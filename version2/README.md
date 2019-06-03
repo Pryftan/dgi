@@ -4,6 +4,8 @@ The second version of the engine has the same core functionality (and reads near
 
 Main classes:
 
+DGIMenu - Defines the initial menu seen at launch.
+
 DGIScreen - Basic configuration for most game scenes, including gestures and text boxes.
 
 DGIVoid - Inherits from DGIScreen, implements the cutscenes between game rooms (the "void" where the player converses with the computer avatar).
