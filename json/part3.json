@@ -1,0 +1,2590 @@
+{ "name": "Part2",
+	"start": "PowerZoom",
+	"defaultpath": "workshop/",
+	"invsounds": [
+		{ "sound": "gtrC1" },
+		{ "sound": "gtrC2" }
+	],
+	"shares": [
+		{ "share": "part1" },
+		{ "share": "part2" }
+	],
+	"loadstate": "part3.key",
+	"screens": [
+		{ "name": "Office1",
+			"share": 1
+		},
+		{ "name": "Office2",
+			"share": 1
+		},
+		{ "name": "Office3",
+			"share": 1,
+			"grid": [
+				{ "name": "O3DoorTXT",
+					"posX": 1082,
+					"posY": 128,
+					"width": 670,
+					"height": 952,
+					"zoom": "Workshop7"
+				}
+			]
+		},
+		{ "name": "Office4",
+			"share": 1
+		},
+		{ "name": "Office5",
+			"share": 1
+		},
+		{ "name": "Office6",
+			"share": 1
+		},
+		{ "name": "Office7",
+			"share": 1,
+			"subs": [
+				{ "name": "O7Key",
+					"posX": 667,
+					"posY": 976,
+					"path": "office/",
+					"image": "o7key"
+				},
+				{ "name": "O7Note",
+					"posX": 642,
+					"posY": 965,
+					"path": "office/",
+					"image": "o7note"
+				}
+			]
+		},
+		{ "name": "Stool",
+			"share": 1
+		},
+		{ "name": "OpTable1",
+			"share": 1
+		},
+		{ "name": "Dartboard",
+			"share": 1
+		},
+		{ "name": "BadgeZoom",
+			"share": 1
+		},
+		{ "name": "Desk",
+			"share": 1
+		},
+		{ "name": "Computer",
+			"share": 1
+		},
+		{ "name": "CoatZoom",
+			"share": 1
+		},
+		{ "name": "VentShelf",
+			"share": 1
+		},
+		{ "name": "Shelves",
+			"share": 1,
+			"subs": [
+				{ "name": "ShelfKey",
+					"posX": 988,
+					"posY": 819,
+					"path": "office/",
+					"image": "shelfkey"
+				},
+				{ "name": "ShelfNote",
+					"posX": 918,
+					"posY": 796,
+					"path": "office/",
+					"image": "shelfnote"
+				}
+			],
+			"grid": [
+				{ "name": "PhotoAllow",
+					"posX": 448,
+					"posY": 690,
+					"width": 1060,
+					"height": 390,
+					"zoom": "PowerZoom"
+				}
+			]
+		},
+		{ "name": "PowerZoom",
+			"path": "office/",
+			"image": "powerzoom",
+			"back": "Shelves",
+			"subs": [
+				{ "name": "PowerKey",
+					"posX": 986,
+					"posY": 352,
+					"path": "office/",
+					"image": "powerkey"
+				},
+				{ "name": "PowerNote",
+					"posX": 866,
+					"posY": 278,
+					"path": "office/",
+					"image": "powernote"
+				}
+			],
+			"grid": [
+				{ "name": "PowerNoteTake",
+					"posX": 802,
+					"posY": 212,
+					"width": 1064,
+					"height": 500,
+					"hides": [
+						{ "name": "PowerNote",
+							"parent": "PowerZoom"
+						},
+						{ "name": "ShelfNote",
+							"parent": "Shelves"
+						},
+						{ "name": "O7Note",
+							"parent": "Office7"
+						}
+					],
+					"toggles": [
+						{ "name": "PowerNoteTake",
+							"parent": "PowerZoom"
+						},
+						{ "name": "PowerKeyTake",
+							"parent": "PowerZoom"
+						}
+					]
+				},
+				{ "name": "PowerKeyTake",
+					"posX": 802,
+					"posY": 212,
+					"width": 1064,
+					"height": 500,
+					"active": false,
+					"object": "Power",
+					"hides": [
+						{ "name": "PowerKey",
+							"parent": "PowerZoom"
+						},
+						{ "name": "ShelfKey",
+							"parent": "Shelves"
+						},
+						{ "name": "O7Key",
+							"parent": "Office7"
+						}
+					],
+					"toggles": [
+						{ "name": "PowerKeyTake",
+							"parent": "PowerZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "WallZoom",
+			"share": 1
+		},
+		{ "name": "PostIt",
+			"share": 1
+		},
+		{ "name": "ArcadeZoom",
+			"share": 1
+		},
+		{ "name": "BenchZoom",
+			"share": 1
+		},
+		{ "name": "ComboBox",
+			"share": 1
+		},
+		{ "name": "ClockZoom",
+			"share": 1
+		},
+		{ "name": "PowerCabZoom",
+			"share": 1
+		},
+		{ "name": "WindowZoom",
+			"share": 1
+		},
+		{ "name": "Workshop1",
+			"share": 2,
+			"subs": [
+				{ "name": "W1Str3",
+					"posX": 481,
+					"posY": 924,
+					"image": "w1str3",
+					"visible": true
+				},
+				{ "name": "W1Str4",
+					"posX": 1126,
+					"posY": 971,
+					"image": "w1str4",
+					"visible": true
+				},
+				{ "name": "W1Str5",
+					"posX": 1789,
+					"posY": 1012,
+					"image": "w1str5",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W1ChainPull",
+					"posX": 583,
+					"posY": 814,
+					"width": 184,
+					"height": 477,
+					"animate": "W1ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop2",
+			"share": 2,
+			"subs": [
+				{ "name": "W2Str5",
+					"posX": 484,
+					"posY": 912,
+					"image": "w2str5",
+					"visible": true
+				},
+				{ "name": "W2Str6",
+					"posX": 999,
+					"posY": 899,
+					"image": "w2str6",
+					"visible": true
+				},
+				{ "name": "W2Str7",
+					"posX": 1621,
+					"posY": 915,
+					"image": "w2str7",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W2ChainPull",
+					"posX": 883,
+					"posY": 657,
+					"width": 188,
+					"height": 619,
+					"animate": "W2ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop3",
+			"share": 2,
+			"subs": [
+				{ "name": "W3Str7",
+					"posX": 462,
+					"posY": 766,
+					"image": "w3str7",
+					"visible": true
+				},
+				{ "name": "W3Str8",
+					"posX": 1341,
+					"posY": 768,
+					"image": "w3str8",
+					"visible": true
+				},
+				{ "name": "W3Str9",
+					"posX": 1694,
+					"posY": 739,
+					"image": "w3str9",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W3ChainPull",
+					"posX": 898,
+					"posY": 668,
+					"width": 154,
+					"height": 551,
+					"animate": "W3ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				},
+				{ "name": "W3Door",
+					"posX": 596,
+					"posY": 0,
+					"width": 698,
+					"height": 978,
+					"zoom": "Office6"
+				}
+			]
+		},
+		{ "name": "Workshop4",
+			"share": 2,
+			"subs": [
+				{ "name": "W4Str8",
+					"posX": 198,
+					"posY": 942,
+					"image": "w4str8",
+					"visible": true
+				},
+				{ "name": "W4Str9",
+					"posX": 558,
+					"posY": 895,
+					"image": "w4str9",
+					"visible": true
+				},
+				{ "name": "W4Str10",
+					"posX": 839,
+					"posY": 881,
+					"image": "w4str10",
+					"visible": true
+				},
+				{ "name": "W4Str11",
+					"posX": 1103,
+					"posY": 868,
+					"image": "w4str11",
+					"visible": true
+				},
+				{ "name": "W4Str12",
+					"posX": 1430,
+					"posY": 866,
+					"image": "w4str12",
+					"visible": true
+				},
+				{ "name": "W4Str13",
+					"posX": 1899,
+					"posY": 931,
+					"image": "w4str13",
+					"visible": true
+				},
+				{ "name": "W4DA2",
+					"posX": 1659,
+					"posY": 573,
+					"path": "workshop/dials/",
+					"image": "w4da2",
+					"visible": false
+				},
+				{ "name": "W4DA3",
+					"posX": 1671,
+					"posY": 552,
+					"path": "workshop/dials/",
+					"image": "w4da3",
+					"visible": false
+				},
+				{ "name": "W4DB2",
+					"posX": 1663,
+					"posY": 552,
+					"path": "workshop/dials/",
+					"image": "w4db2",
+					"visible": false
+				},
+				{ "name": "W4DB3",
+					"posX": 1654,
+					"posY": 540,
+					"path": "workshop/dials/",
+					"image": "w4db3",
+					"visible": false
+				},
+				{ "name": "W4DB4",
+					"posX": 1642,
+					"posY": 545,
+					"path": "workshop/dials/",
+					"image": "w4db4",
+					"visible": false
+				},
+				{ "name": "W4DB5",
+					"posX": 1642,
+					"posY": 563,
+					"path": "workshop/dials/",
+					"image": "w4db5",
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "W4ChainPull",
+					"posX": 690,
+					"posY": 721,
+					"width": 155,
+					"height": 565,
+					"animate": "W4ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop5",
+			"share": 2,
+			"subs": [
+				{ "name": "W5Str11",
+					"posX": 1,
+					"posY": 828,
+					"image": "w5str11",
+					"visible": true
+				},
+				{ "name": "W5Str12",
+					"posX": 449,
+					"posY": 818,
+					"image": "w5str12",
+					"visible": true
+				},
+				{ "name": "W5Str13",
+					"posX": 930,
+					"posY": 861,
+					"image": "w5str13",
+					"visible": true
+				},
+				{ "name": "W5Str14",
+					"posX": 1443,
+					"posY": 912,
+					"image": "w5str14",
+					"visible": true
+				},
+				{ "name": "W5DA2",
+					"posX": 998,
+					"posY": 547,
+					"path": "workshop/dials/",
+					"image": "w5da2",
+					"visible": false
+				},
+				{ "name": "W5DA3",
+					"posX": 983,
+					"posY": 533,
+					"path": "workshop/dials/",
+					"image": "w5da3",
+					"visible": false
+				},
+				{ "name": "W5DA4",
+					"posX": 968,
+					"posY": 548,
+					"path": "workshop/dials/",
+					"image": "w5da4",
+					"visible": false
+				},
+				{ "name": "W5DB2",
+					"posX": 993,
+					"posY": 546,
+					"path": "workshop/dials/",
+					"image": "w5db2",
+					"visible": false
+				},
+				{ "name": "W5DB3",
+					"posX": 985,
+					"posY": 535,
+					"path": "workshop/dials/",
+					"image": "/w5db3",
+					"visible": false
+				},
+				{ "name": "W5DB4",
+					"posX": 971,
+					"posY": 539,
+					"path": "workshop/dials/",
+					"image": "w5db4",
+					"visible": false
+				},
+				{ "name": "W5DB5",
+					"posX": 971,
+					"posY": 554,
+					"path": "workshop/dials/",
+					"image": "w5db5",
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "W5ChainPull",
+					"posX": 1094,
+					"posY": 630,
+					"width": 154,
+					"height": 633,
+					"animate": "W5ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop6",
+			"share": 2,
+			"subs": [
+				{ "name": "W6Str14",
+					"posX": 205,
+					"posY": 956,
+					"image": "w6str14",
+					"visible": true
+				},
+				{ "name": "W6Str15",
+					"posX": 779,
+					"posY": 923,
+					"image": "w6str15",
+					"visible": true
+				},
+				{ "name": "W6Str16",
+					"posX": 1092,
+					"posY": 839,
+					"image": "w6str16",
+					"visible": true
+				},
+				{ "name": "W6Str17",
+					"posX": 1419,
+					"posY": 844,
+					"image": "w6str17",
+					"visible": true
+				},
+				{ "name": "W6Str18",
+					"posX": 1660,
+					"posY": 832,
+					"image": "w6str18",
+					"visible": true
+				},
+				{ "name": "W6Str19",
+					"posX": 1862,
+					"posY": 827,
+					"image": "w6str19",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W6ChainPull",
+					"posX": 1230,
+					"posY": 271,
+					"width": 247,
+					"height": 1028,
+					"animate": "W6ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop7",
+			"share": 2,
+			"subs": [
+				{ "name": "W7Str16",
+					"posX": 0,
+					"posY": 815,
+					"image": "w7str16",
+					"visible": true
+				},
+				{ "name": "W7Str17",
+					"posX": 177,
+					"posY": 818,
+					"image": "w7str17",
+					"visible": true
+				},
+				{ "name": "W7Str18",
+					"posX": 302,
+					"posY": 806,
+					"image": "w7str18",
+					"visible": true
+				},
+				{ "name": "W7Str19",
+					"posX": 425,
+					"posY": 800,
+					"image": "w7str19",
+					"visible": true
+				},
+				{ "name": "W7Str20",
+					"posX": 692,
+					"posY": 805,
+					"image": "w7str20",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W7ChainPull",
+					"posX": 1237,
+					"posY": 596,
+					"width": 157,
+					"height": 695,
+					"animate": "W7ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop8",
+			"share": 2,
+			"subs": [
+				{ "name": "W8Str2",
+					"posX": 1313,
+					"posY": 748,
+					"image": "w8str2",
+					"visible": true
+				},
+				{ "name": "W8Str3",
+					"posX": 1622,
+					"posY": 759,
+					"image": "w8str3",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W8ChainPull",
+					"posX": 635,
+					"posY": 617,
+					"width": 148,
+					"height": 643,
+					"animate": "W8ChainAnim",
+					"object": "Chain",
+					"speech": [
+						{ "line": "Oops.. I guess I pulled it a little much in the last bit." }
+					],
+					"hides": [
+						{ "name": "W1Chain",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2Chain",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3Chain",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4Chain",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5Chain",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6Chain",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7Chain",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8Chain",
+							"parent": "Workshop8"
+						},
+						{ "name": "W11Chain",
+							"parent": "Workshop11"
+						}
+					],
+					"toggles": [
+						{ "name": "W1ChainPull",
+							"parent": "Workshop1"
+						},
+						{ "name": "W2ChainPull",
+							"parent": "Workshop2"
+						},
+						{ "name": "W3ChainPull",
+							"parent": "Workshop3"
+						},
+						{ "name": "W4ChainPull",
+							"parent": "Workshop4"
+						},
+						{ "name": "W5ChainPull",
+							"parent": "Workshop5"
+						},
+						{ "name": "W6ChainPull",
+							"parent": "Workshop6"
+						},
+						{ "name": "W7ChainPull",
+							"parent": "Workshop7"
+						},
+						{ "name": "W8ChainPull",
+							"parent": "Workshop8"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Workshop9",
+			"share": 2,
+			"subs": [
+				{ "name": "W9Str1",
+					"posX": 963,
+					"posY": 718,
+					"image": "w9str1",
+					"visible": true
+				},
+				{ "name": "W9Str2",
+					"posX": 1592,
+					"posY": 726,
+					"image": "w9str2",
+					"visible": true
+				}
+			]
+		},
+		{ "name": "Workshop10",
+			"share": 2,
+			"subs": [
+				{ "name": "W10Str2",
+					"posX": 470,
+					"posY": 773,
+					"image": "w10str2",
+					"visible": true
+				},
+				{ "name": "W10Str3",
+					"posX": 787,
+					"posY": 764,
+					"image": "w10str3",
+					"visible": true
+				},
+				{ "name": "W10Str4",
+					"posX": 1057,
+					"posY": 777,
+					"image": "w10str4",
+					"visible": true
+				},
+				{ "name": "W10Str5",
+					"posX": 1251,
+					"posY": 782,
+					"image": "w10str5",
+					"visible": true
+				},
+				{ "name": "W10Str6",
+					"posX": 1471,
+					"posY": 778,
+					"image": "w10str6",
+					"visible": true
+				},
+				{ "name": "W10Str7",
+					"posX": 1861,
+					"posY": 774,
+					"image": "w10str7",
+					"visible": true
+				}
+			]
+		},
+		{ "name": "Workshop11",
+			"share": 2,
+			"subs": [
+				{ "name": "W11Str4",
+					"posX": 46,
+					"posY": 744,
+					"image": "w11str4",
+					"visible": true
+				},
+				{ "name": "W11Str5",
+					"posX": 185,
+					"posY": 748,
+					"image": "w11str5",
+					"visible": true
+				},
+				{ "name": "W11Str6",
+					"posX": 354,
+					"posY": 742,
+					"image": "w11str6",
+					"visible": true
+				},
+				{ "name": "W11Str7",
+					"posX": 703,
+					"posY": 731,
+					"image": "w11str7",
+					"visible": true
+				},
+				{ "name": "W11Str8",
+					"posX": 1148,
+					"posY": 733,
+					"image": "w11str8",
+					"visible": true
+				},
+				{ "name": "W11Str9",
+					"posX": 1330,
+					"posY": 718,
+					"image": "w11str9",
+					"visible": true
+				},
+				{ "name": "W11Str10",
+					"posX": 1504,
+					"posY": 718,
+					"image": "w11str10",
+					"visible": true
+				},
+				{ "name": "W11Str11",
+					"posX": 1677,
+					"posY": 716,
+					"image": "w11str11",
+					"visible": true
+				},
+				{ "name": "W11Str12",
+					"posX": 1805,
+					"posY": 714,
+					"image": "w11str12",
+					"visible": true
+				},
+				{ "name": "W11DA2",
+					"posX": 1673,
+					"posY": 548,
+					"path": "workshop/dials/",
+					"image": "w11da2",
+					"visible": false
+				},
+				{ "name": "W11DA3",
+					"posX": 1672,
+					"posY": 540,
+					"path": "workshop/dials/",
+					"image": "w11da3",
+					"visible": false
+				},
+				{ "name": "W11DB2",
+					"posX": 1670,
+					"posY": 548,
+					"path": "workshop/dials/",
+					"image": "w11db2",
+					"visible": false
+				},
+				{ "name": "W11DB3",
+					"posX": 1669,
+					"posY": 542,
+					"path": "workshop/dials/",
+					"image": "w11db3",
+					"visible": false
+				},
+				{ "name": "W11DB4",
+					"posX": 1668,
+					"posY": 544,
+					"path": "workshop/dials/",
+					"image": "w11db4",
+					"visible": false
+				},
+				{ "name": "W11DB5",
+					"posX": 1668,
+					"posY": 553,
+					"path": "workshop/dials/",
+					"image": "w11db5",
+					"visible": false
+				}
+			]
+		},
+		{ "name": "Workshop12",
+			"share": 2,
+			"subs": [
+				{ "name": "W12Str9",
+					"posX": 0,
+					"posY": 856,
+					"image": "w12str9",
+					"visible": true
+				},
+				{ "name": "W12Str10",
+					"posX": 201,
+					"posY": 853,
+					"image": "w12str10",
+					"visible": true
+				},
+				{ "name": "W12Str11",
+					"posX": 386,
+					"posY": 848,
+					"image": "w12str11",
+					"visible": true
+				},
+				{ "name": "W12Str12",
+					"posX": 541,
+					"posY": 845,
+					"image": "w12str12",
+					"visible": true
+				},
+				{ "name": "W12Str13",
+					"posX": 699,
+					"posY": 878,
+					"image": "w12str13",
+					"visible": true
+				},
+				{ "name": "W12Str14",
+					"posX": 916,
+					"posY": 927,
+					"image": "w12str14",
+					"visible": true
+				},
+				{ "name": "W12Str15",
+					"posX": 1221,
+					"posY": 946,
+					"image": "w12str15",
+					"visible": true
+				},
+				{ "name": "W12Str16",
+					"posX": 1535,
+					"posY": 891,
+					"image": "w12str16",
+					"visible": true
+				},
+				{ "name": "W12DA2",
+					"posX": 498,
+					"posY": 677,
+					"path": "workshop/dials/",
+					"image": "w12da2",
+					"visible": false
+				},
+				{ "name": "W12DA3",
+					"posX": 495,
+					"posY": 668,
+					"path": "workshop/dials/",
+					"image": "w12da3",
+					"visible": false
+				},
+				{ "name": "W12DB2",
+					"posX": 492,
+					"posY": 685,
+					"path": "workshop/dials/",
+					"image": "w12db2",
+					"visible": false
+				},
+				{ "name": "W12DB3",
+					"posX": 493,
+					"posY": 671,
+					"path": "workshop/dials/",
+					"image": "w12db3",
+					"visible": false
+				},
+				{ "name": "W12DB4",
+					"posX": 490,
+					"posY": 673,
+					"path": "workshop/dials/",
+					"image": "w12db4",
+					"visible": false
+				},
+				{ "name": "W12DB5",
+					"posX": 489,
+					"posY": 682,
+					"path": "workshop/dials/",
+					"image": "w12db5",
+					"visible": false
+				}
+			]
+		},
+		{ "name": "Workshop13",
+			"share": 2,
+			"subs": [
+				{ "name": "W13Str16",
+					"posX": 298,
+					"posY": 1034,
+					"image": "w13str16",
+					"visible": true
+				},
+				{ "name": "W13Str17",
+					"posX": 1116,
+					"posY": 1054,
+					"image": "w13str17",
+					"visible": true
+				},
+				{ "name": "W13Str18",
+					"posX": 1896,
+					"posY": 1045,
+					"image": "w13str18",
+					"visible": true
+				}
+			]
+		},
+		{ "name": "Workshop14",
+			"share": 2,
+			"subs": [
+				{ "name": "W14Str18",
+					"posX": 548,
+					"posY": 897,
+					"image": "w14str18",
+					"visible": true
+				},
+				{ "name": "W14Str19",
+					"posX": 1006,
+					"posY": 890,
+					"image": "w14str19",
+					"visible": true
+				},
+				{ "name": "W14Str20",
+					"posX": 1447,
+					"posY": 915,
+					"image": "w14str20",
+					"visible": true
+				}
+			]
+		},
+		{ "name": "Workshop15",
+			"share": 2,
+			"subs": [
+				{ "name": "W15Str20",
+					"posX": 463,
+					"posY": 832,
+					"image": "w15str20",
+					"visible": true
+				}
+			]
+		},
+		{ "name": "Workshop16",
+			"share": 2,
+			"subs": [
+				{ "name": "W16Str1",
+					"posX": 1811,
+					"posY": 704,
+					"image": "w16str1",
+					"visible": true
+				}
+			],
+			"grid": [
+				{ "name": "W16DoorZoom",
+					"posX": 699,
+					"posY": 225,
+					"width": 263,
+					"height": 387,
+					"zoom": "MonitorZoom"
+				}
+			]
+		},
+		{ "name": "GtrHoleZoom",
+			"share": 2
+		},
+		{ "name": "GooseZoom",
+			"share": 2
+		},
+		{ "name": "PianoZoom",
+			"share": 2
+		},
+		{ "name": "KeyMakerZoom",
+			"share": 2,
+			"subs": [
+				{ "name": "KeyMakerDA2",
+					"posX": 1055,
+					"posY": 729,
+					"path": "workshop/dials/",
+					"image": "kmda2",
+					"visible": false
+				},
+				{ "name": "KeyMakerDA3",
+					"posX": 1001,
+					"posY": 682,
+					"path": "workshop/dials/",
+					"image": "kmda3",
+					"visible": false
+				},
+				{ "name": "KeyMakerDA4",
+					"posX": 951,
+					"posY": 732,
+					"path": "workshop/dials/",
+					"image": "kmda4",
+					"visible": false
+				},
+				{ "name": "KeyMakerDB1",
+					"posX": 1008,
+					"posY": 762,
+					"path": "workshop/dials/",
+					"image": "kmdb1",
+					"visible": false
+				},
+				{ "name": "KeyMakerDB2",
+					"posX": 1039,
+					"posY": 722,
+					"path": "workshop/dials/",
+					"image": "kmdb2",
+					"visible": false
+				},
+				{ "name": "KeyMakerDB3",
+					"posX": 1012,
+					"posY": 687,
+					"path": "workshop/dials/",
+					"image": "kmdb3",
+					"visible": false
+				},
+				{ "name": "KeyMakerDB4",
+					"posX": 965,
+					"posY": 696,
+					"path": "workshop/dials/",
+					"image": "kmdb4",
+					"visible": false
+				},
+				{ "name": "KeyMakerDB5",
+					"posX": 963,
+					"posY": 747,
+					"path": "workshop/dials/",
+					"image": "kmdb5",
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "KeyMakerUseA",
+					"posX": 612,
+					"posY": 211,
+					"width": 264,
+					"height": 676,
+					"active": false,
+					"animate": "KeyMakerLeverA",
+					"cycle": [
+						{ "parent": "KeyMakerZoom",
+							"subs": [
+								{ "sub": "KeyMakerDA1" },
+								{ "sub": "KeyMakerDA2" },
+								{ "sub": "KeyMakerDA3" },
+								{ "sub": "KeyMakerDA4" }
+							]
+						},
+						{ "parent": "Workshop4",
+							"subs": [
+								{ "sub": "W4DA1" },
+								{ "sub": "W4DA2" },
+								{ "sub": "W4DA3" },
+								{ "sub": "None" }
+							]
+						},
+						{ "parent": "Workshop5",
+							"subs": [
+								{ "sub": "W5DA1" },
+								{ "sub": "W5DA2" },
+								{ "sub": "W5DA3" },
+								{ "sub": "W5DA4" }
+							]
+						},
+						{ "parent": "Workshop11",
+							"subs": [
+								{ "sub": "W11DA1" },
+								{ "sub": "W11DA2" },
+								{ "sub": "W11DA3" },
+								{ "sub": "None" }
+							]
+						},
+						{ "parent": "Workshop12",
+							"subs": [
+								{ "sub": "W12DA1" },
+								{ "sub": "W12DA2" },
+								{ "sub": "W12DA3" },
+								{ "sub": "None" }
+							]
+						}
+					]
+				},
+				{ "name": "KeyMakerUseB",
+					"posX": 1150,
+					"posY": 656,
+					"width": 320,
+					"height": 424,
+					"active": false,
+					"animate": "KeyMakerLeverB",
+					"cycle": [
+						{ "parent": "KeyMakerZoom",
+							"subs": [
+								{ "sub": "KeyMakerDB1" },
+								{ "sub": "KeyMakerDB2" },
+								{ "sub": "KeyMakerDB3" },
+								{ "sub": "KeyMakerDB4" },
+								{ "sub": "KeyMakerDB5" }
+							]
+						},
+						{ "parent": "Workshop4",
+							"subs": [
+								{ "sub": "W4DB1" },
+								{ "sub": "W4DB2" },
+								{ "sub": "W4DB3" },
+								{ "sub": "W4DB4" },
+								{ "sub": "W4DB5" }
+							]
+						},
+						{ "parent": "Workshop5",
+							"subs": [
+								{ "sub": "W5DB1" },
+								{ "sub": "W5DB2" },
+								{ "sub": "W5DB3" },
+								{ "sub": "W5DB4" },
+								{ "sub": "W5DB5" }
+							]
+						},
+						{ "parent": "Workshop11",
+							"subs": [
+								{ "sub": "W11DB1" },
+								{ "sub": "W11DB2" },
+								{ "sub": "W11DB3" },
+								{ "sub": "W11DB4" },
+								{ "sub": "W11DB5" }
+							]
+						},
+						{ "parent": "Workshop12",
+							"subs": [
+								{ "sub": "W12DB1" },
+								{ "sub": "W12DB2" },
+								{ "sub": "W12DB3" },
+								{ "sub": "W12DB4" },
+								{ "sub": "W12DB5" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "TPoMZoom",
+			"share": 2
+		},
+		{ "name": "PillowZoom",
+			"share": 2
+		},
+		{ "name": "GuitarCaseZoom",
+			"share": 2
+		},
+		{ "name": "CabinetOpenZoom",
+			"share": 2
+		},
+		{ "name": "ScrewZoom",
+			"share": 2
+		},
+		{ "name": "SwivelZoom",
+			"share": 2
+		},
+		{ "name": "GlobeZoom",
+			"share": 2
+		},
+		{ "name": "CalendarZoom",
+			"share": 2
+		},
+		{ "name": "RecordZoom",
+			"share": 2
+		},
+		{ "name": "DrawersZoom",
+			"share": 2
+		},
+		{ "name": "MedicalZoom",
+			"share": 2
+		},
+		{ "name": "LampZoom",
+			"share": 2
+		},
+		{ "name": "MonitorZoom",
+			"image": "monitorzoom",
+			"back": "Workshop16",
+			"subs":[
+				{ "name": "MonitorEnter",
+					"posX": 782,
+					"posY": 857,
+					"image": "monitorenter"
+				},
+				{ "name": "MonitorBlockYA1",
+					"posX": 738,
+					"posY": 747,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYA2",
+					"posX": 830,
+					"posY": 744,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYA3",
+					"posX": 922,
+					"posY": 741,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYA4",
+					"posX": 1014,
+					"posY": 738,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYA5",
+					"posX": 1106,
+					"posY": 735,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYB1",
+					"posX": 736,
+					"posY": 663,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYB2",
+					"posX": 828,
+					"posY": 660,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYB3",
+					"posX": 920,
+					"posY": 657,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYB4",
+					"posX": 1012,
+					"posY": 654,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYB5",
+					"posX": 1104,
+					"posY": 651,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYC1",
+					"posX": 734,
+					"posY": 579,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYC2",
+					"posX": 826,
+					"posY": 576,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYC3",
+					"posX": 918,
+					"posY": 573,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYC4",
+					"posX": 1010,
+					"posY": 570,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYC5",
+					"posX": 1102,
+					"posY": 567,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYD1",
+					"posX": 733,
+					"posY": 495,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYD2",
+					"posX": 825,
+					"posY": 492,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYD3",
+					"posX": 917,
+					"posY": 489,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYD4",
+					"posX": 1008,
+					"posY": 486,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYD5",
+					"posX": 1101,
+					"posY": 483,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYE1",
+					"posX": 731,
+					"posY": 408,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYE2",
+					"posX": 823,
+					"posY": 405,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYE3",
+					"posX": 915,
+					"posY": 402,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYE4",
+					"posX": 1007,
+					"posY": 399,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockYE5",
+					"posX": 1099,
+					"posY": 396,
+					"image": "monitorblocky",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGA1",
+					"posX": 738,
+					"posY": 747,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGA2",
+					"posX": 830,
+					"posY": 744,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGA3",
+					"posX": 922,
+					"posY": 741,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGA4",
+					"posX": 1014,
+					"posY": 738,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGA5",
+					"posX": 1106,
+					"posY": 735,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGB1",
+					"posX": 736,
+					"posY": 663,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGB2",
+					"posX": 828,
+					"posY": 660,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGB3",
+					"posX": 920,
+					"posY": 657,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGB4",
+					"posX": 1012,
+					"posY": 654,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGB5",
+					"posX": 1104,
+					"posY": 651,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGC1",
+					"posX": 734,
+					"posY": 579,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGC2",
+					"posX": 826,
+					"posY": 576,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGC3",
+					"posX": 918,
+					"posY": 573,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGC4",
+					"posX": 1010,
+					"posY": 570,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGC5",
+					"posX": 1102,
+					"posY": 567,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGD1",
+					"posX": 733,
+					"posY": 495,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGD2",
+					"posX": 825,
+					"posY": 492,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGD3",
+					"posX": 917,
+					"posY": 489,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGD4",
+					"posX": 1008,
+					"posY": 486,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGD5",
+					"posX": 1101,
+					"posY": 483,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGE1",
+					"posX": 731,
+					"posY": 408,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGE2",
+					"posX": 823,
+					"posY": 405,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGE3",
+					"posX": 915,
+					"posY": 402,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGE4",
+					"posX": 1007,
+					"posY": 399,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorBlockGE5",
+					"posX": 1099,
+					"posY": 396,
+					"image": "monitorblockg",
+					"visible": false
+				},
+				{ "name": "MonitorGrid",
+					"posX": 725,
+					"posY": 387,
+					"image": "monitorgrid"
+				}
+			],
+			"grid": [
+				{ "name": "MonitorA1",
+					"posX": 725,
+					"posY": 751,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGA1" },
+								{ "sub": "MonitorBlockYA1" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorA2",
+					"posX": 822,
+					"posY": 751,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGA2" },
+								{ "sub": "MonitorBlockYA2" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorA3",
+					"posX": 919,
+					"posY": 751,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGA3" },
+								{ "sub": "MonitorBlockYA3" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorA4",
+					"posX": 1016,
+					"posY": 751,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGA4" },
+								{ "sub": "MonitorBlockYA4" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorA5",
+					"posX": 1113,
+					"posY": 751,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGA5" },
+								{ "sub": "MonitorBlockYA5" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorB1",
+					"posX": 725,
+					"posY": 660,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGB1" },
+								{ "sub": "MonitorBlockYB1" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorB2",
+					"posX": 822,
+					"posY": 660,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"random": true,
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGB2" },
+								{ "sub": "MonitorBlockYB2" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorB3",
+					"posX": 919,
+					"posY": 660,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGB3" },
+								{ "sub": "MonitorBlockYB3" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorB4",
+					"posX": 1016,
+					"posY": 660,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGB4" },
+								{ "sub": "MonitorBlockYB4" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorB5",
+					"posX": 1113,
+					"posY": 660,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGB5" },
+								{ "sub": "MonitorBlockYB5" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorC1",
+					"posX": 725,
+					"posY": 569,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGC1" },
+								{ "sub": "MonitorBlockYC1" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorC2",
+					"posX": 822,
+					"posY": 569,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGC2" },
+								{ "sub": "MonitorBlockYC2" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorC3",
+					"posX": 919,
+					"posY": 569,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"random": true,
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGC3" },
+								{ "sub": "MonitorBlockYC3" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorC4",
+					"posX": 1016,
+					"posY": 569,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGC4" },
+								{ "sub": "MonitorBlockYC4" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorC5",
+					"posX": 1113,
+					"posY": 569,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGC5" },
+								{ "sub": "MonitorBlockYC5" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorD1",
+					"posX": 725,
+					"posY": 478,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGD1" },
+								{ "sub": "MonitorBlockYD1" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorD2",
+					"posX": 822,
+					"posY": 478,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGD2" },
+								{ "sub": "MonitorBlockYD2" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorD3",
+					"posX": 919,
+					"posY": 478,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGD3" },
+								{ "sub": "MonitorBlockYD3" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorD4",
+					"posX": 1016,
+					"posY": 478,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGD4" },
+								{ "sub": "MonitorBlockYD4" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorD5",
+					"posX": 1113,
+					"posY": 478,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGD5" },
+								{ "sub": "MonitorBlockYD5" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorE1",
+					"posX": 725,
+					"posY": 387,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"random": true,
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGE1" },
+								{ "sub": "MonitorBlockYE1" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorE2",
+					"posX": 822,
+					"posY": 387,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGE2" },
+								{ "sub": "MonitorBlockYE2" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorE3",
+					"posX": 919,
+					"posY": 387,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGE3" },
+								{ "sub": "MonitorBlockYE3" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorE4",
+					"posX": 1016,
+					"posY": 387,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGE4" },
+								{ "sub": "MonitorBlockYE4" }
+							]
+						}
+					]
+				},
+				{ "name": "MonitorE5",
+					"posX": 1113,
+					"posY": 387,
+					"width": 97,
+					"height": 91,
+					"cycle": [
+						{ "parent": "MonitorZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "MonitorBlockGE5" },
+								{ "sub": "MonitorBlockYE5" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Clock1Zoom",
+			"share": 2
+		},
+		{ "name": "Clock2Zoom",
+			"share": 2
+		},
+		{ "name": "Clock3Zoom",
+			"share": 2
+		},
+		{ "name": "C3GearZoom",
+			"share": 2
+		},
+		{ "name": "Clock4Zoom",
+			"share": 2
+		},
+		{ "name": "Clock5Zoom",
+			"share": 2
+		},
+		{ "name": "Clock6Zoom",
+			"share": 2
+		},
+		{ "name": "Clock7Zoom",
+			"share": 2
+		},
+		{ "name": "C7GearZoom",
+			"share": 2
+		},
+		{ "name": "Clock8Zoom",
+			"share": 2
+		},
+		{ "name": "Clock9Zoom",
+			"share": 2
+		},
+		{ "name": "Clock10Zoom",
+			"share": 2
+		},
+		{ "name": "Clock11Zoom",
+			"share": 2
+		},
+		{ "name": "Clock12Zoom",
+			"share": 2
+		}
+	],
+	"objects": [
+		{ "name": "Power",
+			"image": "inv_power",
+			"scale": 0.1,
+			"animations": [
+				{ "name": "PowerComp",
+					"frames": [
+						{ "frame": "compa1",
+							"path": "office/",
+							"posX": 552,
+							"posY": 78,
+							"duration": 0.5
+						},
+						{ "frame": "compa2",
+							"path": "office/",
+							"posX": 552,
+							"posY": 78,
+							"duration": 0.5
+						},
+						{ "frame": "compa3",
+							"path": "office/",
+							"posX": 552,
+							"posY": 78,
+							"duration": 0.5
+						}
+					]
+				},
+				{ "name": "PowerKeyMaker",
+					"frames": [
+						{ "frame": "kmkeya1",
+							"posX": 889,
+							"posY": 549,
+							"duration": 0.5
+						},
+						{ "frame": "kmkeya2",
+							"posX": 889,
+							"posY": 549,
+							"duration": 0.5
+						},
+						{ "frame": "kmkeya3",
+							"posX": 889,
+							"posY": 549,
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Chain",
+			"image": "inv_chain",
+			"scale": 0.08,
+			"animations": [
+				{ "name": "WindowChain",
+					"frames": [
+						{ "frame": "windowza",
+							"path": "office/",
+							"posX": 1203,
+							"posY": 273,
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		}
+	],
+	"globanims": [
+		{ "name": "ShelfBookA",
+					"frames": [
+						{ "frame": "shelfbooka",
+							"path": "office/",
+							"posX": 708,
+							"posY": 0,
+							"duration": 0.5
+						}
+					]
+		},
+		{ "name": "W1ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W1Chain",
+					"parent": "Workshop1",
+					"posX": 0,
+					"posY": -140,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W2ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W2Chain",
+					"parent": "Workshop2",
+					"posX": 0,
+					"posY": -126,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W3ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W3Chain",
+					"parent": "Workshop3",
+					"posX": 0,
+					"posY": -68,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W4ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W4Chain",
+					"parent": "Workshop4",
+					"posX": 0,
+					"posY": -136,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W5ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W5Chain",
+					"parent": "Workshop5",
+					"posX": 0,
+					"posY": -112,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W6ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W6Chain",
+					"parent": "Workshop6",
+					"posX": 0,
+					"posY": -159,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W7ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W7Chain",
+					"parent": "Workshop7",
+					"posX": 0,
+					"posY": -140,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "W8ChainAnim",
+			"frames": [
+				{ "frame": "moveby",
+					"name": "W8Chain",
+					"parent": "Workshop8",
+					"posX": 0,
+					"posY": -110,
+					"duration": 0.4
+				},
+				{ "frame": "moveby",
+					"posX": 0,
+					"posY": -20,
+					"sound": "latch1",
+					"duration": 0.15
+				}
+			]
+		},
+		{ "name": "KeyMakerLeverA",
+			"frames": [
+				{ "frame": "kma1",
+					"posX": 715,
+					"posY": 250,
+					"duration": 0.4
+				}
+			]
+		},
+		{ "name": "KeyMakerLeverB",
+			"frames": [
+				{ "frame": "kma2",
+					"posX": 1258,
+					"posY": 766,
+					"duration": 0.4
+				}
+			]
+		}
+	]
+}

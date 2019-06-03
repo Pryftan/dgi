@@ -1,0 +1,243 @@
+{ "name": "CutS1",
+	"delay": 5,
+	"music": "music_cuts",
+	"images": [
+		{ "name": "Glow1",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"rotate": -45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow2",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"rotate": 45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow3",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"opacity": 0,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "opacityto",
+					"pos": [1],
+					"duration": 7
+				},
+				{ "frame": "opacityto",
+					"pos": [0],
+					"duration": 7
+				}
+			]
+		}
+	],
+	"dialogue": [
+		{ "name": "Focus",
+            "lines": [
+		        { "name": "Start1",
+	        		"character": "Avatar",
+		        	"line": "DGI Avatar Online.",
+		        	"duration": 2
+		        },
+		        { "name": "Start1",
+		        	"character": "Avatar",
+		        	"line": "Uploading voice profile NCL_VO_200603020312.PRF....",
+	        		"duration": 4
+	        	},
+	        	{ "name": "Start2",
+        			"character": "Player",
+		        	"line": "ooh.. my head. What happened?",
+	        		"duration": 4
+	        	},
+        		{ "name": "Start3",
+		        	"character": "Avatar",
+        			"line": "Please remain calm.",
+		        	"duration": 2
+        		},
+        		{ "name": "Start4",
+        			"character": "Player",
+        			"line": "I can't.. I can't remember..",
+        			"duration": 2.5
+        		},
+        		{ "name": "Start5",
+        			"character": "Avatar",
+        			"line": "Remain calm.",
+        			"duration": 1
+        		},
+        		{ "name": "FocusLight",
+        			"character": "Avatar",
+        			"line": "Focus on the light.",
+        			"duration": 2.5
+	        	}
+	        ],
+			"branch": [
+				{ "name": "Ask1",
+					"type": "remove",
+					"text": "What happened?",
+					"lines": [
+						{ "name": "Ask1",
+							"character": "Player",
+							"line": "What happened?",
+							"duration": 2.5
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+					]
+				},
+				{ "name": "Ask2",
+					"type": "remove",
+					"text": "Who are you?",
+					"lines": [
+						{ "name": "Ask2",
+							"character": "Player",
+							"line": "Who are you?",
+							"duration": 2.5
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+
+					]
+				},
+				{ "name": "Ask3",
+					"type": "remove",
+					"text": "What is this place?",
+					"lines": [
+						{ "name": "Ask2",
+							"character": "Player",
+							"line": "Where am I?",
+							"duration": 2.5
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+
+					]
+				},
+				{ "name": "Obey",
+					"type": "cont",
+					"text": "<focus on the light>"
+				}
+			]
+		},
+		{ "name": "Finish",
+			"lines": [
+				{ "name": "Obey",
+					"character": "Player",
+					"skippable": false,
+					"line": "",
+					"duration": 6
+				},
+				{ "name": "Details1",
+					"character": "Avatar",
+					"line": "Thank you. Please continue to focus.",
+					"duration": 3
+				},
+				{ "name": "Details2",
+					"character": "Avatar",
+					"line": "A medical incident has relieved you of your memories and some of your cognition. This interface will walk you through recovery.",
+					"duration": 6
+				},
+				{ "name": "Details3",
+					"character": "Player",
+					"line": "What kind of..",
+					"duration": 1
+				},
+				{ "name": "Details4",
+					"character": "Avatar",
+					"line": "The MELIORIS system is designed to allow you access to information as your cognitive functions repair. Please be patient.",
+					"duration": 5
+				},
+				{ "name": "Details5",
+					"character": "Avatar",
+					"line": "The following simulation is designed to allow patients suffering from retrograde amnesia to become reacclimated with their life and memories at their own pace.",
+					"duration": 8
+				},
+				{ "name": "Details6",
+					"character": "Player",
+					"line": "How will-",
+					"duration": 1
+				},
+				{ "name": "Details7",
+					"character": "Avatar",
+					"line": "You will experience a simulated version of a place recovered from your inactive memories. Look for clues to your identity, such as documents or letters.",
+					"duration": 8
+				},
+				{ "name": "Details8",
+					"character": "Avatar",
+					"line": "DG Industries provides this simulation \"as is\" from subject subconscious. Views, thoughts, and opinions represent those of the subject and do not necessarily belong to DGI or any parties involved in the development of MELIORIS.",
+					"duration": 9
+				},
+				{ "name": "Details9",
+					"character": "Avatar",
+					"line": "Please respond verbally to accept terms of service.",
+					"duration": 3
+				}
+			],
+			"branch": [
+				{ "name": "Yes",
+					"type": "cont",
+					"text": "Yes",
+					"lines": [
+						{ "name": "Confirm1",
+							"character": "Player",
+							"line": "Yes",
+							"duration": 1
+						}
+					]
+				},
+				{ "name": "No",
+					"type": "cont",
+					"text": "Yes",
+					"lines": [
+						{ "name": "Confirm2",
+							"character": "Player",
+							"line": "Yes",
+							"duration": 1
+						}
+					]
+				},
+				{ "name": "What",
+					"type": "cont",
+					"text": "What?",
+					"lines": [
+						{ "name": "Confirm3",
+							"character": "Player",
+							"line": "What?",
+							"duration": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,5783 @@
+{ "name": "Classroom",
+	"start": "Classroom1",
+	"defaultpath": "classroom/",
+	"invsounds": ["gtrC1", "gtrC2"],
+	"screens": [
+		{ "name": "Classroom1",
+			"image": "cl1",
+			"camera": "Camera1",
+			"shows": ["PianoSym11", "PianoSym21", "PianoSym31", "PianoSym41", "Triangle_in1", "Triangle_in2", "Triangle_in3", "TriangleL", "SquareL", "PentagonL", "MemDoor1_out"],
+			"hides": ["Can_out", "Piano_square", "Piano_rope", "PianoSym12", "PianoSym13", "PianoSym14", "PianoSym15", "PianoSym16", "PianoSym17", "PianoSym22", "PianoSym23", "PianoSym24", "PianoSym25", "PianoSym26", "PianoSym27", "PianoSym32", "PianoSym33", "PianoSym34", "PianoSym35", "PianoSym36", "PianoSym37", "PianoSym42", "PianoSym43", "PianoSym44", "PianoSym45", "PianoSym46", "PianoSym47", "Triangle", "Square", "Pentagon", "MemDoor1"],
+			"left": "Classroom8",
+			"right": "Classroom2",
+			"subs": [
+				{ "name": "Cl1Triangle3",
+					"image": "cl1t3",
+					"hides": ["Triangle_in3"],
+					"sub": [964, 445, 40, 7]
+				},
+				{ "name": "Cl1Triangle2",
+					"image": "cl1t2",
+					"hides": ["Triangle_in2"],
+					"sub": [968, 452, 38, 6]
+				},
+				{ "name": "Cl1Triangle1",
+					"image": "cl1t1",
+					"hides": ["Triangle_in1"],
+					"sub": [924, 449, 39, 7]
+				},
+				{ "name": "Cl1Banner3",
+					"image": "cl1banner3",
+					"shows": ["TriangleL", "SquareL", "Pentagon"],
+					"hides": ["Triangle", "Square", "PentagonL"],
+					"sub": [1085, 508, 835, 414]
+				},
+				{ "name": "Cl1Banner3Ref",
+					"image": "cl1banner3ref",
+					"shows": ["TriangleL", "SquareL", "Pentagon"],
+					"hides": ["Triangle", "Square", "PentagonL"],
+					"sub": [370, 459, 256, 141]
+				},
+				{ "name": "Cl1Banner2",
+					"image": "cl1banner2",
+					"shows": ["TriangleL", "Square", "Pentagon"],
+					"hides": ["Triangle", "SquareL", "PentagonL"],
+					"sub": [1085, 508, 835, 414]
+				},
+				{ "name": "Cl1Banner2Ref",
+					"image": "cl1banner2ref",
+					"shows": ["TriangleL", "Square", "Pentagon"],
+					"hides": ["Triangle", "SquareL", "PentagonL"],
+					"sub": [370, 459, 256, 141]
+				},
+				{ "name": "Cl1Banner1",
+					"image": "cl1banner1",
+					"shows": ["Triangle", "Square", "Pentagon"],
+					"hides": ["TriangleL", "SquareL", "PentagonL"],
+					"sub": [1085, 508, 835, 414]
+				},
+				{ "name": "Cl1Banner1Ref",
+					"image": "cl1banner1ref",
+					"shows": ["Triangle", "Square", "Pentagon"],
+					"hides": ["TriangleL", "SquareL", "PentagonL"],
+					"sub": [370, 459, 256, 141]
+				},
+				{ "name": "Cl1Pencil",
+					"image": "cl1pencil",
+					"shows": ["DeskPencil"],
+					"undo": true,
+					"sub": [1343, 278, 71, 19]
+				},
+				{ "name": "Cl1MemDoor1",
+					"image": "cl1memdoor1",
+					"shows": ["MemDoor1"],
+					"hides": ["MemDoor1_out"],
+					"sub": [1851, 253, 69, 48]
+				},
+				{ "name": "Cl1PianoSquare",
+					"image": "cl1psquare",
+					"shows": ["Piano_square"],
+					"undo": true,
+					"sub": [404, 346, 47, 12]
+				},
+				{ "name": "Cl1PianoRope",
+					"image": "cl1prope",
+					"shows": ["Piano_rope"],
+					"undo": true,
+					"sub": [471, 356, 81, 16]
+				},
+				{ "name": "Cl1PianoLid",
+					"image": "cl1plid",
+					"shows": ["Lid_closed"],
+					"hides": ["Lid_opened"],
+					"sub": [188, 302, 486, 152]
+				},
+				{ "name": "Cl1Can",
+					"image": "cl1can",
+					"shows": ["Can_out"],
+					"undo": true,
+					"sub": [254, 593, 67, 75]
+				},
+				{ "name": "Cl1S12",
+					"image": "cl1s12",
+					"shows": ["PianoSym12"],
+					"hides": ["PianoSym11"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S13",
+					"image": "cl1s13",
+					"shows": ["PianoSym13"],
+					"hides": ["PianoSym12"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S14",
+					"image": "cl1s14",
+					"shows": ["PianoSym14"],
+					"hides": ["PianoSym13"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S15",
+					"image": "cl1s15",
+					"shows": ["PianoSym15"],
+					"hides": ["PianoSym14"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S16",
+					"image": "cl1s16",
+					"shows": ["PianoSym16"],
+					"hides": ["PianoSym15"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S17",
+					"image": "cl1s17",
+					"shows": ["PianoSym17"],
+					"hides": ["PianoSym16"],
+					"visible": false,
+					"sub": [297, 429, 41, 47]
+				},
+				{ "name": "Cl1S22",
+					"image": "cl1s22",
+					"shows": ["PianoSym22"],
+					"hides": ["PianoSym21"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S23",
+					"image": "cl1s23",
+					"shows": ["PianoSym23"],
+					"hides": ["PianoSym22"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S24",
+					"image": "cl1s24",
+					"shows": ["PianoSym24"],
+					"hides": ["PianoSym23"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S25",
+					"image": "cl1s25",
+					"shows": ["PianoSym25"],
+					"hides": ["PianoSym24"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S26",
+					"image": "cl1s26",
+					"shows": ["PianoSym26"],
+					"hides": ["PianoSym25"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S27",
+					"image": "cl1s27",
+					"shows": ["PianoSym27"],
+					"hides": ["PianoSym26"],
+					"visible": false,
+					"sub": [360, 436, 39, 46]
+				},
+				{ "name": "Cl1S32",
+					"image": "cl1s32",
+					"shows": ["PianoSym32"],
+					"hides": ["PianoSym31"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S33",
+					"image": "cl1s33",
+					"shows": ["PianoSym33"],
+					"hides": ["PianoSym32"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S34",
+					"image": "cl1s34",
+					"shows": ["PianoSym34"],
+					"hides": ["PianoSym33"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S35",
+					"image": "cl1s35",
+					"shows": ["PianoSym35"],
+					"hides": ["PianoSym34"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S36",
+					"image": "cl1s36",
+					"shows": ["PianoSym36"],
+					"hides": ["PianoSym35"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S37",
+					"image": "cl1s37",
+					"shows": ["PianoSym37"],
+					"hides": ["PianoSym36"],
+					"visible": false,
+					"sub": [423, 443, 37, 45]
+				},
+				{ "name": "Cl1S42",
+					"image": "cl1s42",
+					"shows": ["PianoSym42"],
+					"hides": ["PianoSym41"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				},
+				{ "name": "Cl1S43",
+					"image": "cl1s43",
+					"shows": ["PianoSym43"],
+					"hides": ["PianoSym42"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				},
+				{ "name": "Cl1S44",
+					"image": "cl1s44",
+					"shows": ["PianoSym44"],
+					"hides": ["PianoSym43"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				},
+				{ "name": "Cl1S45",
+					"image": "cl1s45",
+					"shows": ["PianoSym45"],
+					"hides": ["PianoSym44"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				},
+				{ "name": "Cl1S46",
+					"image": "cl1s46",
+					"shows": ["PianoSym46"],
+					"hides": ["PianoSym45"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				},
+				{ "name": "Cl1S47",
+					"image": "cl1s47",
+					"shows": ["PianoSym47"],
+					"hides": ["PianoSym46"],
+					"visible": false,
+					"sub": [482, 450, 35, 44]
+				}
+			],
+			"grid": [
+				{ "name": "Cl1D1Under",
+					"active": false,
+					"pos": [1239, 76, 428, 210],
+					"zoom": "DeskUnderZoom"
+				},
+				{ "name": "Cl1ShelfZoom",
+					"pos": [38, 500, 664, 359],
+					"zoom": "ShelfZoom"
+				},
+				{ "name": "Cl1PianoZoom",
+					"pos": [41, 55, 667, 445],
+					"zoom": "PianoSymZoom"
+				},
+				{ "name": "Cl1PianoZoom2",
+					"active": false,
+					"pos": [41, 55, 667, 445],
+					"zoom": "PianoZoom"
+				},
+				{ "name": "Cl1Col1Zoom",
+					"pos": [777, 140, 371, 443],
+					"zoom": "Column1Zoom"
+				},
+				{ "name": "Cl1Desk1Zoom",
+					"pos": [1151, 14, 588, 488],
+					"zoom": "Desk1Zoom"
+				}
+			]
+		},
+		{ "name": "Classroom2",
+			"image": "cl2",
+			"camera": "Camera2",
+			"shows": ["Triangle_in1", "Triangle_in2", "Triangle_in3", "TriangleL", "SquareL", "PentagonL", "MemDoor1_out", "MemDoor2_out", "MemType1", "Pencil", "PencilTape", "Can", "Rope", "Paper2"],
+			"hides": ["Triangle", "Square", "Pentagon", "MemDoor1", "MemDoor2", "MemType2"],
+			"left": "Classroom1",
+			"right": "Classroom3",
+			"subs": [
+				{ "name": "Cl2Triangle3",
+					"image": "cl2t3",
+					"hides": ["Triangle_in3"],
+					"sub": [246, 388, 51, 7]
+				},
+				{ "name": "Cl2Triangle2",
+					"image": "cl2t2",
+					"hides": ["Triangle_in2"],
+					"sub": [227, 394, 51, 6]
+				},
+				{ "name": "Cl2Triangle1",
+					"image": "cl2t1",
+					"hides": ["Triangle_in1"],
+					"sub": [190, 387, 51, 7]
+				},
+				{ "name": "Cl2Banner3",
+					"image": "cl2banner3",
+					"shows": ["TriangleL", "SquareL", "Pentagon"],
+					"hides": ["Triangle", "Square", "PentagonL"],
+					"sub": [241, 454, 1350, 452]
+				},
+				{ "name": "Cl2Banner2",
+					"image": "cl2banner2",
+					"shows": ["TriangleL", "Square", "Pentagon"],
+					"hides": ["Triangle", "SquareL", "PentagonL"],
+					"sub": [241, 454, 1350, 452]
+				},
+				{ "name": "Cl2Banner1",
+					"image": "cl2banner1",
+					"shows": ["Triangle", "Square", "Pentagon"],
+					"hides": ["TriangleL", "SquareL", "PentagonL"],
+					"sub": [241, 454, 1350, 452]
+				},
+				{ "name": "Cl2Pencil",
+					"image": "cl2pencil",
+					"shows": ["DeskPencil"],
+					"undo": true,
+					"sub": [763, 286, 84, 13]
+				},
+				{ "name": "Cl2MemDoor1",
+					"image": "cl2memdoor1",
+					"shows": ["MemDoor1"],
+					"hides": ["MemDoor1_out"],
+					"sub": [1277, 343, 79, 33]
+				},
+				{ "name": "Cl2MemDoor2",
+					"image": "cl2memdoor2",
+					"shows": ["MemDoor2"],
+					"hides": ["MemDoor2_out"],
+					"sub": [1381, 335, 81, 33]
+				},
+				{ "name": "Cl2MemType2",
+					"image": "cl2memtype2",
+					"shows": ["MemType2"],
+					"hides": ["MemType1"],
+					"sub": [1446, 394, 42, 9]
+				},
+				{ "name": "Cl2Pattern",
+					"image": "cl2pattern",
+					"shows": ["Paper1"],
+					"hides": ["Paper2"],
+					"sub": [1875, 400, 45, 7]
+				},
+				{ "name": "Cl2PencilOn",
+					"image": "cl2pencilon",
+					"hides": ["Pencil", "PencilTape"],
+					"sub": [1912, 404, 8, 71]
+				},
+				{ "name": "Cl2Can",
+					"image": "cl2can",
+					"hides": ["Can", "Rope"],
+					"sub": [1913, 420, 7, 69]
+				}
+			],
+			"grid": [
+				{ "name": "Cl2D1Under",
+					"active": false,
+					"pos": [654, 112, 345, 166],
+					"zoom": "DeskUnderZoom"
+				},
+				{ "name": "Cl2D2Under",
+					"active": false,
+					"pos": [1182, 49, 416, 222],
+					"zoom": "DeskUnderZoom"
+				},
+				{ "name": "Cl2Col1Zoom",
+					"pos": [0, 0, 438, 464],
+					"zoom": "Column1Zoom"
+				},
+				{ "name": "Cl2Desk1Zoom",
+					"pos": [513, 45, 601, 466],
+					"zoom": "Desk1Zoom"
+				},
+				{ "name": "Cl2Desk2Zoom",
+					"pos": [1112, 16, 565, 452],
+					"zoom": "Desk2Zoom"
+				}
+			]
+		},
+		{ "name": "Classroom3",
+			"image": "cl3",
+			"camera": "Camera3",
+			"shows": ["MemDoor1_out", "MemDoor2_out", "MemType1", "Pencil", "PencilTape", "Can", "Rope", "Paper2", "CapDoor_open", "Locker_open1"],
+			"hides": ["MemDoor1", "MemDoor2", "MemType2", "ScreenLight", "ScreenTriangle", "CapDoor_closed", "Locker_door1"],
+			"left": "Classroom2",
+			"right": "Classroom4",
+			"subs": [
+				{ "name": "Cl3Banner3",
+					"image": "cl3banner3",
+					"shows": ["TriangleL", "SquareL", "Pentagon"],
+					"hides": ["Triangle", "Square", "PentagonL"],
+					"sub": [0, 521, 618, 425]
+				},
+				{ "name": "Cl3Banner2",
+					"image": "cl3banner2",
+					"shows": ["TriangleL", "Square", "Pentagon"],
+					"hides": ["Triangle", "SquareL", "PentagonL"],
+					"sub": [0, 521, 618, 425]
+				},
+				{ "name": "Cl3Banner1",
+					"image": "cl3banner1",
+					"shows": ["Triangle", "Square", "Pentagon"],
+					"hides": ["TriangleL", "SquareL", "PentagonL"],
+					"sub": [0, 521, 618, 425]
+				},
+				{ "name": "Cl3Pencil",
+					"image": "cl3pencil",
+					"shows": ["DeskPencil"],
+					"undo": true,
+					"sub": [66, 267, 87, 20]
+				},
+				{ "name": "Cl3MemDoor1",
+					"image": "cl3memdoor1",
+					"shows": ["MemDoor1"],
+					"hides": ["MemDoor1_out"],
+					"sub": [579, 406, 67, 29]
+				},
+				{ "name": "Cl3MemDoor2",
+					"image": "cl3memdoor2",
+					"shows": ["MemDoor2"],
+					"hides": ["MemDoor2_out"],
+					"sub": [676, 411, 67, 28]
+				},
+				{ "name": "Cl3MemType2",
+					"image": "cl3memtype2",
+					"shows": ["MemType2"],
+					"hides": ["MemType1"],
+					"sub": [674, 464, 37, 8]
+				},
+				{ "name": "Cl3Pattern",
+					"image": "cl3pattern",
+					"shows": ["Paper1"],
+					"hides": ["Paper2"],
+					"sub": [867, 499, 26, 5]
+				},
+				{ "name": "Cl3PencilOn",
+					"image": "cl3pencilon",
+					"hides": ["Pencil", "PencilTape"],
+					"sub": [885, 502, 9, 56]
+				},
+				{ "name": "Cl3Can",
+					"image": "cl3can",
+					"hides": ["Can", "Rope"],
+					"sub": [881, 514, 45, 124]
+				},
+				{ "name": "Cl3ScreenLight",
+					"image": "cl3screenlight",
+					"shows": ["ScreenLight"],
+					"visible": false,
+					"sub": [1067, 608, 309, 224],
+					"subsubs": [
+						{ "name": "Cl3ScreenTriangle",
+							"image": "cl3screentriangle",
+							"shows": ["ScreenTriangle"],
+							"hides": ["ScreenLight"],
+							"sub": [1106, 650, 235, 154]
+						}
+					]
+				},
+				{ "name": "Cl3CapSquare",
+					"image": "cl3capsquare",
+					"shows": ["CapSquare"],
+					"undo": true,
+					"sub": [1704, 397, 28, 29]
+				},
+				{ "name": "Cl3CapDoor",
+					"image": "cl3capdoor",
+					"shows": ["CapDoor_closed"],
+					"hides": ["CapDoor_open"],
+					"sub": [1701, 388, 35, 41]
+				},
+				{ "name": "Cl3LockersGrey",
+					"image": "cl3lockersgrey",
+					"shows": ["Lockers_grey", "Locker_hinges_grey", "Locker_open1_grey", "Lockers_shelves_grey"],
+					"hides": ["Lockers", "Locker_hinges", "Locker_open1", "Lockers_shelves"],
+					"undo": true,
+					"visible": false,
+					"sub": [1764, 116, 156, 534]
+				},
+				{ "name": "Cl3Square",
+					"image": "cl3square",
+					"shows": ["LockerSquare"],
+					"undo": true,
+					"sub": [1886, 365, 30, 11]
+				},
+				{ "name": "Cl3Syringe",
+					"image": "cl3syringe",
+					"shows": ["Locker_syringe", "Locker_syringe_top", "LockerSquare"],
+					"undo": true,
+					"sub": [1831, 365, 86, 26]
+				},
+				{ "name": "Cl3Locker1",
+					"image": "cl3l1",
+					"shows": ["Locker_door1"],
+					"hides": ["Locker_open1"],
+					"sub": [1775, 138, 145, 489]
+				}
+			],
+			"grid": [
+				{ "name": "Cl3D1Under",
+					"active": false,
+					"pos": [0, 56, 316, 224],
+					"zoom": "DeskUnderZoom"
+				},
+				{ "name": "Cl3D2Under",
+					"active": false,
+					"pos": [482, 133, 352, 213],
+					"zoom": "DeskUnderZoom"
+				},
+				{ "name": "Cl3Desk1Zoom",
+					"pos": [0, 26, 329, 405],
+					"zoom": "Desk1Zoom"
+				},
+				{ "name": "Cl3Desk2Zoom",
+					"pos": [390, 93, 433, 363],
+					"zoom": "Desk2Zoom"
+				},
+				{ "name": "Cl3SeisZoom",
+					"pos": [823, 258, 228, 442],
+					"zoom": "SeisZoom"
+				},
+				{ "name": "Cl3ScreenZoom",
+					"pos": [1028, 553, 460, 506],
+					"zoom": "ScreenZoom"
+				},
+				{ "name": "Cl3CapitalsZoom",
+					"pos": [1514, 325, 257, 534],
+					"zoom": "CapitalsZoom"
+				},
+				{ "name": "Cl3LockersZoom",
+					"pos": [1716, 71, 204, 661],
+					"zoom": "LockersZoom"
+				}
+			]
+		},
+		{ "name": "Classroom4",
+			"image": "cl4",
+			"camera": "Camera4",
+			"shows": ["CapDoor_open", "Locker_open1", "Locker_open2", "Locker_open3", "Square_in1", "Square_in2", "Square_in3", "Square_in4"],
+			"hides": ["CapDoor_closed", "Locker_door1", "Chalk_locker", "Locker_door2", "Locker_door3"],
+			"left": "Classroom3",
+			"right": "Classroom5",
+			"subs": [
+				{ "name": "Cl4ScreenLight",
+					"image": "cl4screenlight",
+					"shows": ["ScreenLight"],
+					"visible": false,
+					"sub": [214, 554, 437, 245],
+					"subsubs": [
+						{ "name": "Cl4ScreenTriangle",
+							"image": "cl4screentriangle",
+							"shows": ["ScreenTriangle"],
+							"hides": ["ScreenLight"],
+							"sub": [283, 591, 328, 182]
+						}
+					]
+				},
+				{ "name": "Cl4CapSquare",
+					"image": "cl4capsquare",
+					"shows": ["CapSquare"],
+					"undo": true,
+					"sub": [966, 364, 29, 29]
+				},
+				{ "name": "Cl4CapDoor",
+					"image": "cl4capdoor",
+					"shows": ["CapDoor_closed"],
+					"hides": ["CapDoor_open"],
+					"sub": [964, 358, 47, 36]
+				},
+				{ "name": "Cl4LockersGrey",
+					"image": "cl4lockersgrey",
+					"shows": ["Lockers_grey", "Locker_hinges_grey", "Locker_open1_grey", "Locker_open2_grey", "Locker_open3_grey", "Lockers_shelves_grey"],
+					"hides": ["Lockers", "Locker_hinges", "Locker_open1", "Locker_open2", "Locker_open3", "Lockers_shelves"],
+					"undo": true,
+					"visible": false,
+					"sub": [1080, 126, 573, 485]
+				},
+				{ "name": "Cl4Square",
+					"image": "cl4square",
+					"shows": ["LockerSquare"],
+					"undo": true,
+					"sub": [1161, 359, 52, 9]
+				},
+				{ "name": "Cl4Syringe",
+					"image": "cl4syringe",
+					"shows": ["Locker_syringe", "Locker_syringe_top", "LockerSquare"],
+					"undo": true,
+					"sub": [1100, 356, 113, 16]
+				},
+				{ "name": "Cl4Locker1",
+					"image": "cl4l1",
+					"shows": ["Locker_door1"],
+					"hides": ["Locker_open1"],
+					"sub": [1093, 112, 282, 484]
+				},
+				{ "name": "Cl4Chalk",
+					"image": "cl4chalk",
+					"shows": ["Chalk_locker"],
+					"undo": true,
+					"sub": [1302, 320, 16, 4]
+				},
+				{ "name": "Cl4Locker2",
+					"image": "cl4l2",
+					"shows": ["Locker_door2"],
+					"hides": ["Locker_open2"],
+					"sub": [1245, 114, 282, 482]
+				},
+				{ "name": "Cl4Triangle",
+					"image": "cl4triangle",
+					"shows": ["LockerTriangle"],
+					"undo": true,
+					"sub": [1425, 400, 42, 7]
+				},
+				{ "name": "Cl4Locker3",
+					"image": "cl4l3",
+					"shows": ["Locker_door3"],
+					"hides": ["Locker_open3"],
+					"sub": [1392, 110, 351, 485]
+				},
+				{ "name": "Cl4Square1",
+					"image": "cl4square1",
+					"shows": [],
+					"hides": ["Square_in1", "Square_in2", "Square_in3"],
+					"sub": [1754, 365, 56, 8]
+				},
+				{ "name": "Cl4Square2",
+					"image": "cl4square2",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in2", "Square_in4"],
+					"sub": [1807, 362, 56, 9]
+				},
+				{ "name": "Cl4Square3",
+					"image": "cl4square3",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in3", "Square_in4"],
+					"sub": [1765, 371, 54, 8]
+				},
+				{ "name": "Cl4Square4",
+					"image": "cl4square4",
+					"shows": ["Square_in2", "Square_in3"],
+					"hides": ["Square_in4"],
+					"sub": [1817, 368, 55, 8]
+				}
+			],
+			"grid": [
+				{ "name": "Cl4ScreenZoom",
+					"pos": [150, 500, 577, 558],
+					"zoom": "ScreenZoom"
+				},
+				{ "name": "Cl4CapitalsZoom",
+					"pos": [758, 312, 299, 512],
+					"zoom": "CapitalsZoom"
+				},
+				{ "name": "Cl4LockersZoom",
+					"pos": [1021, 111, 609, 585],
+					"zoom": "LockersZoom"
+				},
+				{ "name": "Cl4Col2Zoom",
+					"pos": [1632, 6, 288, 468],
+					"zoom": "Column2Zoom"
+				}
+			]
+		},
+		{ "name": "Classroom5",
+			"image": "cl5",
+			"camera": "Camera5",
+			"shows": ["CapDoor_open", "Locker_open1", "Locker_open2", "Locker_open3", "Square_in1", "Square_in2", "Square_in3", "Square_in4"],
+			"hides": ["CapDoor_closed", "Locker_door1", "Locker_door2", "Locker_door3"],
+			"left": "Classroom4",
+			"right": "Classroom6",
+			"subs": [
+				{ "name": "Cl5CapSquare",
+					"image": "cl5capsquare",
+					"shows": ["CapSquare"],
+					"undo": true,
+					"sub": [104, 341, 37, 38]
+				},
+				{ "name": "Cl5CapDoor",
+					"image": "cl5capdoor",
+					"shows": ["CapDoor_closed"],
+					"hides": ["CapDoor_open"],
+					"sub": [102, 340, 72, 39]
+				},
+				{ "name": "Cl5LockersGrey",
+					"image": "cl5lockersgrey",
+					"shows": ["Lockers_grey", "Locker_hinges_grey", "Locker_open1_grey", "Locker_open2_grey", "Locker_open3_grey", "Lockers_shelves_grey"],
+					"hides": ["Lockers", "Locker_hinges", "Locker_open1", "Locker_open2", "Locker_open3", "Lockers_shelves"],
+					"undo": true,
+					"visible": false,
+					"sub": [236, 102, 587, 530]
+				},
+				{ "name": "Cl5Square",
+					"image": "cl5square",
+					"shows": ["LockerSquare"],
+					"undo": true,
+					"sub": [343, 359, 47, 7]
+				},
+				{ "name": "Cl5Syringe",
+					"image": "cl5syringe",
+					"shows": ["Locker_syringe", "Locker_syringe_top", "LockerSquare"],
+					"undo": true,
+					"sub": [309, 354, 82, 12]
+				},
+				{ "name": "Cl5Locker1",
+					"image": "cl5l1",
+					"shows": ["Locker_door1"],
+					"hides": ["Locker_open1"],
+					"sub": [306, 100, 270, 519]
+				},
+				{ "name": "Cl5Chalk",
+					"image": "cl5chalk",
+					"shows": ["Chalk_locker"],
+					"undo": true,
+					"sub": [489, 328, 12, 6]
+				},
+				{ "name": "Cl5Locker2",
+					"image": "cl5l2",
+					"shows": ["Locker_door2"],
+					"hides": ["Locker_open2"],
+					"sub": [448, 133, 255, 483]
+				},
+				{ "name": "Cl5Triangle",
+					"image": "cl5triangle",
+					"shows": ["LockerTriangle"],
+					"undo": true,
+					"sub": [592, 421, 45, 6]
+				},
+				{ "name": "Cl5Locker3",
+					"image": "cl5l3",
+					"shows": ["Locker_door3"],
+					"hides": ["Locker_open3"],
+					"sub": [585, 156, 290, 479]
+				},
+				{ "name": "Cl5Square4",
+					"image": "cl5square4",
+					"shows": ["Square_in2", "Square_in3"],
+					"hides": ["Square_in4"],
+					"sub": [961, 422, 44, 4]
+				},
+				{ "name": "Cl5Square3",
+					"image": "cl5square3",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in3", "Square_in4"],
+					"sub": [920, 421, 44, 4]
+				},
+				{ "name": "Cl5Square2",
+					"image": "cl5square2",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in2", "Square_in4"],
+					"sub": [969, 418, 45, 4]
+				},
+				{ "name": "Cl5Square1",
+					"image": "cl5square1",
+					"shows": [],
+					"hides": ["Square_in1", "Square_in2", "Square_in3"],
+					"sub": [927, 417, 45, 5]
+				}
+			],
+			"grid": [
+				{ "name": "Cl5LockersZoom",
+					"pos": [336, 149, 442, 518],
+					"zoom": "LockersZoom"
+				},
+				{ "name": "Cl5Col2Zoom",
+					"pos": [810, 168, 292, 379],
+					"zoom": "Column2Zoom"
+				},
+				{ "name": "Cl5CorkZoom",
+					"pos": [1198, 431, 645, 482],
+					"zoom": "CorkZoom"
+				}
+			]
+		},
+		{ "name": "Classroom6",
+			"image": "cl6",
+			"camera": "Camera6",
+			"shows": ["Projector_mag", "Projector_surface", "Trap_in1", "Trap_in2", "Trap_in3", "Trap_in4", "Trap_in5"],
+			"hides": ["Projector_door", "Projector_mag_on", "Projector_surface_on"],
+			"left": "Classroom5",
+			"right": "Classroom7",
+			"subs": [
+				{ "name": "Cl6ProjDoor",
+					"image": "cl6projdoor",
+					"shows": ["Projector_door"],
+					"sub": [1216, 357, 59, 50]
+				},
+				{ "name": "Cl6ProjSurf",
+					"image": "cl6projsurf",
+					"shows": ["Projector_surface_on"],
+					"hides": ["Projector_surface"],
+					"visible": false,
+					"sub": [1082, 421, 166, 19]
+				},
+				{ "name": "Cl6ProjMag",
+					"image": "cl6projmag",
+					"shows": ["Projector_mag_on"],
+					"hides": ["Projector_mag"],
+					"visible": false,
+					"sub": [1116, 596, 39, 52]
+				},
+				{ "name": "Cl6Trap5",
+					"image": "cl6trap5",
+					"shows": ["Trap_in1", "Trap_in4"],
+					"hides": ["Trap_in5"],
+					"sub": [1659, 376, 39, 7]
+				},
+				{ "name": "Cl6Trap4",
+					"image": "cl6trap4",
+					"shows": ["Trap_in3"],
+					"hides": ["Trap_in4", "Trap_in5"],
+					"sub": [1683, 373, 60, 5]
+				},
+				{ "name": "Cl6Trap3",
+					"image": "cl6trap3",
+					"shows": [],
+					"hides": ["Trap_in3", "Trap_in4"],
+					"sub": [1729, 373, 39, 6]
+				},
+				{ "name": "Cl6Trap2",
+					"image": "cl6trap2",
+					"shows": [],
+					"hides": ["Trap_in2"],
+					"sub": [1716, 379, 50, 6]
+				},
+				{ "name": "Cl6Trap1",
+					"image": "cl6trap1",
+					"shows": [],
+					"hides": ["Trap_in1", "Trap_in5"],
+					"sub": [1662, 381, 47, 5]
+				}
+			],
+			"grid": [
+				{ "name": "Cl6CorkZoom",
+					"pos": [103, 377, 700, 514],
+					"zoom": "CorkZoom"
+				},
+				{ "name": "Cl6ProjMagZoom",
+					"pos": [992, 508, 335, 225],
+					"active": false,
+					"zoom": "ProjMagZoom"
+				},
+				{ "name": "Cl6ProjectorZoom",
+					"pos": [855, 0, 587, 724],
+					"zoom": "ProjectorZoom"
+				},
+				{ "name": "Cl6Col3Zoom",
+					"pos": [1476, 0, 423, 510],
+					"zoom": "Column3Zoom"
+				}
+			]
+		},
+		{ "name": "Classroom7",
+			"image": "cl7",
+			"camera": "Camera7",
+			"shows": ["Projector_surface", "Projector_mag", "Trap_in1", "Trap_in2", "Trap_in3", "Trap_in4", "Trap_in5", "Easel_door1_open", "Easel_door2_open"],
+			"hides": ["Projector_door", "Projector_surface_on", "Projector_mag_on", "Easel_door1", "Easel_door2"],
+			"left": "Classroom6",
+			"right": "Classroom8",
+			"subs": [
+				{ "name": "Cl7ProjDoor",
+					"image": "cl7projdoor",
+					"shows": ["Projector_door"],
+					"sub": [504, 408, 15, 57]
+				},
+				{ "name": "Cl7ProjSurf",
+					"image": "cl7projsurf",
+					"shows": ["Projector_surface_on"],
+					"hides": ["Projector_surface"],
+					"visible": false,
+					"sub": [328, 469, 155, 20]
+				},
+				{ "name": "Cl7ProjMag",
+					"image": "cl7projmag",
+					"shows": ["Projector_mag_on"],
+					"hides": ["Projector_mag"],
+					"visible": false,
+					"sub": [368, 651, 47, 55]
+				},
+				{ "name": "Cl7Trap5",
+					"image": "cl7trap5",
+					"shows": ["Trap_in4"],
+					"hides": ["Trap_in5"],
+					"sub": [789, 475, 39, 6]
+				},
+				{ "name": "Cl7Trap4",
+					"image": "cl7trap4",
+					"shows": ["Trap_in3"],
+					"hides": ["Trap_in4", "Trap_in5"],
+					"sub": [827, 475, 46, 5]
+				},
+				{ "name": "Cl7Trap3",
+					"image": "cl7trap3",
+					"shows": ["Trap_in2"],
+					"hides": ["Trap_in3", "Trap_in4"],
+					"sub": [851, 478, 26, 7]
+				},
+				{ "name": "Cl7Trap2",
+					"image": "cl7trap2",
+					"shows": ["Trap_in1"],
+					"hides": ["Trap_in2", "Trap_in3"],
+					"sub": [821, 483, 47, 5]
+				},
+				{ "name": "Cl7Trap1",
+					"image": "cl7trap1",
+					"shows": [],
+					"hides": ["Trap_in1", "Trap_in2"],
+					"sub": [788, 481, 38, 6]
+				},
+				{ "name": "Cl7EBoxGrey",
+					"image": "cl7eboxgrey",
+					"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey"],
+					"hides": ["Easel_box", "Easel_door1_open", "Easel_door2_open"],
+					"undo": true,
+					"visible": false,
+					"sub": [1337, 318, 79, 32]
+				},
+				{ "name": "Cl7ETrap",
+					"image": "cl7etrap",
+					"shows": ["EaselTrap"],
+					"undo": true,
+					"sub": [1381, 329, 21, 5],
+					"subsubs": [
+						{ "name": "Cl7ETrapGrey",
+							"image": "cl7etrapgrey",
+							"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey", "EaselTrap"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2_open"],
+							"undo": true,
+							"visible": false,
+							"sub": [1381, 329, 21, 5]
+						}
+					]
+				},
+				{ "name": "Cl7EDoor2",
+					"image": "cl7edoor2",
+					"shows": ["Easel_door2"],
+					"hides": ["Easel_door2_open"],
+					"sub": [1377, 329, 32, 21],
+					"subsubs": [
+						{ "name": "Cl7EDoor2Grey",
+							"image": "cl7edoor2grey",
+							"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_grey"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2", "Easel_door2_open"],
+							"undo": true,
+							"visible": false,
+							"sub": [1377, 329, 32, 21]
+						}
+					]
+				},
+				{ "name": "Cl7ESquare",
+					"image": "cl7esquare",
+					"shows": ["EaselSquare"],
+					"undo": true,
+					"sub": [1346, 329, 24, 3]
+				},
+				{ "name": "Cl7EDoor1",
+					"image": "cl7edoor1",
+					"shows": ["Easel_door1"],
+					"hides": ["Easel_door1_open"],
+					"sub": [1343, 328, 34, 23]
+				},
+				{ "name": "Cl7PianoLid",
+					"image": "cl7plid",
+					"shows": ["Lid_closed"],
+					"hides": ["Lid_opened"],
+					"sub": [1705, 264, 215, 146]
+				}
+			],
+			"grid": [
+				{ "name": "Cl7ProjMagZoom",
+					"pos": [251, 560, 304, 218],
+					"active": false,
+					"zoom": "ProjMagZoom"
+				},
+				{ "name": "Cl7ProjectorZoom",
+					"pos": [148, 30, 498, 756],
+					"zoom": "ProjectorZoom"
+				},
+				{ "name": "Cl7Col3Zoom",
+					"pos": [650, 169, 369, 454],
+					"zoom": "Column3Zoom"
+				},
+				{ "name": "Cl7EaselZoom",
+					"pos": [1053, 109, 528, 659],
+					"zoom": "EaselZoom"
+				},
+				{ "name": "Cl7PianoZoom",
+					"pos": [1724, 228, 196, 341],
+					"zoom": "PianoSymZoom"
+				},
+				{ "name": "Cl7PianoZoom2",
+					"pos": [1724, 228, 196, 341],
+					"zoom": "PianoZoom"
+				}
+			]
+		},
+		{ "name": "Classroom8",
+			"image": "cl8",
+			"camera": "Camera8",
+			"shows": ["Easel_door1_open", "Easel_door2_open", "Lid_opened", "PianoSym11", "PianoSym21", "PianoSym31", "PianoSym41"],
+			"hides": ["Easel_door1", "Easel_door2", "Piano_square", "Piano_rope", "Lid_closed", "Can_out", "PianoSym12", "PianoSym13", "PianoSym14", "PianoSym15", "PianoSym16", "PianoSym17", "PianoSym22", "PianoSym23", "PianoSym24", "PianoSym25", "PianoSym26", "PianoSym27", "PianoSym32", "PianoSym33", "PianoSym34", "PianoSym35", "PianoSym36", "PianoSym37", "PianoSym42", "PianoSym43", "PianoSym44", "PianoSym45", "PianoSym46", "PianoSym47"],
+			"left": "Classroom7",
+			"right": "Classroom1",
+			"subs": [
+				{ "name": "Cl8EBoxGrey",
+					"image": "cl8eboxgrey",
+					"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey"],
+					"hides": ["Easel_box", "Easel_door1_open", "Easel_door2_open"],
+					"undo": true,
+					"visible": false,
+					"sub": [626, 260, 82, 41]
+				},
+				{ "name": "Cl8ETrap",
+					"image": "cl8etrap",
+					"shows": ["EaselTrap"],
+					"undo": true,
+					"sub": [666, 278, 24, 3],
+					"subsubs": [
+						{ "name": "Cl8ETrapGrey",
+							"image": "cl8etrapgrey",
+							"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey", "EaselTrap"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2", "Easel_door2_open"],
+							"undo": true,
+							"visible": false,
+							"sub": [666, 278, 24, 3]
+						}
+					]
+				},
+				{ "name": "Cl8EDoor2",
+					"image": "cl8edoor2",
+					"shows": ["Easel_door2"],
+					"hides": ["Easel_door2_open"],
+					"sub": [660, 278, 37, 23],
+					"subsubs": [
+						{ "name": "Cl8EDoor2Grey",
+							"image": "cl8edoor2grey",
+							"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_grey"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2", "Easel_door2_open"],
+							"undo": true,
+							"visible": false,
+							"sub": [660, 278, 37, 23]
+						}
+					]
+				},
+				{ "name": "Cl8ESquare",
+					"image": "cl8esquare",
+					"shows": ["EaselSquare"],
+					"undo": true,
+					"sub": [642, 274, 18, 4]
+				},
+				{ "name": "Cl8EDoor1",
+					"image": "cl8edoor1",
+					"shows": ["Easel_door1"],
+					"hides": ["Easel_door1_open"],
+					"sub": [632, 273, 38, 25]
+				},
+				{ "name": "Cl8Can",
+					"image": "cl8can",
+					"shows": ["Can_out"],
+					"undo": true,
+					"sub": [1157, 566, 62, 72]
+				},
+				{ "name": "Cl8PianoSquare",
+					"image": "cl8psquare",
+					"shows": ["Piano_square"],
+					"undo": true,
+					"sub": [1228, 311, 61, 12]
+				},
+				{ "name": "Cl8PianoRope",
+					"image": "cl8prope",
+					"shows": ["Piano_rope"],
+					"undo": true,
+					"sub": [1308, 314, 99, 6]
+				},
+				{ "name": "Cl8PianoLid",
+					"image": "cl8plid",
+					"shows": ["Lid_closed"],
+					"hides": ["Lid_opened"],
+					"sub": [1023, 297, 540, 100]
+				},
+				{ "name": "Cl8S12",
+					"image": "cl8s12",
+					"shows": ["PianoSym12"],
+					"hides": ["PianoSym11"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S13",
+					"image": "cl8s13",
+					"shows": ["PianoSym13"],
+					"hides": ["PianoSym12"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S14",
+					"image": "cl8s14",
+					"shows": ["PianoSym14"],
+					"hides": ["PianoSym13"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S15",
+					"image": "cl8s15",
+					"shows": ["PianoSym15"],
+					"hides": ["PianoSym14"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S16",
+					"image": "cl8s16",
+					"shows": ["PianoSym16"],
+					"hides": ["PianoSym15"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S17",
+					"image": "cl8s17",
+					"shows": ["PianoSym17"],
+					"hides": ["PianoSym16"],
+					"visible": false,
+					"sub": [1153, 408, 44, 43]
+				},
+				{ "name": "Cl8S22",
+					"image": "cl8s22",
+					"shows": ["PianoSym22"],
+					"hides": ["PianoSym21"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S23",
+					"image": "cl8s23",
+					"shows": ["PianoSym23"],
+					"hides": ["PianoSym22"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S24",
+					"image": "cl8s24",
+					"shows": ["PianoSym24"],
+					"hides": ["PianoSym23"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S25",
+					"image": "cl8s25",
+					"shows": ["PianoSym25"],
+					"hides": ["PianoSym24"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S26",
+					"image": "cl8s26",
+					"shows": ["PianoSym26"],
+					"hides": ["PianoSym25"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S27",
+					"image": "cl8s27",
+					"shows": ["PianoSym27"],
+					"hides": ["PianoSym26"],
+					"visible": false,
+					"sub": [1223, 408, 43, 43]
+				},
+				{ "name": "Cl8S32",
+					"image": "cl8s32",
+					"shows": ["PianoSym32"],
+					"hides": ["PianoSym31"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S33",
+					"image": "cl8s33",
+					"shows": ["PianoSym33"],
+					"hides": ["PianoSym32"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S34",
+					"image": "cl8s34",
+					"shows": ["PianoSym34"],
+					"hides": ["PianoSym33"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S35",
+					"image": "cl8s35",
+					"shows": ["PianoSym35"],
+					"hides": ["PianoSym34"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S36",
+					"image": "cl8s36",
+					"shows": ["PianoSym36"],
+					"hides": ["PianoSym35"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S37",
+					"image": "cl8s37",
+					"shows": ["PianoSym37"],
+					"hides": ["PianoSym36"],
+					"visible": false,
+					"sub": [1293, 407, 44, 43]
+				},
+				{ "name": "Cl8S42",
+					"image": "cl8s42",
+					"shows": ["PianoSym42"],
+					"hides": ["PianoSym41"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				},
+				{ "name": "Cl8S43",
+					"image": "cl8s43",
+					"shows": ["PianoSym43"],
+					"hides": ["PianoSym42"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				},
+				{ "name": "Cl8S44",
+					"image": "cl8s44",
+					"shows": ["PianoSym44"],
+					"hides": ["PianoSym43"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				},
+				{ "name": "Cl8S45",
+					"image": "cl8s45",
+					"shows": ["PianoSym45"],
+					"hides": ["PianoSym44"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				},
+				{ "name": "Cl8S46",
+					"image": "cl8s46",
+					"shows": ["PianoSym46"],
+					"hides": ["PianoSym45"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				},
+				{ "name": "Cl8S47",
+					"image": "cl8s47",
+					"shows": ["PianoSym47"],
+					"hides": ["PianoSym46"],
+					"visible": false,
+					"sub": [1363, 407, 43, 43]
+				}
+			],
+			"grid": [
+				{ "name": "Cl8EaselZoom",
+					"pos": [291, 0, 573, 742],
+					"zoom": "EaselZoom"
+				},
+				{ "name": "Cl8ShelfZoom",
+					"pos": [957, 469, 648, 388],
+					"zoom": "ShelfZoom"
+				},
+				{ "name": "Cl8PianoZoom",
+					"pos": [976, 38, 633, 431],
+					"zoom": "PianoSymZoom"
+				},
+				{ "name": "Cl8PianoZoom2",
+					"active": false,
+					"pos": [976, 38, 633, 431],
+					"zoom": "PianoZoom"
+				}
+			]
+		},
+		{ "name": "Column1Zoom",
+			"image": "col1zoom",
+			"camera": "Column1Cam",
+			"shows": ["Triangle_in1", "Triangle_in2", "Triangle_in3"],
+			"hides": [],
+			"left": "ShelfZoom",
+			"right": "Desk1Zoom",
+			"back": "Classroom1",
+			"subs": [
+				{ "name": "Col1Triangle3",
+					"image": "col1t3",
+					"hides": ["Triangle_in3"],
+					"sub": [858, 418, 268, 144]
+				},
+				{ "name": "Col1Triangle2",
+					"image": "col1t2",
+					"hides": ["Triangle_in2"],
+					"sub": [854, 572, 235, 113]
+				},
+				{ "name": "Col1Triangle1",
+					"image": "col1t1",
+					"hides": ["Triangle_in1"],
+					"sub": [592, 495, 240, 127]
+				}
+			],
+			"grid": [
+				{ "name": "Col1Place",
+					"pos": [401, 193, 1168, 590],
+					"selects": [
+						{ "name": "Triangle1",
+							"removes": "Triangle1",
+							"hides": [
+								{ "name": "Col1Triangle1",
+									"parent": "Column1Zoom"
+								},
+								{ "name": "Cl1Triangle1",
+									"parent": "Classroom1"
+								},
+								{ "name": "Cl2Triangle1",
+									"parent": "Classroom2"
+								}
+							]
+						},
+						{ "name": "Triangle2",
+							"removes": "Triangle2",
+							"hides": [
+								{ "name": "Col1Triangle2",
+									"parent": "Column1Zoom"
+								},
+								{ "name": "Cl1Triangle2",
+									"parent": "Classroom1"
+								},
+								{ "name": "Cl2Triangle2",
+									"parent": "Classroom2"
+								}
+							]
+						},
+						{ "name": "Triangle3",
+							"removes": "Triangle3",
+							"hides": [
+								{ "name": "Col1Triangle3",
+									"parent": "Column1Zoom"
+								},
+								{ "name": "Cl1Triangle3",
+									"parent": "Classroom1"
+								},
+								{ "name": "Cl2Triangle3",
+									"parent": "Classroom2"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "It's a column with triangle-shaped receptacles." }
+					]
+				}
+			]
+		},
+		{ "name": "Desk1Zoom",
+			"image": "desk1zoom",
+			"camera": "Desk1Cam",
+			"shows": [],
+			"hides": ["DeskPencil"],
+			"left": "Column1Zoom",
+			"right": "Desk2Zoom",
+			"back": "Classroom2",
+			"subs": [
+				{ "name": "DeskPencil",
+					"image": "deskpencil",
+					"shows": ["DeskPencil"],
+					"undo": true,
+					"sub": [784, 159, 325, 43]
+				}
+			],
+			"grid": [
+				{ "name": "D1BookView",
+					"pos": [336, 491, 817, 429],
+					"view": "book",
+					"subsubs": [
+						{ "name": "Book1Text",
+							"image": "book1t",
+							"sub": [0,0]
+						},
+						{ "name": "Book1Text01",
+							"image": "book1t01",
+							"sub": [175, 600]
+						},
+						{ "name": "Book1Text02",
+							"image": "book1t02",
+							"sub": [315, 441]
+						},
+						{ "name": "Book1Text03",
+							"image": "book1t03",
+							"sub": [93, 300]
+						},
+						{ "name": "Book1Text04",
+							"image": "book1t04",
+							"sub": [519, 200]
+						},
+						{ "name": "Book1Text05",
+							"image": "book1t05",
+							"sub": [902, 609]
+						},
+						{ "name": "Book1Text06",
+							"image": "book1t06",
+							"sub": [798, 448]
+						},
+						{ "name": "Book1Text07",
+							"image": "book1t07",
+							"sub": [810, 299]
+						},
+						{ "name": "Book1Text08",
+							"image": "book1t08",
+							"sub": [952, 147]
+						}
+					],
+					"subgrid": [
+						{ "name": "Book1W01Select",
+							"pos": [423, 684, 237, 139],
+							"selects": [
+								{ "name": "Syringe",
+                                    "animate": "SyringeOnB1W01",
+                                    "invdisplay": ["Syringe", "'Hang'"],
+                                    "speech": [
+                                        { "line": "I picked up the word 'Hang'." }
+                                    ]
+                                }
+							]
+						},
+						{ "name": "Book1W03Select",
+							"pos": [323, 370, 291, 132],
+							"selects": [
+								{ "name": "Syringe",
+                                    "animate": "SyringeOnB1W03",
+                                    "invdisplay": ["Syringe", "'collide'"],
+                                    "speech": [
+                                        { "line": "I picked up the word 'collide'." }
+                                    ]
+                                }
+							]
+						},
+						{ "name": "Book1Left",
+							"pos": [414, 212, 506, 657],
+							"speech": [
+								{ "line": "It looks like instructions for a do-it-yourself seismograph." }
+							]
+						},
+						{ "name": "Book1Right",
+							"pos": [985, 174, 546, 697],
+							"speech": [
+								{ "line": "..not too sure what to make of this page." }
+							]
+						}
+					]
+				},
+				{ "name": "D1PencilTake",
+					"pos": [711, 99, 441, 172],
+					"object": "Pencil",
+					"speech": [
+						{ "line": "There's a pencil in this desk." }
+					],
+					"hides": [
+						{ "name": "DeskPencil",
+							"parent": "Desk1Zoom"
+						},
+						{ "name": "Cl1Pencil",
+							"parent": "Classroom1"
+						},
+						{ "name": "Cl2Pencil",
+							"parent": "Classroom2"
+						},
+						{ "name": "Cl3Pencil",
+							"parent": "Classroom3"
+						}
+					],
+					"toggles": [
+						{ "name": "D1PencilTake",
+							"parent": "Desk1Zoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Desk2Zoom",
+			"image": "desk2zoom",
+			"camera": "Desk2Cam",
+			"shows": ["MemType1", "MemButtons", "MemDoor1_out", "MemDoor2_out"],
+			"hides": ["MemType2", "MemButtonsGlow", "MemButtons_in", "MemDoor1", "MemDoor2"],
+			"left": "Desk1Zoom",
+			"right": "SeisZoom",
+			"back": "Classroom2",
+			"sequence": 7,
+			"subs": [
+				{ "name": "D2B1Glow",
+					"image": "d2b1glow",
+					"shows": ["MemButtonsGlow"],
+					"hides": ["MemButtons"],
+					"priority": 0,
+					"sub": [370, 393, 213, 325],
+					"visible": false
+				},
+				{ "name": "D2B2Glow",
+					"image": "d2b2glow",
+					"priority": 0,
+					"sub": [582, 389, 191, 329],
+					"visible": false
+				},
+				{ "name": "D2B3Glow",
+					"image": "d2b3glow",
+					"priority": 0,
+					"sub": [788, 390, 173, 326],
+					"visible": false
+				},
+				{ "name": "D2B4Glow",
+					"image": "d2b4glow",
+					"priority": 0,
+					"sub": [999, 387, 166, 328],
+					"visible": false
+				},
+				{ "name": "D2B5Glow",
+					"image": "d2b5glow",
+					"priority": 0,
+					"sub": [1188, 384, 188, 329],
+					"visible": false
+				},
+				{ "name": "D2B6Glow",
+					"image": "d2b6glow",
+					"shows": ["MemButtonsGlow"],
+					"hides": ["MemButtons"],
+					"undo": true,
+					"priority": 0,
+					"sub": [1378, 385, 208, 328],
+					"visible": false
+				},
+				{ "name": "D2B1In",
+					"image": "d2b1in",
+					"shows": ["MemButtons_in"],
+					"hides": ["MemButtons"],
+					"priority": 1,
+					"sub": [370, 393, 213, 325],
+					"visible": false
+				},
+				{ "name": "D2B2In",
+					"image": "d2b2in",
+					"priority": 1,
+					"sub": [582, 389, 191, 329],
+					"visible": false
+				},
+				{ "name": "D2B3In",
+					"image": "d2b3in",
+					"priority": 1,
+					"sub": [788, 390, 173, 326],
+					"visible": false
+				},
+				{ "name": "D2B4In",
+					"image": "d2b4in",
+					"priority": 1,
+					"sub": [999, 387, 166, 328],
+					"visible": false
+				},
+				{ "name": "D2B5In",
+					"image": "d2b5in",
+					"priority": 1,
+					"sub": [1188, 384, 188, 329],
+					"visible": false
+				},
+				{ "name": "D2B6In",
+					"image": "d2b6in",
+					"shows": ["MemButtons_in"],
+					"hides": ["MemButtons"],
+					"undo": true,
+					"priority": 1,
+					"sub": [1378, 385, 208, 328],
+					"visible": false
+				},
+				{ "name": "D2Type2",
+					"image": "d2type2",
+					"shows": ["MemType2"],
+					"hides": ["MemType1"],
+					"priority": 0,
+					"undo": true,
+					"sub": [1174, 712, 214, 54],
+					"visible": false
+				},
+				{ "name": "D2Triangle",
+					"image": "d2triangle",
+					"shows": ["MemTriangle"],
+					"priority": 0,
+					"undo": true,
+					"sub": [531, 162, 247, 86]
+				},
+				{ "name": "D2Door1",
+					"image": "d2d1",
+					"shows": ["MemDoor1"],
+					"hides": ["MemDoor1_out"],
+					"priority": 0,
+					"sub": [398, 35, 457, 282]
+				},
+				{ "name": "D2Trap",
+					"image": "d2trap",
+					"shows": ["MemTrap"],
+					"priority": 0,
+					"undo": true,
+					"sub": [1133, 158, 266, 78]
+				},
+				{ "name": "D2Door2",
+					"image": "d2d2",
+					"shows": ["MemDoor2"],
+					"hides": ["MemDoor2_out"],
+					"sub": [1074, 34, 461, 277]
+				}
+			],
+			"grid": [
+				{ "name": "D2MemPress1",
+					"pos": [342, 332, 1273, 472],
+					"animate": "MemT11",
+					"toggles": [
+						{ "name": "D2MemPress1",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB1",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB2",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB3",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB4",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB5",
+							"parent": "Desk2Zoom"
+						},
+						{ "name": "D2MemPressB6",
+							"parent": "Desk2Zoom"
+						}
+					]
+				},
+				{ "name": "D2MemPressB1",
+					"active": false,
+					"pos": [358, 343, 216, 419],
+					"sequence": "1",
+					"animate": "MemB1"
+				},
+				{ "name": "D2MemPressB2",
+					"active": false,
+					"pos": [575, 342, 203, 419],
+					"sequence": "2",
+					"animate": "MemB2"
+				},
+				{ "name": "D2MemPressB3",
+					"active": false,
+					"pos": [778, 340, 200, 420],
+					"sequence": "3",
+					"animate": "MemB3"
+				},
+				{ "name": "D2MemPressB4",
+					"active": false,
+					"pos": [979, 339, 200, 421],
+					"sequence": "4",
+					"animate": "MemB4"
+				},
+				{ "name": "D2MemPressB5",
+					"active": false,
+					"pos": [1180, 338, 189, 373],
+					"sequence": "5",
+					"animate": "MemB5"
+				},
+				{ "name": "D2MemPressB6",
+					"active": false,
+					"pos": [1368, 338, 228, 384],
+					"sequence": "6",
+					"animate": "MemB6"
+				},
+				{ "name": "D2TriangleTake",
+					"active": false,
+					"pos": [460, 99, 378, 220],
+					"object": "Triangle3",
+					"hides": [
+						{ "name": "D2Triangle",
+							"parent": "Desk2Zoom"
+						}
+					],
+                    "toggles": [
+                        { "name": "D2TriangleTake",
+                            "parent": "Desk2Zoom"
+                        }
+                    ]
+				}
+			]
+		},
+		{ "name": "DeskUnderZoom",
+			"image": "deskunder",
+			"camera": "DeskUnderCam",
+			"hides": ["DeskSquare"],
+			"back": "Classroom2",
+			"subs": [
+				{ "name": "DeskUnderSquare",
+					"image": "deskundersquare",
+					"shows": ["DeskSquare"],
+					"undo": true,
+					"sub": [984, 371, 316, 136]
+				}
+			],
+			"grid": [
+				{ "name": "DeskUnderSquareTake",
+					"pos": [784, 234, 736, 440],
+					"object": "Square3",
+					"speech": [
+						{ "line": "Cover and hold." }
+					],
+					"hides": [
+						{ "name": "DeskUnderSquare",
+							"parent": "DeskUnderZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "DeskUnderSquareTake",
+							"parent": "DeskUnderZoom"
+						},
+						{ "name": "Cl1D1Under",
+							"parent": "Classroom1"
+						},
+						{ "name": "Cl2D1Under",
+							"parent": "Classroom2"
+						},
+						{ "name": "Cl2D2Under",
+							"parent": "Classroom2"
+						},
+						{ "name": "Cl3D1Under",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl3D2Under",
+							"parent": "Classroom3"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "SeisZoom",
+			"image": "seiszoom",
+			"camera": "SeisCam",
+			"shows": ["Pencil", "PencilTape", "Rope", "Can", "Tape", "Paper2"],
+			"hides": ["Paper1"],
+			"left": "Desk2Zoom",
+			"right": "ScreenZoom",
+			"back": "Classroom3",
+			"subs": [
+				{ "name": "SeisPattern",
+					"image": "seispattern",
+					"shows": ["Paper1"],
+					"hides": ["Paper2"],
+					"sub": [673, 27, 208, 102]
+				},
+				{ "name": "SeisPencil",
+					"image": "seispencil",
+					"hides": ["Pencil", "PencilTape"],
+					"sub": [833, 109, 51, 371]
+				},
+				{ "name": "SeisCan",
+					"image": "seiscan",
+					"hides": ["Can", "Rope"],
+					"sub": [817, 175, 310, 890]
+				}
+			],
+			"grid": [
+				{ "name": "SeisL1Debug",
+					"pos": [0, 400, 680, 400],
+					"speech": [
+						{ "line": "Mysteriously, a locker opened." }
+					],
+					"hides": [
+						{ "name": "LockerDoor1",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl3Locker1",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl4Locker1",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Locker1",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "Locker1Select",
+							"parent": "LockersZoom"
+						},
+						{ "name": "LockerSyringeTake",
+							"parent": "LockersZoom"
+						},
+						{ "name": "SeisL1Debug",
+							"parent": "SeisZoom"
+						}
+					]
+				},
+				{ "name": "SeisL2Debug",
+					"pos": [0, 400, 680, 400],
+					"speech": [
+						{ "line": "Mysteriously, a locker opened." }
+					],
+					"hides": [
+						{ "name": "LockerDoor2",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl4Locker2",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Locker2",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "Locker2Select",
+							"parent": "LockersZoom"
+						},
+						{ "name": "LockerChalkSelect",
+							"parent": "LockersZoom"
+						},
+						{ "name": "LockerBookSelect",
+							"parent": "LockersZoom"
+						},
+						{ "name": "SeisL2Debug",
+							"parent": "SeisZoom"
+						}
+					]
+				},
+				{ "name": "SeisSelect1",
+					"pos": [480, 0, 893, 1080],
+					"selects": [
+						{ "name": "Can",
+							"flagactions": [
+								{ "name": "RopeTaken",
+									"removes": "Can",
+									"speech": [
+										{ "line": "Alright, I hung up the can." }
+									],
+									"hides": [
+										{ "name": "SeisCan",
+											"parent": "SeisZoom"
+										},
+										{ "name": "Cl2Can",
+											"parent": "Classroom2"
+										},
+										{ "name": "Cl3Can",
+											"parent": "Classroom3"
+										}
+									],
+									"toggles": [
+										{ "name": "SeisSelect1",
+											"parent": "SeisZoom"
+										},
+										{ "name": "SeisSelect2",
+											"parent": "SeisZoom"
+										}
+									]
+								}
+							],
+							"speech": [
+								{ "line": "I'll need something to hang this with." }
+							]
+						}
+					],
+					"speech": [
+						{ "line": "There's a piece of paper on this column, and some tape." },
+						{ "line": "I think these are here for a reason." }
+					]
+				},
+				{ "name": "SeisSelect2",
+					"active": false,
+					"pos": [480, 0, 893, 1080],
+					"selects": [
+						{ "name": "Pencil",
+							"removes": "Pencil",
+							"flag": "SeisDone",
+							"speech": [
+								{ "line": "Ok, there we go." }
+							],
+							"hides": [
+								{ "name": "SeisPencil",
+									"parent": "SeisZoom"
+								},
+								{ "name": "Cl2PencilOn",
+									"parent": "Classroom2"
+								},
+								{ "name": "Cl3PencilOn",
+									"parent": "Classroom3"
+								}
+							],
+							"toggles": [
+								{ "name": "SeisSelect2",
+									"parent": "SeisZoom"
+								},
+								{ "name": "SeisSelect3",
+									"parent": "SeisZoom"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "I've hung a can on the hook here." }
+					]
+				},
+				{ "name": "SeisSelect3",
+					"active": false,
+					"pos": [480, 0, 893, 1080],
+					"speech": [
+						{ "line": "I built a simple seismograph." }
+					]
+				}
+			]
+		},
+		{ "name": "ScreenZoom",
+			"image": "screenzoom",
+			"camera": "ScreenCam",
+			"shows": [],
+			"hides": ["ScreenLight", "ScreenTriangle"],
+			"left": "SeisZoom",
+			"right": "CapitalsZoom",
+			"back": "Classroom4",
+			"subs": [
+				{ "name": "ScreenLight",
+					"image": "screenlight",
+					"shows": ["ScreenLight"],
+					"visible": false,
+					"sub": [413, 179, 1155, 656],
+					"subsubs": [
+						{ "name": "ScreenTriangle",
+							"image": "screentriangle",
+							"shows": ["ScreenTriangle"],
+							"hides": ["ScreenLight"],
+							"sub": [591, 288, 860, 479]
+						}
+					]
+				}
+			],
+			"grid": [
+				{ "name": "ScreenSelect",
+					"pos": [353, 152, 1275, 721],
+					"flagactions": [
+						{ "name": "ProjectorSolved",
+							"flagactions": [
+								{ "name": "ProjectorBlank",
+									"speech": [
+										{ "line": "The screen is now blank." }
+									]
+								}
+							],
+							"speech": [
+								{ "line": "There's a triangle shadow on the projector screen." },
+								{ "line": "Wonder what's casting it." }
+							]
+						}
+					],
+					"speech": [
+						{ "line": "It's a screen for a projector." },
+						{ "line": "The projector isn't currently active." }
+					]
+				}
+			]
+		},
+		{ "name": "CapitalsZoom",
+			"image": "capitalszoom",
+			"camera": "CapitalsCam",
+			"shows": ["CapDoor_open", "CapButtons", "CapText"],
+			"hides": ["CapDoor_closed", "CapSquare", "CapButtons_in", "CapText_in"],
+			"left": "SeisZoom",
+			"right": "LockersZoom",
+			"back": "Classroom4",
+			"backaction": "CapitalsReset",
+			"subs": [
+				{ "name": "CapSquare",
+					"image": "capsquare",
+					"shows": ["CapSquare"],
+					"undo": true,
+					"sub": [1092, 72, 78, 78]
+				},
+				{ "name": "CapDoor",
+					"image": "capdoor",
+					"shows": ["CapDoor_closed"],
+					"hides": ["CapDoor_open"],
+					"sub": [1087, 37, 136, 114]
+				},
+				{ "name": "CapB01",
+					"image": "capb1",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [824, 945, 257, 69]
+				},
+				{ "name": "CapB02",
+					"image": "capb2",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [920, 869, 255, 68]
+				},
+				{ "name": "CapB03",
+					"image": "capb3",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [827, 792, 253, 66]
+				},
+				{ "name": "CapB04",
+					"image": "capb4",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [922, 717, 252, 66]
+				},
+				{ "name": "CapB05",
+					"image": "capb5",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [830, 641, 252, 67]
+				},
+				{ "name": "CapB06",
+					"image": "capb6",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [924, 567, 250, 67]
+				},
+				{ "name": "CapB07",
+					"image": "capb7",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [833, 495, 248, 66]
+				},
+				{ "name": "CapB08",
+					"image": "capb8",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [926, 422, 246, 67]
+				},
+				{ "name": "CapB09",
+					"image": "capb9",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [836, 351, 245, 66]
+				},
+				{ "name": "CapB10",
+					"image": "capb10",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [927, 280, 243, 66]
+				},
+				{ "name": "CapB11",
+					"image": "capb11",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [840, 210, 241, 66]
+				},
+				{ "name": "CapB12",
+					"image": "capb12",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [930, 140, 240, 66]
+				},
+				{ "name": "CapB13",
+					"image": "capb13",
+					"shows": ["CapButtons_in", "CapText_in"],
+					"hides": ["CapButtons", "CapText"],
+					"visible": false,
+					"sub": [842, 72, 239, 65]
+				}
+			],
+			"grid": [
+				{ "name": "CapSquareTake",
+					"pos": [1092, 0, 195, 138],
+					"active": false,
+					"object": "Square4",
+					"hides": [
+						{ "name": "CapSquare",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "Cl3CapSquare",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl4CapSquare",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5CapSquare",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "CapSquareTake",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB01Press",
+					"pos": [790, 949, 366, 102],
+					"shows": [
+						{ "name": "CapB01",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB02Press",
+					"pos": [791, 871, 388, 76],
+					"shows": [
+						{ "name": "CapB02",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB03Press",
+					"pos": [793, 796, 388, 72],
+					"shows": [
+						{ "name": "CapB03",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB04Press",
+					"pos": [788, 717, 394, 79],
+					"shows": [
+						{ "name": "CapB04",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB05Press",
+					"pos": [790, 643, 395, 71],
+					"shows": [
+						{ "name": "CapB05",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB06Press",
+					"pos": [788, 569, 397, 72],
+					"shows": [
+						{ "name": "CapB06",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB07Press",
+					"pos": [791, 497, 394, 71],
+					"shows": [
+						{ "name": "CapB07",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB08Press",
+					"pos": [792, 424, 393, 71],
+					"shows": [
+						{ "name": "CapB08",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB09Press",
+					"pos": [792, 352, 393, 69],
+					"shows": [
+						{ "name": "CapB09",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB10Press",
+					"pos": [795, 284, 390, 67],
+					"shows": [
+						{ "name": "CapB10",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB11Press",
+					"pos": [798, 213, 387, 69],
+					"shows": [
+						{ "name": "CapB11",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB12Press",
+					"pos": [799, 144, 386, 68],
+					"shows": [
+						{ "name": "CapB12",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapB13Press",
+					"pos": [799, 72, 283, 71],
+					"shows": [
+						{ "name": "CapB13",
+							"parent": "CapitalsZoom"
+						}
+					]
+				},
+				{ "name": "CapitalsReset",
+					"pos": [0, 0, 0, 0],
+					"hides": [
+						{ "name": "CapB01",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB02",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB03",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB04",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB05",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB06",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB07",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB08",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB09",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB10",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB11",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB12",
+							"parent": "CapitalsZoom"
+						},
+						{ "name": "CapB13",
+							"parent": "CapitalsZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "LockersZoom",
+			"image": "lockerszoom",
+			"camera": "LockersCam",
+			"shows": ["Locker_open1", "Locker_open2", "Locker_open3"],
+			"hides": ["Locker_door1", "Locker_door2", "Locker_door3"],
+			"left": "CapitalsZoom",
+			"right": "Column2Zoom",
+			"back": "Classroom4",
+			"subs": [
+				{ "name": "LockersGrey",
+					"image": "lockersgrey",
+					"shows": ["Lockers_grey", "Locker_hinges_grey", "Locker_open1_grey", "Locker_open2_grey", "Locker_open3_grey", "Lockers_shelves_grey"],
+					"hides": ["Lockers", "Locker_hinges", "Locker_open1", "Locker_open2", "Locker_open3", "Lockers_shelves"],
+					"undo": true,
+					"visible": false,
+					"sub": [302, 0, 1497, 984]
+				},
+				{ "name": "LockerSquare",
+					"image": "lockersquare",
+					"shows": ["LockerSquare"],
+					"undo": true,
+					"sub": [563, 348, 94, 33]
+				},
+				{ "name": "LockerSyringe",
+					"image": "lockersyringe",
+					"shows": ["Locker_syringe", "Locker_syringe_top", "LockerSquare"],
+					"undo": true,
+					"sub": [427, 336, 231, 53]
+				},
+				{ "name": "LockerDoor1",
+					"image": "lockerd1",
+					"shows": ["Locker_door1"],
+					"hides": ["Locker_open1"],
+					"sub": [332, 0, 730, 958]
+				},
+				{ "name": "LockerChalk",
+					"image": "lockerchalk",
+					"shows": ["Chalk_locker"],
+					"undo": true,
+					"sub": [895, 252, 44, 18]
+				},
+				{ "name": "LockerDoor2",
+					"image": "lockerd2",
+					"shows": ["Locker_door2"],
+					"hides": ["Locker_open2"],
+					"sub": [729, 0, 732, 955]
+				},
+				{ "name": "LockerTriangle",
+					"image": "lockertriangle",
+					"shows": ["LockerTriangle"],
+					"undo": true,
+					"sub": [1199, 446, 100, 26]
+				},
+				{ "name": "LockerDoor3",
+					"image": "lockerd3",
+					"shows": ["Locker_door3"],
+					"hides": ["Locker_open3"],
+					"sub": [1109, 0, 811, 958]
+				},
+				{ "name": "LockerPull1",
+					"image": "lockerp1",
+					"shows": ["Locker_pull1"],
+					"hides": ["Locker_door1", "Locker_open1"],
+					"undo": true,
+					"visible": false,
+					"sub": [334, 0, 367, 941]
+				},
+				{ "name": "LockerPull2",
+					"image": "lockerp2",
+					"shows": ["Locker_pull2"],
+					"hides": ["Locker_door2", "Locker_open1", "Locker_open2"],
+					"undo": true,
+					"visible": false,
+					"sub": [729, 0, 340, 945]
+				},
+				{ "name": "LockerPull3",
+					"image": "lockerp3",
+					"shows": ["Locker_pull3"],
+					"hides": ["Locker_door3", "Locker_open2", "Locker_open3"],
+					"undo": true,
+					"visible": false,
+					"sub": [1102, 0, 355, 951]
+				}
+			],
+			"grid": [
+				{ "name": "Locker1Select",
+					"pos": [308, 0, 402, 978],
+					"animate": "LockerPull1",
+					"speech": [
+						{ "line": "It's locked." },
+						{ "line": "I don't see a way to open it." }
+					]
+				},
+				{ "name": "LockerSyringeTake",
+					"active": false,
+					"pos": [383, 306, 298, 138],
+					"object": "Syringe",
+					"hides": [
+						{ "name": "LockerSyringe",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl3Syringe",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl4Syringe",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Syringe",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "LockerSquareTake",
+							"parent": "LockersZoom"
+						},
+						{ "name": "LockerSyringeTake",
+							"parent": "LockersZoom"
+						}
+					]
+				},
+				{ "name": "LockerSquareTake",
+					"active": false,
+					"pos": [383, 306, 298, 138],
+					"object": "Square5",
+					"hides": [
+						{ "name": "LockerSquare",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl3Square",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl4Square",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Square",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "LockerSquareTake",
+							"parent": "LockersZoom"
+						}
+					]
+				},
+				{ "name": "Locker2Select",
+					"pos": [711, 0, 384, 980],
+					"animate": "LockerPull2",
+					"speech": [
+						{ "line": "It's locked." },
+						{ "line": "I don't see a way to open it." }
+					]
+				},
+				{ "name": "LockerChalkSelect",
+					"pos": [739, 195, 189, 201],
+					"active": false,
+					"object": "Chalk",
+					"hides": [
+						{ "name": "LockerChalk",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl4Chalk",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Chalk",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "LockerChalkSelect",
+							"parent": "LockersZoom"
+						}
+					]
+				},
+				{ "name": "LockerBookSelect",
+					"pos": [932, 202, 129, 358],
+					"active": false,
+					"view": "book",
+					"subsubs": [
+						{ "name": "Book2Text",
+							"image": "book2t",
+							"sub": [0,0]
+						},
+						{ "name": "Book2T01",
+							"image": "book2t01",
+							"sub": [355, 714]
+						},
+						{ "name": "Book2T02",
+							"image": "book2t02",
+							"sub": [119, 650]
+						},
+						{ "name": "Book2T03",
+							"image": "book2t03",
+							"sub": [307, 589]
+						},
+						{ "name": "Book2T04",
+							"image": "book2t04",
+							"sub": [113, 506]
+						},
+						{ "name": "Book2T05",
+							"image": "book2t05",
+							"sub": [382, 448]
+						},
+						{ "name": "Book2T06",
+							"image": "book2t06",
+							"sub": [149, 414]
+						},
+						{ "name": "Book2T07",
+							"image": "book2t07",
+							"sub": [302, 353]
+						},
+						{ "name": "Book2T08",
+							"image": "book2t08",
+							"sub": [508, 259]
+						},
+						{ "name": "Book2T09",
+							"image": "book2t09",
+							"sub": [239, 211]
+						},
+						{ "name": "Book2T10",
+							"image": "book2t10",
+							"sub": [444, 113]
+						},
+						{ "name": "Book2T11",
+							"image": "book2t11",
+							"sub": [861, 699]
+						},
+						{ "name": "Book2T12",
+							"image": "book2t12",
+							"sub": [804, 602]
+						},
+						{ "name": "Book2T13",
+							"image": "book2t13",
+							"sub": [863, 440]
+						},
+						{ "name": "Book2T14",
+							"image": "book2t14",
+							"sub": [1106, 291]
+						},
+						{ "name": "Book2T15",
+							"image": "book2t15",
+							"sub": [828, 182]
+						},
+						{ "name": "Book2T16",
+							"image": "book2t16",
+							"sub": [891, 72]
+						}
+					]
+				},
+				{ "name": "Locker3Select",
+					"pos": [1095, 0, 402, 983],
+					"hides": [
+						{ "name": "LockerDoor3",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl4Locker3",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Locker3",
+							"parent": "Classroom5"
+						},
+						{ "name": "PianoL3",
+							"parent": "PianoSymZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "Locker3Select",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Locker3TriTake",
+							"parent": "LockersZoom"
+						}
+					]
+				},
+				{ "name": "Locker3TriTake",
+					"pos": [1156, 436, 218, 66],
+					"active": false,
+					"object": "Triangle1",
+					"hides": [
+						{ "name": "LockerTriangle",
+							"parent": "LockersZoom"
+						},
+						{ "name": "Cl4Triangle",
+							"parent": "Classroom4"
+						},
+						{ "name": "Cl5Triangle",
+							"parent": "Classroom5"
+						}
+					],
+					"toggles": [
+						{ "name": "Locker3TriTake",
+							"parent": "LockersZoom"
+						}
+					]
+				},
+				{ "name": "LockersSelect",
+					"pos": [295, 0, 1494, 992],
+					"selects": [
+						{ "name": "Syringe",
+							"animate": "SyringeOnLocker",
+							"invdisplay": ["Syringe", "Yellow"],
+							"speech": [
+								{ "line": "I picked up the color yellow." }
+							],
+							"shows": [
+								{ "name": "Cl3LockersGrey",
+									"parent": "Classroom3"
+								},
+								{ "name": "Cl4LockersGrey",
+									"parent": "Classroom4"
+								},
+								{ "name": "Cl5LockersGrey",
+									"parent": "Classroom5"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "These look like the lockers I had at primary school." }
+					]
+				}
+			]
+		},
+		{ "name": "Column2Zoom",
+			"image": "col2zoom",
+			"camera": "Column2Cam",
+			"shows": ["Square_in1", "Square_in2", "Square_in3", "Square_in4"],
+			"hides": [],
+			"left": "LockersZoom",
+			"right": "CorkZoom",
+			"back": "Classroom5",
+			"subs": [
+				{ "name": "Col2Square4",
+					"image": "col2square4",
+					"shows": ["Square_in2", "Square_in3"],
+					"hides": ["Square_in4"],
+					"sub": [895, 573, 269, 93]
+				},
+				{ "name": "Col2Square3",
+					"image": "col2square3",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in3", "Square_in4"],
+					"sub": [670, 540, 266, 101]
+				},
+				{ "name": "Col2Square2",
+					"image": "col2square2",
+					"shows": ["Square_in1"],
+					"hides": ["Square_in2", "Square_in4"],
+					"sub": [969, 480, 304, 114]
+				},
+				{ "name": "Col2Square1",
+					"image": "col2square1",
+					"shows": [],
+					"hides": ["Square_in1", "Square_in2", "Square_in3"],
+					"sub": [720, 439, 301, 125]
+				}
+			],
+			"grid": [
+				{ "name": "Col2Place",
+					"pos": [456, 221, 1061, 548],
+					"selects": [
+						{ "name": "Square1",
+							"removes": "Square1",
+							"hides": [
+								{ "name": "Col2Square1",
+									"parent": "Column2Zoom"
+								},
+								{ "name": "Cl4Square1",
+									"parent": "Classroom4"
+								},
+								{ "name": "Cl5Square1",
+									"parent": "Classroom5"
+								}
+							]
+						},
+						{ "name": "Square2",
+							"removes": "Square2",
+							"hides": [
+								{ "name": "Col2Square2",
+									"parent": "Column2Zoom"
+								},
+								{ "name": "Cl4Square2",
+									"parent": "Classroom4"
+								},
+								{ "name": "Cl5Square2",
+									"parent": "Classroom5"
+								}
+							]
+						},
+						{ "name": "Square3",
+							"removes": "Square3",
+							"hides": [
+								{ "name": "Col2Square3",
+									"parent": "Column2Zoom"
+								},
+								{ "name": "Cl4Square3",
+									"parent": "Classroom4"
+								},
+								{ "name": "Cl5Square3",
+									"parent": "Classroom5"
+								}
+							]
+						},
+						{ "name": "Square4",
+							"removes": "Square4",
+							"hides": [
+								{ "name": "Col2Square4",
+									"parent": "Column2Zoom"
+								},
+								{ "name": "Cl4Square4",
+									"parent": "Classroom4"
+								},
+								{ "name": "Cl5Square4",
+									"parent": "Classroom5"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "This column has receptacles shaped like squares." }
+					]
+				}
+			]
+		},
+		{ "name": "CorkZoom",
+			"image": "corkzoom",
+			"camera": "CorkCam",
+			"shows": [],
+			"hides": [],
+			"left": "Column2Zoom",
+			"right": "ProjectorZoom",
+			"back": "Classroom6",
+			"subs": [
+			],
+			"grid": [
+				{ "name": "CorkFlyerSelect",
+					"pos": [322, 0, 531, 562],
+					"speech": [
+						{ "line": "It's an old earthquake safety flyer." },
+						{ "line": "Cover and hold." }
+					]
+				},
+				{ "name": "CorkPostitSelect",
+					"pos": [883, 50, 748, 928],
+					"speech": [
+						{ "line": "There's a bunch of post-it notes arranged on the board." }
+					]
+				}
+			]
+		},
+		{ "name": "ProjectorZoom",
+			"image": "projectorzoom",
+			"camera": "ProjectorCam",
+			"shows": ["Projector_surface"],
+			"hides": ["Projector_door", "Projector_surface_on"],
+			"left": "CorkZoom",
+			"right": "Column3Zoom",
+			"back": "Classroom6",
+			"subs": [
+				{ "name": "ProjectorButton",
+					"image": "projectbutton",
+					"shows": ["Projector_button_in"],
+					"hides": ["Projector_button"],
+					"undo": true,
+					"visible": false,
+					"sub": [856, 478, 100, 69]
+				},
+				{ "name": "ProjectorDoor",
+					"image": "projectdoor",
+					"shows": ["Projector_door"],
+					"sub": [1132, 332, 203, 275]
+				},
+				{ "name": "ProjectorSurf",
+					"image": "projectsurf",
+					"shows": ["Projector_surface_on"],
+					"hides": ["Projector_surface"],
+					"visible": false,
+					"sub": [655, 574, 583, 213]
+				}
+			],
+			"grid": [
+				{ "name": "ProjectorSelect",
+					"pos": [321, 177, 1156, 745],
+					"animate": "ProjectorStart",
+					"jumble": "ProjGearZoom",
+					"speech": [
+						{ "line": "Hm.. something's wrong with the projector." }
+					],
+					"hides": [
+						{ "name": "ProjectorDoor",
+							"parent": "ProjectorZoom"
+						},
+						{ "name": "Cl6ProjDoor",
+							"parent": "Classroom6"
+						},
+						{ "name": "Cl7ProjDoor",
+							"parent": "Classroom7"
+						}
+					],
+					"toggles": [
+						{ "name": "ProjectorSelect",
+							"parent": "ProjectorZoom"
+						},
+						{ "name": "ProjectorGears",
+							"parent": "ProjectorZoom"
+						}
+					]
+				},
+				{ "name": "ProjectorGears",
+					"active": false,
+					"pos": [1111, 323, 245, 302],
+					"zoom": "ProjGearZoom"
+				}
+			]
+		},
+		{ "name": "ProjMagZoom",
+			"image": "projmagzoom",
+			"camera": "ProjMagCam",
+			"shows": ["Projector_mag_on"],
+			"hides": ["Projector_mag", "Projector_mag_tri"],
+			"back": "ProjectorZoom",
+			"subs": [
+				{ "name": "ProjMagTriangle",
+					"image": "projmagtriangle",
+					"shows": ["Projector_mag_tri"],
+					"hides": ["Projector_mag", "Projector_mag_on"],
+					"sub": [632, 336, 369, 368]
+				}
+			],
+			"grid": [
+				{ "name": "ProjTriangleTake",
+					"pos": [635, 225, 608, 611],
+					"flag": "ProjectorBlank",
+					"object": "Triangle2",
+					"speech": [
+						{ "line": "Ah, this was hidden inside the lens." }
+					],
+					"hides": [
+						{ "name": "ProjMagTriangle",
+							"parent": "ProjMagZoom"
+						},
+						{ "name": "ScreenTriangle",
+                            "parent": "ScreenLight",
+							"grandparent": "ScreenZoom"
+						},
+						{ "name": "Cl3ScreenTriangle",
+                            "parent": "Cl3ScreenLight",
+							"grandparent": "Classroom3"
+						},
+						{ "name": "Cl4ScreenTriangle",
+                            "parent": "Cl4ScreenLight",
+							"grandparent": "Classroom4"
+						}
+					],
+					"toggles": [
+						{ "name": "ProjTriangleTake",
+							"parent": "ProjMagZoom"
+						},
+						{ "name": "Cl6ProjMagZoom",
+							"parent": "Classroom6"
+						},
+						{ "name": "Cl7ProjMagZoom",
+							"parent": "Classroom7"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "ProjGearZoom",
+			"camera": "None",
+			"image": "black",
+			"back": "ProjectorZoom"
+		},
+		{ "name": "Column3Zoom",
+			"image": "col3zoom",
+			"camera": "Column3Cam",
+			"shows": ["Trap_in1", "Trap_in2", "Trap_in3", "Trap_in4", "Trap_in5"],
+			"hides": [],
+			"left": "ProjectorZoom",
+			"right": "EaselZoom",
+			"back": "Classroom7",
+			"subs": [
+				{ "name": "Col3Trap5",
+					"image": "col3trap5",
+					"shows": [],
+					"hides": ["Trap_in5"],
+					"sub": [671, 508, 231, 94]
+				},
+				{ "name": "Col3Trap4",
+					"image": "col3trap4",
+					"shows": ["Trap_in3"],
+					"hides": ["Trap_in4"],
+					"sub": [902, 505, 287, 85]
+				},
+				{ "name": "Col3Trap3",
+					"image": "col3trap3",
+					"shows": ["Trap_in2"],
+					"hides": ["Trap_in3", "Trap_in4"],
+					"sub": [1037, 568, 171, 98]
+				},
+				{ "name": "Col3Trap2",
+					"image": "col3trap2",
+					"shows": ["Trap_in1"],
+					"hides": ["Trap_in2", "Trap_in3"],
+					"sub": [867, 637, 257, 51]
+				},
+				{ "name": "Col3Trap1",
+					"image": "col3trap1",
+					"shows": [],
+					"hides": ["Trap_in1", "Trap_in2"],
+					"sub": [673, 603, 219, 81]
+				}
+			],
+			"grid": [
+				{ "name": "Col3Place",
+					"pos": [471, 408, 1025, 372],
+					"speech": [
+						{ "line": "The receptacles here are shaped like trapezoids." }
+					]
+				}
+			]
+		},
+		{ "name": "EaselZoom",
+			"image": "easelzoom",
+			"camera": "EaselCam",
+			"shows": ["Easel_door1_open", "Easel_door2_open"],
+			"hides": ["Chalk", "Easel_door1", "Easel_door2"],
+			"left": "Column3Zoom",
+			"right": "ShelfZoom",
+			"back": "Classroom7",
+			"coordinate": [4,5],
+			"subs": [
+				{ "name": "EaselChalk",
+					"image": "easelchalk",
+					"shows": ["Chalk"],
+					"undo": true,
+					"visible": false,
+					"sub": [934, 47, 65, 41],
+					"subsubs": [
+						{ "name": "EaselChalkGreen",
+							"image": "easelchalkg",
+							"shows": ["Chalk_green"],
+							"hides": ["Chalk"],
+							"undo": true,
+							"visible": false,
+							"sub": [934, 47, 65, 41]
+						},
+						{ "name": "EaselChalkPink",
+							"image": "easelchalkp",
+							"shows": ["Chalk_pink"],
+							"hides": ["Chalk"],
+							"undo": true,
+							"visible": false,
+							"sub": [934, 47, 65, 41]
+						},
+						{ "name": "EaselChalkYellow",
+							"image": "easelchalky",
+							"shows": ["Chalk_yellow"],
+							"hides": ["Chalk"],
+							"undo": true,
+							"visible": false,
+							"sub": [934, 47, 65, 41]
+						}
+					]
+				},
+				{ "name": "EaselBoxGrey",
+					"image": "easelboxgrey",
+					"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey"],
+					"hides": ["Easel_box", "Easel_door1_open", "Easel_door2_open"],
+					"undo": true,
+					"visible": false,
+					"sub": [1061, 38, 218, 106]
+				},
+				{ "name": "EaselTrap",
+					"image": "easeltrap",
+					"shows": ["EaselTrap"],
+					"undo": true,
+					"sub": [1179, 83, 72, 40],
+					"subsubs": [
+						{ "name": "EaselTrapGrey",
+							"image": "easeltrapgrey",
+							"shows": ["EaselTrap", "Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_open_grey"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2", "Easel_door2_open"],
+							"visible": false,
+							"undo": true,
+							"sub": [1179, 83, 72, 40]
+						}
+					]
+				},
+				{ "name": "EaselDoor2",
+					"image": "easeldoor2",
+					"shows": ["Easel_door2"],
+					"hides": ["Easel_door2_open"],
+					"sub": [1171, 82, 88, 64],
+					"subsubs": [
+						{ "name": "EaselDoor2Grey",
+							"image": "easeldoor2grey",
+							"shows": ["Easel_box_grey", "Easel_door1_open_grey", "Easel_door2_grey"],
+							"hides": ["Easel_box", "Easel_door1", "Easel_door1_open", "Easel_door2", "Easel_door2_open"],
+							"visible": false,
+							"undo": true,
+							"sub": [1171, 82, 88, 64]
+						}
+					]
+				},
+				{ "name": "EaselSquare",
+					"image": "easelsquare",
+					"shows": ["EaselSquare"],
+					"undo": true,
+					"sub": [1086, 82, 70, 36]
+				},
+				{ "name": "EaselDoor1",
+					"image": "easeldoor1",
+					"shows": ["Easel_door1"],
+					"hides": ["Easel_door1_open"],
+					"sub": [1078, 80, 85, 64]
+				}
+			],
+			"grid": [
+				{ "name": "EaselSquareTake",
+					"active": false,
+					"pos": [1045, 48, 132, 116],
+					"object": "Square1",
+					"hides": [
+						{ "name": "EaselSquare",
+							"parent": "EaselZoom"
+						},
+						{ "name": "Cl7ESquare",
+							"parent": "Classroom7"
+						},
+						{ "name": "Cl8ESquare",
+							"parent": "Classroom8"
+						}
+					],
+					"toggles": [
+						{ "name": "EaselSquareTake",
+							"parent": "EaselZoom"
+						}
+					]
+				},
+				{ "name": "EaselSelect",
+					"pos": [564, 133, 825, 906],
+					"selects": [
+						{ "name": "Chalk",
+							"removes": "Chalk",
+							"speech": [
+								{ "line": "I'll just leave the chalk here for when I need it." }
+							],
+							"shows": [
+								{ "name": "EaselChalk",
+									"parent": "EaselZoom"
+								}
+							],
+							"toggles": [
+								{ "name": "EaselSelect",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselErase",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselChalkSelect",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw11",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw12",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw13",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw14",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw21",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw22",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw23",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw24",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw31",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw32",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw33",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw34",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw41",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw42",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw43",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw44",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw51",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw52",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw53",
+									"parent": "EaselZoom"
+								},
+								{ "name": "EaselDraw54",
+									"parent": "EaselZoom"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "It's a chalkboard with some squares drawn."}
+					]
+				},
+				{ "name": "EaselErase",
+					"active": false,
+					"pos": [618, 0, 297, 199],
+					"flag": "!EaselChalk*",
+					"drawclear": ["EaselZoom", "Classroom7", "Classroom8"]
+				},
+				{ "name": "EaselChalkSelect",
+					"active": false,
+					"pos": [897, 0, 150, 173],
+					"selects": [
+						{ "name": "Pink",
+							"animate": "SyringeOnChalkP"
+						},
+						{ "name": "Yellow",
+							"animate": "SyringeOnChalkY"
+						},
+						{ "name": "Green",
+							"animate": "SyringeOnChalkG"
+						}
+					],
+					"speech": [
+						{ "line": "I've placed the chalk here to use later." },
+						{ "line": "I can select where to use this directly on the board." }
+					]
+				},
+				{ "name": "EaselBoxSelect",
+					"pos": [1045, 13, 251, 155],
+					"selects": [
+						{ "name": "Syringe",
+							"animate": "SyringeOnBox",
+							"invdisplay": ["Syringe", "Pink"],
+							"speech": [
+								{ "line": "I picked up the color pink." }
+							],
+							"shows": [
+								{ "name": "Cl7EBoxGrey",
+									"parent": "Classroom7"
+								},
+								{ "name": "Cl7EDoor2Grey",
+									"parent": "Classroom7"
+								},
+								{ "name": "Cl7ETrapGrey",
+									"parent": "Classroom7"
+								},
+								{ "name": "Cl8EBoxGrey",
+									"parent": "Classroom8"
+								},
+								{ "name": "Cl8EDoor2Grey",
+									"parent": "Classroom8"
+								},
+								{ "name": "Cl8ETrapGrey",
+									"parent": "Classroom8"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "This box is a bright pink color." }
+					]
+				},
+				{ "name": "EaselDraw11",
+					"active": false,
+					"pos": [710, 768, 153, 153],
+					"flag": "EaselChalk11",
+					"draws": [
+						{ "name": "EaselChalk11",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [729, 769]
+						},
+						{ "name": "Cl7Chalk11",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1225, 566]
+						},
+						{ "name": "Cl8Chalk11",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [506, 503]
+						}
+					]
+				},
+				{ "name": "EaselDraw12",
+					"active": false,
+					"pos": [862, 768, 134, 151],
+					"flag": "EaselChalk12",
+					"draws": [
+						{ "name": "EaselChalk12",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [869, 777]
+						},
+						{ "name": "Cl7Chalk12",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1270, 566]
+						},
+						{ "name": "Cl8Chalk12",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [546, 506]
+						}
+					]
+				},
+				{ "name": "EaselDraw13",
+					"active": false,
+					"pos": [996, 768, 139, 150],
+					"flag": "EaselChalk13",
+					"draws": [
+						{ "name": "EaselChalk13",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [999, 782]
+						},
+						{ "name": "Cl7Chalk13",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1315, 566]
+						},
+						{ "name": "Cl8Chalk13",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [586, 510]
+						}
+					]
+				},
+				{ "name": "EaselDraw14",
+					"active": false,
+					"pos": [1135, 773, 143, 145],
+					"flag": "EaselChalk14",
+					"draws": [
+						{ "name": "EaselChalk14",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1132, 785]
+						},
+						{ "name": "Cl7Chalk14",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1360, 566]
+						},
+						{ "name": "Cl8Chalk14",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [626, 514]
+						}
+					]
+				},
+				{ "name": "EaselDraw21",
+					"active": false,
+					"pos": [716, 635, 139, 135],
+					"flag": "EaselChalk21",
+					"draws": [
+						{ "name": "EaselChalk21",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [725, 642]
+						},
+						{ "name": "Cl7Chalk21",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1225, 526]
+						},
+						{ "name": "Cl8Chalk21",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [506, 460]
+						}
+					]
+				},
+				{ "name": "EaselDraw22",
+					"active": false,
+					"pos": [853, 635, 137, 139],
+					"flag": "EaselChalk22",
+					"draws": [
+						{ "name": "EaselChalk22",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [865, 642]
+						},
+						{ "name": "Cl7Chalk22",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1270, 526]
+						},
+						{ "name": "Cl8Chalk22",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [546, 460]
+						}
+					]
+				},
+				{ "name": "EaselDraw23",
+					"active": false,
+					"pos": [985, 640, 144, 135],
+					"flag": "EaselChalk23",
+					"draws": [
+						{ "name": "EaselChalk23",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1000, 642]
+						},
+						{ "name": "Cl7Chalk23",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1310, 526]
+						},
+						{ "name": "Cl8Chalk23",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [586, 463]
+						}
+					]
+				},
+				{ "name": "EaselDraw24",
+					"active": false,
+					"pos": [1129, 642, 142, 130],
+					"flag": "EaselChalk24",
+					"draws": [
+						{ "name": "EaselChalk24",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1145, 642]
+						},
+						{ "name": "Cl7Chalk24",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1365, 526]
+						},
+						{ "name": "Cl8Chalk24",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [626, 467]
+						}
+					]
+				},
+				{ "name": "EaselDraw31",
+					"active": false,
+					"pos": [713, 517, 137, 118],
+					"flag": "EaselChalk31",
+					"draws": [
+						{ "name": "EaselChalk31",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [725, 517]
+						},
+						{ "name": "Cl7Chalk31",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1225, 483]
+						},
+						{ "name": "Cl8Chalk31",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [506, 417]
+						}
+					]
+				},
+				{ "name": "EaselDraw32",
+					"active": false,
+					"pos": [850, 514, 130, 128],
+					"flag": "EaselChalk32",
+					"draws": [
+						{ "name": "EaselChalk32",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [858, 517]
+						},
+						{ "name": "Cl7Chalk32",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1270, 483]
+						},
+						{ "name": "Cl8Chalk32",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [546, 417]
+						}
+					]
+				},
+				{ "name": "EaselDraw33",
+					"active": false,
+					"pos": [980, 524, 146, 121],
+					"flag": "EaselChalk33",
+					"draws": [
+						{ "name": "EaselChalk33",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [995, 517]
+						},
+						{ "name": "Cl7Chalk33",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1315, 483]
+						},
+						{ "name": "Cl8Chalk33",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [588, 420]
+						}
+					]
+				},
+				{ "name": "EaselDraw34",
+					"active": false,
+					"pos": [1127, 524, 142, 121],
+					"flag": "EaselChalk34",
+					"draws": [
+						{ "name": "EaselChalk34",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1145, 517]
+						},
+						{ "name": "Cl7Chalk34",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1358, 483]
+						},
+						{ "name": "Cl8Chalk34",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [630, 425]
+						}
+					]
+				},
+				{ "name": "EaselDraw41",
+					"active": false,
+					"pos": [711, 394, 137, 128],
+					"flag": "EaselChalk41",
+					"draws": [
+						{ "name": "EaselChalk41",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [725, 392]
+						},
+						{ "name": "Cl7Chalk41",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1221, 439]
+						},
+						{ "name": "Cl8Chalk41",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [510, 370]
+						}
+					]
+				},
+				{ "name": "EaselDraw42",
+					"active": false,
+					"pos": [848, 394, 135, 123],
+					"flag": "EaselChalk42",
+					"draws": [
+						{ "name": "EaselChalk42",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [860, 392]
+						},
+						{ "name": "Cl7Chalk42",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1267, 439]
+						},
+						{ "name": "Cl8Chalk42",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [550, 370]
+						}
+					]
+				},
+				{ "name": "EaselDraw43",
+					"active": false,
+					"pos": [983, 401, 137, 125],
+					"flag": "EaselChalk43",
+					"draws": [
+						{ "name": "EaselChalk43",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [995, 392]
+						},
+						{ "name": "Cl7Chalk43",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1312, 439]
+						},
+						{ "name": "Cl8Chalk43",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [595, 377]
+						}
+					]
+				},
+				{ "name": "EaselDraw44",
+					"active": false,
+					"pos": [1117, 405, 156, 123],
+					"flag": "EaselChalk44",
+					"draws": [
+						{ "name": "EaselChalk44",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1135, 392]
+						},
+						{ "name": "Cl7Chalk44",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1357, 439]
+						},
+						{ "name": "Cl8Chalk44",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [630, 384]
+						}
+					]
+				},
+				{ "name": "EaselDraw51",
+					"active": false,
+					"pos": [702, 247, 146, 146],
+					"flag": "EaselChalk51",
+					"draws": [
+						{ "name": "EaselChalk51",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [725, 267]
+						},
+						{ "name": "Cl7Chalk51",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1221, 395]
+						},
+						{ "name": "Cl8Chalk51",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [515, 325]
+						}
+					]
+				},
+				{ "name": "EaselDraw52",
+					"active": false,
+					"pos": [846, 250, 137, 146],
+					"flag": "EaselChalk52",
+					"draws": [
+						{ "name": "EaselChalk52",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [845, 267]
+						},
+						{ "name": "Cl7Chalk52",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1266, 395]
+						},
+						{ "name": "Cl8Chalk52",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [555, 329]
+						}
+					]
+				},
+				{ "name": "EaselDraw53",
+					"active": false,
+					"pos": [985, 247, 128, 158],
+					"flag": "EaselChalk53",
+					"draws": [
+						{ "name": "EaselChalk53",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [995, 267]
+						},
+						{ "name": "Cl7Chalk53",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1311, 395]
+						},
+						{ "name": "Cl8Chalk53",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [595, 335]
+						}
+					]
+				},
+				{ "name": "EaselDraw54",
+					"active": false,
+					"pos": [1110, 250, 156, 158],
+					"flag": "EaselChalk54",
+					"draws": [
+						{ "name": "EaselChalk54",
+							"parent": "EaselZoom",
+							"draw": "chalkmark",
+							"maxoff": 15,
+							"pos": [1120, 267]
+						},
+						{ "name": "Cl7Chalk54",
+							"parent": "Classroom7",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [1356, 395]
+						},
+						{ "name": "Cl8Chalk54",
+							"parent": "Classroom8",
+							"draw": "clchalkmark",
+							"maxoff": 2,
+							"pos": [635, 340]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "ShelfZoom",
+			"image": "shelfzoom",
+			"camera": "ShelfCam",
+			"shows": ["Shelf", "Plate1", "Plate2"],
+			"hides": ["Shelf_tilt", "Plate1_tilt", "Plate2_tilt", "Can_out"],
+			"left": "EaselZoom",
+			"right": "Column1Zoom",
+			"back": "Classroom8",
+			"subs": [
+				{ "name": "ShelfTilt",
+					"image": "shelftilt",
+					"shows": ["Shelf_tilt", "Plate1_tilt", "Plate2_tilt"],
+					"hides": ["Shelf", "Plate1", "Plate2"],
+					"visible": false,
+					"undo": true,
+					"sub": [437, 290, 1060, 628]
+				},
+				{ "name": "ShelfCan",
+					"image": "shelfcan",
+					"shows": ["Can_out"],
+					"sub": [550, 0, 337, 372]
+				}
+			],
+			"grid": [
+				{ "name": "ShelfSelect",
+					"pos": [387, 390, 1141, 592],
+					"animate": "ShelfTilt",
+					"flagactions": [
+						{ "name": "SeisDone",
+							"animate": "ShelfTilt2",
+							"flag": "!SeisDone",
+							"speech": [
+								{ "line": "Guess I caused an earthquake." }
+							],
+							"hides": [
+								{ "name": "Cl2Pattern",
+									"parent": "Classroom2"
+								},
+								{ "name": "Cl3Pattern",
+									"parent": "Classroom3"
+								}
+							],
+							"toggles": [
+								{ "name": "Cl1D1Under",
+									"parent": "Classroom1"
+								},
+								{ "name": "Cl2D1Under",
+									"parent": "Classroom2"
+								},
+								{ "name": "Cl2D2Under",
+									"parent": "Classroom2"
+								},
+								{ "name": "Cl3D1Under",
+									"parent": "Classroom3"
+								},
+								{ "name": "Cl3D2Under",
+									"parent": "Classroom3"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "Precarious." }
+					]
+				},
+				{ "name": "ShelfCanTake",
+					"pos": [428, 19, 476, 387],
+					"flag": "CanTaken",
+					"object": "Can",
+					"speech": [
+						{ "line": "It's a tin can with some holes in the top." }
+					],
+					"hides": [
+						{ "name": "ShelfCan",
+							"parent": "ShelfZoom"
+						},
+						{ "name": "Cl1Can",
+							"parent": "Classroom1"
+						},
+						{ "name": "Cl8Can",
+							"parent": "Classroom8"
+						}
+					],
+					"toggles": [
+						{ "name": "ShelfCanTake",
+							"parent": "ShelfZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "PianoSymZoom",
+			"image": "pianosymzoom",
+			"camera": "PianoSymCam",
+			"shows": ["Locker_door1", "Locker_open2", "Locker_open3", "PianoSym11", "PianoSym21", "PianoSym31", "PianoSym41"],
+			"hides": ["Locker_open1", "Locker_door2", "Locker_door3", "PianoSym12", "PianoSym13", "PianoSym14", "PianoSym15", "PianoSym16", "PianoSym17", "PianoSym22", "PianoSym23", "PianoSym24", "PianoSym25", "PianoSym26", "PianoSym27", "PianoSym32", "PianoSym33", "PianoSym34", "PianoSym35", "PianoSym36", "PianoSym37", "PianoSym42", "PianoSym43", "PianoSym44", "PianoSym45", "PianoSym46", "PianoSym47"],
+			"left": "EaselZoom",
+			"right": "Column1Zoom",
+			"back": "Classroom8",
+			"subs": [
+				{ "name": "PianoL3",
+					"image": "pianol3",
+					"shows": ["Locker_door3"],
+					"hides": ["Locker_open3"],
+					"sub": [0, 563, 330, 447]
+				},
+				{ "name": "PianoL2",
+					"image": "pianol2",
+					"shows": ["Locker_door2"],
+					"hides": ["Locker_open2"],
+					"sub": [201, 565, 258, 472]
+				},
+				{ "name": "PianoS12",
+					"image": "pianos12",
+					"shows": ["PianoSym12"],
+					"hides": ["PianoSym11"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS13",
+					"image": "pianos13",
+					"shows": ["PianoSym13"],
+					"hides": ["PianoSym12"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS14",
+					"image": "pianos14",
+					"shows": ["PianoSym14"],
+					"hides": ["PianoSym13"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS15",
+					"image": "pianos15",
+					"shows": ["PianoSym15"],
+					"hides": ["PianoSym14"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS16",
+					"image": "pianos16",
+					"shows": ["PianoSym16"],
+					"hides": ["PianoSym15"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS17",
+					"image": "pianos17",
+					"shows": ["PianoSym17"],
+					"hides": ["PianoSym16"],
+					"priority": 0,
+					"visible": false,
+					"sub": [116, 477, 303, 268]
+				},
+				{ "name": "PianoS22",
+					"image": "pianos22",
+					"shows": ["PianoSym22"],
+					"hides": ["PianoSym21"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS23",
+					"image": "pianos23",
+					"shows": ["PianoSym23"],
+					"hides": ["PianoSym22"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS24",
+					"image": "pianos24",
+					"shows": ["PianoSym24"],
+					"hides": ["PianoSym23"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS25",
+					"image": "pianos25",
+					"shows": ["PianoSym25"],
+					"hides": ["PianoSym24"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS26",
+					"image": "pianos26",
+					"shows": ["PianoSym26"],
+					"hides": ["PianoSym25"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS27",
+					"image": "pianos27",
+					"shows": ["PianoSym27"],
+					"hides": ["PianoSym26"],
+					"priority": 0,
+					"visible": false,
+					"sub": [577, 473, 286, 272]
+				},
+				{ "name": "PianoS32",
+					"image": "pianos32",
+					"shows": ["PianoSym32"],
+					"hides": ["PianoSym31"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS33",
+					"image": "pianos33",
+					"shows": ["PianoSym33"],
+					"hides": ["PianoSym32"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS34",
+					"image": "pianos34",
+					"shows": ["PianoSym34"],
+					"hides": ["PianoSym33"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS35",
+					"image": "pianos35",
+					"shows": ["PianoSym35"],
+					"hides": ["PianoSym34"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS36",
+					"image": "pianos36",
+					"shows": ["PianoSym36"],
+					"hides": ["PianoSym35"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS37",
+					"image": "pianos37",
+					"shows": ["PianoSym37"],
+					"hides": ["PianoSym36"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1041, 468, 289, 277]
+				},
+				{ "name": "PianoS42",
+					"image": "pianos42",
+					"shows": ["PianoSym42"],
+					"hides": ["PianoSym41"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				},
+				{ "name": "PianoS43",
+					"image": "pianos43",
+					"shows": ["PianoSym43"],
+					"hides": ["PianoSym42"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				},
+				{ "name": "PianoS44",
+					"image": "pianos44",
+					"shows": ["PianoSym44"],
+					"hides": ["PianoSym43"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				},
+				{ "name": "PianoS45",
+					"image": "pianos45",
+					"shows": ["PianoSym45"],
+					"hides": ["PianoSym44"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				},
+				{ "name": "PianoS46",
+					"image": "pianos46",
+					"shows": ["PianoSym46"],
+					"hides": ["PianoSym45"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				},
+				{ "name": "PianoS47",
+					"image": "pianos47",
+					"shows": ["PianoSym47"],
+					"hides": ["PianoSym46"],
+					"priority": 0,
+					"visible": false,
+					"sub": [1489, 466, 310, 279]
+				}
+			],
+			"grid": [
+				{ "name": "PianoSym1",
+					"pos": [0, 323, 498, 602],
+					"cycle": [
+						{ "parent": "PianoSymZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PianoS12" },
+								{ "sub": "PianoS13" },
+								{ "sub": "PianoS14" },
+								{ "sub": "PianoS15" },
+								{ "sub": "PianoS16" },
+								{ "sub": "PianoS17" }
+							]
+						},
+						{ "parent": "Classroom1",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl1S12" },
+								{ "sub": "Cl1S13" },
+								{ "sub": "Cl1S14" },
+								{ "sub": "Cl1S15" },
+								{ "sub": "Cl1S16" },
+								{ "sub": "Cl1S17" }
+							]
+						},
+						{ "parent": "Classroom8",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl8S12" },
+								{ "sub": "Cl8S13" },
+								{ "sub": "Cl8S14" },
+								{ "sub": "Cl8S15" },
+								{ "sub": "Cl8S16" },
+								{ "sub": "Cl8S17" }
+							]
+						}
+					]
+				},
+				{ "name": "PianoSym2",
+					"pos": [502, 316, 461, 608],
+					"cycle": [
+						{ "parent": "PianoSymZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PianoS22" },
+								{ "sub": "PianoS23" },
+								{ "sub": "PianoS24" },
+								{ "sub": "PianoS25" },
+								{ "sub": "PianoS26" },
+								{ "sub": "PianoS27" }
+							]
+						},
+						{ "parent": "Classroom1",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl1S22" },
+								{ "sub": "Cl1S23" },
+								{ "sub": "Cl1S24" },
+								{ "sub": "Cl1S25" },
+								{ "sub": "Cl1S26" },
+								{ "sub": "Cl1S27" }
+							]
+						},
+						{ "parent": "Classroom8",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl8S22" },
+								{ "sub": "Cl8S23" },
+								{ "sub": "Cl8S24" },
+								{ "sub": "Cl8S25" },
+								{ "sub": "Cl8S26" },
+								{ "sub": "Cl8S27" }
+							]
+						}
+					]
+				},
+				{ "name": "PianoSym3",
+					"pos": [963, 309, 448, 612],
+					"cycle": [
+						{ "parent": "PianoSymZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PianoS32" },
+								{ "sub": "PianoS33" },
+								{ "sub": "PianoS34" },
+								{ "sub": "PianoS35" },
+								{ "sub": "PianoS36" },
+								{ "sub": "PianoS37" }
+							]
+						},
+						{ "parent": "Classroom1",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl1S32" },
+								{ "sub": "Cl1S33" },
+								{ "sub": "Cl1S34" },
+								{ "sub": "Cl1S35" },
+								{ "sub": "Cl1S36" },
+								{ "sub": "Cl1S37" }
+							]
+						},
+						{ "parent": "Classroom8",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl8S32" },
+								{ "sub": "Cl8S33" },
+								{ "sub": "Cl8S34" },
+								{ "sub": "Cl8S35" },
+								{ "sub": "Cl8S36" },
+								{ "sub": "Cl8S37" }
+							]
+						}
+					]
+				},
+				{ "name": "PianoSym4",
+					"pos": [1411, 306, 509, 615],
+					"cycle": [
+						{ "parent": "PianoSymZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PianoS42" },
+								{ "sub": "PianoS43" },
+								{ "sub": "PianoS44" },
+								{ "sub": "PianoS45" },
+								{ "sub": "PianoS46" },
+								{ "sub": "PianoS47" }
+							]
+						},
+						{ "parent": "Classroom1",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl1S42" },
+								{ "sub": "Cl1S43" },
+								{ "sub": "Cl1S44" },
+								{ "sub": "Cl1S45" },
+								{ "sub": "Cl1S46" },
+								{ "sub": "Cl1S47" }
+							]
+						},
+						{ "parent": "Classroom8",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Cl8S42" },
+								{ "sub": "Cl8S43" },
+								{ "sub": "Cl8S44" },
+								{ "sub": "Cl8S45" },
+								{ "sub": "Cl8S46" },
+								{ "sub": "Cl8S47" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "PianoZoom",
+			"image": "pianozoom",
+			"camera": "PianoCam",
+			"shows": [],
+			"hides": ["Piano_rope", "Piano_square"],
+			"left": "EaselZoom",
+			"right": "Column1Zoom",
+			"back": "Classroom8",
+			"subs": [
+				{ "name": "PianoSquare",
+					"image": "psquare",
+					"shows": ["Piano_square"],
+					"undo": true,
+					"sub": [0, 267, 585, 412]
+				},
+				{ "name": "PianoRope",
+					"image": "prope",
+					"shows": ["Piano_rope"],
+					"undo": true,
+					"sub": [729, 428, 1012, 60]
+				}
+			],
+			"grid": [
+				{ "name": "PianoSquareTake",
+					"pos": [0, 50, 634, 897],
+					"object": "Square2",
+					"hides": [
+						{ "name": "PianoSquare",
+							"parent": "PianoZoom"
+						},
+						{ "name": "Cl1PianoSquare",
+							"parent": "Classroom1"
+						},
+						{ "name": "Cl8PianoSquare",
+							"parent": "Classroom8"
+						}
+					],
+					"toggles": [
+						{ "name": "PianoSquareTake",
+							"parent": "PianoZoom"
+						}
+					]
+				},
+				{ "name": "PianoRopeTake",
+					"pos": [673, 50, 1155, 888],
+					"object": "Rope",
+					"flag": "RopeTaken",
+					"hides": [
+						{ "name": "PianoRope",
+							"parent": "PianoZoom"
+						},
+						{ "name": "Cl1PianoRope",
+							"parent": "Classroom1"
+						},
+						{ "name": "Cl8PianoRope",
+							"parent": "Classroom8"
+						}
+					],
+					"toggles": [
+						{ "name": "PianoRopeTake",
+							"parent": "PianoZoom"
+						}
+					]
+				}
+			]
+		}
+	],
+	"globanims": [
+		{ "name": "ProjectorStart",
+			"frames": [
+				{ "frame": "show",
+					"name": "ProjectorButton",
+					"parent": "ProjectorZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "ShelfTilt",
+			"frames": [
+				{ "frame": "show",
+					"name": "ShelfTilt",
+					"parent": "ShelfZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "ShelfTilt2",
+			"frames": [
+				{ "frame": "show",
+					"name": "ShelfTilt",
+					"parent": "ShelfZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				},
+				{ "frame": "show",
+					"name": "SeisZoom",
+					"parent": "None",
+					"duration": 1
+				},
+				{ "frame": "wait",
+					"duration": 0.5
+				},
+				{ "frame": "fadeout",
+					"name": "SeisPattern",
+					"parent": "SeisZoom",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "LockerPull1",
+			"frames": [
+				{ "frame": "show",
+					"name": "LockerPull1",
+					"parent": "LockersZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "LockerPull2",
+			"frames": [
+				{ "frame": "show",
+					"name": "LockerPull2",
+					"parent": "LockersZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "LockerPull3",
+			"frames": [
+				{ "frame": "show",
+					"name": "LockerPull3",
+					"parent": "LockersZoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB1",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B1In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB2",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B2In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB3",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B3In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB4",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B4In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB5",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B5In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemB6",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B6In",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MemT11",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"flag": "MemRunning",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0.5
+				},
+				{ "frame": "show",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0.5
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0.5
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.5
+				},
+				{ "frame": "hide",
+					"duration": 0.1
+				}
+			]
+		},
+		{ "name": "MemReset",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "show",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "MemRight",
+			"frames": [
+				{ "frame": "show",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B6Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B5Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B4Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B3Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B2Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"duration": 0.06
+				},
+				{ "frame": "show",
+					"name": "D2B1Glow",
+					"parent": "Desk2Zoom",
+					"duration": 0.06
+				},
+				{ "frame": "hide",
+					"flag": "!MemRunning",
+					"duration": 0.06
+				}
+			]
+		},
+		{ "name": "PianoOpen",
+			"frames": [
+				{ "frame": "show",
+					"name": "Classroom8",
+					"parent": "None",
+					"duration": 1.4
+				},
+				{ "frame": "wait",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "Cl8PianoLid",
+					"parent": "Classroom8",
+					"duration": 0.7
+				},
+				{ "frame": "releaseto",
+					"name": "Classroom8",
+					"parent": "None",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "SyringeOnLocker",
+			"frames": [
+				{ "frame": "slocker3",
+					"pos": [1056, 607, 66, 73],
+					"camera": "LockersCam",
+					"shows": ["Lockers_syringe_yellow"],
+					"hides": ["Lockers", "Locker_open2", "Locker_hinges", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadein",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "slocker2",
+					"pos": [1000, 669, 72, 80],
+					"camera": "LockersCam",
+					"shows": ["Lockers_syringe_top"],
+					"hides": ["Lockers", "Locker_open2", "Locker_hinges", "Room"],
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-30, 30],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "slocker1",
+					"pos": [1019, 542, 151, 178],
+					"camera": "LockersCam",
+					"shows": ["Lockers_syringe"],
+					"hides": ["Lockers", "Locker_open2", "Locker_hinges", "Room"],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "LockersGrey",
+					"parent": "LockersZoom",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnBox",
+			"frames": [
+				{ "frame": "sbox3",
+					"pos": [1253, 126, 92, 74],
+					"camera": "EaselCam",
+					"shows": ["Box_syringe_pink"],
+					"hides": ["Easel_box", "Easel_door2_open", "EaselTray", "Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadein",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sbox2",
+					"pos": [1330, 175, 105, 84],
+					"camera": "EaselCam",
+					"shows": ["Box_syringe_top"],
+					"hides": ["Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [50, 30],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sbox1",
+					"pos": [1168, 80, 221, 162],
+					"camera": "EaselCam",
+					"shows": ["Box_syringe"],
+					"hides": ["Easel_box", "Easel_door2_open", "EaselTray", "Easel", "Room"],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselDoor2Grey",
+					"parent": "EaselDoor2",
+					"grandparent": "EaselZoom",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselTrapGrey",
+					"parent": "EaselTrap",
+					"grandparent": "EaselZoom",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselBoxGrey",
+					"parent": "EaselZoom",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnChalkP",
+			"frames": [
+				{ "frame": "schalk3p",
+					"pos": [823, 120, 78, 76],
+					"camera": "EaselCam",
+					"shows": ["Chalk_syringe_pink"],
+					"hides": ["EaselTray", "Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadeout",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk2",
+					"pos": [737, 187, 91, 87],
+					"camera": "EaselCam",
+					"shows": ["Chalk_syringe_top"],
+					"hides": ["Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [30, -30],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk1",
+					"pos": [778, 67, 183, 169],
+					"camera": "EaselCam",
+					"shows": ["Chalk_syringe"],
+					"hides": ["Eraser", "EaselTray", "Easel", "Room"],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselChalkPink",
+					"parent": "EaselZoom",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnChalkG",
+			"frames": [
+				{ "frame": "schalk3g",
+					"pos": [823, 120, 78, 76],
+					"camera": "EaselCam",
+					"shows": ["Chalk_syringe_green"],
+					"hides": ["EaselTray", "Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadeout",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk2",
+					"pos": [737, 187, 91, 87],
+					"camera": "None",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [30, -30],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk1",
+					"pos": [778, 67, 183, 169],
+					"camera": "None",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselChalkGreen",
+					"parent": "EaselZoom",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnChalkY",
+			"frames": [
+				{ "frame": "schalk3y",
+					"pos": [823, 120, 78, 76],
+					"camera": "EaselCam",
+					"shows": ["Chalk_syringe_yellow"],
+					"hides": ["EaselTray", "Easel", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadeout",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk2",
+					"pos": [737, 187, 91, 87],
+					"camera": "None",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [30, -30],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "schalk1",
+					"pos": [778, 67, 183, 169],
+					"camera": "None",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadein",
+					"name": "EaselChalkYellow",
+					"parent": "EaselZoom",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnB1W01",
+			"frames": [
+				{ "frame": "sword3",
+					"pos": [755, 848, 193, 176],
+					"camera": "None",
+					"duration": 0
+				},
+				{ "frame": "fadein",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sword2",
+					"pos": [925, 941, 457, 353],
+					"camera": "None",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [80, 50],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sword1",
+					"pos": [541, 750, 640, 494],
+					"camera": "None",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadeout",
+					"name": "Book1Text01",
+					"parent": "D1BookView",
+					"duration": 1.0
+				}
+			]
+		},
+		{ "name": "SyringeOnB1W03",
+			"frames": [
+				{ "frame": "sword3",
+					"pos": [728, 533, 193, 176],
+					"camera": "Book1Cam",
+					"shows": ["Book_syringe_words", "Book_words_curve"],
+					"hides": ["Desktop1", "DeskLegs1", "DeskUnder1", "Book_open", "Book_openP", "Room"],
+					"duration": 0
+				},
+				{ "frame": "fadein",
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sword2",
+					"pos": [898, 626, 457, 353],
+					"camera": "Book1Cam",
+					"shows": ["Book_syringe_top"],
+					"hides": ["Desktop1", "DeskLegs1", "DeskUnder1", "Book_open", "Book_openP", "Room"],
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [80, 50],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "sword1",
+					"pos": [514, 435, 640, 494],
+					"camera": "Book1Cam",
+					"shows": ["Book_syringe"],
+					"hides": ["Desktop1", "DeskLegs1", "DeskUnder1", "Book_open", "Book_openP", "Room"],
+					"pauses": false,
+					"duration": 1.0
+				},
+				{ "frame": "fadeout",
+					"name": "Book1Text03",
+					"parent": "D1BookView",
+					"duration": 1.0
+				}
+			]
+		}
+	],
+	"states": [
+		{ "name": "MemReset1",
+			"type": "wrong",
+			"screen": "Desk2Zoom",
+			"match": "263",
+			"animate": "MemReset",
+			"flag": "!MemRunning",
+			"sequence": "clear",
+			"toggles": [
+				{ "name": "D2MemPress1",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB1",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB2",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB3",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB4",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB5",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "D2MemPressB6",
+					"parent": "Desk2Zoom"
+				}
+			]
+		},
+		{ "name": "MemPattern1",
+			"type": "once",
+			"screen": "Desk2Zoom",
+			"match": "2635",
+			"flag": "!MemRunning",
+			"animate": "MemRight",
+			"hides": [
+				{ "name": "D2Door1",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "Cl1MemDoor1",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl2MemDoor1",
+					"parent": "Classroom2"
+				},
+				{ "name": "Cl3MemDoor1",
+					"parent": "Classroom3"
+				}
+			],
+			"toggles": [
+				{ "name": "D2TriangleTake",
+					"parent": "Desk2Zoom"
+				},
+				{ "name": "MemReset1",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "TriangleSolve",
+			"type": "once",
+			"visibles": [
+				{ "name": "Col1Triangle1",
+					"parent": "Column1Zoom",
+					"visible": false
+				},
+				{ "name": "Col1Triangle2",
+					"parent": "Column1Zoom",
+					"visible": false
+				},
+				{ "name": "Col1Triangle3",
+					"parent": "Column1Zoom",
+					"visible": false
+				}
+			],
+			"hides": [
+				{ "name": "Cl1Banner1",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl1Banner1Ref",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl2Banner1",
+					"parent": "Classroom2"
+				},
+				{ "name": "Cl3Banner1",
+					"parent": "Classroom3"
+				},
+				{ "name": "LockerDoor2",
+					"parent": "LockersZoom"
+				},
+				{ "name": "Cl4Locker2",
+					"parent": "Classroom4"
+				},
+				{ "name": "Cl5Locker2",
+					"parent": "Classroom5"
+				}
+			],
+			"toggles": [
+				{ "name": "Locker2Select",
+					"parent": "LockersZoom"
+				},
+				{ "name": "LockerChalkSelect",
+					"parent": "LockersZoom"
+				},
+				{ "name": "LockerBookSelect",
+					"parent": "LockersZoom"
+				}
+			]
+		},
+		{ "name": "PianoOpen",
+			"type": "once",
+			"cycles": [
+				{ "name": "PianoSym1",
+					"parent": "PianoSymZoom",
+					"cycle": 4
+				},
+				{ "name": "PianoSym2",
+					"parent": "PianoSymZoom",
+					"cycle": 0
+				},
+				{ "name": "PianoSym3",
+					"parent": "PianoSymZoom",
+					"cycle": 5
+				},
+				{ "name": "PianoSym4",
+					"parent": "PianoSymZoom",
+					"cycle": 2
+				}
+			],
+			"animate": "PianoOpen",
+			"hides": [
+				{ "name": "Cl1PianoLid",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl7PianoLid",
+					"parent": "Classroom7"
+				}
+			],
+			"toggles": [
+				{ "name": "Cl1PianoZoom",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl1PianoZoom2",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl7PianoZoom",
+					"parent": "Classroom7"
+				},
+				{ "name": "Cl7PianoZoom2",
+					"parent": "Classroom7"
+				},
+				{ "name": "Cl8PianoZoom",
+					"parent": "Classroom8"
+				},
+				{ "name": "Cl8PianoZoom2",
+					"parent": "Classroom8"
+				}
+			]
+		},
+		{ "name": "EaselSolve1A",
+			"type": "once",
+			"flags": [
+				{ "name": "EaselChalk11",
+					"value": true
+				},
+				{ "name": "EaselChalk12",
+					"value": false
+				},
+				{ "name": "EaselChalk13",
+					"value": false
+				},
+				{ "name": "EaselChalk14",
+					"value": false
+				},
+				{ "name": "EaselChalk21",
+					"value": false
+				},
+				{ "name": "EaselChalk22",
+					"value": true
+				},
+				{ "name": "EaselChalk23",
+					"value": false
+				},
+				{ "name": "EaselChalk24",
+					"value": false
+				},
+				{ "name": "EaselChalk31",
+					"value": false
+				},
+				{ "name": "EaselChalk32",
+					"value": false
+				},
+				{ "name": "EaselChalk33",
+					"value": true
+				},
+				{ "name": "EaselChalk34",
+					"value": true
+				},
+				{ "name": "EaselChalk41",
+					"value": false
+				},
+				{ "name": "EaselChalk42",
+					"value": true
+				},
+				{ "name": "EaselChalk43",
+					"value": false
+				},
+				{ "name": "EaselChalk44",
+					"value": false
+				},
+				{ "name": "EaselChalk51",
+					"value": true
+				},
+				{ "name": "EaselChalk52",
+					"value": false
+				},
+				{ "name": "EaselChalk53",
+					"value": false
+				},
+				{ "name": "EaselChalk54",
+					"value": false
+				}
+			],
+			"hides": [
+				{ "name": "EaselDoor1",
+					"parent": "EaselZoom"
+				},
+				{ "name": "Cl7EDoor1",
+					"parent": "Classroom7"
+				},
+				{ "name": "Cl8EDoor1",
+					"parent": "Classroom8"
+				}
+			],
+			"toggles": [
+				{ "name": "EaselSquareTake",
+					"parent": "EaselZoom"
+				}
+			]
+		},
+		{ "name": "EaselSolve1B",
+			"type": "once",
+			"flags": [
+				{ "name": "EaselChalk11",
+					"value": false
+				},
+				{ "name": "EaselChalk12",
+					"value": true
+				},
+				{ "name": "EaselChalk13",
+					"value": false
+				},
+				{ "name": "EaselChalk14",
+					"value": false
+				},
+				{ "name": "EaselChalk21",
+					"value": true
+				},
+				{ "name": "EaselChalk22",
+					"value": false
+				},
+				{ "name": "EaselChalk23",
+					"value": true
+				},
+				{ "name": "EaselChalk24",
+					"value": false
+				},
+				{ "name": "EaselChalk31",
+					"value": true
+				},
+				{ "name": "EaselChalk32",
+					"value": true
+				},
+				{ "name": "EaselChalk33",
+					"value": false
+				},
+				{ "name": "EaselChalk34",
+					"value": false
+				},
+				{ "name": "EaselChalk41",
+					"value": false
+				},
+				{ "name": "EaselChalk42",
+					"value": false
+				},
+				{ "name": "EaselChalk43",
+					"value": false
+				},
+				{ "name": "EaselChalk44",
+					"value": true
+				},
+				{ "name": "EaselChalk51",
+					"value": false
+				},
+				{ "name": "EaselChalk52",
+					"value": true
+				},
+				{ "name": "EaselChalk53",
+					"value": false
+				},
+				{ "name": "EaselChalk54",
+					"value": true
+				}
+			],
+			"hides": [
+				{ "name": "EaselDoor1",
+					"parent": "EaselZoom"
+				},
+				{ "name": "Cl7EDoor1",
+					"parent": "Classroom7"
+				},
+				{ "name": "Cl8EDoor1",
+					"parent": "Classroom8"
+				}
+			],
+			"toggles": [
+				{ "name": "EaselSquareTake",
+					"parent": "EaselZoom"
+				}
+			]
+		},
+		{ "name": "EaselSolve1C",
+			"type": "once",
+			"flags": [
+				{ "name": "EaselChalk11",
+					"value": false
+				},
+				{ "name": "EaselChalk12",
+					"value": false
+				},
+				{ "name": "EaselChalk13",
+					"value": true
+				},
+				{ "name": "EaselChalk14",
+					"value": true
+				},
+				{ "name": "EaselChalk21",
+					"value": false
+				},
+				{ "name": "EaselChalk22",
+					"value": false
+				},
+				{ "name": "EaselChalk23",
+					"value": false
+				},
+				{ "name": "EaselChalk24",
+					"value": true
+				},
+				{ "name": "EaselChalk31",
+					"value": false
+				},
+				{ "name": "EaselChalk32",
+					"value": false
+				},
+				{ "name": "EaselChalk33",
+					"value": false
+				},
+				{ "name": "EaselChalk34",
+					"value": false
+				},
+				{ "name": "EaselChalk41",
+					"value": true
+				},
+				{ "name": "EaselChalk42",
+					"value": false
+				},
+				{ "name": "EaselChalk43",
+					"value": true
+				},
+				{ "name": "EaselChalk44",
+					"value": false
+				},
+				{ "name": "EaselChalk51",
+					"value": false
+				},
+				{ "name": "EaselChalk52",
+					"value": false
+				},
+				{ "name": "EaselChalk53",
+					"value": true
+				},
+				{ "name": "EaselChalk54",
+					"value": false
+				}
+			],
+			"hides": [
+				{ "name": "EaselDoor1",
+					"parent": "EaselZoom"
+				},
+				{ "name": "Cl7EDoor1",
+					"parent": "Classroom7"
+				},
+				{ "name": "Cl8EDoor1",
+					"parent": "Classroom8"
+				}
+			],
+			"toggles": [
+				{ "name": "EaselSquareTake",
+					"parent": "EaselZoom"
+				}
+			]
+		},
+		{ "name": "CapitalsSolve",
+			"type": "once",
+			"visibles": [
+				{ "name": "CapB01",
+					"parent": "CapitalsZoom",
+					"visible": true
+				},
+				{ "name": "CapB02",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB03",
+					"parent": "CapitalsZoom",
+					"visible": true
+				},
+				{ "name": "CapB04",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB05",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB06",
+					"parent": "CapitalsZoom",
+					"visible": true
+				},
+				{ "name": "CapB07",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB08",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB09",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB10",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB11",
+					"parent": "CapitalsZoom",
+					"visible": false
+				},
+				{ "name": "CapB12",
+					"parent": "CapitalsZoom",
+					"visible": true
+				},
+				{ "name": "CapB13",
+					"parent": "CapitalsZoom",
+					"visible": false
+				}
+			],
+			"hides": [
+				{ "name": "Cl3CapDoor",
+					"parent": "Classroom3"
+				},
+				{ "name": "Cl4CapDoor",
+					"parent": "Classroom4"
+				},
+				{ "name": "Cl5CapDoor",
+					"parent": "Classroom5"
+				},
+				{ "name": "CapDoor",
+					"parent": "CapitalsZoom"
+				}
+			],
+			"toggles": [
+				{ "name": "CapSquareTake",
+					"parent": "CapitalsZoom"
+				}
+			]
+		},
+		{ "name": "SquareSolve",
+			"type": "once",
+			"visibles": [
+				{ "name": "Col2Square1",
+					"parent": "Column2Zoom",
+					"visible": false
+				},
+				{ "name": "Col2Square2",
+					"parent": "Column2Zoom",
+					"visible": false
+				},
+				{ "name": "Col2Square3",
+					"parent": "Column2Zoom",
+					"visible": false
+				},
+				{ "name": "Col2Square4",
+					"parent": "Column2Zoom",
+					"visible": false
+				}
+			],
+			"hides": [
+				{ "name": "Cl1Banner2",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl1Banner2Ref",
+					"parent": "Classroom1"
+				},
+				{ "name": "Cl2Banner2",
+					"parent": "Classroom2"
+				},
+				{ "name": "Cl3Banner2",
+					"parent": "Classroom3"
+				},
+				{ "name": "LockerDoor1",
+					"parent": "LockersZoom"
+				},
+				{ "name": "Cl3Locker1",
+					"parent": "Classroom3"
+				},
+				{ "name": "Cl4Locker1",
+					"parent": "Classroom4"
+				},
+				{ "name": "Cl5Locker1",
+					"parent": "Classroom5"
+				}
+			],
+			"toggles": [
+				{ "name": "Locker1Select",
+					"parent": "LockersZoom"
+				},
+				{ "name": "LockerSyringeTake",
+					"parent": "LockersZoom"
+				}
+			]
+		}
+	],			
+	"objects": [
+		{ "name": "Pencil",
+			"image": "inv_pencil",
+			"scale": 0.12
+		},
+		{ "name": "Can",
+			"image": "inv_can",
+			"scale": 0.12,
+			"collects": ["Rope"]
+		},
+		{ "name": "Triangle1",
+			"displayname": "Metal Piece",
+			"image": "inv_tri1",
+			"scale": 0.12
+		},
+		{ "name": "Triangle2",
+			"displayname": "Metal Piece",
+			"image": "inv_tri2",
+			"scale": 0.12
+		},
+		{ "name": "Triangle3",
+			"displayname": "Metal Piece",
+			"image": "inv_tri3",
+			"scale": 0.12
+		},
+		{ "name": "Chalk",
+			"image": "inv_chalk",
+			"scale": 0.12
+		},
+		{ "name": "Square1",
+			"displayname": "Metal Piece",
+			"image": "inv_square1",
+			"scale": 0.12
+		},
+		{ "name": "Square2",
+			"displayname": "Metal Piece",
+			"image": "inv_square2",
+			"scale": 0.12
+		},
+		{ "name": "Square3",
+			"displayname": "Metal Piece",
+			"image": "inv_square3",
+			"scale": 0.12
+		},
+		{ "name": "Square4",
+			"displayname": "Metal Piece",
+			"image": "inv_square4",
+			"scale": 0.12
+		},
+		{ "name": "Rope",
+			"image": "inv_rope",
+			"scale": 0.12,
+			"collects": ["Can"]
+		},
+		{ "name": "Syringe",
+			"image": "inv_syringe",
+			"sub": [647, 119, 620, 750],
+			"scale": 0.12,
+			"subs": [
+				{ "name": "SyringeY",
+					"image": "inv_syringeY",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeP",
+					"image": "inv_syringeP",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeG",
+					"image": "inv_syringeG",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeW",
+					"image": "inv_syringeW",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeA",
+					"image": "inv_syringeA",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeN",
+					"image": "inv_syringeN",
+					"visible": false,
+					"relZ": -1
+				},
+				{ "name": "SyringeT",
+					"image": "inv_syringeT",
+					"visible": false,
+					"relZ": -1
+				}
+			]
+		},
+		{ "name": "Square5",
+			"displayname": "Metal Piece",
+			"image": "inv_square2",
+			"scale": 0.12
+		}
+    ],
+    "gearboxes": [
+		{ "name": "ProjGearZoom",
+			"front": "projgearedge",
+			"pos": [77, 225, 1746, 653],
+            "solve": [
+				{ "name": "ProjSolve",
+                    "flag": "ProjectorSolved",
+                    "speech": [
+						{ "line": "There we go." }
+					],
+					"shows": [
+						{ "name": "ProjectorSurf",
+							"parent": "ProjectorZoom"
+						},
+						{ "name": "Cl6ProjSurf",
+							"parent": "Classroom6"
+						},
+						{ "name": "Cl6ProjMag",
+							"parent": "Classroom6"
+						},
+						{ "name": "Cl7ProjSurf",
+							"parent": "Classroom7"
+						},
+						{ "name": "Cl7ProjMag",
+							"parent": "Classroom7"
+						},
+						{ "name": "ScreenLight",
+							"parent": "ScreenZoom"
+						},
+						{ "name": "Cl3ScreenLight",
+							"parent": "Classroom3"
+						},
+						{ "name": "Cl4ScreenLight",
+							"parent": "Classroom4"
+						}
+					],
+					"toggles": [
+						{ "name": "Cl6ProjMagZoom",
+							"parent": "Classroom6"
+						},
+						{ "name": "Cl7ProjMagZoom",
+							"parent": "Classroom7"
+						}
+					]
+				}
+            ],
+			"speed": 5,
+			"geartypes": [
+				{ "name": "Gear32",
+					"image": "gear32",
+					"radius": 391,
+					"teeth": 32
+				},
+				{ "name": "Gear8",
+					"image": "gear8",
+					"radius": 152,
+					"teeth": 8
+				},
+				{ "name": "Gear6",
+					"image": "gear6",
+					"radius": 110,
+					"teeth": 6
+				},
+				{ "name": "Gear4",
+					"image": "gear4",
+					"radius": 82,
+					"teeth": 4
+				}
+			],
+			"gears": [
+				{ "type": "Gear32",
+					"posX": -15,
+					"posY": 835,
+					"running": 1,
+					"fixed": true
+				},
+				{ "type": "Gear6",
+					"posX": 368,
+					"posY": 518
+				},
+				{ "type": "Gear4",
+					"posX": 532,
+					"posY": 428
+				},
+				{ "type": "Gear8",
+					"posX": 738,
+					"posY": 353
+				},
+				{ "type": "Gear6",
+					"posX": 857,
+					"posY": 592
+				},
+				{ "type": "Gear4",
+					"posX": 1017,
+					"posY": 697
+				},
+				{ "type": "Gear4",
+					"posX": 1162,
+					"posY": 660
+				},
+				{ "type": "Gear8",
+					"posX": 1273,
+					"posY": 852
+				},
+				{ "type": "Gear6",
+					"posX": 1465,
+					"posY": 672
+				},
+				{ "type": "Gear32",
+					"posX": 1935,
+					"posY": 835,
+					"fixed": true
+				}
+			],
+			"pegimage": "peg",
+			"pegextra": 3,
+			"pegs": [
+				{ "posX": 368,
+					"posY": 518
+				},
+				{ "posX": 532,
+					"posY": 428
+				},
+				{ "posX": 738,
+					"posY": 353
+				},
+				{ "posX": 857,
+					"posY": 592
+				},
+				{ "posX": 1017,
+					"posY": 697
+				},
+				{ "posX": 1162,
+					"posY": 660
+				},
+				{ "posX": 1273,
+					"posY": 852
+				},
+				{ "posX": 1465,
+					"posY": 672
+				},
+				{ "posX": 455,
+					"posY": 813
+				},
+				{ "posX": 757,
+					"posY": 815
+				},
+				{ "posX": 1598,
+					"posY": 422
+				}
+			]
+		}
+	]
+}

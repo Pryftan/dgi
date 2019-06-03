@@ -1,0 +1,6773 @@
+{ "name": "Cabin",
+	"start": "Cabin1",
+	"defaultpath": "cabin/",
+	"music": "music_cabin",
+	"invsounds": ["gtrC1", "gtrC2"],
+	"screens": [
+		{ "name": "Cabin1",
+			"image": "c1",
+			"camera": "Camera1",
+			"shows": ["Room", "Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest", "Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open", "Rifle_blood", "Mattress1_blood", "Rosary", "RosaryCross", "RosaryCurve"],
+			"hides": ["Laces", "Lace_tips", "Chest", "Gold", "Canteen_cover", "Snap_L", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out", "Key3_out", "Key3_number_out", "Key3_tag_out"],
+			"left": "Cabin8",
+			"right": "Cabin2",
+			"subs": [
+				{ "name": "C1Laces",
+					"image": "c1laces",
+					"shows": ["Laces", "Lace_tips"],
+					"sub": [61, 0, 81, 62]
+				},
+				{ "name": "C1Key2",
+					"image": "c1key2",
+					"shows": ["Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [967, 715, 15, 10]
+				},
+				{ "name": "C1Canteen",
+					"image": "c1canteen",
+					"shows": ["Canteen_cover", "Snap_L"],
+					"hides": ["Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [954, 573, 41, 165]
+				},
+				{ "name": "C1Key3",
+					"image": "c1key3",
+					"shows": ["Key3_out", "Key3_number_out", "Key3_tag_out"],
+					"sub": [1432, 532, 8, 8]
+				},
+				{ "name": "C1Rosary",
+					"image": "c1rosary",
+					"hides": ["Rifle_blood", "Mattress1_blood", "Key3_out", "Key3_number_out", "Key3_tag_out", "Rosary", "RosaryCross", "RosaryCurve"],
+					"sub": [1408, 299, 85, 241]
+				},
+				{ "name": "C1Chest",
+					"image": "c1chest",
+					"shows": ["Chest", "Gold"],
+					"hides": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest"],
+					"sub": [1687, 104, 233, 205]
+				}
+			],
+			"grid": [
+				{ "name": "C1SoldiersZoom",
+					"pos": [0, 495, 374, 352],
+					"zoom": "SoldiersZoom"
+				},
+				{ "name": "C1BootsZoom",
+					"pos": [0, 0, 258, 137],
+					"zoom": "BootsZoom"
+				},
+				{ "name": "C1CanteenZoom",
+					"pos": [830, 553, 424, 325],
+					"zoom": "CanteenZoom"
+				},
+				{ "name": "C1RifleZoom",
+					"pos": [1160, 0, 522, 552],
+					"zoom": "RifleZoom"
+				},
+				{ "name": "C1OrderZoom",
+					"pos": [1737, 517, 183, 248],
+					"zoom": "Order1Zoom"
+				},
+				{ "name": "C1ChestZoom",
+					"pos": [1694, 0, 226, 319],
+					"zoom": "ChestZoom",
+					"flagactions": [
+						{ "name": "ChestOpen",
+							"zoom": "ChestInZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Cabin2",
+			"image": "c2",
+			"camera": "Camera2",
+			"shows": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest", "Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open", "Rifle_blood", "Mattress1_blood", "Rosary", "RosaryCross", "RosaryCurve", "Laces_floor", "Magnet_floor", "Pin_shirt", "Shirt_blood", "Shirt_open", "Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+			"hides": ["Chest", "Gold", "Canteen_cover", "Snap_L", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out", "Key_floor", "Key_floor2", "Key3_out", "Key3_number_out", "Key3_tag_out", "Key4_out", "Key4_number_out", "Key4_ring_out", "Key4_tag_out", "Key6_out", "Key6_number_out", "Key6_ring_out", "Key6_tag_out", "Shirt", "Laces_floor_nm", "Star_floor"],
+			"left": "Cabin1",
+			"right": "Cabin3",
+			"subs": [
+				{ "name": "C2Chest",
+					"image": "c2chest",
+					"shows": ["Chest", "Gold"],
+					"hides": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest"],
+					"sub": [626, 129, 399, 341]
+				},
+				{ "name": "C2Key2",
+					"image": "c2key2",
+					"shows": ["Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [280, 805, 20, 10]
+				},
+				{ "name": "C2Canteen",
+					"image": "c2canteen",
+					"shows": ["Canteen_cover", "Snap_L"],
+					"hides": ["Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [264, 651, 42, 179]
+				},
+				{ "name": "C2Key3",
+					"image": "c2key3",
+					"shows": ["Key3_out", "Key3_number_out", "Key3_tag_out"],
+					"sub": [413, 595, 7, 9]
+				},
+				{ "name": "C2Rosary",
+					"image": "c2rosary",
+					"hides": ["Rifle_blood", "Mattress1_blood", "Key3_out", "Key3_number_out", "Key3_tag_out", "Rosary", "RosaryCross", "RosaryCurve"],
+					"sub": [401, 365, 102, 239]
+				},
+				{ "name": "C2Key",
+					"image": "c2key",
+					"shows": ["Key_floor2"],
+					"sub": [1180, 119, 30, 36],
+					"visible": false
+				},
+				{ "name": "C2Laces2",
+					"image": "c2laces2",
+					"shows": ["Laces_floor_nm"],
+					"hides": ["Laces_floor", "Magnet_floor", "Key_floor2"],
+					"sub": [1079, 131, 117, 31]
+				},
+				{ "name": "C2Laces1",
+					"image": "c2laces1",
+					"hides": ["Laces_floor_nm"],
+					"sub": [1079, 131, 117, 31]
+				},
+				{ "name": "C2Star",
+					"image": "c2s",
+					"shows": ["Star_floor"],
+					"sub": [1280, 109, 41, 28]
+				},
+				{ "name": "C2Pin",
+					"image": "c2pin",
+					"shows": ["Shirt"],
+					"hides": ["Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Pin_shirt", "Shirt_blood", "Shirt_open"],
+					"sub": [1753, 322, 88, 51]
+				},
+				{ "name": "C2Key4",
+					"image": "c2key4",
+					"shows": ["Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out"],
+					"sub": [1775, 870, 18, 10]
+				},
+				{ "name": "C2Watch",
+					"image": "c2w",
+					"hides": ["CaseFlap", "Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out", "Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+					"sub": [1743, 817, 64, 92]
+				}
+			],
+			"grid": [
+				{ "name": "C2CanteenZoom",
+					"pos": [131, 609, 311, 307],
+					"zoom": "CanteenZoom"
+				},
+				{ "name": "C2RifleZoom",
+					"pos": [178, 70, 456, 532],
+					"zoom": "RifleZoom"
+				},
+				{ "name": "C2OrderZoom",
+					"pos": [609, 539, 381, 339],
+					"zoom": "Order1Zoom"
+				},
+				{ "name": "C2ChestZoom",
+					"pos": [636, 90, 412, 362],
+					"zoom": "ChestZoom",
+					"flagactions": [
+						{ "name": "ChestOpen",
+							"zoom": "ChestInZoom"
+						}
+					]
+				},
+				{ "name": "C2FloorZoom",
+					"pos": [1018, 35, 418, 201],
+					"zoom": "FloorZoom"
+				},
+				{ "name": "C2WatchZoom",
+					"pos": [1324, 615, 596, 423],
+					"zoom": "WatchZoom"
+				},
+				{ "name": "C2ShirtZoom",
+					"pos": [1436, 191, 481, 264],
+					"zoom": "ShirtZoom"
+				}
+			]
+		},
+		{ "name": "Cabin3",
+			"image": "c3",
+			"camera": "Camera3",
+			"shows": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest", "Laces_floor", "Magnet_floor", "Pin_shirt", "Shirt_blood", "Shirt_open", "Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+			"hides": ["Chest", "Gold", "Key_floor", "Key_floor2", "Laces_floor_nm", "Shirt", "Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out"],
+			"left": "Cabin2",
+			"right": "Cabin4",
+			"subs": [
+				{ "name": "C3Chest",
+					"image": "c3chest",
+					"shows": ["Chest", "Gold"],
+					"hides": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest"],
+					"sub": [0, 157, 86, 161]
+				},
+				{ "name": "C3Key",
+					"image": "c3key",
+					"shows": ["Key_floor2"],
+					"sub": [279, 28, 29, 26],
+					"visible": false
+				},
+				{ "name": "C3Laces2",
+					"image": "c3laces2",
+					"shows": ["Laces_floor_nm"],
+					"hides": ["Laces_floor", "Magnet_floor", "Key_floor2"],
+					"sub": [164, 12, 131, 42]
+				},
+				{ "name": "C3Laces1",
+					"image": "c3laces1",
+					"hides": ["Laces_floor_nm"],
+					"sub": [164, 12, 131, 42]
+				},
+				{ "name": "C3Star",
+					"image": "c3s",
+					"shows": ["Star_floor"],
+					"sub": [392, 30, 50, 32]
+				},
+				{ "name": "C3Key6",
+					"image": "c3key6",
+					"shows": ["Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out"],
+					"sub": [939, 323, 10, 7]
+				},
+				{ "name": "C3Pin",
+					"image": "c3pin",
+					"shows": ["Shirt"],
+					"hides": ["Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out", "Pin_shirt", "Shirt_blood", "Shirt_open"],
+					"sub": [917, 309, 57, 46]
+				},
+				{ "name": "C3Key4",
+					"image": "c3key4",
+					"shows": ["Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out"],
+					"sub": [978, 799, 18, 9]
+				},
+				{ "name": "C3Watch",
+					"image": "c3w",
+					"hides": ["CaseFlap", "Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out", "Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+					"sub": [972, 757, 31, 72]
+				}
+			],
+			"grid": [
+				{ "name": "C3ChestZoom",
+					"pos": [0, 0, 89, 365],
+					"zoom": "ChestZoom",
+					"flagactions": [
+						{ "name": "ChestOpen",
+							"zoom": "ChestInZoom"
+						}
+					]
+				},
+				{ "name": "C3FloorZoom",
+					"pos": [94, 0, 481, 173],
+					"zoom": "FloorZoom"
+				},
+				{ "name": "C3ShirtZoom",
+					"pos": [527, 175, 620, 262],
+					"zoom": "ShirtZoom"
+				},
+				{ "name": "C3WatchZoom",
+					"pos": [731, 607, 527, 356],
+					"zoom": "WatchZoom"
+				}
+			]
+		},
+		{ "name": "Cabin4",
+			"image": "c4",
+			"camera": "Camera4",
+			"shows": ["Cabinet_hinges_open", "Door_open", "Star_open"],
+			"hides": ["Rosary_sink", "RosaryCurve_sink", "Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out", "Star_pipes", "Cabinet_hinges", "Door_closed", "Star1", "Star2", "Star3", "Star4", "Star5", "Star6", "Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top"],
+			"rotates": [{ "name": "Spigot1", "by": [90, 180, -90] },
+				{ "name": "Spigot2", "by": [90, 180, -90] },
+				{ "name": "Spigot3", "by": [90, 180, -90] },
+				{ "name": "Spigot4", "by": [90, 180, -90] },
+				{ "name": "Spigot5", "by": [90, 180, -90] }
+			],
+			"left": "Cabin3",
+			"right": "Cabin5",
+			"subs": [
+				{ "name": "C4Rosary",
+					"image": "c4r",
+					"shows": ["Rosary_sink", "RosaryCurve_sink"],
+					"sub": [763, 457, 96, 40]
+				},
+				{ "name": "C4RosaryOut",
+					"image": "c4rout",
+					"shows": ["Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out"],
+					"hides": ["Rosary_sink", "RosaryCurve_sink"],
+					"sub": [772, 462, 149, 77],
+					"visible": false
+				},
+				{ "name": "C4Sp11",
+					"image": "c4sp11",
+					"rotates": [{ "name": "Spigot1", "by": [90, 270, -90] }],
+					"sub": [811, 196, 74, 71],
+					"visible": false
+				},
+				{ "name": "C4Sp12",
+					"image": "c4sp12",
+					"rotates": [{ "name": "Spigot1", "by": [90, 0, -90] }],
+					"sub": [811, 196, 74, 71],
+					"visible": false
+				},
+				{ "name": "C4Sp13",
+					"image": "c4sp13",
+					"rotates": [{ "name": "Spigot1", "by": [90, 90, -90] }],
+					"sub": [811, 196, 74, 71],
+					"visible": false
+				},
+				{ "name": "C4Sp21",
+					"image": "c4sp21",
+					"rotates": [{ "name": "Spigot2", "by": [90, 270, -90] }],
+					"sub": [961, 260, 78, 76],
+					"visible": false
+				},
+				{ "name": "C4Sp22",
+					"image": "c4sp22",
+					"rotates": [{ "name": "Spigot2", "by": [90, 0, -90] }],
+					"sub": [961, 260, 78, 76],
+					"visible": false
+				},
+				{ "name": "C4Sp23",
+					"image": "c4sp23",
+					"rotates": [{ "name": "Spigot2", "by": [90, 90, -90] }],
+					"sub": [961, 260, 78, 76],
+					"visible": false
+				},
+				{ "name": "C4Sp31",
+					"image": "c4sp31",
+					"rotates": [{ "name": "Spigot3", "by": [90, 270, -90] }],
+					"sub": [1013, 79, 75, 74],
+					"visible": false
+				},
+				{ "name": "C4Sp32",
+					"image": "c4sp32",
+					"rotates": [{ "name": "Spigot3", "by": [90, 0, -90] }],
+					"sub": [1013, 79, 75, 74],
+					"visible": false
+				},
+				{ "name": "C4Sp33",
+					"image": "c4sp33",
+					"rotates": [{ "name": "Spigot3", "by": [90, 90, -90] }],
+					"sub": [1013, 79, 75, 74],
+					"visible": false
+				},
+				{ "name": "C4Sp41",
+					"image": "c4sp41",
+					"rotates": [{ "name": "Spigot4", "by": [90, 270, -90] }],
+					"sub": [1259, 257, 76, 77],
+					"visible": false
+				},
+				{ "name": "C4Sp42",
+					"image": "c4sp42",
+					"rotates": [{ "name": "Spigot4", "by": [90, 0, -90] }],
+					"sub": [1259, 257, 76, 77],
+					"visible": false
+				},
+				{ "name": "C4Sp43",
+					"image": "c4sp43",
+					"rotates": [{ "name": "Spigot4", "by": [90, 90, -90] }],
+					"sub": [1259, 257, 76, 77],
+					"visible": false
+				},
+				{ "name": "C4Sp51",
+					"image": "c4sp51",
+					"rotates": [{ "name": "Spigot5", "by": [90, 270, -90] }],
+					"sub": [1408, 121, 77, 73],
+					"visible": false
+				},
+				{ "name": "C4Sp52",
+					"image": "c4sp52",
+					"rotates": [{ "name": "Spigot5", "by": [90, 0, -90] }],
+					"sub": [1408, 121, 77, 73],
+					"visible": false
+				},
+				{ "name": "C4Sp53",
+					"image": "c4sp53",
+					"rotates": [{ "name": "Spigot5", "by": [90, 90, -90] }],
+					"sub": [1408, 121, 77, 73],
+					"visible": false
+				},
+				{ "name": "C4StarPipes",
+					"image": "c4starpipes",
+					"shows": ["Star_pipes"],
+					"sub": [1231, 124, 61, 28]
+				},
+				{ "name": "C4Whiskey",
+					"image": "c4whiskey",
+					"shows": ["Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top"],
+					"sub": [1845, 664, 75, 54]
+				},
+				{ "name": "C4Cabinet",
+					"image": "c4cabinet",
+					"shows": ["Cabinet_hinges", "Door_closed"],
+					"hides": ["Cabinet_hinges_open", "Door_open", "Star_open"],
+					"sub": [1787, 645, 133, 310]
+				},
+				{ "name": "C4Star4",
+					"image": "c4star4",
+					"shows": ["Star4"],
+					"sub": [1898, 722, 22, 55],
+					"visible": false
+				},
+				{ "name": "C4Star5",
+					"image": "c4star5",
+					"shows": ["Star5"],
+					"sub": [1872, 777, 48, 35],
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "C4SinkZoom",
+					"pos": [454, 410, 774, 508],
+					"zoom": "SinkZoom"
+				},
+				{ "name": "C4PipesZoom",
+					"pos": [685, 0, 989, 407],
+					"zoom": "PipesZoom"
+				}
+			]
+		},
+		{ "name": "Cabin5",
+			"image": "c5",
+			"camera": "Camera5",
+			"shows": ["Cabinet_hinges_open", "Door_open", "Star_open", "KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag", "MapGlass_open", "MapWilliamText", "MapFog", "SoldierN"],
+			"hides": ["Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out", "Cabinet_hinges", "Door_closed", "Star1", "Star2", "Star3", "Star4", "Star5", "Star6", "Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top", "Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out", "MapGlass_closed", "Cross"],
+			"rotates": [{ "name": "Spigot1", "by": [90, 180, -90] },
+				{ "name": "Spigot2", "by": [90, 180, -90] },
+				{ "name": "Spigot3", "by": [90, 180, -90] },
+				{ "name": "Spigot4", "by": [90, 180, -90] },
+				{ "name": "Spigot5", "by": [90, 180, -90] }
+			],
+			"left": "Cabin4",
+			"right": "Cabin6",
+			"subs": [
+				{ "name": "C5RosaryOut",
+					"image": "c5rout",
+					"shows": ["Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out"],
+					"priority": 0,
+					"sub": [0, 389, 49, 66],
+					"visible": false
+				},
+				{ "name": "C5Whiskey",
+					"image": "c5whiskey",
+					"shows": ["Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top"],
+					"priority": 0,
+					"sub": [814, 583, 89, 42]
+				},
+				{ "name": "C5Cabinet",
+					"image": "c5cabinet",
+					"shows": ["Cabinet_hinges", "Door_closed", "Star6"],
+					"hides": ["Cabinet_hinges_open", "Door_open", "Star_open"],
+					"priority": 0,
+					"sub": [779, 455, 180, 349]
+				},
+				{ "name": "C5Star1",
+					"image": "c5star1",
+					"shows": ["Star1"],
+					"sub": [858, 696, 23, 42],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C5Star2",
+					"image": "c5star2",
+					"shows": ["Star2"],
+					"sub": [880, 670, 36, 26],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C5Star3",
+					"image": "c5star3",
+					"shows": ["Star3"],
+					"sub": [869, 628, 29, 41],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C5Star4",
+					"image": "c5star4",
+					"shows": ["Star4"],
+					"sub": [839, 629, 30, 41],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C5Star5",
+					"image": "c5star5",
+					"shows": ["Star5"],
+					"sub": [820, 671, 38, 27],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C5Sp11",
+					"image": "c5sp11",
+					"rotates": [{ "name": "Spigot1", "by": [90, 270, -90] }],
+					"priority": 0,
+					"sub": [0, 112, 17, 66],
+					"visible": false
+				},
+				{ "name": "C5Sp12",
+					"image": "c5sp12",
+					"rotates": [{ "name": "Spigot1", "by": [90, 0, -90] }],
+					"priority": 0,
+					"sub": [0, 112, 17, 66],
+					"visible": false
+				},
+				{ "name": "C5Sp13",
+					"image": "c5sp13",
+					"rotates": [{ "name": "Spigot1", "by": [90, 90, -90] }],
+					"priority": 0,
+					"sub": [0, 112, 17, 66],
+					"visible": false
+				},
+				{ "name": "C5Sp21",
+					"image": "c5sp21",
+					"rotates": [{ "name": "Spigot2", "by": [90, 270, -90] }],
+					"priority": 0,
+					"sub": [97, 193, 75, 74],
+					"visible": false
+				},
+				{ "name": "C5Sp22",
+					"image": "c5sp22",
+					"rotates": [{ "name": "Spigot2", "by": [90, 0, -90] }],
+					"priority": 0,
+					"sub": [97, 193, 75, 74],
+					"visible": false
+				},
+				{ "name": "C5Sp23",
+					"image": "c5sp23",
+					"rotates": [{ "name": "Spigot2", "by": [90, 90, -90] }],
+					"priority": 0,
+					"sub": [97, 193, 75, 74],
+					"visible": false
+				},
+				{ "name": "C5Sp31",
+					"image": "c5sp31",
+					"rotates": [{ "name": "Spigot3", "by": [90, 270, -90] }],
+					"priority": 0,
+					"sub": [151, 22, 72, 72],
+					"visible": false
+				},
+				{ "name": "C5Sp32",
+					"image": "c5sp32",
+					"rotates": [{ "name": "Spigot3", "by": [90, 0, -90] }],
+					"priority": 0,
+					"sub": [151, 22, 72, 72],
+					"visible": false
+				},
+				{ "name": "C5Sp33",
+					"image": "c5sp33",
+					"rotates": [{ "name": "Spigot3", "by": [90, 90, -90] }],
+					"priority": 0,
+					"sub": [151, 22, 72, 72],
+					"visible": false
+				},
+				{ "name": "C5Sp41",
+					"image": "c5sp41",
+					"rotates": [{ "name": "Spigot4", "by": [90, 270, -90] }],
+					"priority": 0,
+					"sub": [377, 222, 66, 68],
+					"visible": false
+				},
+				{ "name": "C5Sp42",
+					"image": "c5sp42",
+					"rotates": [{ "name": "Spigot4", "by": [90, 0, -90] }],
+					"priority": 0,
+					"sub": [377, 222, 66, 68],
+					"visible": false
+				},
+				{ "name": "C5Sp43",
+					"image": "c5sp43",
+					"rotates": [{ "name": "Spigot4", "by": [90, 90, -90] }],
+					"priority": 0,
+					"sub": [377, 222, 66, 68],
+					"visible": false
+				},
+				{ "name": "C5Sp51",
+					"image": "c5sp51",
+					"rotates": [{ "name": "Spigot5", "by": [90, 270, -90] }],
+					"priority": 0,
+					"sub": [504, 116, 61, 63],
+					"visible": false
+				},
+				{ "name": "C5Sp52",
+					"image": "c5sp52",
+					"rotates": [{ "name": "Spigot5", "by": [90, 0, -90] }],
+					"priority": 0,
+					"sub": [504, 116, 61, 63],
+					"visible": false
+				},
+				{ "name": "C5Sp53",
+					"image": "c5sp53",
+					"rotates": [{ "name": "Spigot5", "by": [90, 90, -90] }],
+					"priority": 0,
+					"sub": [504, 116, 61, 63],
+					"visible": false
+				},
+				{ "name": "C5StarPipes",
+					"image": "c5starpipes",
+					"shows": ["Star_pipes"],
+					"priority": 0,
+					"sub": [346, 88, 63, 41]
+				},
+				{ "name": "C5Key5",
+					"image": "c5key5",
+					"shows": ["Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out"],
+					"sub": [1399, 520, 20, 21]
+				},
+				{ "name": "C5MapSide",
+					"image": "c5mapside",
+					"shows": ["MapGlass_closed"],
+					"hides": ["MapGlass_open", "MapWilliamText", "KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag"],
+					"sub": [1416, 322, 109, 411]
+				}
+			],
+			"grid": [
+				{ "name": "C5SinkZoom",
+					"pos": [0, 330, 216, 351],
+					"zoom": "SinkZoom"
+				},
+				{ "name": "C5PipesZoom",
+					"pos": [0, 0, 709, 325],
+					"zoom": "PipesZoom"
+				},
+				{ "name": "C5CabinetZoom",
+					"pos": [630, 482, 447, 413],
+					"zoom": "CabinetZoom"
+				},
+				{ "name": "C5MapZoom",
+					"pos": [1170, 473, 406, 342],
+					"zoom": "MapZoom"
+				}
+			]
+		},
+		{ "name": "Cabin6",
+			"image": "c6",
+			"camera": "Camera6",
+			"shows": ["KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag", "MapGlass_open", "MapWilliamText", "MapFog", "SoldierN", "Pin_cover_open", "SymbolE11", "SymbolE12", "SymbolE13", "SymbolE14"],
+			"hides": ["Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out", "MapGlass_closed", "Cross", "DeskCover", "Pin_cover_closed", "Symbol11", "Symbol12", "Symbol13", "Symbol14", "Symbol21", "Symbol22", "Symbol23", "Symbol24", "Symbol31", "Symbol32", "Symbol33", "Symbol34", "Symbol41", "Symbol42", "Symbol43", "Symbol44", "Symbol51", "Symbol52", "Symbol53", "Symbol54", "Symbol61", "Symbol62", "Symbol63", "Symbol64"],
+			"left": "Cabin5",
+			"right": "Cabin7",
+			"subs": [
+				{ "name": "C6Key5",
+					"image": "c6key5",
+					"shows": ["Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out"],
+					"sub": [247, 550, 23, 27]
+				},
+				{ "name": "C6MapSide",
+					"image": "c6mapside",
+					"shows": ["MapGlass_closed"],
+					"hides": ["MapGlass_open", "MapWilliamText", "KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag"],
+					"sub": [299, 345, 113, 424]
+				},
+				{ "name": "C6PinCover",
+					"image": "c6pincover",
+					"shows": ["Pin_cover_closed"],
+					"hides": ["Pin_cover_open"],
+					"priority": 0,
+					"sub": [1659, 391, 115, 36]
+				},
+				{ "name": "C6Cover",
+					"image": "c6cover",
+					"shows": ["DeskCover"],
+					"priority": 0,
+					"sub": [1211, 391, 678, 265]
+				},
+				{ "name": "C6Symbol11",
+					"image": "c6s11",
+					"shows": ["Symbol11"],
+					"hides": ["SymbolE11", "DeskCover"],
+					"priority": 0,
+					"sub": [1491, 359, 32, 31],
+					"visible": false
+				},
+				{ "name": "C6Symbol21",
+					"image": "c6s21",
+					"shows": ["Symbol21"],
+					"hides": ["Symbol11"],
+					"sub": [1491, 359, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol31",
+					"image": "c6s31",
+					"shows": ["Symbol31"],
+					"hides": ["Symbol21"],
+					"sub": [1491, 359, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol41",
+					"image": "c6s41",
+					"shows": ["Symbol41"],
+					"hides": ["Symbol31"],
+					"sub": [1491, 359, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol51",
+					"image": "c6s51",
+					"shows": ["Symbol51"],
+					"hides": ["Symbol41"],
+					"sub": [1491, 359, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol61",
+					"image": "c6s61",
+					"shows": ["Symbol61"],
+					"hides": ["Symbol51"],
+					"sub": [1491, 359, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol12",
+					"image": "c6s12",
+					"shows": ["Symbol12"],
+					"hides": ["SymbolE12"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol22",
+					"image": "c6s22",
+					"shows": ["Symbol22"],
+					"hides": ["Symbol12"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol32",
+					"image": "c6s32",
+					"shows": ["Symbol32"],
+					"hides": ["Symbol22"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol42",
+					"image": "c6s42",
+					"shows": ["Symbol42"],
+					"hides": ["Symbol32"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol52",
+					"image": "c6s52",
+					"shows": ["Symbol52"],
+					"hides": ["Symbol42"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol62",
+					"image": "c6s62",
+					"shows": ["Symbol62"],
+					"hides": ["Symbol52"],
+					"sub": [1529, 360, 32, 31],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol13",
+					"image": "c6s13",
+					"shows": ["Symbol13"],
+					"hides": ["SymbolE13"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol23",
+					"image": "c6s23",
+					"shows": ["Symbol23"],
+					"hides": ["Symbol13"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol33",
+					"image": "c6s33",
+					"shows": ["Symbol33"],
+					"hides": ["Symbol23"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol43",
+					"image": "c6s43",
+					"shows": ["Symbol43"],
+					"hides": ["Symbol33"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol53",
+					"image": "c6s53",
+					"shows": ["Symbol53"],
+					"hides": ["Symbol43"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol63",
+					"image": "c6s63",
+					"shows": ["Symbol63"],
+					"hides": ["Symbol53"],
+					"sub": [1568, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol14",
+					"image": "c6s14",
+					"shows": ["Symbol14"],
+					"hides": ["SymbolE14"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol24",
+					"image": "c6s24",
+					"shows": ["Symbol24"],
+					"hides": ["Symbol14"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol34",
+					"image": "c6s34",
+					"shows": ["Symbol34"],
+					"hides": ["Symbol24"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol44",
+					"image": "c6s44",
+					"shows": ["Symbol44"],
+					"hides": ["Symbol34"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol54",
+					"image": "c6s54",
+					"shows": ["Symbol54"],
+					"hides": ["Symbol44"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				},
+				{ "name": "C6Symbol64",
+					"image": "c6s64",
+					"shows": ["Symbol64"],
+					"hides": ["Symbol54"],
+					"sub": [1605, 359, 33, 32],
+					"priority": 0,
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "C6MapZoom",
+					"pos": [0, 478, 466, 373],
+					"zoom": "MapZoom"
+				},
+				{ "name": "C6DoorSelect",
+					"pos": [517, 63, 477, 862],
+					"dialogue": "DoorDiscuss"
+				},
+				{ "name": "C6DeskZoom",
+					"pos": [1061, 241, 859, 525],
+					"zoom": "DeskZoom"
+				}
+			]
+		},
+		{ "name": "Cabin7",
+			"image": "c7",
+			"camera": "Camera7",
+			"shows": ["Pin_cover_open", "SymbolE11", "SymbolE12", "SymbolE13", "SymbolE14", "Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open", "Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open", "Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open", "Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open", "Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open", "Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+			"hides": ["DeskCover", "Pin_cover_closed", "Symbol11", "Symbol12", "Symbol13", "Symbol14", "Symbol21", "Symbol22", "Symbol23", "Symbol24", "Symbol31", "Symbol32", "Symbol33", "Symbol34", "Symbol41", "Symbol42", "Symbol43", "Symbol44", "Symbol51", "Symbol52", "Symbol53", "Symbol54", "Symbol61", "Symbol62", "Symbol63", "Symbol64", "Mailbox1_closed", "Mailbox1_keyhole_closed", "Mailbox2_closed", "Mailbox2_keyhole_closed", "Mailbox3_closed", "Mailbox3_keyhole_closed", "Mailbox4_closed", "Mailbox4_keyhole_closed", "Mailbox5_closed", "Mailbox5_keyhole_closed", "Mailbox6_closed", "Mailbox6_keyhole_closed", "Magnet", "Star_mailbox", "Mailbox2_note", "Mailbox3_note", "Mailbox4_note", "Mailbox6_note"],
+			"left": "Cabin6",
+			"right": "Cabin8",
+			"subs": [
+				{ "name": "C7PinCover",
+					"image": "c7pincover",
+					"shows": ["Pin_cover_closed"],
+					"hides": ["Pin_cover_open", "DeskCover"],
+					"sub": [888, 427, 85, 31]
+				},
+				{ "name": "C7Cover",
+					"image": "c7cover",
+					"shows": ["DeskCover"],
+					"sub": [481, 396, 622, 272]
+				},
+				{ "name": "C7Symbol11",
+					"image": "c7s11",
+					"shows": ["Symbol11"],
+					"hides": ["SymbolE11", "DeskCover"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol21",
+					"image": "c7s21",
+					"shows": ["Symbol21"],
+					"hides": ["Symbol11"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol31",
+					"image": "c7s31",
+					"shows": ["Symbol31"],
+					"hides": ["Symbol21"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol41",
+					"image": "c7s41",
+					"shows": ["Symbol41"],
+					"hides": ["Symbol31"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol51",
+					"image": "c7s51",
+					"shows": ["Symbol51"],
+					"hides": ["Symbol41"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol61",
+					"image": "c7s61",
+					"shows": ["Symbol61"],
+					"hides": ["Symbol51"],
+					"sub": [818, 387, 27, 32],
+					"visible": false
+				},
+				{ "name": "C7Symbol12",
+					"image": "c7s12",
+					"shows": ["Symbol12"],
+					"hides": ["SymbolE12"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol22",
+					"image": "c7s22",
+					"shows": ["Symbol22"],
+					"hides": ["Symbol12"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol32",
+					"image": "c7s32",
+					"shows": ["Symbol32"],
+					"hides": ["Symbol22"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol42",
+					"image": "c7s42",
+					"shows": ["Symbol42"],
+					"hides": ["Symbol32"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol52",
+					"image": "c7s52",
+					"shows": ["Symbol52"],
+					"hides": ["Symbol42"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol62",
+					"image": "c7s62",
+					"shows": ["Symbol62"],
+					"hides": ["Symbol52"],
+					"sub": [849, 390, 26, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol13",
+					"image": "c7s13",
+					"shows": ["Symbol13"],
+					"hides": ["SymbolE13"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol23",
+					"image": "c7s23",
+					"shows": ["Symbol23"],
+					"hides": ["Symbol13"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol33",
+					"image": "c7s33",
+					"shows": ["Symbol33"],
+					"hides": ["Symbol23"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol43",
+					"image": "c7s43",
+					"shows": ["Symbol43"],
+					"hides": ["Symbol33"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol53",
+					"image": "c7s53",
+					"shows": ["Symbol53"],
+					"hides": ["Symbol43"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol63",
+					"image": "c7s63",
+					"shows": ["Symbol63"],
+					"hides": ["Symbol53"],
+					"sub": [880, 393, 25, 31],
+					"visible": false
+				},
+				{ "name": "C7Symbol14",
+					"image": "c7s14",
+					"shows": ["Symbol14"],
+					"hides": ["SymbolE14"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Symbol24",
+					"image": "c7s24",
+					"shows": ["Symbol24"],
+					"hides": ["Symbol14"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Symbol34",
+					"image": "c7s34",
+					"shows": ["Symbol34"],
+					"hides": ["Symbol24"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Symbol44",
+					"image": "c7s44",
+					"shows": ["Symbol44"],
+					"hides": ["Symbol34"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Symbol54",
+					"image": "c7s54",
+					"shows": ["Symbol54"],
+					"hides": ["Symbol44"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Symbol64",
+					"image": "c7s64",
+					"shows": ["Symbol64"],
+					"hides": ["Symbol54"],
+					"sub": [909, 395, 25, 30],
+					"visible": false
+				},
+				{ "name": "C7Mailbox1",
+					"image": "c7mbox1",
+					"shows": ["Mailbox1_closed", "Mailbox1_keyhole_closed"],
+					"hides": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open"],
+					"sub": [1383, 607, 96, 104]
+				},
+				{ "name": "C7Mailbox2",
+					"image": "c7mbox2",
+					"shows": ["Mailbox2_closed", "Mailbox2_keyhole_closed"],
+					"hides": ["Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open"],
+					"sub": [1512, 606, 106, 105]
+				},
+				{ "name": "C7Mailbox3",
+					"image": "c7mbox3",
+					"shows": ["Mailbox3_closed", "Mailbox3_keyhole_closed"],
+					"hides": ["Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open"],
+					"sub": [1659, 605, 116, 109]
+				},
+				{ "name": "C7Mailbox4",
+					"image": "c7mbox4",
+					"shows": ["Mailbox4_closed", "Mailbox4_keyhole_closed"],
+					"hides": ["Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open"],
+					"sub": [1381, 430, 94, 100]
+				},
+				{ "name": "C7Mailbox5",
+					"image": "c7mbox5",
+					"shows": ["Mailbox5_closed", "Mailbox5_keyhole_closed"],
+					"hides": ["Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open"],
+					"sub": [1513, 418, 102, 105]
+				},
+				{ "name": "C7Mailbox6",
+					"image": "c7mbox6",
+					"shows": ["Mailbox6_closed", "Mailbox6_keyhole_closed"],
+					"hides": ["Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+					"sub": [1659, 404, 111, 113]
+				},
+				{ "name": "C7Star",
+					"image": "c7star",
+					"shows": ["Star_mailbox"],
+					"sub": [1721, 370, 43, 20]
+				}
+			],
+			"grid": [
+				{ "name": "C7DeskZoom",
+					"pos": [272, 258, 935, 514],
+					"zoom": "DeskZoom"
+				},
+				{ "name": "C7MailboxesZoom",
+					"pos": [1241, 212, 679, 724],
+					"zoom": "MailboxesZoom"
+				}
+			]
+		},
+		{ "name": "Cabin8",
+			"image": "c8",
+			"camera": "Camera8",
+			"shows": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open", "Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open", "Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open", "Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open", "Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open", "Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open", "ClockDoor_open"],
+			"hides": ["Laces", "Lace_tips", "Mailbox1_closed", "Mailbox1_keyhole_closed", "Mailbox2_closed", "Mailbox2_keyhole_closed", "Mailbox3_closed", "Mailbox3_keyhole_closed", "Mailbox4_closed", "Mailbox4_keyhole_closed", "Mailbox5_closed", "Mailbox5_keyhole_closed", "Mailbox6_closed", "Mailbox6_keyhole_closed", "Star_mailbox", "Mailbox2_note", "Mailbox3_note", "Mailbox4_note", "Mailbox6_note", "Watch2", "Band2", "Band_slip2", "ClockDoor_closed", "WatchClasp2", "WatchFace2", "WatchGlass2", "WatchHands2", "WatchKnob2", "WatchNumbers2"],
+			"left": "Cabin7",
+			"right": "Cabin1",
+			"subs": [
+				{ "name": "C8Mailbox1",
+					"image": "c8mbox1",
+					"shows": ["Mailbox1_closed", "Mailbox1_keyhole_closed"],
+					"hides": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open"],
+					"sub": [201, 640, 113, 106]
+				},
+				{ "name": "C8Mailbox2",
+					"image": "c8mbox2",
+					"shows": ["Mailbox2_closed", "Mailbox2_keyhole_closed"],
+					"hides": ["Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open"],
+					"sub": [370, 637, 109, 105]
+				},
+				{ "name": "C8Mailbox3",
+					"image": "c8mbox3",
+					"shows": ["Mailbox3_closed", "Mailbox3_keyhole_closed"],
+					"hides": ["Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open"],
+					"sub": [532, 639, 108, 103]
+				},
+				{ "name": "C8Mailbox4",
+					"image": "c8mbox4",
+					"shows": ["Mailbox4_closed", "Mailbox4_keyhole_closed"],
+					"hides": ["Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open"],
+					"sub": [210, 458, 112, 100]
+				},
+				{ "name": "C8Mailbox5",
+					"image": "c8mbox5",
+					"shows": ["Mailbox5_closed", "Mailbox5_keyhole_closed"],
+					"hides": ["Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open"],
+					"sub": [377, 459, 106, 99]
+				},
+				{ "name": "C8Mailbox6",
+					"image": "c8mbox6",
+					"shows": ["Mailbox6_closed", "Mailbox6_keyhole_closed"],
+					"hides": ["Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+					"sub": [539, 459, 105, 100]
+				},
+				{ "name": "C8Star",
+					"image": "c8star",
+					"shows": ["Star_mailbox"],
+					"sub": [598, 430, 45, 21]
+				},
+				{ "name": "C8Watch",
+					"image": "c8w",
+					"shows": ["Watch2", "Band2", "Band_slip2", "WatchClasp2", "WatchFace2", "WatchGlass2", "WatchHands2", "WatchKnob2", "WatchNumbers2"],
+					"sub": [1031, 315, 52, 32]
+				},
+				{ "name": "C8CDoor",
+					"image": "c8cdoor",
+					"shows": ["ClockDoor_closed"],
+					"hides": ["ClockDoor_open"],
+					"sub": [980, 145, 157, 475]
+				},
+				{ "name": "C8H3",
+					"image": "c8h3",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 300, 0] }],
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H4",
+					"image": "c8h4",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 330, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H5",
+					"image": "c8h5",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 0, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H6",
+					"image": "c8h6",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 30, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H7",
+					"image": "c8h7",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 60, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H8",
+					"image": "c8h8",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 90, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H9",
+					"image": "c8h9",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 120, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H10",
+					"image": "c8h10",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 150, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H11",
+					"image": "c8h11",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 180, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H12",
+					"image": "c8h12",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 210, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H1",
+					"image": "c8h1",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 240, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8H2",
+					"image": "c8h2",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 270, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [1014, 704, 98, 99]
+				},
+				{ "name": "C8M9",
+					"image": "c8m9",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 70, 0] }],
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M10",
+					"image": "c8m10",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 100, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M11",
+					"image": "c8m11",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 130, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M12",
+					"image": "c8m12",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 160, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M1",
+					"image": "c8m1",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 190, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M2",
+					"image": "c8m2",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 220, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M3",
+					"image": "c8m3",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 250, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M4",
+					"image": "c8m4",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 280, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M5",
+					"image": "c8m5",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 310, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M6",
+					"image": "c8m6",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 340, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M7",
+					"image": "c8m7",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 10, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8M8",
+					"image": "c8m8",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 40, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [994, 684, 139, 140]
+				},
+				{ "name": "C8Laces",
+					"image": "c8laces",
+					"shows": ["Laces", "Lace_tips"],
+					"sub": [1375, 129, 62, 67]
+				}
+			],
+			"grid": [
+				{ "name": "C8MailboxesZoom",
+					"pos": [0, 303, 832, 698],
+					"zoom": "MailboxesZoom"
+				},
+				{ "name": "C8ClockZoom",
+					"pos": [832, 565, 448, 433],
+					"zoom": "ClockZoom"
+				},
+				{ "name": "C8PendulumZoom",
+					"pos": [830, 0, 450, 563],
+					"zoom": "PendulumZoom"
+				},
+				{ "name": "C8SoldiersZoom",
+					"pos": [1282, 496, 525, 419],
+					"zoom": "SoldiersZoom"
+				},
+				{ "name": "C8BootsZoom",
+					"pos": [1265, 0, 469, 387],
+					"zoom": "BootsZoom"
+				}
+			]
+		},
+		{ "name": "BootsZoom",
+			"image": "bootszoom",
+			"camera": "BootsCam",
+			"hides": ["Laces", "Lace_tips"],
+			"left": "ClockZoom",
+			"right": "CanteenZoom",
+			"back": "Cabin8",
+			"subs": [
+				{ "name": "BootsLaces",
+					"image": "bootslaces",
+					"shows": ["Laces", "Lace_tips"],
+					"sub": [693, 446, 302, 310]
+				}
+			],
+			"grid": [
+				{ "name": "BootsLacesTake",
+					"pos": [472, 284, 565, 703],
+					"object": "Laces",
+					"speech": [
+						{ "line": "I pulled the laces out of the boot." }
+					],
+					"hides": [
+						{ "name": "BootsLaces",
+							"parent": "BootsZoom"
+						},
+						{ "name": "C1Laces",
+							"parent": "Cabin1"
+						},
+						{ "name": "C8Laces",
+							"parent": "Cabin8"
+						}
+					],
+					"toggles": [
+						{ "name": "BootsLacesTake",
+							"parent": "BootsZoom"
+						},
+						{ "name": "BootsSelect",
+							"parent": "BootsZoom"
+						}
+					]
+				},
+				{ "name": "BootsSelect",
+					"pos": [472, 284, 565, 703],
+					"speech": [
+						{ "line": "They're military boots." }
+					]
+				}
+			]
+		},
+		{ "name": "CanteenZoom",
+			"image": "canteenzoom",
+			"camera": "CanteenCam",
+			"shows": ["Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open"],
+			"hides": ["Canteen_cover", "Snap_L", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+			"left": "BootsZoom",
+			"right": "RifleZoom",
+			"back": "Cabin1",
+			"subs": [
+				{ "name": "CanteenKey2",
+					"image": "canteenkey2",
+					"shows": ["Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [671, 510, 82, 47]
+				},
+				{ "name": "CanteenBlood",
+					"image": "canteenblood",
+					"shows": ["Canteen_cover", "Snap_L"],
+					"hides": ["Bunk1_blood", "Canteen_cover_open", "Canteen_blood", "Snap_L_open", "Key2_out", "Key2_number_out", "Key2_ring_out", "Key2_tag_out"],
+					"sub": [603, 0, 222, 633]
+				}
+			],
+			"grid": [
+				{ "name": "CanteenSelect",
+					"pos": [414, 0, 773, 846],
+					"speech": [
+						{ "line": "It's a military canteen." },
+						{ "line": "It's mostly empty." }
+					],
+					"selects": [
+						{ "name": "Whiskey",
+							"removes": "Whiskey",
+							"animate": "WhiskeyPour",
+							"flag": "BloodSeen",
+							"speech": [
+								{ "line": "Hmm.." }
+							],
+							"hides": [
+								{ "name": "CanteenBlood",
+									"parent": "CanteenZoom"
+								},
+								{ "name": "C1Canteen",
+									"parent": "Cabin1"
+								},
+								{ "name": "C2Canteen",
+									"parent": "Cabin2"
+								}
+							],
+							"toggles": [
+								{ "name": "CanteenSelect",
+									"parent": "CanteenZoom"
+								},
+								{ "name": "CanteenKey2Take",
+									"parent": "CanteenZoom"
+								},
+								{ "name": "CanteenSelect2",
+									"parent": "CanteenZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "CanteenKey2Take",
+					"pos": [609, 447, 215, 159],
+					"flag": "WhiskeyPlaced",
+					"active": false,
+					"object": "Key2",
+					"speech": [
+						{ "line": "There's a small key here." }
+					],
+					"hides": [
+						{ "name": "CanteenKey2",
+							"parent": "CanteenZoom"
+						},
+						{ "name": "C1Key2",
+							"parent": "Cabin1"
+						},
+						{ "name": "C2Key2",
+							"parent": "Cabin2"
+						}
+					],
+					"toggles": [
+						{ "name": "CanteenKey2Take",
+							"parent": "CanteenZoom"
+						}
+					]
+				},
+				{ "name": "CanteenSelect2",
+					"pos": [414, 0, 773, 846],
+					"active": false,
+					"speech": [
+						{ "line": "I filled the canteen with whiskey." },
+						{ "line": "Ominous." }
+					]
+				},
+				{ "name": "David1Select",
+					"pos": [1190, 85, 635, 795],
+					"view": "david1"
+				}
+			]
+		},
+		{ "name": "RifleZoom",
+			"image": "riflezoom",
+			"camera": "RifleCam",
+			"shows": ["Rifle_blood", "Mattress1_blood", "Rosary", "RosaryCross", "RosaryCurve"],
+			"hides": ["Key3_out", "Key3_number_out", "Key3_tag_out"],
+			"left": "CanteenZoom",
+			"right": "ChestZoom",
+			"back": "Cabin1",
+			"subs": [
+				{ "name": "RifleKey3",
+					"image": "riflekey3",
+					"shows": ["Key3_out", "Key3_number_out", "Key3_tag_out"],
+					"sub": [937, 852, 26, 26]
+				},
+				{ "name": "RifleRosary",
+					"image": "riflerosary",
+					"hides": ["Rifle_blood", "Mattress1_blood", "Key3_out", "Key3_number_out", "Key3_tag_out", "Rosary", "RosaryCross", "RosaryCurve"],
+					"sub": [880, 34, 262, 844]
+				}
+			],
+			"grid": [
+				{ "name": "RifleSelect",
+					"pos": [834, 0, 650, 943],
+					"speech": [
+						{ "line": "It's a rifle." }
+					],
+					"selects": [
+						{ "name": "Rosary",
+							"removes": "Rosary",
+							"animate": "RosaryPlace",
+							"flag": "BloodSeen",
+							"speech": [
+								{ "line": "A small key emerged from the barrel." }
+							],
+							"hides": [
+								{ "name": "RifleRosary",
+									"parent": "RifleZoom"
+								},
+								{ "name": "C1Rosary",
+									"parent": "Cabin1"
+								},
+								{ "name": "C2Rosary",
+									"parent": "Cabin2"
+								}
+							],
+							"toggles": [
+								{ "name": "RifleSelect",
+									"parent": "RifleZoom"
+								},
+								{ "name": "RifleKey3Take",
+									"parent": "RifleZoom"
+								},
+								{ "name": "RifleSelect2",
+									"parent": "RifleZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "RifleKey3Take",
+					"pos": [787, 598, 406, 414],
+					"active": false,
+					"flag": "RosaryPlaced",
+					"object": "Key3",
+					"hides": [
+						{ "name": "RifleKey3",
+							"parent": "RifleZoom"
+						},
+						{ "name": "C1Key3",
+							"parent": "Cabin1"
+						},
+						{ "name": "C2Key3",
+							"parent": "Cabin2"
+						}
+					],
+					"toggles": [
+						{ "name": "RifleKey3Take",
+							"parent": "RifleZoom"
+						}
+					]
+				},
+				{ "name": "RifleSelect2",
+					"pos": [834, 0, 650, 943],
+					"active": false,
+					"speech": [
+						{ "line": "I draped the rosary on the rifle." }
+					]
+				},
+				{ "name": "William1Select",
+					"pos": [210, 0, 650, 461],
+					"view": "william1"
+				}
+			]
+		},
+		{ "name": "Order1Zoom",
+			"image": "order1zoom",
+			"camera": "Order1Cam",
+			"left": "RifleZoom",
+			"right": "FloorZoom",
+			"back": "Cabin2",
+			"grid": [
+				{ "name": "Order1Select",
+					"pos": [267, 38, 1329, 971],
+					"speech": [
+						{ "line": "It's.. a poem about, soldiers?" },
+						{ "line": "I don't recognize any of the names in this.." }
+					],
+					"choices": [
+						{ "name": "OrderHint",
+							"dialogue": "Avatar",
+							"type": "remove"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "ChestZoom",
+			"image": "chestzoom",
+			"camera": "ChestCam",
+			"shows": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest", "Laces_floor"],
+			"hides": ["Chest", "Gold"],
+			"left": "RifleZoom",
+			"right": "FloorZoom",
+			"back": "Cabin2",
+			"subs": [
+				{ "name": "ChestLid",
+					"image": "chestlid",
+					"shows": ["Chest", "Gold"],
+					"hides": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "Key_chest"],
+					"sub": [169, 412, 1348, 603]
+				},
+				{ "name": "ChestLaces",
+					"image": "chestlaces",
+					"hides": ["Laces_floor"],
+					"sub": [1669, 0, 251, 103]
+				}
+			],
+			"grid": [
+				{ "name": "ChestSelect",
+					"pos": [343, 138, 1123, 696],
+					"speech": [
+						{ "line": "It's a locked chest." }
+					],
+					"selects": [
+						{ "name": "Key",
+							"removes": "Key",
+							"animate": "ChestOpen",
+							"flag": "ChestOpen",
+							"choices": [
+								{ "name": "ChestHint",
+									"type": "remove",
+									"dialogue": "Avatar"
+								}
+							],
+							"hides": [
+								{ "name": "ChestLid",
+									"parent": "ChestZoom"
+								},
+								{ "name": "C1Chest",
+									"parent": "Cabin1"
+								},
+								{ "name": "C2Chest",
+									"parent": "Cabin2"
+								},
+								{ "name": "C3Chest",
+									"parent": "Cabin3"
+								}
+							],
+							"toggles": [
+								{ "name": "ChestSelect",
+									"parent": "ChestZoom"
+								},
+								{ "name": "ChestSelect2",
+									"parent": "ChestZoom"
+								}
+							]
+						}
+					],
+					"choices": [
+						{ "name": "ChestHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "ChestSelect2",
+					"pos": [343, 138, 1123, 696],
+					"zoom": "ChestInZoom",
+					"active": false,
+					"flag": "ChestOpen"
+				}
+			]
+		},
+		{ "name": "ChestInZoom",
+			"image": "chestinzoom",
+			"camera": "ChestInCam",
+			"shows": ["Chest_lid", "ChestLight", "Gold_bottom", "Gold_top", "CompassNeedle"], 
+			"hides": ["Star_chest"],
+			"left": "RifleZoom",
+			"right": "FloorZoom",
+			"back": "Cabin2",
+			"subs": [
+				{ "name": "ChestStar",
+					"image": "cheststar",
+					"shows": ["Star_chest"],
+					"sub": [571, 96, 325, 277]
+				}
+			],
+			"grid": [
+				{ "name": "ChestStarTake",
+					"pos": [571, 82, 330, 270],
+					"object": "Star5",
+					"hides": [
+						{ "name": "ChestStar",
+							"parent": "ChestInZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "ChestStarTake",
+							"parent": "ChestInZoom"
+						}
+					]
+				},
+				{ "name": "ChestCompassZoom",
+					"pos": [997, 135, 657, 355],
+					"zoom": "CompassZoom"
+				},
+				{ "name": "ChestWilliam2",
+					"pos": [410, 355, 592, 438],
+					"view": "william2"
+				}
+			]
+		},
+		{ "name": "CompassZoom",
+			"image": "compasszoom",
+			"shows": ["Compass_button", "ChestLight"],
+			"hides": ["CompassNeedle", "CompassBlue", "CompassCyan", "CompassGreen", "CompassOrange", "CompassRed"],
+			"camera": "CompassCam",
+			"back": "ChestInZoom",
+			"subs": [
+				{ "name": "CompassGreen",
+					"image": "compassgreen",
+					"shows": ["CompassGreen"],
+					"sub": [639, 303, 610, 577],
+					"visible": false
+				},
+				{ "name": "CompassBlue",
+					"image": "compassblue",
+					"shows": ["CompassGreen"],
+					"sub": [639, 303, 610, 577],
+					"visible": false
+				},
+				{ "name": "CompassCyan",
+					"image": "compasscyan",
+					"shows": ["CompassCyan"],
+					"sub": [639, 303, 610, 577],
+					"visible": false
+				},
+				{ "name": "CompassRed",
+					"image": "compassred",
+					"shows": ["CompassRed"],
+					"sub": [639, 303, 610, 577],
+					"visible": false
+				},
+				{ "name": "CompassOrange",
+					"image": "compassorange",
+					"shows": ["CompassOrange"],
+					"sub": [639, 303, 610, 577],
+					"visible": false
+				},
+				{ "name": "CompassNeedle",
+					"image": "compassneedle",
+					"shows": ["CompassNeedle"],
+					"hides": ["CompassFace", "CompassCenter", "Compass", "Chest_bottom", "Floor", "Room"],
+					"anchor": [0.5, 0],
+					"undo": true,
+					"sub": [924, 612, 43, 222]
+				}
+			],
+			"grid": [
+				{ "name": "CompassSelect",
+					"pos": [612, 293, 670, 648],
+					"speech": [
+						{ "line": "It looks like some sort of compass." }
+					]
+				},
+				{ "name": "CompassPress",
+					"pos": [833, 44, 210, 196],
+					"animate": "CompassRun"
+				}
+			]
+		},
+		{ "name": "FloorZoom",
+			"image": "floorzoom",
+			"camera": "FloorCam",
+			"shows": ["Laces_floor", "Magnet_floor"],
+			"hides": ["Star_floor", "Key_floor", "Key_floor2", "Laces_floor_nm"],
+			"left": "ChestZoom",
+			"right": "ShirtZoom",
+			"back": "Cabin2",
+			"subs": [
+				{ "name": "FloorStar",
+					"image": "floorstar",
+					"shows": ["Star_floor"],
+					"sub": [1442, 312, 323, 230]
+				},
+				{ "name": "FloorKey2",
+					"image": "floorkey2",
+					"shows": ["Key_floor2"],
+					"sub": [935, 390, 144, 157],
+					"visible": false
+				},
+				{ "name": "FloorKey1",
+					"image": "floorkey1",
+					"shows": ["Key_floor"],
+					"hides": ["Key_floor2"],
+					"sub": [998, 426, 50, 88]
+				},
+				{ "name": "FloorLaces2",
+					"image": "floorlaces2",
+					"shows": ["Laces_floor_nm"],
+					"hides": ["Laces_floor", "Magnet_floor"],
+					"sub": [412, 395, 600, 208]
+				},
+				{ "name": "FloorLaces1",
+					"image": "floorlaces1",
+					"hides": ["Laces_floor_nm"],
+					"sub": [412, 395, 600, 208]
+				}
+			],
+			"grid": [
+				{ "name": "FloorKeySelect1",
+					"pos": [322, 199, 925, 510],
+					"speech": [
+						{ "line": "There's something between the floorboards here." },
+						{ "line": "I can't reach it with my fingers." }
+					],
+					"selects": [
+						{ "name": "Laces",
+							"removes": "Laces",
+							"hides": [
+								{ "name": "FloorLaces1",
+									"parent": "FloorZoom"
+								},
+								{ "name": "ChestLaces",
+									"parent": "ChestZoom"
+								},
+								{ "name": "C2Laces1",
+									"parent": "Cabin2"
+								},
+								{ "name": "C3Laces1",
+									"parent": "Cabin3"
+								}
+							],
+							"toggles": [
+								{ "name": "FloorKeySelect1",
+									"parent": "FloorZoom"
+								},
+								{ "name": "FloorKeySelect2",
+									"parent": "FloorZoom"
+								}
+							],
+							"choices": [
+								{ "name": "LacesHint",
+									"type": "remove",
+									"dialogue": "Avatar"
+								}
+							]
+						},
+						{ "name": "Magnet",
+							"speech": [
+								{ "line": "That might work, but it's too far down." }
+							]
+						}
+					],
+					"choices": [
+						{ "name": "LacesHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "FloorKeySelect2",
+					"pos": [322, 199, 925, 510],
+					"active": false,
+					"speech": [
+						{ "line": "I've tied the laces to the floor." },
+						{ "line": "There's something between the floorboards here." }
+					],
+					"selects": [
+						{ "name": "Magnet",
+							"removes": "Magnet",
+							"shows": [
+								{ "name": "FloorKey2",
+									"parent": "FloorZoom"
+								}
+							],
+							"hides": [
+								{ "name": "FloorLaces2",
+									"parent": "FloorZoom"
+								},
+								{ "name": "FloorKey1",
+									"parent": "FloorZoom"
+								},
+								{ "name": "C2Laces2",
+									"parent": "Cabin2"
+								},
+								{ "name": "C3Laces2",
+									"parent": "Cabin3"
+								}
+							],
+							"toggles": [
+								{ "name": "FloorKeySelect2",
+									"parent": "FloorZoom"
+								},
+								{ "name": "FloorKeySelect3",
+									"parent": "FloorZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "FloorKeySelect3",
+					"pos": [322, 199, 925, 510],
+					"active": false,
+					"object": "Key",
+					"speech": [
+						{ "line": "There was a key below the floorboards." }
+					],
+					"hides": [
+						{ "name": "FloorKey2",
+							"parent": "FloorZoom"
+						},
+						{ "name": "C2Key",
+							"parent": "Cabin2"
+						},
+						{ "name": "C3Key",
+							"parent": "Cabin3"
+						}
+					],
+					"toggles": [
+						{ "name": "FloorKeySelect3",
+							"parent": "FloorZoom"
+						},
+						{ "name": "FloorKeySelect4",
+							"parent": "FloorZoom"
+						}
+					]
+				},
+				{ "name": "FloorKeySelect4",
+					"pos": [322, 199, 925, 510],
+					"active": false,
+					"speech": [
+						{ "line": "There was a key below the floorboards." }
+					]
+				},
+				{ "name": "FloorStarTake",
+					"pos": [1314, 197, 538, 485],
+					"object": "Star4",
+					"speech": [
+						{ "line": "It's a triangular piece of metal." }
+					],
+					"hides": [
+						{ "name": "FloorStar",
+							"parent": "FloorZoom"
+						},
+						{ "name": "C2Star",
+							"parent": "Cabin2"
+						},
+						{ "name": "C3Star",
+							"parent": "Cabin3"
+						}
+					],
+					"toggles": [
+						{ "name": "FloorStarTake",
+							"parent": "FloorZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "ShirtZoom",
+			"image": "shirtzoom",
+			"camera": "ShirtCam",
+			"shows": ["Pin_shirt", "Shirt_blood", "Shirt_open"],
+			"hides": ["Shirt", "Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out"],
+			"left": "FloorZoom",
+			"right": "WatchZoom",
+			"back": "Cabin3",
+			"subs": [
+				{ "name": "ShirtKey6",
+					"image": "shirtkey6",
+					"shows": ["Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out"],
+					"sub": [1106, 674, 44, 23]
+				},
+				{ "name": "ShirtPin",
+					"image": "shirtpin",
+					"shows": ["Shirt"],
+					"hides": ["Key6_number_out", "Key6_out", "Key6_ring_out", "Key6_tag_out", "Pin_shirt", "Shirt_blood", "Shirt_open"],
+					"sub": [1100, 563, 188, 198]
+				}
+			],
+			"grid": [
+				{ "name": "James1Select",
+					"pos": [561, 0, 768, 422],
+					"view": "james1"
+				},
+				{ "name": "ShirtKey6Take",
+					"pos": [1095, 666, 63, 39],
+					"active": false,
+					"flag": "PinPlaced",
+					"object": "Key6",
+					"speech": [
+						{ "line": "It's a small metal key." }
+					],
+					"hides": [
+						{ "name": "ShirtKey6",
+							"parent": "ShirtZoom"
+						},
+						{ "name": "C3Key6",
+							"parent": "Cabin3"
+						}
+					],
+					"toggles": [
+						{ "name": "ShirtKey6Take",
+							"parent": "ShirtZoom"
+						}
+					]
+				},
+				{ "name": "ShirtSelect",
+					"pos": [603, 386, 805, 518],
+					"speech": [
+						{ "line": "Someone's folded a dress shirt here." }
+					],
+					"selects": [
+						{ "name": "Pin",
+							"removes": "Pin",
+							"animate": "PinPlace",
+							"flag": "BloodSeen",
+							"speech": [
+								{ "line": "Hmm.." }
+							],
+							"hides": [
+								{ "name": "ShirtPin",
+									"parent": "ShirtZoom"
+								},
+								{ "name": "C2Pin",
+									"parent": "Cabin2"
+								},
+								{ "name": "C3Pin",
+									"parent": "Cabin3"
+								}
+							],
+							"toggles": [
+								{ "name": "ShirtSelect",
+									"parent": "ShirtZoom"
+								},
+								{ "name": "ShirtKey6Take",
+									"parent": "ShirtZoom"
+								},
+								{ "name": "ShirtSelect2",
+									"parent": "ShirtZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "ShirtSelect2",
+					"pos": [603, 386, 805, 518],
+					"active": false,
+					"speech": [
+						{ "line": "I placed the pin on the shirt." }
+					]
+				}
+			]
+		},
+		{ "name": "WatchZoom",
+			"image": "watchzoom",
+			"camera": "WatchCam",
+			"shows": ["CaseFlap", "Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+			"hides": ["Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out"],
+			"left": "ShirtZoom",
+			"right": "SinkZoom",
+			"back": "Cabin3",
+			"subs": [
+				{ "name": "WatchKey4",
+					"image": "watchkey4",
+					"shows": ["Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out"],
+					"sub": [849, 578, 52, 30]
+				},
+				{ "name": "WatchCaseFlap",
+					"image": "watchcaseflap",
+					"hides": ["CaseFlap", "Key4_number_out", "Key4_out", "Key4_ring_out", "Key4_tag_out"],
+					"sub": [822, 578, 113, 101]
+				},
+				{ "name": "WatchCase",
+					"image": "watchcase",
+					"hides": ["Watch", "Band", "Band_slip", "WatchClasp", "WatchFace", "WatchGlass", "WatchHands", "WatchKnob", "WatchNumbers"],
+					"sub": [762, 334, 134, 200]
+				}
+			],
+			"grid": [
+				{ "name": "WatchSelect",
+					"pos": [535, 193, 493, 684],
+					"speech": [
+						{ "line": "Looks like an empty case." },
+						{ "line": "Might fit a bracelet, or a watch." }
+					],
+					"selects": [
+						{ "name": "Watch",
+							"flagactions": [
+								{ "name": "&BloodSeen",
+									"speech": [
+										{ "line": "Hmm.. no blood this time." }
+									]
+								},
+								{ "name": "&!BloodSeen",
+									"speech": [
+										{ "line": "The watch fits here." }
+									]
+								}
+							],
+							"animate": "WatchPlace",
+							"removes": "Watch",
+							"sound": "dooropen1",
+							"hides": [
+								{ "name": "WatchCaseFlap",
+									"parent": "WatchZoom"
+								},
+								{ "name": "C2Watch",
+									"parent": "Cabin2"
+								},
+								{ "name": "C3Watch",
+									"parent": "Cabin3"
+								}
+							],
+							"toggles": [
+								{ "name": "WatchSelect",
+									"parent": "WatchZoom"
+								},
+								{ "name": "WatchKey4Take",
+									"parent": "WatchZoom"
+								},
+								{ "name": "WatchSelect2",
+									"parent": "WatchZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "WatchKey4Take",
+					"pos": [669, 510, 402, 282],
+					"active": false,
+					"flag": "WatchPlaced",
+					"object": "Key4",
+					"speech": [
+						{ "line": "It's a small metal key." }
+					],
+					"hides": [
+						{ "name": "WatchKey4",
+							"parent": "WatchZoom"
+						},
+						{ "name": "C2Key4",
+							"parent": "Cabin2"
+						},
+						{ "name": "C3Key4",
+							"parent": "Cabin3"
+						}
+					],
+					"toggles": [
+						{ "name": "WatchKey4Take",
+							"parent": "WatchZoom"
+						}
+					]
+				},
+				{ "name": "WatchSelect2",
+					"pos": [535, 193, 493, 684],
+					"active": false,
+					"speech": [
+						{ "line": "I put the watch in its case." }
+					]
+				},
+				{ "name": "Nathan1Select",
+					"pos": [1020, 0, 647, 474],
+					"view": "nathan1"
+				}
+			]
+		},
+		{ "name": "SinkZoom",
+			"image": "sinkzoom",
+			"camera": "SinkCam",
+			"shows": [],
+			"hides": ["Rosary_sink", "RosaryCurve_sink", "Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out"],
+			"left": "WatchZoom",
+			"right": "PipesZoom",
+			"back": "Cabin4",
+			"subs": [
+				{ "name": "SinkRosary",
+					"image": "sinkrosary",
+					"shows": ["Rosary_sink", "RosaryCurve_sink"],
+					"sub": [758, 278, 246, 103]
+				},
+				{ "name": "SinkRosaryOut",
+					"image": "sinkrosaryout",
+					"shows": ["Sink_water", "Rosary_sink_out", "RosaryCurve_sink_out", "RosaryCross_sink_out"],
+					"hides": ["Rosary_sink", "RosaryCurve_sink"],
+					"sub": [755, 263, 439, 244],
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "SinkFaucets",
+					"pos": [606, 580, 734, 338],
+					"speech": [
+						{ "line": "The faucet handles don't seem to turn." },
+						{ "line": "I think they're rusty." }
+					],
+					"choices": [
+						{ "name": "PipesHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "SinkRosarySelect",
+					"pos": [645, 204, 624, 272],
+					"speech": [
+						{ "line": "They look like rosary beads, but they're stuck in the drain." },
+						{ "line": "Maybe I can get the sink to back up and push them out." },
+						{ "line": "I think the cross is caught." }
+					],	
+					"choices": [
+						{ "name": "PipesHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "SinkRosaryTake",
+					"pos": [693, 292, 587, 293],
+					"active": false,
+					"object": "Rosary",
+					"speech": [
+						{ "line": "The water pushed it out." }
+					],
+					"hides": [
+						{ "name": "SinkRosaryOut",
+							"parent": "SinkZoom"
+						},
+						{ "name": "C4RosaryOut",
+							"parent": "Cabin4"
+						},
+						{ "name": "C5RosaryOut",
+							"parent": "Cabin5"
+						}
+					],
+					"toggles": [
+						{ "name": "SinkRosaryTake",
+							"parent": "SinkZoom"
+						}
+					],
+					"choices": [
+						{ "name": "PlaceHint",
+							"dialogue": "Avatar",
+							"type": "enable"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "PipesZoom",
+			"image": "pipeszoom",
+			"camera": "PipesCam",
+			"shows": [],
+			"hides": ["Rosary_sink", "RosaryCurve_sink", "Star_pipes"],
+			"rotates": [{ "name": "Spigot1", "by": [90, 180, -90] },
+				{ "name": "Spigot2", "by": [90, 180, -90] },
+				{ "name": "Spigot3", "by": [90, 180, -90] },
+				{ "name": "Spigot4", "by": [90, 180, -90] },
+				{ "name": "Spigot5", "by": [90, 180, -90] }
+			],
+			"left": "SinkZoom",
+			"right": "CabinetZoom",
+			"back": "Cabin4",
+			"subs": [
+				{ "name": "PipesSp11",
+					"image": "pipessp11",
+					"rotates": [{ "name": "Spigot1", "by": [90, 270, -90] }],
+					"sub": [193, 441, 168, 166],
+					"visible": false
+				},
+				{ "name": "PipesSp12",
+					"image": "pipessp12",
+					"rotates": [{ "name": "Spigot1", "by": [90, 0, -90] }],
+					"sub": [193, 441, 168, 166],
+					"visible": false
+				},
+				{ "name": "PipesSp13",
+					"image": "pipessp13",
+					"rotates": [{ "name": "Spigot1", "by": [90, 90, -90] }],
+					"sub": [193, 441, 168, 166],
+					"visible": false
+				},
+				{ "name": "PipesSp21",
+					"image": "pipessp21",
+					"rotates": [{ "name": "Spigot2", "by": [90, 270, -90] }],
+					"sub": [527, 591, 181, 168],
+					"visible": false
+				},
+				{ "name": "PipesSp22",
+					"image": "pipessp22",
+					"rotates": [{ "name": "Spigot2", "by": [90, 0, -90] }],
+					"sub": [527, 591, 181, 168],
+					"visible": false
+				},
+				{ "name": "PipesSp23",
+					"image": "pipessp23",
+					"rotates": [{ "name": "Spigot2", "by": [90, 90, -90] }],
+					"sub": [527, 591, 181, 168],
+					"visible": false
+				},
+				{ "name": "PipesSp31",
+					"image": "pipessp31",
+					"rotates": [{ "name": "Spigot3", "by": [90, 270, -90] }],
+					"sub": [665, 194, 170, 162],
+					"visible": false
+				},
+				{ "name": "PipesSp32",
+					"image": "pipessp32",
+					"rotates": [{ "name": "Spigot3", "by": [90, 0, -90] }],
+					"sub": [665, 194, 170, 162],
+					"visible": false
+				},
+				{ "name": "PipesSp33",
+					"image": "pipessp33",
+					"rotates": [{ "name": "Spigot3", "by": [90, 90, -90] }],
+					"sub": [665, 194, 170, 162],
+					"visible": false
+				},
+				{ "name": "PipesSp41",
+					"image": "pipessp41",
+					"rotates": [{ "name": "Spigot4", "by": [90, 270, -90] }],
+					"sub": [1230, 576, 177, 181],
+					"visible": false
+				},
+				{ "name": "PipesSp42",
+					"image": "pipessp42",
+					"rotates": [{ "name": "Spigot4", "by": [90, 0, -90] }],
+					"sub": [1230, 576, 177, 181],
+					"visible": false
+				},
+				{ "name": "PipesSp43",
+					"image": "pipessp43",
+					"rotates": [{ "name": "Spigot4", "by": [90, 90, -90] }],
+					"sub": [1230, 576, 177, 181],
+					"visible": false
+				},
+				{ "name": "PipesSp51",
+					"image": "pipessp51",
+					"rotates": [{ "name": "Spigot5", "by": [90, 270, -90] }],
+					"sub": [1552, 282, 177, 166],
+					"visible": false
+				},
+				{ "name": "PipesSp52",
+					"image": "pipessp52",
+					"rotates": [{ "name": "Spigot5", "by": [90, 0, -90] }],
+					"sub": [1552, 282, 177, 166],
+					"visible": false
+				},
+				{ "name": "PipesSp53",
+					"image": "pipessp53",
+					"rotates": [{ "name": "Spigot5", "by": [90, 90, -90] }],
+					"sub": [1552, 282, 177, 166],
+					"visible": false
+				},
+				{ "name": "PipesStar",
+					"image": "pipesstar",
+					"shows": ["Star_pipes"],
+					"sub": [1148, 289, 148, 87]
+				}
+			],
+			"grid": [
+				{ "name": "PipeSpigot1",
+					"pos": [92, 351, 354, 339],
+					"sound": "squeak2",
+					"cycle": [
+						{ "parent": "PipesZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PipesSp11" },
+								{ "sub": "PipesSp12" },
+								{ "sub": "PipesSp13" }
+							]
+						},
+						{ "parent": "Cabin4",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C4Sp11" },
+								{ "sub": "C4Sp12" },
+								{ "sub": "C4Sp13" }
+							]
+						},
+						{ "parent": "Cabin5",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C5Sp11" },
+								{ "sub": "C5Sp12" },
+								{ "sub": "C5Sp13" }
+							]
+						}
+					]
+				},
+				{ "name": "PipeSpigot2",
+					"pos": [445, 491, 346, 385],
+					"sound": "squeak2",
+					"cycle": [
+						{ "parent": "PipesZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PipesSp21" },
+								{ "sub": "PipesSp22" },
+								{ "sub": "PipesSp23" }
+							]
+						},
+						{ "parent": "Cabin4",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C4Sp21" },
+								{ "sub": "C4Sp22" },
+								{ "sub": "C4Sp23" }
+							]
+						},
+						{ "parent": "Cabin5",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C5Sp21" },
+								{ "sub": "C5Sp22" },
+								{ "sub": "C5Sp23" }
+							]
+						}
+					]
+				},
+				{ "name": "PipeSpigot3",
+					"pos": [588, 105, 358, 382],
+					"sound": "squeak2",
+					"cycle": [
+						{ "parent": "PipesZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PipesSp31" },
+								{ "sub": "PipesSp32" },
+								{ "sub": "PipesSp33" }
+							]
+						},
+						{ "parent": "Cabin4",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C4Sp31" },
+								{ "sub": "C4Sp32" },
+								{ "sub": "C4Sp33" }
+							]
+						},
+						{ "parent": "Cabin5",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C5Sp31" },
+								{ "sub": "C5Sp32" },
+								{ "sub": "C5Sp33" }
+							]
+						}
+					]
+				},
+				{ "name": "PipeSpigot4",
+					"pos": [1101, 484, 412, 339],
+					"sound": "squeak2",
+					"cycle": [
+						{ "parent": "PipesZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PipesSp41" },
+								{ "sub": "PipesSp42" },
+								{ "sub": "PipesSp43" }
+							]
+						},
+						{ "parent": "Cabin4",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C4Sp41" },
+								{ "sub": "C4Sp42" },
+								{ "sub": "C4Sp43" }
+							]
+						},
+						{ "parent": "Cabin5",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C5Sp41" },
+								{ "sub": "C5Sp42" },
+								{ "sub": "C5Sp43" }
+							]
+						}
+					]
+				},
+				{ "name": "PipeSpigot5",
+					"pos": [1482, 161, 377, 349],
+					"sound": "squeak2",
+					"cycle": [
+						{ "parent": "PipesZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "PipesSp51" },
+								{ "sub": "PipesSp52" },
+								{ "sub": "PipesSp53" }
+							]
+						},
+						{ "parent": "Cabin4",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C4Sp51" },
+								{ "sub": "C4Sp52" },
+								{ "sub": "C4Sp53" }
+							]
+						},
+						{ "parent": "Cabin5",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C5Sp51" },
+								{ "sub": "C5Sp52" },
+								{ "sub": "C5Sp53" }
+							]
+						}
+					]
+				},
+				{ "name": "PipesStarTake",
+					"pos": [1016, 174, 392, 281],
+					"object": "Star3",
+					"hides": [
+						{ "name": "PipesStar",
+							"parent": "PipesZoom"
+						},
+						{ "name": "C4StarPipes",
+							"parent": "Cabin4"
+						},
+						{ "name": "C5StarPipes",
+							"parent": "Cabin5"
+						}
+					],
+					"toggles": [
+						{ "name": "PipesStarTake",
+							"parent": "PipesZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "CabinetZoom",
+			"image": "cabinetzoom",
+			"camera": "CabinetCam",
+			"shows": ["Cabinet_hinges_open", "Door_open", "Star_open"],
+			"hides": ["Cabinet_hinges", "Door_closed", "Star1", "Star2", "Star3", "Star4", "Star5", "Star6", "Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top"],
+			"left": "PipesZoom",
+			"right": "MapZoom",
+			"back": "Cabin5",
+			"subs": [
+				{ "name": "CabWhiskey",
+					"image": "cabwhiskey",
+					"shows": ["Whiskey", "Whiskey_cork", "Whiskey_label", "Whiskey_liquid_side", "Whiskey_top"],
+					"sub": [867, 240, 349, 131]
+				},
+				{ "name": "CabDoor",
+					"image": "cabdoor",
+					"shows": ["Cabinet_hinges", "Door_closed", "Star6"],
+					"hides": ["Cabinet_hinges_open", "Door_open", "Star_open"],
+					"sub": [313, 0, 1358, 972]
+				},
+				{ "name": "CabStar1",
+					"image": "cabstar1",
+					"shows": ["Star1"],
+					"sub": [986, 608, 104, 158],
+					"visible": false
+				},
+				{ "name": "CabStar2",
+					"image": "cabstar2",
+					"shows": ["Star2"],
+					"sub": [1088, 513, 162, 97],
+					"visible": false
+				},
+				{ "name": "CabStar3",
+					"image": "cabstar3",
+					"shows": ["Star3"],
+					"sub": [1036, 359, 133, 152],
+					"visible": false
+				},
+				{ "name": "CabStar4",
+					"image": "cabstar4",
+					"shows": ["Star4"],
+					"sub": [906, 358, 128, 154],
+					"visible": false
+				},
+				{ "name": "CabStar5",
+					"image": "cabstar5",
+					"shows": ["Star5"],
+					"sub": [823, 512, 162, 101],
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "CabinetSelect",
+					"pos": [795, 304, 489, 494],
+					"speech": [
+						{ "line": "It's a cabinet with a star pattern on the front." },
+						{ "line": "It won't open." }
+					],
+					"choices": [
+						{ "name": "CabinetHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					],
+					"selects": [
+						{ "name": "Star1",
+							"removes": "Star1",
+							"sound": "thud1",
+							"shows": [
+								{ "name": "CabStar1",
+									"parent": "CabinetZoom"
+								},
+								{ "name": "C5Star1",
+									"parent": "Cabin5"
+								}
+							]
+						},
+						{ "name": "Star2",
+							"removes": "Star2",
+							"sound": "thud1",
+							"shows": [
+								{ "name": "CabStar2",
+									"parent": "CabinetZoom"
+								},
+								{ "name": "C5Star2",
+									"parent": "Cabin5"
+								}
+							]
+						},
+						{ "name": "Star3",
+							"removes": "Star3",
+							"sound": "thud1",
+							"shows": [
+								{ "name": "CabStar3",
+									"parent": "CabinetZoom"
+								},
+								{ "name": "C5Star3",
+									"parent": "Cabin5"
+								}
+							]
+						},
+						{ "name": "Star4",
+							"removes": "Star4",
+							"sound": "thud1",
+							"shows": [
+								{ "name": "CabStar4",
+									"parent": "CabinetZoom"
+								},
+								{ "name": "C4Star4",
+									"parent": "Cabin4"
+								},
+								{ "name": "C5Star4",
+									"parent": "Cabin5"
+								}
+							]
+						},
+						{ "name": "Star5",
+							"removes": "Star5",
+							"sound": "thud1",
+							"shows": [
+								{ "name": "CabStar5",
+									"parent": "CabinetZoom"
+								},
+								{ "name": "C4Star5",
+									"parent": "Cabin4"
+								},
+								{ "name": "C5Star5",
+									"parent": "Cabin5"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "CabinetNathan2",
+					"pos": [838, 524, 428, 163],
+					"active": false,
+					"view": "nathan2"
+				},
+				{ "name": "WhiskeyTake",
+					"pos": [747, 134, 572, 332],
+					"active": false,
+					"object": "Whiskey",
+					"speech": [
+						{ "line": "Looks like a bottle of.. really cheap whiskey." }
+					],
+					"hides": [
+						{ "name": "CabWhiskey",
+							"parent": "CabinetZoom"
+						},
+						{ "name": "C4Whiskey",
+							"parent": "Cabin4"
+						},
+						{ "name": "C5Whiskey",
+							"parent": "Cabin5"
+						}
+					],
+					"toggles": [
+						{ "name": "WhiskeyTake",
+							"parent": "CabinetZoom"
+						}
+					],
+					"choices": [
+						{ "name": "PlaceHint",
+							"dialogue": "Avatar",
+							"type": "enable"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "MapZoom",
+			"image": "mapzoom",
+			"camera": "MapCam",
+			"shows": ["KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag", "MapGlass_open", "MapWilliamText"],
+			"hides": ["Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out", "MapGlass_closed", "MapFog", "Cross", "SoldierN"],
+			"sequence": 3,
+			"left": "CabinetZoom",
+			"right": "DeskZoom",
+			"back": "Cabin6",
+			"subs": [
+				{ "name": "MapKey5",
+					"image": "mapkey5",
+					"shows": ["Key5_out", "Key5_number_out", "Key5_ring_out", "Key5_tag_out"],
+					"priority": 0,
+					"sub": [932, 60, 81, 95]
+				},
+				{ "name": "MapSide",
+					"image": "mapside",
+					"priority": 0,
+					"shows": ["MapGlass_closed"],
+					"hides": ["KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag", "MapGlass_open", "MapWilliamText"],
+					"sub": [1128, 0, 402, 875]
+				},
+				{ "name": "MapBlack",
+					"image": "mapblack",
+					"priority": -1,
+					"visible": false,
+					"sub": [0, 0, 1920, 1080]
+				},
+				{ "name": "MapSoldier",
+					"image": "mapsoldier",
+					"shows": ["SoldierN", "MapLight"],
+					"hides": ["Room", "MapFog", "Map", "MapFrame"],
+					"undo": true,
+					"running": false,
+					"type": "action",
+					"frames": [
+						{ "frame": "rotateby",
+							"pos": [-15],
+							"duration": 0.2
+						},
+						{ "frame": "rotateby",
+							"pos": [30],
+							"duration": 0.4
+						},
+						{ "frame": "rotateby",
+							"pos": [-15],
+							"duration": 0.2
+						}
+					],
+					"subsubs": [
+						{ "name": "Bullet1",
+							"image": "mapbullet",
+							"priority": -1,
+							"sub": [748, 508, 14, 11],
+							"visible": false
+						},
+						{ "name": "Bullet2",
+							"image": "mapbullet",
+							"priority": -1,
+							"sub": [748, 508, 14, 11],
+							"visible": false
+						},
+						{ "name": "Bullet3",
+							"image": "mapbullet",
+							"priority": -1,
+							"sub": [748, 508, 14, 11],
+							"visible": false
+						}
+					],
+					"sub": [748, 468, 89, 89]
+				},
+				{ "name": "MapCross",
+					"image": "mapcross",
+					"shows": ["Cross", "MapLight"],
+					"hides": ["Room", "MapFog", "Map", "MapFrame"],
+					"undo": true,
+					"running": false,
+					"type": "action",
+					"frames": [
+						{ "frame": "rotateby",
+							"pos": [-5],
+							"duration": 0.15
+						},
+						{ "frame": "rotateby",
+							"pos": [10],
+							"duration": 0.3
+						},
+						{ "frame": "rotateby",
+							"pos": [-5],
+							"duration": 0.15
+						}
+					],
+					"sub": [454, 621, 87, 87]
+				},
+				{ "name": "MapFog",
+					"image": "mapfog",
+					"shows": ["MapFog"],
+					"hides": ["Room", "SoldierN", "Map", "MapFrame"],
+					"priority": 0,
+					"undo": true,
+					"sub": [455, 162, 675, 675]
+				}
+			],
+			"grid": [
+				{ "name": "MapKey5Take",
+					"pos": [892, 33, 158, 158],
+					"object": "Key5",
+					"hides": [
+						{ "name": "MapKey5",
+							"parent": "MapZoom"
+						},
+						{ "name": "C5Key5",
+							"parent": "Cabin5"
+						},
+						{ "name": "C6Key5",
+							"parent": "Cabin6"
+						}
+					],
+					"toggles": [
+						{ "name": "MapKey5Take",
+							"parent": "MapZoom"
+						}
+					]
+				},
+				{ "name": "MapSelect",
+					"pos": [417, 121, 741, 754],
+					"speech": [
+						{ "line": "It looks like some sort of map." }
+					]
+				},
+				{ "name": "MapKeyUnlock",
+					"pos": [1176, 144, 327, 714],
+					"selects": [
+                        { "name": "Key5",
+                            "speech": [
+                                { "line": "This key doesn't fit here.. it's labeled with a '5'." }
+                            ]
+                        },
+						{ "name": "KeyM",
+							"animate": "KeyMUse",
+							"removes": "KeyM",
+							"hides": [
+								{ "name": "MapSide",
+									"parent": "MapZoom"
+								},
+								{ "name": "C5MapSide",
+									"parent": "Cabin5"
+								},
+								{ "name": "C6MapSide",
+									"parent": "Cabin6"
+								}
+							],
+							"toggles": [
+								{ "name": "MapKeyUnlock",
+									"parent": "MapZoom"
+								},
+								{ "name": "MapWilliam",
+									"parent": "MapZoom"
+								},
+								{ "name": "MapNSelect",
+									"parent": "MapZoom"
+								},
+								{ "name": "MapESelect",
+									"parent": "MapZoom"
+								},
+								{ "name": "MapSSelect",
+									"parent": "MapZoom"
+								},
+								{ "name": "MapWSelect",
+									"parent": "MapZoom"
+								}
+							],
+							"choices": [
+								{ "name": "FollowHint",
+									"dialogue": "Avatar",
+									"type": "enable"
+								}
+							]
+						}
+					],
+					"speech": [
+						{ "line": "Looks like this side can be unlocked." }
+					]
+				},
+				{ "name": "MapWilliamSelect",
+					"pos": [1177, 315, 313, 84],
+					"active": false,
+					"speech": [
+						{ "line": "It says, 'Follow William'." }
+					]
+				},
+				{ "name": "MapNSelect",
+					"pos": [1280, 607, 113, 111],
+					"active": false,
+					"animate": "MapN",
+					"sequence": "N"
+				},
+				{ "name": "MapESelect",
+					"pos": [1381, 510, 103, 103],
+					"active": false,
+					"animate": "MapE",
+					"sequence": "E"
+				},
+				{ "name": "MapSSelect",
+					"pos": [1284, 414, 101, 103],
+					"active": false,
+					"animate": "MapS",
+					"sequence": "S"
+				},
+				{ "name": "MapWSelect",
+					"pos": [1193, 507, 106, 105],
+					"active": false,
+					"animate": "MapW",
+					"sequence": "W"
+				}
+			]
+		},
+		{ "name": "DeskZoom",
+			"image": "deskzoom",
+			"camera": "DeskCam",
+			"shows": ["Pin_cover_open", "SymbolE11", "SymbolE12", "SymbolE13", "SymbolE14"],
+			"hides": ["DeskCover", "Star_desk", "Pin_cover_closed", "Pin_in", "Symbol11", "Symbol12", "Symbol13", "Symbol14", "Symbol21", "Symbol22", "Symbol23", "Symbol24", "Symbol31", "Symbol32", "Symbol33", "Symbol34", "Symbol41", "Symbol42", "Symbol43", "Symbol44", "Symbol51", "Symbol52", "Symbol53", "Symbol54", "Symbol61", "Symbol62", "Symbol63", "Symbol64"],
+			"left": "MapZoom",
+			"right": "MailboxesZoom",
+			"back": "Cabin6",
+			"subs": [
+				{ "name": "DeskStar",
+					"image": "deskstar",
+					"shows": ["Star_desk"],
+					"sub": [563, 278, 105, 52]
+				},
+				{ "name": "DeskPin",
+					"image": "deskpin",
+					"shows": ["Pin_in"],
+					"sub": [1384, 321, 83, 43]
+				},
+				{ "name": "DeskPinCover",
+					"image": "deskpincover",
+					"shows": ["Pin_cover_closed"],
+					"hides": ["Pin_cover_open"],
+					"sub": [1270, 312, 236, 147]
+				},
+				{ "name": "DeskCover",
+					"image": "deskcover",
+					"shows": ["DeskCover"],
+					"sub": [229, 246, 1476, 703]
+				},
+				{ "name": "DeskSymbol11",
+					"image": "desks11",
+					"shows": ["Symbol11"],
+					"hides": ["SymbolE11", "DeskCover"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol21",
+					"image": "desks21",
+					"shows": ["Symbol21"],
+					"hides": ["Symbol11"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol31",
+					"image": "desks31",
+					"shows": ["Symbol31"],
+					"hides": ["Symbol21"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol41",
+					"image": "desks41",
+					"shows": ["Symbol41"],
+					"hides": ["Symbol31"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol51",
+					"image": "desks51",
+					"shows": ["Symbol51"],
+					"hides": ["Symbol41"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol61",
+					"image": "desks61",
+					"shows": ["Symbol61"],
+					"hides": ["Symbol51"],
+					"sub": [784, 184, 71, 65],
+					"visible": false
+				},
+				{ "name": "DeskSymbol12",
+					"image": "desks12",
+					"shows": ["Symbol12"],
+					"hides": ["SymbolE12"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol22",
+					"image": "desks22",
+					"shows": ["Symbol22"],
+					"hides": ["Symbol12"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol32",
+					"image": "desks32",
+					"shows": ["Symbol32"],
+					"hides": ["Symbol22"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol42",
+					"image": "desks42",
+					"shows": ["Symbol42"],
+					"hides": ["Symbol32"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol52",
+					"image": "desks52",
+					"shows": ["Symbol52"],
+					"hides": ["Symbol42"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol62",
+					"image": "desks62",
+					"shows": ["Symbol62"],
+					"hides": ["Symbol52"],
+					"sub": [870, 182, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol13",
+					"image": "desks13",
+					"shows": ["Symbol13"],
+					"hides": ["SymbolE13"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol23",
+					"image": "desks23",
+					"shows": ["Symbol23"],
+					"hides": ["Symbol13"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol33",
+					"image": "desks33",
+					"shows": ["Symbol33"],
+					"hides": ["Symbol23"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol43",
+					"image": "desks43",
+					"shows": ["Symbol43"],
+					"hides": ["Symbol33"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol53",
+					"image": "desks53",
+					"shows": ["Symbol53"],
+					"hides": ["Symbol43"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol63",
+					"image": "desks63",
+					"shows": ["Symbol63"],
+					"hides": ["Symbol53"],
+					"sub": [960, 181, 71, 67],
+					"visible": false
+				},
+				{ "name": "DeskSymbol14",
+					"image": "desks14",
+					"shows": ["Symbol14"],
+					"hides": ["SymbolE14"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				},
+				{ "name": "DeskSymbol24",
+					"image": "desks24",
+					"shows": ["Symbol24"],
+					"hides": ["Symbol14"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				},
+				{ "name": "DeskSymbol34",
+					"image": "desks34",
+					"shows": ["Symbol34"],
+					"hides": ["Symbol24"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				},
+				{ "name": "DeskSymbol44",
+					"image": "desks44",
+					"shows": ["Symbol44"],
+					"hides": ["Symbol34"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				},
+				{ "name": "DeskSymbol54",
+					"image": "desks54",
+					"shows": ["Symbol54"],
+					"hides": ["Symbol44"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				},
+				{ "name": "DeskSymbol64",
+					"image": "desks64",
+					"shows": ["Symbol64"],
+					"hides": ["Symbol54"],
+					"sub": [1048, 181, 70, 66],
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "DeskSelect",
+					"pos": [151, 297, 1616, 696],
+					"speech": [
+						{ "line": "It looks like a writing desk." },
+						{ "line": "It's locked." }
+					],
+					"choices": [
+						{ "name": "DeskHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "DeskSymbolZoom",
+					"pos": [642, 92, 609, 197],
+					"zoom": "SymbolZoom"
+				},
+				{ "name": "DeskJames2",
+					"pos": [447, 603, 378, 200],
+					"active": false,
+					"view": "james2"
+				},
+				{ "name": "DeskStarTake",
+					"pos": [406, 268, 376, 101],
+					"active": false,
+					"object": "Star1",
+					"hides": [
+						{ "name": "DeskStar",
+							"parent": "DeskZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "DeskStarTake",
+							"parent": "DeskZoom"
+						}
+					]
+				},
+				{ "name": "DeskPadZoom",
+					"pos": [781, 257, 478, 261],
+					"active": false,
+					"zoom": "PadZoom"
+				},
+				{ "name": "DeskPinZoom",
+					"pos": [1257, 254, 358, 233],
+					"active": false,
+					"zoom": "PincaseZoom"
+				},
+				{ "name": "DeskDrawerSelect",
+					"pos": [361, 374, 448, 228],
+					"active": false,
+					"speech": [
+						{ "line": "It won't open." },
+						{ "line": "It's locked." }
+					]
+				}
+			]
+		},
+		{ "name": "SymbolZoom",
+			"image": "symbolzoom",
+			"camera": "SymbolCam",
+			"shows": ["Pin_cover_open", "SymbolE11", "SymbolE12", "SymbolE13", "SymbolE14"],
+			"hides": ["DeskCover", "Star_desk", "Pin_cover_closed", "Pin_in", "Symbol11", "Symbol12", "Symbol13", "Symbol14", "Symbol21", "Symbol22", "Symbol23", "Symbol24", "Symbol31", "Symbol32", "Symbol33", "Symbol34", "Symbol41", "Symbol42", "Symbol43", "Symbol44", "Symbol51", "Symbol52", "Symbol53", "Symbol54", "Symbol61", "Symbol62", "Symbol63", "Symbol64"],
+			"back": "DeskZoom",
+			"subs": [
+				{ "name": "SymbolCover",
+					"image": "symbolcover",
+					"shows": ["DeskCover"],
+					"sub": [0, 707, 1920, 373]
+				},	
+				{ "name": "Symbol11",
+					"image": "symbol11",
+					"shows": ["Symbol11"],
+					"hides": ["SymbolE11", "DeskCover"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol21",
+					"image": "symbol21",
+					"shows": ["Symbol21"],
+					"hides": ["Symbol11"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol31",
+					"image": "symbol31",
+					"shows": ["Symbol31"],
+					"hides": ["Symbol21"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol41",
+					"image": "symbol41",
+					"shows": ["Symbol41"],
+					"hides": ["Symbol31"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol51",
+					"image": "symbol51",
+					"shows": ["Symbol51"],
+					"hides": ["Symbol41"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol61",
+					"image": "symbol61",
+					"shows": ["Symbol61"],
+					"hides": ["Symbol51"],
+					"sub": [56, 331, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol12",
+					"image": "symbol12",
+					"shows": ["Symbol12"],
+					"hides": ["SymbolE12"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol22",
+					"image": "symbol22",
+					"shows": ["Symbol22"],
+					"hides": ["Symbol12"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol32",
+					"image": "symbol32",
+					"shows": ["Symbol32"],
+					"hides": ["Symbol22"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol42",
+					"image": "symbol42",
+					"shows": ["Symbol42"],
+					"hides": ["Symbol32"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol52",
+					"image": "symbol52",
+					"shows": ["Symbol52"],
+					"hides": ["Symbol42"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol62",
+					"image": "symbol62",
+					"shows": ["Symbol62"],
+					"hides": ["Symbol52"],
+					"sub": [521, 330, 378, 379],
+					"visible": false
+				},
+				{ "name": "Symbol13",
+					"image": "symbol13",
+					"shows": ["Symbol13"],
+					"hides": ["SymbolE13"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol23",
+					"image": "symbol23",
+					"shows": ["Symbol23"],
+					"hides": ["Symbol13"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol33",
+					"image": "symbol33",
+					"shows": ["Symbol33"],
+					"hides": ["Symbol23"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol43",
+					"image": "symbol43",
+					"shows": ["Symbol43"],
+					"hides": ["Symbol33"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol53",
+					"image": "symbol53",
+					"shows": ["Symbol53"],
+					"hides": ["Symbol43"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol63",
+					"image": "symbol63",
+					"shows": ["Symbol63"],
+					"hides": ["Symbol53"],
+					"sub": [994, 332, 382, 375],
+					"visible": false
+				},
+				{ "name": "Symbol14",
+					"image": "symbol14",
+					"shows": ["Symbol14"],
+					"hides": ["SymbolE14"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol24",
+					"image": "symbol24",
+					"shows": ["Symbol24"],
+					"hides": ["Symbol14"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol34",
+					"image": "symbol34",
+					"shows": ["Symbol34"],
+					"hides": ["Symbol24"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol44",
+					"image": "symbol44",
+					"shows": ["Symbol44"],
+					"hides": ["Symbol34"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol54",
+					"image": "symbol54",
+					"shows": ["Symbol54"],
+					"hides": ["Symbol44"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				},
+				{ "name": "Symbol64",
+					"image": "symbol64",
+					"shows": ["Symbol64"],
+					"hides": ["Symbol54"],
+					"sub": [1448, 332, 389, 376],
+					"visible": false
+				}
+			],
+			"grid": [
+				{ "name": "SymbolSelect1",
+					"pos": [0, 231, 481, 589],
+					"sound": "tap1",
+					"cycle": [
+						{ "parent": "SymbolZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Symbol11" },
+								{ "sub": "Symbol21" },
+								{ "sub": "Symbol31" },
+								{ "sub": "Symbol41" },
+								{ "sub": "Symbol51" },
+								{ "sub": "Symbol61" }
+							]
+						},
+						{ "parent": "DeskZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "DeskSymbol11" },
+								{ "sub": "DeskSymbol21" },
+								{ "sub": "DeskSymbol31" },
+								{ "sub": "DeskSymbol41" },
+								{ "sub": "DeskSymbol51" },
+								{ "sub": "DeskSymbol61" }
+							]
+						},
+						{ "parent": "Cabin6",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C6Symbol11" },
+								{ "sub": "C6Symbol21" },
+								{ "sub": "C6Symbol31" },
+								{ "sub": "C6Symbol41" },
+								{ "sub": "C6Symbol51" },
+								{ "sub": "C6Symbol61" }
+							]
+						},
+						{ "parent": "Cabin7",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C7Symbol11" },
+								{ "sub": "C7Symbol21" },
+								{ "sub": "C7Symbol31" },
+								{ "sub": "C7Symbol41" },
+								{ "sub": "C7Symbol51" },
+								{ "sub": "C7Symbol61" }
+							]
+						}
+					]
+				},
+				{ "name": "SymbolSelect2",
+					"pos": [481, 234, 467, 587],
+					"sound": "tap1",
+					"cycle": [
+						{ "parent": "SymbolZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Symbol12" },
+								{ "sub": "Symbol22" },
+								{ "sub": "Symbol32" },
+								{ "sub": "Symbol42" },
+								{ "sub": "Symbol52" },
+								{ "sub": "Symbol62" }
+							]
+						},
+						{ "parent": "DeskZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "DeskSymbol12" },
+								{ "sub": "DeskSymbol22" },
+								{ "sub": "DeskSymbol32" },
+								{ "sub": "DeskSymbol42" },
+								{ "sub": "DeskSymbol52" },
+								{ "sub": "DeskSymbol62" }
+							]
+						},
+						{ "parent": "Cabin6",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C6Symbol12" },
+								{ "sub": "C6Symbol22" },
+								{ "sub": "C6Symbol32" },
+								{ "sub": "C6Symbol42" },
+								{ "sub": "C6Symbol52" },
+								{ "sub": "C6Symbol62" }
+							]
+						},
+						{ "parent": "Cabin7",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C7Symbol12" },
+								{ "sub": "C7Symbol22" },
+								{ "sub": "C7Symbol32" },
+								{ "sub": "C7Symbol42" },
+								{ "sub": "C7Symbol52" },
+								{ "sub": "C7Symbol62" }
+							]
+						}
+					]
+				},
+				{ "name": "SymbolSelect3",
+					"pos": [943, 231, 472, 592],
+					"sound": "tap1",
+					"cycle": [
+						{ "parent": "SymbolZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Symbol13" },
+								{ "sub": "Symbol23" },
+								{ "sub": "Symbol33" },
+								{ "sub": "Symbol43" },
+								{ "sub": "Symbol53" },
+								{ "sub": "Symbol63" }
+							]
+						},
+						{ "parent": "DeskZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "DeskSymbol13" },
+								{ "sub": "DeskSymbol23" },
+								{ "sub": "DeskSymbol33" },
+								{ "sub": "DeskSymbol43" },
+								{ "sub": "DeskSymbol53" },
+								{ "sub": "DeskSymbol63" }
+							]
+						},
+						{ "parent": "Cabin6",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C6Symbol13" },
+								{ "sub": "C6Symbol23" },
+								{ "sub": "C6Symbol33" },
+								{ "sub": "C6Symbol43" },
+								{ "sub": "C6Symbol53" },
+								{ "sub": "C6Symbol63" }
+							]
+						},
+						{ "parent": "Cabin7",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C7Symbol13" },
+								{ "sub": "C7Symbol23" },
+								{ "sub": "C7Symbol33" },
+								{ "sub": "C7Symbol43" },
+								{ "sub": "C7Symbol53" },
+								{ "sub": "C7Symbol63" }
+							]
+						}
+					]
+				},
+				{ "name": "SymbolSelect4",
+					"pos": [1416, 229, 504, 591],
+					"sound": "tap1",
+					"cycle": [
+						{ "parent": "SymbolZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "Symbol14" },
+								{ "sub": "Symbol24" },
+								{ "sub": "Symbol34" },
+								{ "sub": "Symbol44" },
+								{ "sub": "Symbol54" },
+								{ "sub": "Symbol64" }
+							]
+						},
+						{ "parent": "DeskZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "DeskSymbol14" },
+								{ "sub": "DeskSymbol24" },
+								{ "sub": "DeskSymbol34" },
+								{ "sub": "DeskSymbol44" },
+								{ "sub": "DeskSymbol54" },
+								{ "sub": "DeskSymbol64" }
+							]
+						},
+						{ "parent": "Cabin6",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C6Symbol14" },
+								{ "sub": "C6Symbol24" },
+								{ "sub": "C6Symbol34" },
+								{ "sub": "C6Symbol44" },
+								{ "sub": "C6Symbol54" },
+								{ "sub": "C6Symbol64" }
+							]
+						},
+						{ "parent": "Cabin7",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "C7Symbol14" },
+								{ "sub": "C7Symbol24" },
+								{ "sub": "C7Symbol34" },
+								{ "sub": "C7Symbol44" },
+								{ "sub": "C7Symbol54" },
+								{ "sub": "C7Symbol64" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "PadZoom",
+			"image": "padzoom",
+			"camera": "PadCam",
+			"shows": ["Pin_cover_open"],
+			"hides": ["DeskCover", "Pin_cover_closed", "Pin_in"],
+			"right": "PincaseZoom",
+			"back": "DeskZoom",
+			"subs": [
+				{ "name": "PadPin",
+					"image": "padpin",
+					"shows": ["Pin_in"],
+					"sub": [1777, 391, 143, 182]
+				},
+				{ "name": "PadDoor",
+					"image": "paddoor",
+					"shows": ["Pin_cover_closed"],
+					"hides": ["Pin_cover_open"],
+					"sub": [1533, 297, 387, 544]
+				}
+			],
+			"grid": [
+				{ "name": "PadSelect",
+					"pos": [616, 402, 771, 462],
+					"speech": [
+						{ "line": "Five dots are drawn on this pad." }
+					]
+				}
+			]
+		},
+		{ "name": "PincaseZoom",
+			"image": "pincasezoom",
+			"camera": "PinCam",
+			"sequence": 7,
+			"shows": ["Pin_cover_open"],
+			"hides": ["DeskCover", "Pin_cover_closed", "Pin_in"],
+			"left": "PadZoom",
+			"back": "DeskZoom",
+			"subs": [
+				{ "name": "PincasePin",
+					"image": "pincasepin",
+					"shows": ["Pin_in"],
+					"sub": [793, 384, 379, 501]
+				},
+				{ "name": "PincaseDoor",
+					"image": "pincasedoor",
+					"shows": ["Pin_cover_closed"],
+					"hides": ["Pin_cover_open"],
+					"sub": [254, 288, 994, 777]
+				}
+			],
+			"grid": [
+				{ "name": "PinPressUp",
+					"pos": [887, 184, 190, 107],
+					"animate": "PinUp",
+					"sequence": "U"
+				},
+				{ "name": "PinPressLeft",
+					"pos": [828, 71, 110, 126],
+					"animate": "PinLeft",
+					"sequence": "L"
+				},
+				{ "name": "PinPressDown",
+					"pos": [939, 63, 81, 119],
+					"animate": "PinDown",
+					"sequence": "D"
+				},
+				{ "name": "PinPressRight",
+					"pos": [1022, 63, 113, 138],
+					"animate": "PinRight",
+					"sequence": "R"
+				},
+				{ "name": "PinSelect",
+					"pos": [753, 312, 474, 640],
+					"speech": [
+						{ "line": "It's a brass pin in a locked case." },
+						{ "line": "The case is locked." }
+					],
+					"choices": [
+						{ "name": "PincaseHint",
+							"dialogue": "Avatar",
+							"type": "enable"
+						}
+					]
+				},
+				{ "name": "PinTake",
+					"pos": [753, 312, 474, 640],
+					"active": false,
+					"object": "Pin",
+					"hides": [
+						{ "name": "PincasePin",
+							"parent": "PincaseZoom"
+						},
+						{ "name": "DeskPin",
+							"parent": "DeskZoom"
+						},
+						{ "name": "PadPin",
+							"parent": "PadZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "PinTake",
+							"parent": "PincaseZoom"
+						}
+					],
+					"choices": [
+						{ "name": "PlaceHint",
+							"dialogue": "Avatar",
+							"type": "enable"
+						}
+					]
+				},
+				{ "name": "PinTransition",
+					"pos": [0, 780, 300, 300],
+					"transition": true
+				}
+			]
+		},
+		{ "name": "MailboxesZoom",
+			"image": "mailboxeszoom",
+			"camera": "MailboxesCam",
+			"shows": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open", "Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open", "Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open", "Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open", "Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open", "Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+			"hides": ["Mailbox1_closed", "Mailbox1_keyhole_closed", "Mailbox2_closed", "Mailbox2_keyhole_closed", "Mailbox3_closed", "Mailbox3_keyhole_closed", "Mailbox4_closed", "Mailbox4_keyhole_closed", "Mailbox5_closed", "Mailbox5_keyhole_closed", "Mailbox6_closed", "Mailbox6_keyhole_closed", "Star_mailbox", "Mailbox2_note", "Mailbox3_note", "Mailbox4_note", "Mailbox6_note"],
+			"left": "DeskZoom",
+			"right": "ClockZoom",
+			"back": "Cabin7",
+			"subs": [
+				{ "name": "MailboxZ1",
+					"image": "mbox1",
+					"shows": ["Mailbox1_closed", "Mailbox1_keyhole_closed"],
+					"hides": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open"],
+					"sub": [482, 549, 238, 233]
+				},
+				{ "name": "MailboxZ2",
+					"image": "mbox2",
+					"shows": ["Mailbox2_closed", "Mailbox2_keyhole_closed"],
+					"hides": ["Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open"],
+					"sub": [859, 549, 224, 233]
+				},
+				{ "name": "MailboxZ3",
+					"image": "mbox3",
+					"shows": ["Mailbox3_closed", "Mailbox3_keyhole_closed"],
+					"hides": ["Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open"],
+					"sub": [1219, 549, 233, 224]
+				},
+				{ "name": "MailboxZ4",
+					"image": "mbox4",
+					"shows": ["Mailbox4_closed", "Mailbox4_keyhole_closed"],
+					"hides": ["Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open"],
+					"sub": [494, 138, 237, 243]
+				},
+				{ "name": "MailboxZ5",
+					"image": "mbox5",
+					"shows": ["Mailbox5_closed", "Mailbox5_keyhole_closed"],
+					"hides": ["Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open"],
+					"sub": [856, 141, 228, 237]
+				},
+				{ "name": "MailboxZ6",
+					"image": "mbox6",
+					"shows": ["Mailbox6_closed", "Mailbox6_keyhole_closed"],
+					"hides": ["Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+					"sub": [1214, 145, 233, 228]
+				},
+				{ "name": "MailboxStar",
+					"image": "mailboxstar",
+					"shows": ["Star_mailbox"],
+					"sub": [1335, 72, 117, 55]
+				}
+			],
+			"grid": [
+				{ "name": "MailboxesStarTake",
+					"pos": [1278, 48, 234, 102],
+					"object": "Star2",
+					"speech": [
+						{ "line": "It's a triangular piece of metal." }
+					],
+					"hides": [
+						{ "name": "MailboxStar",
+							"parent": "MailboxesZoom"
+						},
+						{ "name": "C7Star",
+							"parent": "Cabin7"
+						},
+						{ "name": "C8Star",
+							"parent": "Cabin8"
+						}
+					],
+					"toggles": [
+						{ "name": "MailboxesStarTake",
+							"parent": "MailboxesZoom"
+						}
+					]
+				},
+				{ "name": "Mailboxes1Select",
+					"pos": [430, 504, 364, 439],
+					"speech": [
+						{ "line": "Mailbox number one." }
+					],
+					"selects": [
+						{ "name": "Key1",
+							"removes": "Key1",
+							"animate": "Key1Open",
+							"hides": [
+								{ "name": "MailboxZ1",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox1",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox1",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes1Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes1Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes1Select2",
+					"pos": [430, 504, 364, 439],
+					"active": false
+				},
+				{ "name": "Mailboxes2Select",
+					"pos": [801, 508, 346, 420],
+					"speech": [
+						{ "line": "Mailbox number two." }
+					],
+					"selects": [
+						{ "name": "Key2",
+							"removes": "Key2",
+							"animate": "Key2Open",
+							"view": "davidtelegram",
+							"hides": [
+								{ "name": "MailboxZ2",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox2",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox2",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes2Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes2Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes2Select2",
+					"pos": [801, 508, 346, 420],
+					"active": false,
+					"animate": "Mailbox2Note",
+					"view": "davidtelegram"
+				},
+				{ "name": "Mailboxes3Select",
+					"pos": [1161, 510, 364, 436],
+					"speech": [
+						{ "line": "Mailbox number three." }
+					],
+					"selects": [
+						{ "name": "Key3",
+							"removes": "Key3",
+							"animate": "Key3Open",
+							"view": "williamtelegram",
+							"hides": [
+								{ "name": "MailboxZ3",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox3",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox3",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes3Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes3Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes3Select2",
+					"pos": [1161, 510, 364, 436],
+					"active": false,
+					"animate": "Mailbox3Note",
+					"view": "williamtelegram"
+				},
+				{ "name": "Mailboxes4Select",
+					"pos": [429, 96, 376, 405],
+					"speech": [
+						{ "line": "Mailbox number four." }
+					],
+					"selects": [
+						{ "name": "Key4",
+							"removes": "Key4",
+							"animate": "Key4Open",
+							"view": "nathantelegram",
+							"hides": [
+								{ "name": "MailboxZ4",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox4",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox4",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes4Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes4Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes4Select2",
+					"pos": [429, 96, 376, 405],
+					"active": false,
+					"animate": "Mailbox4Note",
+					"view": "nathantelegram"
+				},
+				{ "name": "Mailboxes5Select",
+					"pos": [799, 74, 340, 434],
+					"speech": [
+						{ "line": "Mailbox number five." }
+					],
+					"selects": [
+						{ "name": "Key5",
+							"removes": "Key5",
+							"animate": "Key5Open",
+							"hides": [
+								{ "name": "MailboxZ5",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox5",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox5",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes5Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes5Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes5Select2",
+					"pos": [799, 74, 340, 434],
+					"active": false,
+					"speech": [
+						{ "line": "Looks like there's a magnet stuck to the inside." }
+					],
+					"zoom": "MagnetZoom"
+				},
+				{ "name": "Mailboxes6Select",
+					"pos": [1148, 60, 392, 451],
+					"speech": [
+						{ "line": "Mailbox number six." }
+					],
+					"selects": [
+						{ "name": "Key6",
+							"removes": "Key6",
+							"animate": "Key6Open",
+							"view": "jamestelegram",
+							"hides": [
+								{ "name": "MailboxZ6",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "C7Mailbox6",
+									"parent": "Cabin7"
+								},
+								{ "name": "C8Mailbox6",
+									"parent": "Cabin8"
+								}
+							],
+							"toggles": [
+								{ "name": "Mailboxes6Select",
+									"parent": "MailboxesZoom"
+								},
+								{ "name": "Mailboxes6Select2",
+									"parent": "MailboxesZoom"
+								}
+							]
+						}
+					]
+				},
+				{ "name": "Mailboxes6Select2",
+					"pos": [1148, 60, 392, 451],
+					"active": false,
+					"animate": "Mailbox6Note",
+					"view": "jamestelegram"
+				}
+			]
+		},
+		{ "name": "MagnetZoom",
+			"image": "magnetzoom",
+			"camera": "MagnetCam",
+			"shows": ["Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open"],
+			"hides": ["Mailbox5_closed", "Mailbox5_keyhole_closed", "Magnet"],
+			"back": "MailboxesZoom",
+			"subs": [
+				{ "name": "MailboxMagnet",
+					"image": "mboxmagnet",
+					"shows": ["Magnet"],
+					"sub": [622, 432, 350, 167]
+				}
+			],
+			"grid": [
+				{ "name": "MailboxMagnetTake",
+					"pos": [461, 290, 696, 483],
+					"object": "Magnet",
+					"hides": [
+						{ "name": "MailboxMagnet",
+							"parent": "MagnetZoom"
+						}
+					],
+					"toggles": [
+						{ "name": "MailboxMagnetTake",
+							"parent": "MagnetZoom"
+						},
+						{ "name": "Mailboxes5Select2",
+							"parent": "MailboxesZoom"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "ClockZoom",
+			"image": "clockzoom",
+			"camera": "ClockCam",
+			"shows": ["ClockDoor_open"],
+			"hides": ["ClockDoor_closed", "HourHand", "MinuteHand"],
+			"rotates": [{ "name": "HourHand", "by": [90, 60, 0] }, { "name": "MinuteHand", "by": [90, 70, 0] }],
+			"left": "MailboxesZoom",
+			"right": "SoldiersZoom",
+			"back": "Cabin8",
+			"subs": [
+				{ "name": "ClockDoor",
+					"image": "clockdoor",
+					"shows": ["ClockDoor_closed"],
+					"hides": ["ClockDoor_open"],
+					"sub": [769, 0, 362, 295]
+				},
+				{ "name": "ClockH3",
+					"image": "clockh3",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 300, 0] }],
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH4",
+					"image": "clockh4",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 330, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH5",
+					"image": "clockh5",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 0, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH6",
+					"image": "clockh6",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 30, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH7",
+					"image": "clockh7",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 60, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH8",
+					"image": "clockh8",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 90, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH9",
+					"image": "clockh9",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 120, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH10",
+					"image": "clockh10",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 150, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH11",
+					"image": "clockh11",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 180, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH12",
+					"image": "clockh12",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 210, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH1",
+					"image": "clockh1",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 240, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockH2",
+					"image": "clockh2",
+					"shows": ["HourHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "HourHand", "by": [90, 270, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [802, 418, 290, 291]
+				},
+				{ "name": "ClockM9",
+					"image": "clockm9",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 70, 0] }],
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM10",
+					"image": "clockm10",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 100, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM11",
+					"image": "clockm11",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 130, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM12",
+					"image": "clockm12",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 160, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM1",
+					"image": "clockm1",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 190, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM2",
+					"image": "clockm2",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 220, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM3",
+					"image": "clockm3",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 250, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM4",
+					"image": "clockm4",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 280, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM5",
+					"image": "clockm5",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 310, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM6",
+					"image": "clockm6",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 340, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM7",
+					"image": "clockm7",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 10, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				},
+				{ "name": "ClockM8",
+					"image": "clockm8",
+					"shows": ["MinuteHand"],
+					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
+					"rotates": [{ "name": "MinuteHand", "by": [90, 40, 0] }],
+					"visible": false,
+					"undo": true,
+					"sub": [737, 353, 420, 423]
+				}
+			],
+			"grid": [
+				{ "name": "ClockButtonPress",
+					"pos": [1178, 246, 184, 200],
+					"animate": "ClockButton",
+					"flagactions": [
+						{ "name": "ClockHSet",
+							"flagactions": [
+								{ "name": "ClockMSet",
+									"animate": "ClockOpen",
+									"hides": [
+										{ "name": "ClockDoor",
+											"parent": "ClockZoom"
+										},
+										{ "name": "C8CDoor",
+											"parent": "Cabin8"
+										}
+									],
+									"toggles": [
+										{ "name": "ClockButtonPress",
+											"parent": "ClockZoom"
+										},
+										{ "name": "ClockButtonPress2",
+											"parent": "ClockZoom"
+										},
+										{ "name": "PendulumSelect",
+											"parent": "PendulumZoom"
+										},
+										{ "name": "PendulumWatchTake",
+											"parent": "PendulumZoom"
+										}
+									],
+									"choices": [
+										{ "name": "ClockHint",
+											"type": "remove",
+											"dialogue": "Avatar"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{ "name": "ClockButtonPress2",
+					"pos": [1178, 246, 184, 200],
+					"animate": "ClockButton",
+					"active": false
+				},
+				{ "name": "ClockHourMove",
+					"pos": [819, 437, 256, 250],
+					"sound": "tap1",
+					"cycleif": [
+						{ "name": "ClockHourMove",
+							"parent": "ClockZoom",
+							"values": [
+								{ "name": "CheckH0",
+									"value": 0,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH1",
+									"value": 1,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH2",
+									"value": 2,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH3",
+									"value": 3,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH4",
+									"value": 4,
+									"flag": "ClockHSet"
+								},
+								{ "name": "CheckH5",
+									"value": 5,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH6",
+									"value": 6,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH7",
+									"value": 7,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH8",
+									"value": 8,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH9",
+									"value": 9,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH10",
+									"value": 10,
+									"flag": "!ClockHSet"
+								},
+								{ "name": "CheckH11",
+									"value": 11,
+									"flag": "!ClockHSet"
+								}
+							]
+						}
+					],
+					"cycle": [
+						{ "parent": "ClockZoom",
+							"subs": [
+								{ "sub": "ClockH3" },
+								{ "sub": "ClockH4" },
+								{ "sub": "ClockH5" },
+								{ "sub": "ClockH6" },
+								{ "sub": "ClockH7" },
+								{ "sub": "ClockH8" },
+								{ "sub": "ClockH9" },
+								{ "sub": "ClockH10" },
+								{ "sub": "ClockH11" },
+								{ "sub": "ClockH12" },
+								{ "sub": "ClockH1" },
+								{ "sub": "ClockH2" }
+							]
+						},
+						{ "parent": "Cabin8",
+							"subs": [
+								{ "sub": "C8H3" },
+								{ "sub": "C8H4" },
+								{ "sub": "C8H5" },
+								{ "sub": "C8H6" },
+								{ "sub": "C8H7" },
+								{ "sub": "C8H8" },
+								{ "sub": "C8H9" },
+								{ "sub": "C8H10" },
+								{ "sub": "C8H11" },
+								{ "sub": "C8H12" },
+								{ "sub": "C8H1" },
+								{ "sub": "C8H2" }
+							]
+						}
+					]
+				},
+				{ "name": "ClockMinuteMove",
+					"pos": [674, 286, 554, 554],
+					"sound": "tap1",
+					"cycleif": [
+						{ "name": "ClockMinuteMove",
+							"parent": "ClockZoom",
+							"values": [
+								{ "name": "CheckM0",
+									"value": 0,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM1",
+									"value": 1,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM2",
+									"value": 2,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM3",
+									"value": 3,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM4",
+									"value": 4,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM5",
+									"value": 5,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM6",
+									"value": 6,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM7",
+									"value": 7,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM8",
+									"value": 8,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM9",
+									"value": 9,
+									"flag": "!ClockMSet"
+								},
+								{ "name": "CheckM10",
+									"value": 10,
+									"flag": "ClockMSet"
+								},
+								{ "name": "CheckM11",
+									"value": 11,
+									"flag": "!ClockMSet"
+								}
+							]
+						}
+					],
+					"cycle": [
+						{ "parent": "ClockZoom",
+							"subs": [
+								{ "sub": "ClockM9" },
+								{ "sub": "ClockM10" },
+								{ "sub": "ClockM11" },
+								{ "sub": "ClockM12" },
+								{ "sub": "ClockM1" },
+								{ "sub": "ClockM2" },
+								{ "sub": "ClockM3" },
+								{ "sub": "ClockM4" },
+								{ "sub": "ClockM5" },
+								{ "sub": "ClockM6" },
+								{ "sub": "ClockM7" },
+								{ "sub": "ClockM8" }
+							]
+						},
+						{ "parent": "Cabin8",
+							"subs": [
+								{ "sub": "C8M9" },
+								{ "sub": "C8M10" },
+								{ "sub": "C8M11" },
+								{ "sub": "C8M12" },
+								{ "sub": "C8M1" },
+								{ "sub": "C8M2" },
+								{ "sub": "C8M3" },
+								{ "sub": "C8M4" },
+								{ "sub": "C8M5" },
+								{ "sub": "C8M6" },
+								{ "sub": "C8M7" },
+								{ "sub": "C8M8" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ "name": "PendulumZoom",
+			"image": "penzoom",
+			"camera": "PendulumCam",
+			"shows": ["ClockDoor_open"],
+			"hides": ["ClockDoor_closed", "Watch2", "Band2", "Band_slip2", "WatchClasp2", "WatchFace2", "WatchGlass2", "WatchHands2", "WatchKnob2", "WatchNumbers2"],
+			"left": "MailboxesZoom",
+			"right": "BootsZoom",
+			"back": "Cabin8",
+			"subs": [
+				{ "name": "PendulumWatch",
+					"image": "penw",
+					"shows": ["Watch2", "Band2", "Band_slip2", "WatchClasp2", "WatchFace2", "WatchGlass2", "WatchHands2", "WatchKnob2", "WatchNumbers2"],
+					"sub": [900, 213, 154, 94]
+				},
+				{ "name": "PendulumDoor",
+					"image": "pendoor",
+					"shows": ["ClockDoor_closed"],
+					"hides": ["ClockDoor_open"],
+					"sub": [694, 0, 514, 1080]
+				}
+			],
+			"grid": [
+				{ "name": "PendulumSelect",
+					"pos": [706, 0, 510, 830],
+					"speech": [
+						{ "line": "The clock casing is locked." },
+						{ "line": "It looks like a watch inside." }
+					],
+					"choices": [
+						{ "name": "ClockHint",
+							"type": "enable",
+							"dialogue": "Avatar"
+						}
+					]
+				},
+				{ "name": "PendulumWatchTake",
+					"pos": [760, 77, 432, 538],
+					"active": false,
+					"object": "Watch",
+					"speech": [
+						{ "line": "An old watch." }
+					],
+					"hides": [
+						{ "name": "PendulumWatch",
+							"parent": "PendulumZoom"
+						},
+						{ "name": "C8Watch",
+							"parent": "Cabin8"
+						}
+					],
+					"toggles": [
+						{ "name": "PendulumWatchTake",
+							"parent": "PendulumZoom"
+						}
+					],
+					"choices": [
+						{ "name": "PlaceHint",
+							"dialogue": "Avatar",
+							"type": "enable"
+						}
+					]
+				}
+			]
+		},
+		{ "name": "SoldiersZoom",
+			"image": "soldierszoom",
+			"camera": "SoldiersCam",
+			"left": "ClockZoom",
+			"right": "CanteenZoom",
+			"back": "Cabin8",
+			"grid": [
+				{ "name": "SoldiersSelect",
+					"pos": [413, 139, 1171, 741],
+					"speech": [
+						{ "line": "It's a simple picture of soldiers." },
+						{ "line": "They're facing different directions." }
+					]
+				}
+			]
+		}
+	],
+	"states": [
+		{ "name": "DeskOpen",
+			"type": "once",
+			"cycles": [
+				{ "name": "SymbolSelect1",
+					"parent": "SymbolZoom",
+					"cycle": 1
+				},
+				{ "name": "SymbolSelect2",
+					"parent": "SymbolZoom",
+					"cycle": 5
+				},
+				{ "name": "SymbolSelect3",
+					"parent": "SymbolZoom",
+					"cycle": 3
+				},
+				{ "name": "SymbolSelect4",
+					"parent": "SymbolZoom",
+					"cycle": 4
+				}
+			],
+			"sound": "draweropen1",
+			"flag": "DeskOpen",
+			"hides": [
+				{ "name": "SymbolCover",
+					"parent": "SymbolZoom"
+				},
+				{ "name": "DeskCover",
+					"parent": "DeskZoom"
+				},
+				{ "name": "C6Cover",
+					"parent": "Cabin6"
+				},
+				{ "name": "C7Cover",
+					"parent": "Cabin7"
+				}
+			],
+			"toggles": [
+				{ "name": "DeskSelect",
+					"parent": "DeskZoom"
+				},
+				{ "name": "DeskJames2",
+					"parent": "DeskZoom"
+				},
+				{ "name": "DeskStarTake",
+					"parent": "DeskZoom"
+				},
+				{ "name": "DeskPadZoom",
+					"parent": "DeskZoom"
+				},
+				{ "name": "DeskPinZoom",
+					"parent": "DeskZoom"
+				},
+				{ "name": "DeskDrawerSelect",
+					"parent": "DeskZoom"
+				}
+			],
+			"choices": [
+				{ "name": "OrderHint",
+					"dialogue": "Avatar",
+					"type": "remove"
+				},
+				{ "name": "DeskHint",
+					"dialogue": "Avatar",
+					"type": "remove"
+				},
+				{ "name": "DeskHint2",
+					"dialogue": "Avatar",
+					"type": "remove"
+				}
+			],
+			"speech": [
+				{ "line": "Got it." }
+			]
+		},
+		{ "name": "DeskChestOpen",
+			"type": "once",
+			"flags": [
+				{ "name": "DeskOpen",
+					"value": true
+				},
+				{ "name": "ChestOpen",
+					"value": true
+				}
+			],
+			"choices": [
+				{ "name": "CabinetHint3",
+					"type": "disable",
+					"dialogue": "Avatar",
+					"parent": "CabinetHint"
+				},
+				{ "name": "CabinetHint4",
+					"type": "enable",
+					"dialogue": "Avatar",
+					"parent": "CabinetHint"
+				},
+				{ "name": "ClockHint3",
+					"type": "disable",
+					"dialogue": "Avatar",
+					"parent": "ClockHint"
+				},
+				{ "name": "ClockHint4",
+					"type": "enable",
+					"dialogue": "Avatar",
+					"parent": "ClockHint"
+				},
+				{ "name": "PipesHint3",
+					"type": "disable",
+					"dialogue": "Avatar",
+					"parent": "PipesHint"
+				},
+				{ "name": "PipesHint4",
+					"type": "enable",
+					"dialogue": "Avatar",
+					"parent": "PipesHint"
+				}
+			]
+		},
+		{ "name": "CabinetOpen",
+			"type": "once",
+			"visibles": [
+				{ "name": "CabStar1",
+					"parent": "CabinetZoom",
+					"visible": true
+				},
+				{ "name": "CabStar2",
+					"parent": "CabinetZoom",
+					"visible": true
+				},
+				{ "name": "CabStar3",
+					"parent": "CabinetZoom",
+					"visible": true
+				},
+				{ "name": "CabStar4",
+					"parent": "CabinetZoom",
+					"visible": true
+				},
+				{ "name": "CabStar5",
+					"parent": "CabinetZoom",
+					"visible": true
+				}
+			],
+			"sound": "latch1",
+			"hides": [
+				{ "name": "CabDoor",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabStar1",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabStar2",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabStar3",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabStar4",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabStar5",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "C4Cabinet",
+					"parent": "Cabin4"
+				},
+				{ "name": "C4Star4",
+					"parent": "Cabin4"
+				},
+				{ "name": "C4Star5",
+					"parent": "Cabin4"
+				},
+				{ "name": "C5Cabinet",
+					"parent": "Cabin5"
+				},
+				{ "name": "C5Star1",
+					"parent": "Cabin5"
+				},
+				{ "name": "C5Star2",
+					"parent": "Cabin5"
+				},
+				{ "name": "C5Star3",
+					"parent": "Cabin5"
+				},
+				{ "name": "C5Star4",
+					"parent": "Cabin5"
+				},
+				{ "name": "C5Star5",
+					"parent": "Cabin5"
+				}
+			],
+			"toggles": [
+				{ "name": "CabinetSelect",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "CabinetNathan2",
+					"parent": "CabinetZoom"
+				},
+				{ "name": "WhiskeyTake",
+					"parent": "CabinetZoom"
+				}
+			],
+			"choices": [
+				{ "name": "CabinetHint",
+					"type": "remove",
+					"dialogue": "Avatar"
+				}
+			]
+		},
+		{ "name": "PipesSet",
+			"type": "once",
+			"cycles": [
+				{ "name": "PipeSpigot1",
+					"parent": "PipesZoom",
+					"cycle": 1
+				},
+				{ "name": "PipeSpigot2",
+					"parent": "PipesZoom",
+					"cycle": 2
+				},
+				{ "name": "PipeSpigot3",
+					"parent": "PipesZoom",
+					"cycle": 0
+				},
+				{ "name": "PipeSpigot4",
+					"parent": "PipesZoom",
+					"cycle": 1
+				},
+				{ "name": "PipeSpigot5",
+					"parent": "PipesZoom",
+					"cycle": 3
+				}
+			],
+			"animate": "PipesSet",
+			"speech": [
+				{ "line": "Oops." }
+			],
+			"shows": [
+				{ "name": "C4RosaryOut",
+					"parent": "Cabin4"
+				},
+				{ "name": "C5RosaryOut",
+					"parent": "Cabin5"
+				}
+			],
+			"hides": [
+				{ "name": "C4Rosary",
+					"parent": "Cabin4"
+				}
+			],
+			"toggles": [
+				{ "name": "SinkRosarySelect",
+					"parent": "SinkZoom"
+				},
+				{ "name": "SinkRosaryTake",
+					"parent": "SinkZoom"
+				}
+			],
+			"choices": [
+				{ "name": "PipesHint",
+					"type": "remove",
+					"dialogue": "Avatar"
+				}
+			]
+		},
+		{ "name": "PinSequence",
+			"type": "once",
+			"screen": "PincaseZoom",
+			"match": "DLLRDUD",
+			"sound": "doorunlock1",
+			"hides": [
+				{ "name": "PincaseDoor",
+					"parent": "PincaseZoom"
+				},
+				{ "name": "DeskPinCover",
+					"parent": "DeskZoom"
+				},
+				{ "name": "PadDoor",
+					"parent": "PadZoom"
+				},
+				{ "name": "C7PinCover",
+					"parent": "Cabin7"
+				},
+				{ "name": "C6PinCover",
+					"parent": "Cabin6"
+				}
+			],
+			"toggles": [
+				{ "name": "PinSelect",
+					"parent": "PincaseZoom"
+				},
+				{ "name": "PinTake",
+					"parent": "PincaseZoom"
+				}
+			],
+			"choices": [
+				{ "name": "PincaseHint",
+					"dialogue": "Avatar",
+					"type": "remove"
+				}
+			]
+		},
+		{ "name": "ItemsPlaced",
+			"type": "once",
+			"flags": [
+				{ "name": "WhiskeyPlaced",
+					"value": true
+				},
+				{ "name": "RosaryPlaced",
+					"value": true
+				},
+				{ "name": "WatchPlaced",
+					"value": true
+				},
+				{ "name": "PinPlaced",
+					"value": true
+				}
+			],
+			"choices": [
+				{ "name": "PlaceHint",
+					"dialogue": "Avatar",
+					"type": "remove"
+				},
+				{ "name": "DeskHint3",
+					"dialogue": "Avatar",
+					"type": "remove"
+				}
+			]
+		},
+		{ "name": "DeskOpen2",
+			"type": "once",
+			"cycles": [
+				{ "name": "SymbolSelect1",
+					"parent": "SymbolZoom",
+					"cycle": 6
+				},
+				{ "name": "SymbolSelect2",
+					"parent": "SymbolZoom",
+					"cycle": 4
+				},
+				{ "name": "SymbolSelect3",
+					"parent": "SymbolZoom",
+					"cycle": 2
+				},
+				{ "name": "SymbolSelect4",
+					"parent": "SymbolZoom",
+					"cycle": 1
+				}
+			],
+			"animate": "DeskDrawer",
+			"object": "KeyM"
+		},
+		{ "name": "MapNNW",
+			"type": "cont",
+			"screen": "MapZoom",
+			"match": "NNW",
+			"animate": "MapNNW",
+			"sequence": "clear",
+			"toggles": [
+				{ "name": "MapSE",
+					"parent": "State"
+				},
+				{ "name": "MapNSE",
+					"parent": "State"
+				},
+				{ "name": "MapESE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE1",
+					"parent": "State"
+				},
+				{ "name": "MapWSE",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapSE",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "SE",
+			"animate": "MapSE",
+			"toggles": [
+				{ "name": "MapNSE",
+					"parent": "State"
+				},
+				{ "name": "MapESE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE1",
+					"parent": "State"
+				},
+				{ "name": "MapWSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE2",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapNSE",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "NSE",
+			"animate": "MapSE",
+			"toggles": [
+				{ "name": "MapSE",
+					"parent": "State"
+				},
+				{ "name": "MapESE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE1",
+					"parent": "State"
+				},
+				{ "name": "MapWSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE2",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapESE",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "ESE",
+			"animate": "MapSE",
+			"toggles": [
+				{ "name": "MapNSE",
+					"parent": "State"
+				},
+				{ "name": "MapSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE1",
+					"parent": "State"
+				},
+				{ "name": "MapWSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE2",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapSSE1",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "SSE",
+			"animate": "MapSE",
+			"toggles": [
+				{ "name": "MapNSE",
+					"parent": "State"
+				},
+				{ "name": "MapESE",
+					"parent": "State"
+				},
+				{ "name": "MapSE",
+					"parent": "State"
+				},
+				{ "name": "MapWSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE2",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapWSE",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "WSE",
+			"animate": "MapSE",
+			"toggles": [
+				{ "name": "MapNSE",
+					"parent": "State"
+				},
+				{ "name": "MapESE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE1",
+					"parent": "State"
+				},
+				{ "name": "MapSE",
+					"parent": "State"
+				},
+				{ "name": "MapSSE2",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapSSE2",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "SSE",
+			"animate": "MapSSE",
+			"toggles": [
+				{ "name": "MapWSW",
+					"parent": "State"
+				}
+			]
+		},
+		{ "name": "MapWSW",
+			"type": "cont",
+			"active": false,
+			"screen": "MapZoom",
+			"match": "WSW",
+			"animate": "MapWSW",
+			"transition": true
+		}
+	],
+	"globanims": [
+		{ "name": "CompassRun",
+			"frames": [
+				{ "frame": "compassbutton",
+					"camera": "CompassCam",
+					"shows": ["Compass_button_down"],
+					"hides": ["Compass_button"],
+					"pos": [877, 82, 131, 137],
+					"duration": 0.5
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [90, 0],
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassGreen",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"name": "CompassGreen",
+					"parent": "CompassZoom",
+					"duration": 0
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [-360, 0],
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassBlue",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"name": "CompassBlue",
+					"parent": "CompassZoom",
+					"duration": 0
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [180, 0],
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassCyan",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"name": "CompassCyan",
+					"parent": "CompassZoom",
+					"duration": 0
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [-270, 0],
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassRed",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"name": "CompassRed",
+					"parent": "CompassZoom",
+					"duration": 0
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [180, 0],
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassOrange",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"name": "CompassOrange",
+					"parent": "CompassZoom",
+					"duration": 0
+				},
+				{ "name": "CompassNeedle",
+					"parent": "CompassZoom",
+					"frame": "rotateby",
+					"pos": [-180, 0],
+					"duration": 1
+				}
+			]
+		},
+		{ "name": "PinUp",
+			"frames": [
+				{ "frame": "pinuppress",
+					"camera": "PinCam",
+					"shows": ["Pin_up_pressed"],
+					"hides": ["Pin_up"],
+					"pos": [939, 184, 81, 84],
+					"sound": "latch1",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "PinLeft",
+			"frames": [
+				{ "frame": "pinleftpress",
+					"camera": "PinCam",
+					"shows": ["Pin_left_pressed"],
+					"hides": ["Pin_left"],
+					"pos": [857, 99, 83, 84],
+					"sound": "latch1",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "PinDown",
+			"frames": [
+				{ "frame": "pindownpress",
+					"camera": "PinCam",
+					"shows": ["Pin_down_pressed"],
+					"hides": ["Pin_down"],
+					"pos": [939, 98, 82, 84],
+					"sound": "latch1",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "PinRight",
+			"frames": [
+				{ "frame": "pinrightpress",
+					"camera": "PinCam",
+					"shows": ["Pin_right_pressed"],
+					"hides": ["Pin_right"],
+					"pos": [1021, 97, 81, 85],
+					"sound": "latch1",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "ClockButton",
+			"frames": [
+				{ "frame": "clockbutton",
+					"camera": "ClockCam",
+					"shows": ["ClockButton_in"],
+					"hides": ["ClockButton"],
+					"pos": [1195, 359, 66, 72],
+					"sound": "click1",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "PipesSet",
+			"frames": [
+				{ "frame": "show",
+					"name": "SinkZoom",
+					"parent": "None",
+					"duration": 1.4
+				},
+				{ "frame": "wait",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "SinkRosary",
+					"parent": "SinkZoom",
+					"duration": 0
+				},
+				{ "frame": "show",
+					"name": "SinkRosaryOut",
+					"parent": "SinkZoom",
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "ClockOpen",
+			"frames": [
+				{ "frame": "clockbutton",
+					"camera": "None",
+					"pos": [1195, 359, 66, 72],
+					"sound": "click1",
+					"duration": 0.5
+				},
+				{ "frame": "show",
+					"name": "PendulumZoom",
+					"parent": "None",
+					"duration": 1.4
+				},
+				{ "frame": "wait",
+					"duration": 0.7
+				},
+				{ "frame": "hide",
+					"name": "PendulumDoor",
+					"parent": "PendulumZoom",
+					"sound": "doorunlock1",
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "Mailbox2Note",
+			"frames": [
+				{ "frame": "key2note",
+					"pos": [849, 530, 240, 303],
+					"camera": "None",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "Mailbox3Note",
+			"frames": [
+				{ "frame": "key3note",
+					"pos": [1210, 539, 248, 288],
+					"camera": "None",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "Mailbox4Note",
+			"frames": [
+				{ "frame": "key4note",
+					"pos": [491, 140, 237, 286],
+					"camera": "None",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "Mailbox6Note",
+			"frames": [
+				{ "frame": "key6note",
+					"pos": [1216, 142, 234, 278],
+					"camera": "None",
+					"duration": 0.5
+				}
+			]
+		},
+		{ "name": "DeskDrawer",
+			"frames": [
+				{ "frame": "show",
+					"name": "DeskZoom",
+					"parent": "None",
+					"duration": 2.1
+				},
+				{ "frame": "deskdrawera1",
+					"pos": [323, 296, 479, 322],
+					"camera": "DeskCam",
+					"shows": ["DeskDrawer_out", "DrawerKnob_out"],
+					"hides": ["DeskDrawer_in", "DrawerKnob"],
+					"duration": 0.7
+				},
+				{ "frame": "deskdrawera1",
+					"pos": [323, 296],
+					"camera": "None",
+					"pauses": false,
+					"duration": 0.7
+				},
+				{ "frame": "deskdrawera2",
+					"pos": [535, 711, 44, 64],
+					"camera": "DeskCam",
+					"shows": ["KeyM_desk", "KeyM_number_desk", "KeyM_ring_desk", "KeyM_tag_desk"],
+					"hides": ["Desk", "Room"],
+					"duration": 0.7
+				},
+				{ "frame": "releaseto",
+					"name": "DeskZoom",
+					"parent": "None",
+					"duration": 0
+				}
+			]
+		},
+		{ "name": "MapN",
+			"frames": [
+				{ "frame": "mapn",
+					"pos": [1277, 605, 108, 103],
+					"camera": "MapCam",
+					"shows": ["ButtonN_pushed", "ButtonN_text_pushed"],
+					"hides": ["ButtonN", "ButtonN_text"],
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "MapE",
+			"frames": [
+				{ "frame": "mape",
+					"pos": [1375, 509, 104, 97],
+					"camera": "MapCam",
+					"shows": ["ButtonE_pushed", "ButtonE_text_pushed"],
+					"hides": ["ButtonE", "ButtonE_text"],
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "MapS",
+			"frames": [
+				{ "frame": "maps",
+					"pos": [1280, 412, 104, 103],
+					"camera": "MapCam",
+					"shows": ["ButtonS_pushed", "ButtonS_text_pushed"],
+					"hides": ["ButtonS", "ButtonS_text"],
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "MapW",
+			"frames": [
+				{ "frame": "mapw",
+					"pos": [1188, 506, 104, 101],
+					"camera": "MapCam",
+					"shows": ["ButtonW_pushed", "ButtonW_text_pushed"],
+					"hides": ["ButtonW", "ButtonW_text"],
+					"duration": 0.7
+				}
+			]
+		},
+		{ "name": "MapNNW",
+			"frames": [
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"pauses": false,
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-160, 0],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				}
+			]
+		},
+		{ "name": "MapSE",
+			"frames": [
+				{ "frame": "fliph",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0.3
+				},
+				{ "frame": "runanim",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pauses": false,
+					"pos": [160, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -150],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				}
+			]
+		},
+		{ "name": "MapSSE",
+			"frames": [
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [160, 0],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0
+				},
+				{ "frame": "fliph",
+					"pauses": false,
+					"duration": 0.3
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-160, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				}
+			]
+		},
+		{ "name": "MapWSW",
+			"frames": [
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-160, 0],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "zoom",
+					"pos": [755, 505, 0.5],
+					"pauses": false,
+					"duration": 7
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -150],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-160, 0],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-160, 0],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [150, 0],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, 160],
+					"pauses": false,
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "runanim",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [0, -150],
+					"duration": 1
+				},
+				{ "frame": "stopanim",
+					"duration": 0.1
+				},
+				{ "frame": "fliph",
+					"name": "MapSoldier",
+					"parent": "MapZoom",
+					"duration": 0.2
+				},
+				{ "frame": "moveby",
+					"pos": [50, 0],
+					"duration": 0.1
+				},
+				{ "frame": "moveby",
+					"pos": [200, 0],
+					"pauses": false,
+					"duration": 0.5
+				},
+				{ "frame": "show",
+					"name": "Bullet1",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-150, 0],
+					"pauses": false,
+					"duration": 0.2
+				},
+				{ "frame": "wait",
+					"duration": 0.1,
+				},
+				{ "frame": "fadein",
+					"name": "MapBlack",
+					"parent": "MapZoom",
+					"pauses": false,
+					"duration": 7
+				},
+				{ "frame": "show",
+					"name": "Bullet2",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-150, 0],
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "hide",
+					"name": "Bullet1",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "wait",
+					"duration": 0.1,
+				},
+				{ "frame": "hide",
+					"name": "Bullet2",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "show",
+					"name": "Bullet3",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"pos": [-150, 0],
+					"pauses": false,
+					"duration": 0.1
+				},
+				{ "frame": "hide",
+					"name": "Bullet3",
+					"parent": "MapSoldier",
+					"grandparent": "MapZoom",
+					"duration": 0
+				},
+				{ "frame": "moveby",
+					"name": "MapCross",
+					"parent": "MapZoom",
+					"pos": [70, 0],
+					"duration": 0.3
+				},
+				{ "frame": "moveby",
+					"pos": [40, 0],
+					"pauses": false,
+					"duration": 0.4
+				},
+				{ "frame": "rotateby",
+					"pos": [65],
+					"duration": 0.4
+				}
+			]
+		}
+	],
+    "objects": [
+		{ "name": "Laces",
+			"image": "inv_laces",
+			"scale": 0.1
+		},
+		{ "name": "Magnet",
+			"image": "inv_magnet",
+			"scale": 0.12
+		},
+		{ "name": "Key",
+			"image": "inv_chestkey",
+			"scale": 0.1,
+			"animations": [
+				{ "name": "ChestOpen",
+					"frames": [
+						{ "frame": "chesta1",
+							"pos": [769, 386, 115, 104],
+							"camera": "ChestCam",
+							"shows": ["Key_chest_out"],
+							"hides": ["Key_chest"],
+							"duration": 0.5
+						},
+						{ "frame": "chesta2",
+							"pos": [840, 408, 49, 87],
+							"camera": "ChestCam",
+							"shows": ["Key_chest"],
+							"sound": "latch1",
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Star1",
+			"displayname": "Metal Piece",
+			"image": "inv_star1",
+			"scale": 0.12
+		},
+		{ "name": "Star2",
+			"displayname": "Metal Piece",
+			"image": "inv_star2",
+			"scale": 0.12
+		},
+		{ "name": "Star3",
+			"displayname": "Metal Piece",
+			"image": "inv_star3",
+			"scale": 0.12
+		},
+		{ "name": "Star4",
+			"displayname": "Metal Piece",
+			"image": "inv_star4",
+			"scale": 0.12
+		},
+		{ "name": "Star5",
+			"displayname": "Metal Piece",
+			"image": "inv_star5",
+			"scale": 0.12
+		},
+		{ "name": "Whiskey",
+			"image": "inv_whiskey",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "WhiskeyPour",
+					"frames": [
+						{ "frame": "whiskeya1",
+							"pos": [424, 623, 449, 171],
+							"camera": "CanteenCam",
+							"shows": ["Cap_off", "Canteen_cover"],
+							"hides": ["Cap_on", "Canteen_blood", "Canteen_cover_open"],
+							"sound": "click1",
+							"duration": 1
+						},
+						{ "frame": "whiskeya2",
+							"pos": [420, 426, 1234, 443],
+							"camera": "CanteenCam",
+							"shows": ["Cap_off", "Canteen_cover", "Snap_L", "Whiskey_pour1", "Whiskey_label_pour1", "Whiskey_liquid_pour1", "Whiskey_top_pour1"],
+							"hides": ["Cap_on", "Canteen_blood", "Canteen_cover_open"],
+							"duration": 1
+						},
+						{ "frame": "whiskeya3",
+							"pos": [426, 618, 1104, 462],
+							"camera": "CanteenCam",
+							"shows": ["Cap_off", "Canteen_cover", "Whiskey_pour2", "Whiskey_label_pour2", "Whiskey_liquid_pour2", "Whiskey_top_pour2"],
+							"hides": ["Cap_on", "Canteen_blood", "Canteen_cover_open"],
+							"duration": 1
+						},
+						{ "frame": "whiskeya4",
+							"pos": [730, 538, 98, 93],
+							"camera": "CanteenCam",
+							"shows": ["Canteen_blood", "Canteen_cover"],
+							"hides": ["Canteen_cover_open"],
+							"duration": 1
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Rosary",
+			"image": "inv_rosary",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "RosaryPlace",
+					"frames": [
+						{ "frame": "rosarya1",
+							"pos": [923, 34, 223, 802],
+							"camera": "RifleCam",
+							"hides": ["Rifle_blood", "Mattress1_blood"],
+							"duration": 1
+						},
+						{ "frame": "rosarya2",
+							"pos": [920, 32, 225, 828],
+							"hides": ["Mattress1_blood"],
+							"camera": "RifleCam",
+							"duration": 1
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Pin",
+			"displayname": "Brass Pin",
+			"image": "inv_pin",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "PinPlace",
+					"frames": [
+						{ "frame": "pina1",
+							"pos": [1143, 581, 142, 88],
+							"camera": "ShirtCam",
+							"hides": ["Shirt_blood"],
+							"duration": 1
+						},
+						{ "frame": "pina2",
+							"pos": [1103, 564, 181, 201],
+							"camera": "ShirtCam",
+							"shows": ["Shirt"],
+							"hides": ["Shirt_open"],
+							"duration": 1
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Watch",
+			"image": "inv_watch",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "WatchPlace",
+					"frames": [
+						{ "frame": "hide",
+							"name": "WatchCase",
+							"parent": "WatchZoom",
+							"sound": "switchup1",
+							"duration": 0.7
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key1",
+			"displayname": "Key 1",
+			"image": "inv_key1",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key1Open",
+					"frames": [
+						{ "frame": "key1unlock",
+							"pos": [601, 728, 15, 27],
+							"camera": "MailboxesCam",
+							"shows": ["Key1_number", "Key1_closed", "Key1_ring", "Key1_tag", "Mailbox1_keyhole_closed", "Mailbox1_closed"],
+							"hides": ["Key1_number_open", "Key1_open", "Key1_ring_open", "Key1_tag_open", "Mailbox1_keyhole_open", "Mailbox1_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key2",
+			"displayname": "Key 2",
+			"image": "inv_key2",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key2Open",
+					"frames": [
+						{ "frame": "key2unlock",
+							"pos": [968, 724, 13, 31],
+							"camera": "MailboxesCam",
+							"shows": ["Key2_number", "Key2_closed", "Key2_ring", "Key2_tag", "Mailbox2_keyhole_closed", "Mailbox2_closed"],
+							"hides": ["Key2_number_open", "Key2_open", "Key2_ring_open", "Key2_tag_open", "Mailbox2_keyhole_open", "Mailbox2_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						},
+						{ "frame": "key2note",
+							"pos": [849, 530, 240, 303],
+							"camera": "MailboxesCam",
+							"shows": ["Mailbox2_note"],
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key3",
+			"displayname": "Key 3",
+			"image": "inv_key3",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key3Open",
+					"frames": [
+						{ "frame": "key3unlock",
+							"pos": [1325, 723, 15, 33],
+							"camera": "MailboxesCam",
+							"shows": ["Key3_number", "Key3_closed", "Key3_ring", "Key3_tag", "Mailbox3_keyhole_closed", "Mailbox3_closed"],
+							"hides": ["Key3_number_open", "Key3_open", "Key3_ring_open", "Key3_tag_open", "Mailbox3_keyhole_open", "Mailbox3_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						},
+						{ "frame": "key3note",
+							"pos": [1210, 539, 248, 288],
+							"camera": "MailboxesCam",
+							"shows": ["Mailbox3_note"],
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key4",
+			"displayname": "Key 4",
+			"image": "inv_key4",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key4Open",
+					"frames": [
+						{ "frame": "key4unlock",
+							"pos": [605, 312, 16, 36],
+							"camera": "MailboxesCam",
+							"shows": ["Key4_number", "Key4_closed", "Key4_ring", "Key4_tag", "Mailbox4_keyhole_closed", "Mailbox4_closed"],
+							"hides": ["Key4_number_open", "Key4_open", "Key4_ring_open", "Key4_tag_open", "Mailbox4_keyhole_open", "Mailbox4_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						},
+						{ "frame": "key4note",
+							"pos": [491, 140, 237, 286],
+							"camera": "MailboxesCam",
+							"shows": ["Mailbox4_note"],
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key5",
+			"displayname": "Key 5",
+			"image": "inv_key5",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key5Open",
+					"frames": [
+						{ "frame": "key5unlock",
+							"pos": [969, 318, 11, 25],
+							"camera": "MailboxesCam",
+							"shows": ["Key5_number", "Key5_closed", "Key5_ring", "Key5_tag", "Mailbox5_keyhole_closed", "Mailbox5_closed"],
+							"hides": ["Key5_number_open", "Key5_open", "Key5_ring_open", "Key5_tag_open", "Mailbox5_keyhole_open", "Mailbox5_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Key6",
+			"displayname": "Key 6",
+			"image": "inv_key6",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "Key6Open",
+					"frames": [
+						{ "frame": "key6unlock",
+							"pos": [1323, 316, 14, 28],
+							"camera": "MailboxesCam",
+							"shows": ["Key6_number", "Key6_closed", "Key6_ring", "Key6_tag", "Mailbox6_keyhole_closed", "Mailbox6_closed"],
+							"hides": ["Key6_number_open", "Key6_open", "Key6_ring_open", "Key6_tag_open", "Mailbox6_keyhole_open", "Mailbox6_open"],
+							"sound": "latch1",
+							"duration": 0.5
+						},
+						{ "frame": "key6note",
+							"pos": [1216, 142, 234, 278],
+							"camera": "MailboxesCam",
+							"shows": ["Mailbox6_note"],
+							"duration": 0.5
+						}
+					]
+				}
+			]
+		},
+		{ "name": "KeyM",
+			"displayname": "Key M",
+			"image": "inv_keym",
+			"scale": 0.12,
+			"animations": [
+				{ "name": "KeyMUse",
+					"frames": [
+						{ "frame": "mapunlock1",
+							"pos": [1457, 230, 61, 91],
+							"camera": "MapCam",
+							"shows": ["MapGlass_closed", "KeyM_anim", "KeyM_number_anim", "KeyM_ring_anim", "KeyM_tag_anim"],
+							"hides": ["KeyM_number", "KeyM_tag"],
+							"duration": 0.7
+						},
+						{ "frame": "mapunlock2",
+							"pos": [1418, 193, 46, 94],
+							"camera": "MapCam",
+							"shows": ["MapGlass_closed", "KeyM_in", "KeyM_number", "KeyM_ring", "KeyM_tag"],
+							"duration": 0.7
+						}
+					]
+				}
+			]
+		}
+    ],
+    "dialogues": [
+        { "name": "Avatar",
+            "lines": [
+                { "name": "AvatarHelp",
+                    "character": "Avatar",
+                    "line": "How can I help you?",
+                    "duration": 2
+                }
+            ],
+            "branch": [
+                { "name": "Objective",
+                    "text": "What am I supposed to be doing again?",
+                    "lines": [
+                        { "name": "Objective1",
+                            "character": "Player",
+                            "line": "I'm not sure what I'm supposed to be doing.",
+                            "duration": 2
+                        },
+                        { "name": "Objective2",
+                            "character": "Avatar",
+                            "line": "This simulation is designed to ease you back into your memories.",
+                            "duration": 3
+                        },
+                        { "name": "Objective3",
+                            "character": "Avatar",
+                            "line": "I suggest looking for some documentation, or a photograph.",
+                            "duration": 3
+                        }
+                    ],
+                    "action": [
+                        { "name": "DirectHintON",
+                            "choices": [
+                                { "name": "Direct",
+                                    "dialogue": "Avatar",
+                                    "type": "enable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                { "name": "Direct",
+                    "text": "Could you be more direct about what I can do?",
+                    "active": false,
+                    "lines": [
+                        { "name": "Direct1",
+                            "character": "Player",
+                            "line": "Could you be more direct about what I should be doing?",
+                            "duration": 2
+                        },
+                        { "name": "Direct2",
+                            "character": "Avatar",
+                            "line": "It will be most beneficial to your recovering mind to discover your identity on your own.",
+                            "duration": 3
+                        },
+                        { "name": "Direct3",
+                            "character": "Avatar",
+                            "line": "However, I can provide guidance in a limited capacity.",
+                            "duration": 2
+                        }
+                    ],
+                    "branch": [
+                        { "name": "OrderHint",
+                            "text": "I'm still not sure where I should start.",
+                            "lines": [
+                                { "name": "OrderHint1",
+                                    "character": "Player",
+                                    "line": "I'm still not sure where to begin.",
+                                    "duration": 2
+                                },
+                                { "name": "OrderHint2",
+                                    "character": "Avatar",
+                                    "line": "Look around everywhere, see if anything jogs your memory.",
+                                    "duration": 3
+                                },
+                                { "name": "OrderHint3",
+                                    "character": "Avatar",
+                                    "line": "The passage on the wall above the locked chest might be a good place to begin.",
+                                    "duration": 3.5
+                                }
+                            ]
+                        },
+                        { "name": "ChestHint",
+                            "text": "How can I open this chest?",
+                            "active": false,
+                            "lines": [
+                                { "name": "ChestHint1",
+                                    "character": "Player",
+                                    "line": "How can I open the chest?",
+                                    "duration": 2
+                                },
+                                { "name": "ChestHint2",
+                                    "character": "Avatar",
+                                    "line": "The key is close by, but requires some effort to retrieve.",
+                                    "duration": 3
+                                },
+                                { "name": "ChestHint3",
+                                    "character": "Avatar",
+                                    "line": "Have you found the mailbox key to the left of the door?",
+                                    "duration": 3.2
+                                }
+                            ]
+                        },
+                        { "name": "LacesHint",
+                            "text": "I can't reach under the floorboards.",
+                            "active": false,
+                            "lines": [
+                                { "name": "LacesHint1",
+                                    "character": "Player",
+                                    "line": "I can't reach under the floorboards.",
+                                    "duration": 2
+                                },
+                                { "name": "LacesHint2",
+                                    "character": "Avatar",
+                                    "line": "Look for something in the room that might extend your reach.",
+                                    "duration": 3
+                                },
+                                { "name": "LacesHint3",
+                                    "character": "Avatar",
+                                    "line": "Your collected objects can be accessed at the lower-left of your interface.",
+                                    "duration": 3.2
+                                }
+                            ]
+                        },
+                        { "name": "DeskHint",
+                            "text": "How do I open this desk?",
+                            "active": false,
+                            "lines": [
+                                { "name": "DeskHint1",
+                                    "character": "Player",
+                                    "line": "I don't know how to open the writing desk.",
+                                    "duration": 2
+                                },
+                                { "name": "DeskHint2",
+                                    "character": "Avatar",
+                                    "line": "You should see depictions of the symbols you need drawn on the letters scattered around the room.",
+                                    "duration": 4
+                                },
+                                { "name": "DeskHint3",
+                                    "character": "Avatar",
+                                    "line": "The order is important as well.",
+                                    "duration": 3.2
+                                }
+                            ],
+                            "action": [
+                                { "name": "DeskHintON",
+                                    "choices": [
+                                        { "name": "DeskHint",
+                                            "dialogue": "Avatar",
+                                            "type": "remove"
+                                        },
+                                        { "name": "DeskHint2",
+                                            "dialogue": "Avatar",
+                                            "type": "enable"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        { "name": "DeskHint2",
+                            "text": "I still need help with the desk.",
+                            "active": false,
+                            "lines": [
+                                { "name": "DeskHint21",
+                                    "character": "Player",
+                                    "line": "I'm still not sure how to get the desk open..",
+                                    "duration": 2
+                                },
+                                { "name": "DeskHint22",
+                                    "character": "Avatar",
+                                    "line": "The symbols are on each of four letters in the room. The order can be taken from the poem on the wall, above the chest.",
+                                    "duration": 4.5
+                                },
+                                { "name": "DeskHint23",
+                                    "character": "Avatar",
+                                    "line": "The first symbol looks a little like a harp.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "CabinetHint",
+                            "text": "How can I open the cabinet with the star pattern?",
+                            "active": false,
+                            "lines": [
+                                { "name": "CabinetHint1",
+                                    "character": "Player",
+                                    "line": "The wooden cabinet won't open.",
+                                    "duration": 2
+                                },
+                                { "name": "CabinetHint2",
+                                    "character": "Avatar",
+                                    "line": "You'll need to complete the pattern.",
+                                    "duration": 2
+                                },
+                                { "name": "CabinetHint3",
+                                    "character": "Avatar",
+                                    "line": "Look around the room. Some pieces may not yet be available.",
+                                    "duration": 3.2
+                                },
+                                { "name": "CabinetHint4",
+                                    "active": false,
+                                    "character": "Avatar",
+                                    "line": "You should be able to find all the pieces now.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "ClockHint",
+                            "text": "How can I open the grandfather clock?",
+                            "active": false,
+                            "lines": [
+                                { "name": "ClockHint1",
+                                    "character": "Player",
+                                    "line": "What should I do with this clock?",
+                                    "duration": 2
+                                },
+                                { "name": "ClockHint2",
+                                    "character": "Avatar",
+                                    "line": "There's a hint in the corner of the clock face.",
+                                    "duration": 2
+                                },
+                                { "name": "ClockHint3",
+                                    "character": "Avatar",
+                                    "line": "Look around the room. Some pieces may not yet be available.",
+                                    "duration": 3
+                                },
+                                { "name": "ClockHint4",
+                                    "active": false,
+                                    "character": "Avatar",
+                                    "line": "See if you can find objects that correspond with both symbols.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "PipesHint",
+                            "text": "What can I do with the pipes under the sink?",
+                            "active": false,
+                            "lines": [
+                                { "name": "PipesHint1",
+                                    "character": "Player",
+                                    "line": "What can I do with these pipes under the sink?",
+                                    "duration": 2.5
+                                },
+                                { "name": "PipesHint2",
+                                    "character": "Avatar",
+                                    "line": "You'll need to combine two pieces of information to get the right settings.",
+                                    "duration": 3
+                                },
+                                { "name": "PipesHint3",
+                                    "character": "Avatar",
+                                    "line": "Focus on other questions for the time being.",
+                                    "duration": 3
+                                },
+                                { "name": "PipesHint4",
+                                    "active": false,
+                                    "character": "Avatar",
+                                    "line": "Look at the compass in the chest, and the pad in the desk.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "PincaseHint",
+                            "text": "How can I open the wooden case in the desk?",
+                            "active": false,
+                            "lines": [
+                                { "name": "PincaseHint1",
+                                    "character": "Player",
+                                    "line": "How can I open the locked case in the desk?",
+                                    "duration": 2.5
+                                },
+                                { "name": "PincaseHint2",
+                                    "character": "Avatar",
+                                    "line": "You need to press the buttons in the right order.",
+                                    "duration": 3
+                                },
+                                { "name": "PincaseHint3",
+                                    "character": "Avatar",
+                                    "line": "Look for something in the room that depicts a sequence of directions.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "PlaceHint",
+                            "text": "I've got something I don't know what to do with.",
+                            "active": false,
+                            "lines": [
+                                { "name": "PlaceHint1",
+                                    "character": "Player",
+                                    "line": "I'm not sure what to do with something I'm holding.",
+                                    "duration": 2.5
+                                },
+                                { "name": "PlaceHint2",
+                                    "character": "Avatar",
+                                    "line": "Make sure you read the letters in the room thoroughly.",
+                                    "duration": 3
+                                },
+                                { "name": "PlaceHint3",
+                                    "character": "Avatar",
+                                    "line": "You need to understand your past to recover your future.",
+                                    "duration": 3
+                                }
+                            ]
+                        },
+                        { "name": "DeskHint3",
+                            "text": "What do I do next?",
+                            "active": false,
+                            "lines": [
+                                { "name": "DeskHint31",
+                                    "character": "Player",
+                                    "line": "I understand what happened, but I'm not sure what to do next.",
+                                    "duration": 3
+                                },
+                                { "name": "DeskHint32",
+                                    "character": "Avatar",
+                                    "line": "Each of the four letters in the mailboxes have a symbol drawn on them.",
+                                    "duration": 3
+                                },
+                                { "name": "DeskHint33",
+                                    "character": "Avatar",
+                                    "line": "Last time, you entered these symbols in the order these four went into service. Now, enter them in the order they left.",
+                                    "duration": 4
+                                }
+                            ]
+                        },
+                        { "name": "FollowHint",
+                            "text": "What does 'Follow William' mean?",
+                            "active": false,
+                            "lines": [
+                                { "name": "FollowHint1",
+                                    "character": "Player",
+                                    "line": "What does 'Follow William' mean?",
+                                    "duration": 3
+                                },
+                                { "name": "FollowHint2",
+                                    "character": "Avatar",
+                                    "line": "William may help you find the order to travel in the map before you.",
+                                    "duration": 3
+                                },
+                                { "name": "FollowHint3",
+                                    "character": "Avatar",
+                                    "line": "Check William's letters again.",
+                                    "duration": 2
+                                }
+                            ]
+                        },
+                        { "name": "NeverMindHint",
+                            "text": "Never mind",
+                            "lines": [
+                                { "name": "NeverMind1",
+                                    "character": "Player",
+                                    "line": "Never mind.",
+                                    "duration": 3
+                                }
+                            ],
+                            "exittype": "NeverMind"
+                        }
+                    ]
+                },
+                { "name": "SimulationAsk",
+                    "text": "Why am I in this room?",
+                    "lines": [
+                        { "name": "Simulation1",
+                            "character": "Player",
+                            "line": "Why am I in this particular room?",
+                            "duration": 2
+                        },
+                        { "name": "Simulation2",
+                            "character": "Avatar",
+                            "line": "This environment has been seeded from your individual memories and grown into a healing experience.",
+                            "duration": 3
+                        },
+                        { "name": "Simulation3",
+                            "character": "Avatar",
+                            "line": "As your subconscious is partly responsible, the details here may not be literal memory, but extrapolations from your impressions of a time in your life.",
+                            "duration": 4
+                        },
+                        { "name": "Simulation4",
+                            "character": "Avatar",
+                            "line": "Exerting cognition on these issues is negatively correlated with recovery.",
+                            "duration": 3
+                        }
+                    ],
+                    "action": [
+                        { "name": "PuzzlesON",
+                            "choices": [
+                                { "name": "Puzzles",
+                                    "dialogue": "Avatar",
+                                    "type": "enable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                { "name": "Puzzles",
+                    "text": "What's the point of all these puzzles?",
+                    "active": false,
+                    "lines": [
+                        { "name": "Puzzles1",
+                            "character": "Player",
+                            "line": "Why am I running around solving puzzles?",
+                            "duration": 2
+                        },
+                        { "name": "Puzzles2",
+                            "character": "Avatar",
+                            "line": "As indicated, your cognition is in danger of fragmentation due to external events.",
+                            "duration": 3
+                        },
+                        { "name": "Puzzles3",
+                            "character": "Avatar",
+                            "line": "Do not be alarmed. Completing these simulated tasks should return you to your baseline mental health.",
+                            "duration": 3.5
+                        },
+                        { "name": "Puzzles4",
+                            "character": "Player",
+                            "line": "..baseline mental health?",
+                            "duration": 2
+                        },
+                        { "name": "Puzzles5",
+                            "character": "Avatar",
+                            "line": "DG Industries does not accept liability for results, as MELIORIS is classified as an experimental treatment attempted only when subjects lack capacity to consent.",
+                            "duration": 5
+                        },
+                        { "name": "Puzzles5",
+                            "character": "Avatar",
+                            "line": "Exerting cognition on these issues is negatively correlated with recovery.",
+                            "duration": 3
+                        }
+                    ]
+                },
+                { "name": "NathanAsk",
+                    "text": "Am I Nathan Cliff?",
+                    "active": false,
+                    "lines": [
+                        { "name": "Nathan1",
+                            "character": "Player",
+                            "line": "Am I.. Nathan?",
+                            "duration": 1.5
+                        },
+                        { "name": "Nathan2",
+                            "character": "Avatar",
+                            "line": "That conclusion is yours alone to determine.",
+                            "duration": 2
+                        },
+                        { "name": "Nathan3",
+                            "character": "Player",
+                            "line": "It looks like he's the only one who survived..",
+                            "duration": 2
+                        },
+                        { "name": "Nathan4",
+                            "character": "Avatar",
+                            "line": "It is safe to confirm that Nathan Cliff was the lone survivor of the four depicted in this simulation.",
+                            "duration": 3.2
+                        }
+                    ]
+                },
+                { "name": "Exit",
+                    "text": "Never mind.",
+                    "lines": [
+                        { "name": "NeverMind",
+                            "character": "Player",
+                            "line": "Never mind.",
+                            "duration": 1
+                        }
+                    ],
+                    "exittype": "NeverMind"
+                }
+            ],
+            "sharedexit": [
+                { "name": "NeverMind" }
+            ]
+        },
+        { "name": "DoorDiscuss",
+            "lines": [
+                { "name": "DoorDiscuss1",
+                    "character": "Player",
+                    "line": "Why is the door locked?",
+                    "duration": 1.2
+                },
+                { "name": "DoorDiscuss2",
+                    "character": "Avatar",
+                    "line": "This simulation does not currently extend beyond this room.",
+                    "duration": 2
+                },
+                { "name": "DoorDiscuss3",
+                    "character": "Avatar",
+                    "line": "Should we need more information to restore your memories, we can extend the simulation.",
+                    "duration": 3
+                },
+                { "name": "DoorDiscuss4",
+                    "character": "Avatar",
+                    "line": "Focus on the task at hand.",
+                    "duration": 2
+                }
+            ]
+        }
+    ]
+}

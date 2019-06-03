@@ -1,0 +1,165 @@
+{ "name": "CutS3",
+	"delay": 3,
+	"music": "music_cuts",
+	"images": [
+		{ "name": "Glow1",
+			"image": "glow",
+			"anchor": [0.5, 0.5],
+			"rotate": -45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow2",
+			"image": "glow",
+			"anchor": [0.5, 0.5],
+			"rotate": 45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow3",
+			"image": "glow",
+			"anchor": [0.5, 0.5],
+			"opacity": 0,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "opacityto",
+					"pos": [1],
+					"duration": 7
+				},
+				{ "frame": "opacityto",
+					"pos": [0],
+					"duration": 7
+				}
+			]
+		},
+		{ "name": "Note",
+			"image": "nathanendnote",
+			"anchor": [0.5, 0.5],
+			"opacity": 0,
+			"sub": [960, 540]
+		}
+	],
+	"dialogue": [
+		{ "name": "Finale",
+            "lines": [
+		        { "name": "Finale1",
+	        		"character": "Player",
+		        	"line": "It’s coming back to me. My son.. ",
+		        	"duration": 3
+		        },
+				{ "name": "Finale2",
+	        		"character": "Player",
+		        	"line": "He’s a grown man now..",
+		        	"duration": 3
+		        },
+				{ "name": "Finale3",
+	        		"character": "Avatar",
+		        	"line": "Neural activity has indeed dramatically improved. MELIORIS system will soon disengage.",
+		        	"duration": 5
+		        },
+				{ "name": "Finale4",
+	        		"character": "Player",
+		        	"line": "Wait.. I’m going to remember everything?",
+		        	"duration": 5
+		        },
+				{ "name": "FinaleNote",
+					"character": "Image",
+					"line": "Note",
+					"duration": 5
+				},
+				{ "name": "Finale5",
+	        		"character": "Player",
+		        	"line": "What if there are memories I’d rather leave behind?",
+		        	"duration": 5
+		        },
+				{ "name": "Finale6",
+	        		"character": "Avatar",
+		        	"line": "Processing query.",
+					"skippable": false,
+		        	"duration": 6
+		        },
+				{ "name": "Finale7",
+	        		"character": "Avatar",
+		        	"line": "It seems…that would be possible.",
+		        	"duration": 3
+		        },
+				{ "name": "Finale8",
+	        		"character": "Player",
+		        	"line": "Really?",
+		        	"duration": 1.5
+		        },
+				{ "name": "Finale9",
+	        		"character": "Avatar",
+		        	"line": "My programming adapts to subject need...adopts some elements of input consciousness...it may not have been my designer’s intention, but yes, I can facilitate the removal of some memories.",
+		        	"duration": 8
+				},
+				{ "name": "Finale10",
+	        		"character": "Player",
+		        	"line": "So I don’t need to remember what happened during the war?",
+		        	"duration": 4
+		        },
+				{ "name": "Finale11",
+	        		"character": "Avatar",
+		        	"line": "You can return without remembering what happened to William. But these events affected you greatly, perhaps even created you.",
+		        	"duration": 6
+		        },
+				{ "name": "Finale12",
+	        		"character": "Avatar",
+		        	"line": "Your son...",
+		        	"duration": 2.5
+		        },
+				{ "name": "Finale13",
+	        		"character": "Player",
+		        	"line": "I named him William.",
+		        	"duration": 2
+		        },
+				{ "name": "Finale12",
+	        		"character": "Avatar",
+		        	"line": "Without your memory, you may be happier, but lesser. Or, at least, different.",
+		        	"duration": 4
+		        },
+				{ "name": "Finale13",
+	        		"character": "Player",
+		        	"line": "Is that a risk I should take?",
+		        	"duration": 3
+		        },
+				{ "name": "Finale12",
+	        		"character": "Avatar",
+		        	"line": "It is up to you. After all...",
+		        	"duration": 3.5
+		        },
+				{ "name": "Finale12",
+	        		"character": "Avatar",
+		        	"line": "It is only you here, Nathan.",
+		        	"duration": 3.5
+		        },
+				{ "name": "Finale13",
+	        		"character": "Player",
+		        	"line": "",
+					"skippable": false,
+		        	"duration": 3
+		        }
+	        ]
+		}
+	]
+}

@@ -1,0 +1,340 @@
+{ "name": "CutS2",
+	"delay": 3,
+	"music": "music_cuts",
+	"images": [
+		{ "name": "Glow1",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"rotate": -45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow2",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"rotate": 45,
+			"opacity": 0.5,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "rotateby",
+					"pos": [-75],
+					"duration": 10
+				},
+				{ "frame": "rotateby",
+					"pos": [75],
+					"duration": 10
+				}
+			]
+		},
+		{ "name": "Glow3",
+			"image": "glow.png",
+			"anchor": [0.5, 0.5],
+			"opacity": 0,
+			"sub": [960, 540],
+			"frames": [
+				{ "frame": "opacityto",
+					"pos": [1],
+					"duration": 7
+				},
+				{ "frame": "opacityto",
+					"pos": [0],
+					"duration": 7
+				}
+			]
+		}
+	],
+	"dialogue": [
+		{ "name": "Focus",
+            "lines": [
+        		{ "name": "Start1",
+		        	"character": "Avatar",
+        			"line": "Please remain calm.",
+		        	"duration": 2
+        		},
+        		{ "name": "Start2",
+        			"character": "Player",
+        			"line": "What the hell was that?",
+        			"duration": 2.5
+        		},
+        		{ "name": "Start5",
+        			"character": "Avatar",
+        			"line": "Remain calm.",
+        			"duration": 1
+        		},
+        		{ "name": "FocusLight",
+        			"character": "Avatar",
+        			"line": "Focus on the light.",
+        			"duration": 2.5
+	        	}
+	        ],
+			"branch": [
+				{ "name": "Ask1",
+					"type": "remove",
+					"text": "What did I just see?",
+					"lines": [
+						{ "name": "Ask1",
+							"character": "Player",
+							"line": "What just happened??",
+							"duration": 2.5
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+					]
+				},
+				{ "name": "Ask2",
+					"type": "remove",
+					"text": "Am I really this Nathan person?",
+					"lines": [
+						{ "name": "Ask2",
+							"character": "Player",
+							"line": "Am I really Nathan?",
+							"duration": 2.5
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+
+					]
+				},
+				{ "name": "Ask3",
+					"type": "remove",
+					"text": "Why can't I still remember anything?",
+					"lines": [
+						{ "name": "Ask2",
+							"character": "Player",
+							"line": "Why can't I still remember anything?",
+							"duration":3
+						},
+						{ "name": "FocusLight",
+							"character": "Avatar",
+							"line": "Focus on the light.",
+							"duration": 2.5
+						}
+
+					]
+				},
+				{ "name": "Obey",
+					"type": "cont",
+					"text": "<focus on the light>"
+				}
+			]
+		},
+		{ "name": "Questions",
+			"type": "max2",
+			"lines": [
+				{ "name": "Obey",
+					"character": "Player",
+					"skippable": false,
+					"line": "",
+					"duration": 6
+				},
+				{ "name": "Questions1",
+					"character": "Avatar",
+					"line": "Thank you. You’ve done well [top 67% of similar subjects]. If you continue to follow DGI protocol, you may fully recover.",
+					"duration": 6
+				},
+				{ "name": "Questions2",
+					"character": "Avatar",
+					"line": "System parameters allow for asking two questions. Further cognitive exertion is contraindicated by experimental data.",
+					"duration": 5
+				},
+				{ "name": "Questions3",
+					"character": "Avatar",
+					"line": "Please use your questions efficiently.",
+					"duration": 2
+				}
+			],
+			"branch": [
+				{ "name": "Question1",
+					"type": "remove",
+					"text": "So I'm definitely Nathan Cliff?",
+					"lines": [
+						{ "name": "Q21",
+							"character": "Player",
+							"line": "So, my name is Nathan Cliff, yes?",
+							"duration": 3
+						},
+						{ "name": "Q22",
+							"character": "Avatar",
+							"line": "Does that feel right to you? Your acceptance of your reality is critical.",
+							"duration": 4
+						},
+						{ "name": "Q23",
+							"character": "Player",
+							"line": "I.. think so. At least, it doesn't feel.. insane.",
+							"duration": 3
+						},
+						{ "name": "Q24",
+							"character": "Player",
+							"line": "Nathan.. seems like someone I might have known. Like an old classmate I haven't thought of in awhile.",
+							"duration": 4
+						},
+						{ "name": "Q25",
+							"character": "Avatar",
+							"line": "The memories you have been accessing are somewhat old, so that experience is logical. We'll be moving to more current history shortly.",
+							"duration": 5
+						}
+					]
+				},
+				{ "name": "Question2",
+                    "type": "remove",
+					"text": "What did I just see a moment ago?",
+					"lines": [
+						{ "name": "Q21",
+							"character": "Player",
+							"line": "What happened with the soldier I saw on the map? What did that mean?",
+							"duration": 4
+						},
+						{ "name": "Q22",
+							"character": "Avatar",
+							"line": "You should think of the MELIORIS system as soil, wherein are planted seeds from your subconcious.",
+							"duration": 6
+						},
+						{ "name": "Q23",
+							"character": "Avatar",
+							"line": "What you saw depicts something that has been playing in your mind, even without access to direct memory. Conforming to DGI protocol should recover these details.",
+							"duration": 8
+						}
+					]
+				},
+				{ "name": "Question3",
+					"type": "remove",
+					"text": "Are you ever going to tell me what happened to me?",
+					"lines": [
+						{ "name": "Q31",
+							"character": "Player",
+							"line": "Are you ever going to tell me what happened to put me here?",
+							"duration": 3
+						},
+						{ "name": "Q32",
+							"character": "Avatar",
+							"line": "Memories associated with personality formation and character are much more important to recover at this stage.",
+							"duration": 6
+						},
+						{ "name": "Q33",
+							"character": "Avatar",
+							"line": "It is not enough to recall what happened to you recently. You must recall who you are, and how you came to be.",
+							"duration": 6
+						}
+					]
+				},
+				{ "name": "Question4",
+					"type": "remove",
+					"text": "How accurate is this simulation?",
+					"lines": [
+						{ "name": "Q41",
+							"character": "Player",
+							"line": "How accurate is this simulation?",
+							"duration": 2
+						},
+						{ "name": "Q42",
+							"character": "Avatar",
+							"line": "MELIORIS replicates basic spatial experience and layout, but replaces many details with cognitive exercises for synaptic flex.",
+							"duration": 6
+						},
+						{ "name": "Q43",
+							"character": "Avatar",
+							"line": "However, the largest role in the creation of your recovery space is given to your subconscious. Remember that not all you see can be interpreted literally.",
+							"duration": 7
+						},
+						{ "name": "Q44",
+							"character": "Avatar",
+							"line": "Asking this question has been positively correlated with recovery odds.",
+							"duration": 4
+						}
+					]
+				},
+				{ "name": "Question5",
+					"type": "remove",
+					"text": "Where am I?",
+					"lines": [
+						{ "name": "Q51",
+							"character": "Player",
+							"line": "Where am I, really?",
+							"duration": 2
+						},
+						{ "name": "Q52",
+							"character": "Avatar",
+							"line": "Your physical location should be prioritized many levels below your mental health.",
+							"duration": 3
+						},
+						{ "name": "Q53",
+							"character": "Avatar",
+							"line": "Asking this question has been negatively correlated with recovery odds.",
+							"duration": 4
+						}
+					]
+				}
+			]
+		},
+		{ "name": "Finish",
+			"lines": [
+				{ "name": "Finish1",
+					"character": "Avatar",
+					"line": "This next simulation covers some time after the events depicted in the previous room.",
+					"duration": 6
+				},
+				{ "name": "Finish2",
+					"character": "Avatar",
+					"line": "This interface will maintain an active presence to monitor your progress.",
+					"duration": 4
+				},
+				{ "name": "Finish3",
+					"character": "Avatar",
+					"line": "Please respond verbally to accept terms of service.",
+					"duration": 3
+				}
+			],
+			"branch": [
+				{ "name": "Yes",
+					"type": "cont",
+					"text": "Yes",
+					"lines": [
+						{ "name": "Confirm1",
+							"character": "Player",
+							"line": "Yes",
+							"duration": 1
+						}
+					]
+				},
+				{ "name": "No",
+					"type": "cont",
+					"text": "Yes",
+					"lines": [
+						{ "name": "Confirm2",
+							"character": "Player",
+							"line": "Yes",
+							"duration": 1
+						}
+					]
+				},
+				{ "name": "Wait!",
+					"type": "cont",
+					"text": "What?",
+					"lines": [
+						{ "name": "Confirm3",
+							"character": "Player",
+							"line": "What?",
+							"duration": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}
