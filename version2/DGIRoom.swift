@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class DGIRoom: DGIScreen {
     
@@ -25,11 +26,6 @@ class DGIRoom: DGIScreen {
     
     override init(from json: String) {
         super.init(from: json)
-    }
-    
-    override func didMove(to view: SKView) {
-        
-        super.didMove(to: view)
         
         inventory.setScale(Config.inv.scale)
         inventory.position = CGPoint(x: Config.inv.space + (Config.inv.unit / 2), y: Config.inv.space + (Config.inv.unit / 2))
@@ -43,7 +39,11 @@ class DGIRoom: DGIScreen {
         subtitle.zPosition = 4
         subtitle.isHidden = true
         addChild(subtitle)
-        
+    }
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        loadAutoSave()
     }
     
     override func touchUp(atPoint pos : CGPoint) {
@@ -242,6 +242,14 @@ class DGIRoom: DGIScreen {
         do {
             let jsonData = try JSONDecoder().decode(DGIJSONRoom.self, from: Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: json, ofType: "json")!)))
             invsounds = Next<String>(jsonData.invsounds)
+            if let music = jsonData.music {
+                do {
+                    self.music = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: music + ".mp3", ofType: nil)!))
+                    self.music!.numberOfLoops = -1
+                } catch {
+                    print("Music Error")
+                }
+            }
             for screenData in jsonData.screens {
                 let start = (jsonData.start == screenData.name) ? true : false
                 let screen = DGIRoomNode(imageNamed: screenData.image, name: screenData.name, grid: screenData.grid, start: start)
@@ -436,5 +444,90 @@ class DGIRoom: DGIScreen {
             setcycles = cyclelist
         }
         return DGIParsedState(name: spot.name, type: spot.type!, sequencescreen: setscreen, sequence: spot.match, visibles: setvisibles, cycles: setcycles, flags: spot.flags, action: spot)
+    }
+    
+    override func loadAutoSave() {
+        //var hold: GameSave  = GameSave.autosave
+        for object in GameSave.autosave.inventory {
+            for obj in inventory.masterinv {
+                if obj.name == object {
+                    inventory.addObj(objectname: object)
+                }
+            }
+        }
+        for show in GameSave.autosave.shows {
+            if show.count == 3 {
+                childNode(withName: show[2])?.childNode(withName: show[1])?.childNode(withName: show[0])?.isHidden = false
+            }
+            else {
+                childNode(withName: show[1])?.childNode(withName: show[0])?.isHidden = false
+            }
+            
+        }
+        for hide in GameSave.autosave.hides {
+            if hide.count == 3 {
+                childNode(withName: hide[2])?.childNode(withName: hide[1])?.childNode(withName: hide[0])?.isHidden = true
+            }
+            else {
+                childNode(withName: hide[1])?.childNode(withName: hide[0])?.isHidden = true
+            }
+        }
+        for (name, parent) in GameSave.autosave.toggles
+        {
+            if parent == "State" {
+                for state in states {
+                    if state.name == name {
+                        state.action.active = !(state.action.active ?? true)
+                    }
+                }
+            } else {
+                (childNode(withName: parent) as! DGIRoomNode).toggleGrid(withName: name)
+            }
+        }
+        for (name, value) in GameSave.autosave.flags {
+            flags[name] = value
+        }
+        /*for (name, value) in GameSave.autosave.cyclevals {
+            for grid in (childNode(withName: GameSave.autosave.cyclelocs[name]!) as! GameScreen).getGrid()!
+            {
+                if grid.getName() == name
+                {
+                    grid.setCycleCounter(count: value)
+                }
+            }
+        }
+        var vals: [Int] = []
+        for (i, state) in states.enumerated() {
+            if GameSave.autosave.states.contains(state.name) {
+                vals.append(i)
+            }
+        }
+        for i in vals.reversed() { states.remove(at: i) }
+        for choice in GameSave.autosave.choices {
+            for currdialogue in dialogue {
+                if currdialogue.getName() == choice[1] {
+                    if choice.count == 4 {
+                        if let choiceparent = findChoice(start: currdialogue, name: choice[3]) {
+                            if choice[2] == "enable" {
+                                choiceparent.setLineActive(line: choice[0], active: true)
+                            } else if choice[2] == "disable" {
+                                choiceparent.setLineActive(line: choice[0], active: false)
+                            }
+                        }
+                    } else {
+                        if let choiceparent = findChoice(start: currdialogue, name: choice[0]) {
+                            if choice[2] == "enable" && choiceparent.getActive() != 2 {
+                                choiceparent.setActive(active: 1)
+                            } else if choice[2] == "disable" && choiceparent.getActive() != 2
+                            {
+                                choiceparent.setActive(active: 0)
+                            } else if choice[2] == "remove" {
+                                choiceparent.setActive(active: 2)
+                            }
+                        }
+                    }
+                }
+            }
+        }*/
     }
 }

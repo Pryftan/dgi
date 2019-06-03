@@ -23,7 +23,6 @@ class DGIVoid: DGIScreen {
     }
     
     override func didMove(to view: SKView) {
-        
         super.didMove(to: view)
         disableGestures(except: ["scrollUp", "scrollDown"])
         childNode(withName: "Avatar")?.run(SKAction.sequence([SKAction.wait(forDuration: delay),SKAction.fadeAlpha(to: 0.8, duration: 1), SKAction.run{ self.runDialogue() }]))
@@ -60,8 +59,8 @@ class DGIVoid: DGIScreen {
     override func closeDialogue() {
         dialno += 1
         if dialno < dialogues.count { runDialogue() }
-        else { //transition
-            
+        else {
+            view?.transitionScene()
         }
     }
     

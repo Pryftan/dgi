@@ -82,6 +82,7 @@ class DGIScreen: SKScene {
         for gesture in gestures {
             self.view!.addGestureRecognizer(gesture.value)
         }
+        self.music?.play()
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -121,30 +122,26 @@ class DGIScreen: SKScene {
     }
     
     @objc func scrollUp() {
-        if let choicebox = childNode(withName: "ChoiceBox") as? DGIChoiceBox {
-            if !choicebox.isHidden && choicebox.scroll > 0 {
-                choicebox.scroll -= 1
-                for (index, line) in choicebox.children.enumerated() {
-                    if index < choicebox.scroll  {
-                        line.run(SKAction.group([SKAction.moveBy(x:0, y: -1 * (Config.dialogue.text + Config.dialogue.space), duration: 0.1), SKAction.fadeOut(withDuration: 0.1), SKAction.hide()]))
-                    } else {
-                        line.run(SKAction.group([SKAction.moveBy(x:0, y: -1 * (Config.dialogue.text + Config.dialogue.space), duration: 0.1), SKAction.unhide(), SKAction.fadeIn(withDuration: 0.1)]))
-                    }
+        if !choicebox.isHidden && choicebox.scroll > 0 {
+            choicebox.scroll -= 1
+            for (index, line) in choicebox.children.enumerated() {
+                if index < choicebox.scroll  {
+                    line.run(SKAction.group([SKAction.moveBy(x:0, y: -1 * (Config.dialogue.text + Config.dialogue.space), duration: 0.1), SKAction.fadeOut(withDuration: 0.1), SKAction.hide()]))
+                } else {
+                    line.run(SKAction.group([SKAction.moveBy(x:0, y: -1 * (Config.dialogue.text + Config.dialogue.space), duration: 0.1), SKAction.unhide(), SKAction.fadeIn(withDuration: 0.1)]))
                 }
             }
         }
     }
     
     @objc func scrollDown() {
-        if let choicebox = childNode(withName: "ChoiceBox") as? DGIChoiceBox {
-            if !choicebox.isHidden && (choicebox.scroll + Int(Config.dialogue.rows)) < choicebox.lineno {
-                choicebox.scroll += 1
-                for (index, line) in choicebox.children.enumerated() {
-                    if index < choicebox.scroll {
-                        line.run(SKAction.group([SKAction.moveBy(x:0, y: Config.dialogue.text + Config.dialogue.space, duration: 0.1), SKAction.fadeOut(withDuration: 0.1), SKAction.hide()]))
-                    } else {
-                        line.run(SKAction.group([SKAction.moveBy(x:0, y: Config.dialogue.text + Config.dialogue.space, duration: 0.1), SKAction.unhide(), SKAction.fadeIn(withDuration: 0.1)]))
-                    }
+        if !choicebox.isHidden && (choicebox.scroll + Int(Config.dialogue.rows)) < choicebox.lineno {
+            choicebox.scroll += 1
+            for (index, line) in choicebox.children.enumerated() {
+                if index < choicebox.scroll {
+                    line.run(SKAction.group([SKAction.moveBy(x:0, y: Config.dialogue.text + Config.dialogue.space, duration: 0.1), SKAction.fadeOut(withDuration: 0.1), SKAction.hide()]))
+                } else {
+                    line.run(SKAction.group([SKAction.moveBy(x:0, y: Config.dialogue.text + Config.dialogue.space, duration: 0.1), SKAction.unhide(), SKAction.fadeIn(withDuration: 0.1)]))
                 }
             }
         }
@@ -180,6 +177,10 @@ class DGIScreen: SKScene {
     }
     
     func loadJSON() {
+        //override
+    }
+    
+    func loadAutoSave() {
         //override
     }
 }

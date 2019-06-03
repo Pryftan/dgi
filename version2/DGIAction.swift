@@ -448,6 +448,7 @@ extension DGIRoom {
                 if spotsave { GameSave.autosave.addToggle(name: toggle.name, parent: toggle.parent) }
             }
         }
+        if let _ = spot.transition { view?.transitionScene() }
         if save, spotsave { GameSave.autosave.save() }
     }
     

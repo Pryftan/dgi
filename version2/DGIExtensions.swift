@@ -51,6 +51,12 @@ struct Next<T> {
             return data[curr]
         }
     }
+    var now: T {
+        get { return data[counter] }
+    }
+    var peek: T {
+        get { return data[counter+1] }
+    }
     
     init(_ data: [T]) {
         self.data = data
@@ -58,5 +64,13 @@ struct Next<T> {
     
     mutating func add(_ element: T) {
         data.append(element)
+    }
+    
+    mutating func reset() {
+        counter = 0
+    }
+    
+    mutating func increment() {
+        counter += 1
     }
 }

@@ -11,10 +11,11 @@ import UIKit
 import SpriteKit
 
 let Config = ParseConfig()
+var sceneorder = Next<String>(["cuts1", "cabin", "cuts2", "endroom", "cuts3"])
 
 class ParseConfig {
     
-    let bounds: CGSize
+    var bounds: CGSize
     let scale: CGFloat
     let textspeed: TimeInterval
     let subtitle: (text: CGFloat, y: CGFloat)
