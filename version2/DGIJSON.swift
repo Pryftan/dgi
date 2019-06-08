@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 import SpriteKit
 
-let Config = ParseConfig()
-var sceneorder = Next<String>(["cuts1", "cabin", "cuts2", "endroom", "cuts3"])
-
 class ParseConfig {
     
     var bounds: CGSize
@@ -22,6 +19,7 @@ class ParseConfig {
     let inv: (unit: CGFloat, space: CGFloat, scale: CGFloat)
     let dialogue: (text: CGFloat, space: CGFloat, rows: CGFloat)
     let avatarspace: CGFloat
+    var volume: (music: Float, effect: Float)
     
     init (jsonFile: String = "config") {
         do {
@@ -33,6 +31,7 @@ class ParseConfig {
             inv = (config.invunit * config.invscale * config.scale, config.invspace * config.invscale * config.scale, config.invscale * config.scale)
             dialogue = (config.dialoguetext * config.scale, config.dialoguespace * config.scale, config.dialoguerows)
             avatarspace = config.avatarspace
+            volume = (GameSave.autosave.volume[0], GameSave.autosave.volume[1])
         } catch {
             print("Error loading default config.")
             bounds = CGSize(width: 1920, height: 1080)
@@ -42,6 +41,7 @@ class ParseConfig {
             inv = (100, 25, 1)
             dialogue = (42, 20, 5)
             avatarspace = 40
+            volume = (1, 1)
         }
     }
 }
@@ -78,8 +78,16 @@ struct DGIJSONVoid: Decodable {
     let name: String
     let music: String?
     let delay: Double?
+    let preload: [String]?
     let images: [DGIJSONSub]?
     let dialogue: [DGIJSONDialogue]
+}
+
+struct DGIJSONMenu: Decodable {
+    let name: String
+    let music: String?
+    let scenes: [String]
+    let images: [DGIJSONSub]
 }
 
 struct DGIJSONScreen: Decodable {

@@ -41,7 +41,7 @@ extension SKSpriteNode {
     
 }
 
-struct Next<T> {
+struct Next<T: Equatable> {
     private var data = [T]()
     private var counter = 0
     var next: T {
@@ -55,11 +55,16 @@ struct Next<T> {
         get { return data[counter] }
     }
     var peek: T {
-        get { return data[counter+1] }
+        get { return data[(counter + 1) % data.count] }
     }
     
     init(_ data: [T]) {
         self.data = data
+    }
+    
+    mutating func set(_ element: T) {
+        counter = 0
+        while data[counter] != element { counter += 1; if counter > data.count { break } }
     }
     
     mutating func add(_ element: T) {
@@ -71,6 +76,10 @@ struct Next<T> {
     }
     
     mutating func increment() {
-        counter += 1
+        counter = (counter + 1) % data.count
+    }
+    
+    mutating func setData(_ data: [T]) {
+        self.data = data
     }
 }

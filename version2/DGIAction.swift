@@ -67,11 +67,15 @@ extension DGIRoom {
                     }
                 }
             }
+            if let sound = useframe.sound {
+                actionGroup.append(SKAction.run{
+                    [weak self] in self?.soundEffect.run(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
+                })
+            }
             if useframe.frame == "zoom" {
                 camera?.run(SKAction.sequence([SKAction.wait(forDuration: delay), SKAction.group([SKAction.move(to: CGPoint(x: frame.pos![0] * Config.scale, y: frame.pos![1] * Config.scale), duration: frame.duration), SKAction.scale(to: frame.pos![2], duration: frame.duration)])]))
             }
             else if useframe.frame == "show" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.unhide())
                 if let last = last {
                     if last.type == .permscreen {
@@ -89,7 +93,6 @@ extension DGIRoom {
                 
             }
             else if useframe.frame == "hide" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.hide())
                 actionGroup.append(SKAction.wait(forDuration: useframe.duration))
                 if let last = last { if last.type == .permsub { GameSave.autosave.addHide(name: last.ref.name!, parent: last.parent!, grandparent: last.grandparent) } }
@@ -97,16 +100,12 @@ extension DGIRoom {
             else if useframe.frame == "moveto" {
                 actionGroup.append(SKAction.move(to: CGPoint(x: useframe.pos![0] * Config.scale, y: useframe.pos![1] * Config.scale), duration: useframe.duration))
             } else if useframe.frame == "moveby" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.move(by: CGVector(dx: useframe.pos![0] * Config.scale, dy: useframe.pos![1] * Config.scale), duration: useframe.duration))
             } else if useframe.frame == "cfmoveby" {
-                if let sound = useframe.sound { playSound(sound) }
                 if let subs = useframe.subs { actionGroup.append(SKAction.group([SKAction.run{last?.ref.childNode(withName: subs[0])?.run(SKAction.fadeOut(withDuration: useframe.duration))},SKAction.move(by: CGVector(dx: useframe.pos![0] * Config.scale, dy: useframe.pos![1] * Config.scale), duration: useframe.duration),SKAction.run{last?.ref.childNode(withName: subs[1])?.run(SKAction.fadeIn(withDuration: useframe.duration))}])) }
             } else if useframe.frame == "rotateby" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.rotate(byAngle: -1 * useframe.pos![0] * CGFloat(Double.pi)/180, duration: useframe.duration))
             } else if useframe.frame == "fadein" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.unhide())
                 actionGroup.append(SKAction.fadeIn(withDuration: useframe.duration))
                 if let last = last {
@@ -115,14 +114,11 @@ extension DGIRoom {
                     if last.type == .permsub { GameSave.autosave.addShow(name: last.ref.name!, parent: last.parent!, grandparent: last.grandparent) }
                 }
             } else if useframe.frame == "fadeout" {
-                if let sound = useframe.sound { playSound(sound) }
                 if let last = last { if last.type == .permsub  { GameSave.autosave.addHide(name: last.ref.name!, parent: last.parent!, grandparent: last.grandparent) } }
                 actionGroup.append(SKAction.fadeOut(withDuration: useframe.duration))
             } else if useframe.frame == "fliph" {
-                if let sound = useframe.sound { playSound(sound) }
                 if let last = last { actionGroup.append(SKAction.group([SKAction.scaleX(to: last.ref.xScale * -1, duration: useframe.duration), SKAction.move(by: CGVector(dx: last.ref.size.width * last.ref.xScale, dy: 0), duration: useframe.duration)])) }
             } else if useframe.frame == "flipv" {
-                if let sound = useframe.sound { playSound(sound) }
                 if let last = last { actionGroup.append(SKAction.group([SKAction.scaleY(to: last.ref.yScale * -1, duration: useframe.duration), SKAction.move(by: CGVector(dx: 0, dy: last.ref.size.height * last.ref.yScale), duration: useframe.duration)])) }
             } else if useframe.frame == "runanim" {
                 if let last = last { actionGroup.append(SKAction.run({ last.ref.action(forKey: "Animate")?.speed = 1 })) }
@@ -136,7 +132,6 @@ extension DGIRoom {
                  self.thisscreen = last as? GameScreen
                  })])) }*/
             } else if useframe.frame == "wait" {
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.wait(forDuration: useframe.duration))
             } else {
                 let newframe = DGIRoomSub(imageNamed: useframe.frame)
@@ -155,7 +150,6 @@ extension DGIRoom {
                 thisnode.addChild(newframe)
                 actionGroup.append(SKAction.wait(forDuration: delay))
                 actionGroup.append(SKAction.unhide())
-                if let sound = useframe.sound { playSound(sound) }
                 actionGroup.append(SKAction.wait(forDuration: useframe.duration))
                 last = (newframe, .temp, nil, nil)
             }
@@ -289,7 +283,7 @@ extension DGIRoom {
             runSpot(randoms[Int.random(in: 0..<randoms.count)])
         }
         if let selectable = spot.selectable { thisnode.setSelected(name: selectable) }
-        if let sound = spot.sound { playSound(sound) }
+        if let sound = spot.sound { soundEffect.run(SKAction.playSoundFileNamed(sound, waitForCompletion: false)) }
         if let zoom = spot.zoom {
             if let newnode = childNode(withName: zoom) as? DGIRoomNode {
                 thisnode.clearSelected()
@@ -315,7 +309,7 @@ extension DGIRoom {
             save = true
         }
         if let objectname = spot.object {
-            playSound(invsounds.next)
+            soundEffect.run(SKAction.playSoundFileNamed(invsounds.next, waitForCompletion: false))
             inventory.addObj(objectname: objectname, after: delay)
             let spotsave = spot.saves ?? true
             if spotsave { GameSave.autosave.addInv(object: objectname) }

@@ -13,6 +13,7 @@ class DGIVoid: DGIScreen {
     
     private var delay: Double = 0
     private var dialno = 0
+    private var preloadnames: [String] = []
     
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -26,6 +27,8 @@ class DGIVoid: DGIScreen {
         super.didMove(to: view)
         disableGestures(except: ["scrollUp", "scrollDown"])
         childNode(withName: "Avatar")?.run(SKAction.sequence([SKAction.wait(forDuration: delay),SKAction.fadeAlpha(to: 0.8, duration: 1), SKAction.run{ self.runDialogue() }]))
+        menubar.isHidden = true
+        music.run(SKAction.play())
     }
     
     override func touchUp(atPoint pos : CGPoint) {
@@ -59,22 +62,22 @@ class DGIVoid: DGIScreen {
     override func closeDialogue() {
         dialno += 1
         if dialno < dialogues.count { runDialogue() }
-        else {
-            view?.transitionScene()
-        }
+        else { view?.transitionScene() }
     }
     
     override func loadJSON() {
         do {
             let jsonData = try JSONDecoder().decode(DGIJSONVoid.self, from: Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: json, ofType: "json")!)))
             if let delay  = jsonData.delay { self.delay = delay }
-            if let music = jsonData.music {
-                do {
-                    self.music = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: music + ".mp3", ofType: nil)!))
-                    self.music!.numberOfLoops = -1
-                } catch {
-                    print("Music Error")
-                }
+            if let musicname = jsonData.music {
+                let musicNode = SKAudioNode(fileNamed: musicname)
+                musicNode.name = "Music"
+                musicNode.autoplayLooped = true
+                addChild(musicNode)
+            }
+            if let preloadnames = jsonData.preload {
+                //for image in preloadnames { preload.append(SKTexture(imageNamed: image)) }
+                self.preloadnames = preloadnames
             }
             if let images = jsonData.images {
                 var currZ: CGFloat = 0.1

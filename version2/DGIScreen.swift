@@ -13,9 +13,17 @@ class DGIScreen: SKScene {
     
     let json: String!
     let gestures = ["leftSwipe": UISwipeGestureRecognizer(), "rightSwipe": UISwipeGestureRecognizer(), "upSwipe": UISwipeGestureRecognizer(), "downSwipe": UISwipeGestureRecognizer()]
-    var music: AVAudioPlayer?
-    var soundEffect: AVAudioPlayer?
     var dialogues: [DGIJSONDialogue] = []
+    var menu: DGIMenu? = nil
+    var music: SKAudioNode! {
+        get { return childNode(withName: "Music") as? SKAudioNode }
+    }
+    var soundEffect: SKAudioNode! {
+        get { return childNode(withName: "SoundEffect") as? SKAudioNode }
+    }
+    var menubar: DGIMenuBar! {
+        get { return childNode(withName: "MenuBar") as? DGIMenuBar }
+    }
     var playerbox: DGISpeechBox! {
         get { return childNode(withName: "PlayerBox") as? DGISpeechBox }
     }
@@ -48,6 +56,10 @@ class DGIScreen: SKScene {
         addChild(cameraNode)
         camera = cameraNode
         
+        let soundNode = SKAudioNode()
+        soundNode.name = "SoundEffect"
+        addChild(soundNode)
+        
         loadJSON()
         
         gestures["leftSwipe"]?.addTarget(self, action: #selector(self.moveRight))
@@ -62,6 +74,9 @@ class DGIScreen: SKScene {
             gesture.value.cancelsTouchesInView = true
             gesture.value.delaysTouchesEnded = true
         }
+        
+        let menubar = DGIMenuBar(imageNamed: "config")
+        addChild(menubar)
         
         let avatar = SKSpriteNode(imageNamed: "avatar", name: "Avatar")
         avatar.position = CGPoint(x: Config.bounds.width - Config.avatarspace - avatar.size.width, y: Config.bounds.height - Config.avatarspace - avatar.size.height)
@@ -82,7 +97,7 @@ class DGIScreen: SKScene {
         for gesture in gestures {
             self.view!.addGestureRecognizer(gesture.value)
         }
-        self.music?.play()
+        music.run(SKAction.play())
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -160,15 +175,6 @@ class DGIScreen: SKScene {
     func enableGestures(except names: [String] = []) {
         for gesture in gestures {
             if !names.contains(gesture.key) { gesture.value.isEnabled = true }
-        }
-    }
-    
-    func playSound(_ sound: String) {
-        do {
-            soundEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: sound + ".mp3", ofType: nil)!))
-            soundEffect?.play()
-        } catch {
-            print("sound \(sound) not found")
         }
     }
     

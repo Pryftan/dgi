@@ -62,7 +62,10 @@ class DGISpeechBox: DGILineBox {
         lines = []
         for jsonline in jsonlines {
             var lineaction: [SKAction] = []
-            if !(jsonline.skippable ?? true) { lineaction.append(SKAction.run{ (self.parent as? DGIScreen)?.setTouches(false) }) }
+            if !(jsonline.skippable ?? true) { lineaction.append(SKAction.run{
+                (self.parent as? DGIScreen)?.setTouches(false)
+                //(self.parent as? DGIVoid)?.preloadTextures()
+            }) }
             if jsonline.character == name {
                 lineaction.append(SKAction.run{ [weak self, jsonline] in self?.text.text = jsonline.line; self?.lines.remove(at: 0) })
                 if jsonline.line != "" { lineaction.append(SKAction.unhide()) }
@@ -80,6 +83,9 @@ class DGISpeechBox: DGILineBox {
                         (self?.parent as? DGIScreen)?.choicebox?.runBranch(branch)
                         (self?.parent as? DGIRoom)?.runSpot(action)
                     })
+                } else if exit {
+                    lines.append(SKAction.run{ [weak self] in
+                        (self?.parent as? DGIScreen)?.closeDialogue() })
                 } else {
                     lines.append(SKAction.run{ [weak self] in
                         (self?.parent as? DGIScreen)?.choicebox?.runBranch(branch)
@@ -89,14 +95,11 @@ class DGISpeechBox: DGILineBox {
                 if let action = action {
                     lines.append(SKAction.run{ [weak self] in
                         (self?.parent as? DGIScreen)?.closeDialogue()
-                        (self?.parent as? DGIScreen)?.enableGestures()
                         (self?.parent as? DGIRoom)?.runSpot(action)
                     })
                 } else {
                     lines.append(SKAction.run{ [weak self] in
-                        (self?.parent as? DGIScreen)?.closeDialogue()
-                        (self?.parent as? DGIScreen)?.enableGestures()
-                    })
+                        (self?.parent as? DGIScreen)?.closeDialogue() })
                 }
             }
         }
@@ -149,7 +152,7 @@ class DGIChoiceBox: DGILineBox {
                         isHidden = true
                         var action = branch.action?[0]
                         var exitbool = false
-                        if let dialtype = (parent as? DGIRoom)?.dialogues[dialno].type {
+                        if let dialtype = (parent as? DGIScreen)?.dialogues[dialno].type {
                             if dialtype == "max2" {
                                 maxcount += 1
                                 if maxcount == 2 { exitbool = true; maxcount = 0 }

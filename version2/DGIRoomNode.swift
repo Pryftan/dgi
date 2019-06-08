@@ -34,18 +34,11 @@ class DGIRoomNode: DGIRoomSub {
         texturename = imageNamed
     }
     
-    convenience init(imageNamed: String, name: String, grid: [DGIJSONGrid]? = [], start: Bool = false) {
-        if start {
-            let color = UIColor()
-            let texture = SKTexture(imageNamed: imageNamed)
-            let size = texture.size()
-            self.init(texture: texture, color: color, size: size)
-        } else {
-            self.init()
-            self.isHidden = true
-        }
+    convenience init(imageNamed: String, name: String, grid: [DGIJSONGrid]? = []) {
+        self.init()
         self.name = name
         texturename = imageNamed
+        self.isHidden = true
         self.anchorPoint = CGPoint(x: 0, y: 0)
         self.setScale(Config.scale)
         if let setgrid = grid {

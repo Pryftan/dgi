@@ -39,15 +39,39 @@ class DGIRoom: DGIScreen {
         subtitle.zPosition = 4
         subtitle.isHidden = true
         addChild(subtitle)
+        
+        loadAutoSave()
     }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        loadAutoSave()
     }
     
     override func touchUp(atPoint pos : CGPoint) {
         if gestures.allSatisfy( {$0.value.state == .possible || $0.value.state == .failed} ) {
+            if camera?.xScale != 1 {
+                if let spot = thisnode.gridSelected(at: pos)?.spot {
+                    if let _ = spot.phonezoom {
+                        
+                    } else {
+                        camera?.run(SKAction.group([SKAction.move(to: CGPoint(x: Config.bounds.width / 2, y: Config.bounds.height / 2), duration: 0.6), SKAction.scale(to: 1, duration: 0.6)]))
+                    }
+                } else {
+                    camera?.run(SKAction.group([SKAction.move(to: CGPoint(x: Config.bounds.width / 2, y: Config.bounds.height / 2), duration: 0.6), SKAction.scale(to: 1, duration: 0.6)]))
+                }
+            }
+            if menubar.contains(pos) {
+                removeAction(forKey: "MenuBarClose")
+                menubar.openBar()
+                run(SKAction.sequence([SKAction.wait(forDuration:4), SKAction.run{ self.menubar.closeBar() }]), withKey: "MenuBarClose")
+                if menubar.touchUp(pos: pos) == 1 {
+                    print("title selected")
+                    music.run(SKAction.pause())
+                    menu?.returnScene = self
+                    view?.presentScene(menu)
+                }
+                return
+            }
             if !choicebox.isHidden {
                 choicebox.selectLine(at: pos)
                 return
@@ -108,6 +132,8 @@ class DGIRoom: DGIScreen {
             thisnode.left = childNode(withName: thisnode.moves["leftname"]!) as? DGIRoomNode
         }
         if let left = thisnode.left {
+            //disables zoom swipes
+            if left.texture == nil { return }
             thisnode.clearSelected()
             left.run(SKAction.sequence([SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0), SKAction.unhide(), SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0.15)]))
             thisnode.run(SKAction.sequence([SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0.15), SKAction.hide(), SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0)]))
@@ -120,6 +146,8 @@ class DGIRoom: DGIScreen {
             thisnode.right = childNode(withName: thisnode.moves["rightname"]!) as? DGIRoomNode
         }
         if let right = thisnode.right {
+            //disables zoom swipes
+            if right.texture == nil { return }
             thisnode.clearSelected()
             right.run(SKAction.sequence([SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0), SKAction.unhide(), SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0.15)]))
             thisnode.run(SKAction.sequence([SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0.15), SKAction.hide(), SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0)]))
@@ -226,7 +254,7 @@ class DGIRoom: DGIScreen {
                 (childNode(withName: "ChoiceBox") as! DGIChoiceBox).runBranch(branch)
             }
             inventory.run(SKAction.fadeOut(withDuration: 0.5))
-            //menubar?.run(SKAction.fadeOut(withDuration: 0.5))
+            menubar.run(SKAction.fadeOut(withDuration: 0.5))
             if (inventory.zRotation > 0) {
                 inventory.closeInv()
             }
@@ -235,35 +263,33 @@ class DGIRoom: DGIScreen {
     
     override func closeDialogue() {
         inventory.run(SKAction.fadeIn(withDuration: 0.5))
-        //menubar
+        menubar.run(SKAction.fadeIn(withDuration: 0.5))
+        enableGestures()
     }
     
     override func loadJSON() {
         do {
             let jsonData = try JSONDecoder().decode(DGIJSONRoom.self, from: Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: json, ofType: "json")!)))
             invsounds = Next<String>(jsonData.invsounds)
-            if let music = jsonData.music {
-                do {
-                    self.music = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: music + ".mp3", ofType: nil)!))
-                    self.music!.numberOfLoops = -1
-                } catch {
-                    print("Music Error")
-                }
+            if let musicname = jsonData.music {
+                let musicNode = SKAudioNode(fileNamed: musicname)
+                musicNode.name = "Music"
+                musicNode.autoplayLooped = true
+                addChild(musicNode)
             }
-            for screenData in jsonData.screens {
+            for (index, screenData) in jsonData.screens.enumerated() {
                 let start = (jsonData.start == screenData.name) ? true : false
-                let screen = DGIRoomNode(imageNamed: screenData.image, name: screenData.name, grid: screenData.grid, start: start)
+                let screen = DGIRoomNode(imageNamed: screenData.image, name: screenData.name, grid: screenData.grid)
                 if let left = screenData.left { screen.moves["leftname"] = left }
                 if let right = screenData.right { screen.moves["rightname"] = right }
                 if let back = screenData.back { screen.moves["backname"] = back }
                 if let backaction = screenData.backaction { screen.backaction = backaction }
                 if let sequence = screenData.sequence { screen.sequencelength = sequence }
                 addChild(screen)
-                if start { thisnode = screen }
                 if let subs = screenData.subs {
                     var currZ: CGFloat = 0.01
                     for subData in subs {
-                        let sub = DGIRoomSub(imageNamed: subData.image, name: subData.name, position: CGPoint(x: subData.sub[0], y: subData.sub[1]))
+                        let sub = DGIRoomSub(imageNamed: subData.image, name: subData.name, position: CGPoint(x: subData.sub[0] * Config.scale, y: subData.sub[1] * Config.scale))
                         if let anchor = subData.anchor {
                             sub.anchorPoint = CGPoint(x:anchor[0], y:anchor[1])
                             sub.position = CGPoint(x: (subData.sub[0] + (subData.sub[2] * anchor[0]))  * Config.scale, y: (subData.sub[1] + (subData.sub[3] * anchor[1])) * Config.scale)
@@ -333,6 +359,8 @@ class DGIRoom: DGIScreen {
                     }
                 }
                 for spot in screen.grid { parseSpot(spot) }
+                if start { thisnode = screen; screen.loadTexture(); screen.isHidden = false }
+                else if index <= 8 { screen.loadTexture() }
             }
             //TODO: CLEANUP INVOBJ INITS
             for objectData in jsonData.objects {
@@ -447,11 +475,17 @@ class DGIRoom: DGIScreen {
     }
     
     override func loadAutoSave() {
-        //var hold: GameSave  = GameSave.autosave
         for object in GameSave.autosave.inventory {
             for obj in inventory.masterinv {
                 if obj.name == object {
-                    inventory.addObj(objectname: object)
+                    inventory.currentinv.append(obj)
+                    obj.position = CGPoint(x: inventory.center, y: inventory.center)
+                    obj.setScale(0)
+                    for collectobj in obj.collects {
+                        if let addto = inventory.currentinv.firstIndex(where: { $0.name == collectobj }) {
+                            obj.isCollected = addto
+                        }
+                    }
                 }
             }
         }

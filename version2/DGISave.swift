@@ -31,6 +31,7 @@ class GameSave: NSObject, NSCoding {
     }()
     
     var part = ""
+    var volume: [Float] = [1,1]
     var inventory: [String] = []
     var shows: [[String]] = []
     var hides: [[String]] = []
@@ -52,6 +53,9 @@ class GameSave: NSObject, NSCoding {
     required init?(coder decoder: NSCoder) {
         if let part = decoder.decodeObject(forKey: "part") {
             self.part = part as! String
+        }
+        if let volume = decoder.decodeObject(forKey: "volume") {
+            self.volume = volume as! [Float]
         }
         if let inventory = decoder.decodeObject(forKey: "inventory") {
             self.inventory = inventory as! [String]
@@ -87,6 +91,7 @@ class GameSave: NSObject, NSCoding {
     
     func encode(with coder: NSCoder) {
         coder.encode(part, forKey: "part")
+        coder.encode(volume, forKey: "volume")
         coder.encode(inventory, forKey: "inventory")
         coder.encode(shows, forKey: "shows")
         coder.encode(hides, forKey: "hides")
@@ -177,6 +182,7 @@ class GameSave: NSObject, NSCoding {
     
     func save() {
         do {
+            volume = [Config.volume.music, Config.volume.effect]
             try UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false), forKey: "autosave")
         } catch {
             print("Error")

@@ -13,6 +13,9 @@ class DGIInventory: SKSpriteNode {
     var masterinv: [DGIInventoryObject] = []
     var currentinv: [DGIInventoryObject] = []
     weak var selected: DGIInventoryObject?
+    var collected: Int {
+        get { return currentinv.filter({ $0.isCollected > -1 }).count }
+    }
     
     let center: CGFloat = (Config.inv.space + (Config.inv.unit / 2))
     let block: CGFloat = (Config.inv.space + Config.inv.unit)
@@ -38,7 +41,7 @@ class DGIInventory: SKSpriteNode {
     
     func addObj(objectname: String, after: Double = 0) {
         if let object = masterinv.first(where: { $0.name == objectname }) {
-            //add find by displayname
+            //add find by displayname?
             openInv()
             currentinv.append(object)
             object.removeAllActions()
@@ -47,7 +50,6 @@ class DGIInventory: SKSpriteNode {
             object.position = CGPoint(x: parent!.frame.midX, y: parent!.frame.midY)
             object.zPosition = 2
             object.zRotation = CGFloat(Double.pi/15)
-            let collected = currentinv.filter({ $0.isCollected > -1 }).count
             var movepos: CGFloat = block * CGFloat(currentinv.count - collected) + center
             for collectobj in object.collects {
                 if let addto = currentinv.firstIndex(where: { $0.name == collectobj }) {
@@ -118,7 +120,6 @@ class DGIInventory: SKSpriteNode {
     
     func selectInv(at pos: CGFloat) {
         var objindex: Int = Int(pos / block) - 1
-        let collected = currentinv.filter({ $0.isCollected > -1 }).count
         if objindex < currentinv.count - collected {
             for (index, object) in currentinv.enumerated() {
                 object.removeSelect()
