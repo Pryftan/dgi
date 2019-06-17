@@ -15,6 +15,8 @@ DGIRoom - Inherits from DGIScreen, implements the game rooms. Much of this class
 DGIAction - Extension of DGIRoom just to split out functionality for readability. Handling clickable regions and animations is done hre.
 DGIRoomNode, DGIRoomSub - Extensions of SKSpriteNodes to add features for room contents. "sub" always refers to smaller images that are children of the main room backgrounds ("nodes").
 
+DGITutorial - Implements the tutorial sequence that runs when new games are created, or when the tutorial is selected from the top menu.
+
 DGIInventory, DGIInventoryObject - Handles the player inventory, extends from SKSpriteNode as well.
 
 DGIJSON - Defines all JSON parsing objects including the Config singleton which houses global configuration options (like text size).
