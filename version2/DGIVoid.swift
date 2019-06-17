@@ -28,7 +28,7 @@ class DGIVoid: DGIScreen {
         disableGestures(except: ["scrollUp", "scrollDown"])
         childNode(withName: "Avatar")?.run(SKAction.sequence([SKAction.wait(forDuration: delay),SKAction.fadeAlpha(to: 0.8, duration: 1), SKAction.run{ self.runDialogue() }]))
         menubar.isHidden = true
-        music.run(SKAction.play())
+        music?.run(SKAction.play())
     }
     
     override func touchUp(atPoint pos : CGPoint) {

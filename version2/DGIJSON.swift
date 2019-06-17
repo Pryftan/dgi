@@ -12,6 +12,7 @@ import SpriteKit
 
 class ParseConfig {
     
+    let name: String
     var bounds: CGSize
     let scale: CGFloat
     let textspeed: TimeInterval
@@ -19,11 +20,16 @@ class ParseConfig {
     let inv: (unit: CGFloat, space: CGFloat, scale: CGFloat)
     let dialogue: (text: CGFloat, space: CGFloat, rows: CGFloat)
     let avatarspace: CGFloat
-    var volume: (music: Float, effect: Float)
+    var volume: (music: Float, effect: Float) {
+        didSet {
+            GameSave.autosave.volume = [volume.music, volume.effect]
+        }
+    }
     
     init (jsonFile: String = "config") {
         do {
             let config = try JSONDecoder().decode(DGIJSONConfig.self, from: Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: jsonFile, ofType: "json")!)))
+            name = config.name
             bounds = CGSize(width: config.basewidth, height: config.baseheight)
             scale = config.scale
             textspeed = config.textspeed
@@ -34,6 +40,7 @@ class ParseConfig {
             volume = (GameSave.autosave.volume[0], GameSave.autosave.volume[1])
         } catch {
             print("Error loading default config.")
+            name = ""
             bounds = CGSize(width: 1920, height: 1080)
             scale = 1
             textspeed = 5
@@ -41,12 +48,13 @@ class ParseConfig {
             inv = (100, 25, 1)
             dialogue = (42, 20, 5)
             avatarspace = 40
-            volume = (1, 1)
+            volume = (0.5, 1)
         }
     }
 }
 
 struct DGIJSONConfig: Decodable {
+    let name: String
     let basewidth: CGFloat
     let baseheight: CGFloat
     let scale: CGFloat
@@ -112,6 +120,10 @@ struct DGIJSONSub: Decodable {
     let rotate: CGFloat?
     let opacity: CGFloat?
     let anchor: [CGFloat]?
+    let draggable: Bool?
+    let dragbeds: [Int]?
+    let dragcycle: [DGIJSONCycle]?
+    let dragaction: String?
     let subsubs: [DGIJSONSub]?
     let frames: [DGIJSONFrame]?
     let running: Bool?

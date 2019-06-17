@@ -20,6 +20,9 @@ class DGIRoomNode: DGIRoomSub {
     var sequence: [String] = []
     var sequencelength = 0
     weak var selected: DGIRoomSub? = nil
+    var zoomGrid: DGIJSONGrid? { return grid.first(where: { $0.active ?? true && $0.zoom != nil } ) }
+    var objGrid: DGIJSONGrid? { return grid.first(where: { $0.active ?? true && $0.object != nil } ) }
+    var dragSub: DGIRoomSub? { return children.first(where: {($0 as? DGIRoomSub)?.draggable ?? false}) as? DGIRoomSub }
     
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -99,6 +102,11 @@ class DGIRoomSub: SKSpriteNode {
     
     var texturename: String = ""
     var displayname: String = ""
+    var draggable = false
+    var dragbeds: Int = 0
+    var dragbed: Int = 0
+    var dragcycle: [DGIJSONCycle] = []
+    var dragaction: String = ""
     
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -145,12 +153,12 @@ class DGIRoomSub: SKSpriteNode {
         color = UIColor.red
         colorBlendFactor = 1
         /*let effectNode = SKEffectNode()
-         effectNode.name = "Glow"
-         effectNode.shouldRasterize = true
-         effectNode.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
-         addChild(effectNode)
-         effectNode.addChild(SKSpriteNode(texture: texture))
-         effectNode.filter = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius": radius])*/
+        effectNode.name = "Glow"
+        effectNode.shouldRasterize = true
+        effectNode.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
+        addChild(effectNode)
+        effectNode.addChild(SKSpriteNode(texture: texture))
+        effectNode.filter = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius": radius])*/
         if label {
             let labelNode = SKLabelNode()
             labelNode.name = "Label"

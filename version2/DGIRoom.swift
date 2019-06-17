@@ -19,6 +19,8 @@ class DGIRoom: DGIScreen {
     var flags = [String : Bool]()
     var globanims: [DGIJSONAnimation]?
     weak var viewnode: DGIRoomNode!
+    weak var dragging: DGIRoomSub!
+    let tutorial = DGITutorial()
     
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -26,6 +28,8 @@ class DGIRoom: DGIScreen {
     
     override init(from json: String) {
         super.init(from: json)
+        
+        addChild(tutorial)
         
         inventory.setScale(Config.inv.scale)
         inventory.position = CGPoint(x: Config.inv.space + (Config.inv.unit / 2), y: Config.inv.space + (Config.inv.unit / 2))
@@ -40,14 +44,89 @@ class DGIRoom: DGIScreen {
         subtitle.isHidden = true
         addChild(subtitle)
         
+        /*let testbox = SKShapeNode(rect: CGRect(x: -60, y: -60, width: 120, height: 120), cornerRadius: 15)
+        testbox.position = CGPoint(x: Config.bounds.width / 2, y: Config.bounds.height / 2)
+        testbox.zPosition = 3
+        testbox.fillColor = .black
+        addChild(testbox)
+        let effectNode = SKEffectNode()
+        effectNode.shouldRasterize = true
+        effectNode.addChild(SKSpriteNode(texture: view?.texture(from: testbox)))
+        addChild(effectNode)
+        effectNode.filter = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius":60])*/
+        
         loadAutoSave()
     }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        if GameSave.autosave.tutorial == "" {
+            tutorial.restart()
+            tutorial.nextStep(hasLeft: true, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
+            GameSave.autosave.setTutorial(true)
+            GameSave.autosave.save()
+        }
+    }
+    
+    override func touchDown(atPoint pos: CGPoint) {
+        let nodelist = nodes(at: pos)
+        for node in nodelist {
+            if node is DGIRoomSub {
+                if (node as? DGIRoomSub)?.draggable ?? false {
+                    dragging = node as? DGIRoomSub
+                    disableGestures()
+                    return
+                }
+            }
+        }
+        
+    }
+    
+    override func touchMoved(toPoint pos: CGPoint) {
+        if dragging != nil {
+            if dragging.anchorPoint == CGPoint(x: 0, y: 0) {
+                dragging.position = CGPoint(x: pos.x - dragging.size.width / 2, y: pos.y - dragging.size.height / 2)
+            } else {
+                dragging.zRotation = -1 * atan2(pos.x - dragging.position.x, pos.y - dragging.position.y)
+                //dragging.zRotation += pos.distance(toPoint: dragging.position) / (CGFloat.pi * 200)
+            }
+        }
     }
     
     override func touchUp(atPoint pos : CGPoint) {
+        if dragging != nil {
+            if dragging.dragbeds > 0 {
+                if dragging.anchorPoint == CGPoint(x: 0, y: 0) {
+                    dragging.position = CGPoint(x: pos.x - dragging.size.width / 2, y: pos.y - dragging.size.height / 2)
+                } else {
+                    dragging.zRotation = -1 * atan2(pos.x - dragging.position.x, pos.y - dragging.position.y)
+                    //dragging.zRotation += pos.distance(toPoint: dragging.position) / (CGFloat.pi * 200)
+                }
+                dragging.dragbed = (-1*((dragging.zRotation - (CGFloat.pi / CGFloat(dragging.dragbeds))).remainder(dividingBy: 2 * CGFloat.pi)) / (2 * CGFloat.pi / CGFloat(dragging.dragbeds))).mod(dragging.dragbeds)
+                dragging.run(SKAction.rotate(toAngle: -2 * CGFloat.pi * CGFloat(dragging.dragbed) / CGFloat(dragging.dragbeds), duration: 0.3, shortestUnitArc: true))
+                for cycle in dragging.dragcycle {
+                    if let parentNode = childNode(withName: cycle.parent) {
+                        for sub in cycle.subs { parentNode.childNode(withName: sub.sub)?.isHidden = true }
+                        if let newNode = parentNode.childNode(withName: cycle.subs[dragging.dragbed].sub) as? DGIRoomSub {
+                            if newNode.texture == nil { newNode.loadTexture() }
+                            newNode.isHidden = false
+                        }
+                        
+                        //add saving dragcycles
+                        //if spotsave { GameSave.autosave.addCycle(name: spot.name, parent: cycle.parent, val: spot.cyclecounter) }
+                        //save = true
+                    }
+                }
+                enableGestures()
+            }
+            if dragging.dragaction != "" {
+                runSpot((thisnode.gridSelected(name: dragging.dragaction)?.spot)!)
+            }
+            tutorial.typechecks.insert(.dragObj)
+            tutorial.nextStep(hasLeft: thisnode.left != nil, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
+            dragging = nil
+            return
+        }
         if gestures.allSatisfy( {$0.value.state == .possible || $0.value.state == .failed} ) {
             if camera?.xScale != 1 {
                 if let spot = thisnode.gridSelected(at: pos)?.spot {
@@ -64,11 +143,20 @@ class DGIRoom: DGIScreen {
                 removeAction(forKey: "MenuBarClose")
                 menubar.openBar()
                 run(SKAction.sequence([SKAction.wait(forDuration:4), SKAction.run{ self.menubar.closeBar() }]), withKey: "MenuBarClose")
-                if menubar.touchUp(pos: pos) == 1 {
-                    print("title selected")
-                    music.run(SKAction.pause())
+                let menuoption = menubar.touchUp(pos: pos)
+                if menuoption == 1 {
+                    music?.run(SKAction.pause())
                     menu?.returnScene = self
+                    menu?.toggleSettings(false)
                     view?.presentScene(menu)
+                } else if menuoption == 2 {
+                    music?.run(SKAction.pause())
+                    menu?.returnScene = self
+                    menu?.toggleSettings(true)
+                    view?.presentScene(menu)
+                } else if menuoption == 3 {
+                    tutorial.restart()
+                    tutorial.nextStep(hasLeft: thisnode.back == nil && thisnode.moves["leftname"] != "", zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back != nil, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
                 }
                 return
             }
@@ -82,6 +170,7 @@ class DGIRoom: DGIScreen {
                 return
             }
             if pos.x > Config.bounds.width - Config.avatarspace - (childNode(withName: "Avatar")?.frame.width ?? 0), pos.y > Config.bounds.height - Config.avatarspace - (childNode(withName: "Avatar")?.frame.height ?? 0) {
+                tutorial.clearScreen()
                 runDialogue(name: "Avatar")
                 return
             }
@@ -133,11 +222,13 @@ class DGIRoom: DGIScreen {
         }
         if let left = thisnode.left {
             //disables zoom swipes
-            if left.texture == nil { return }
+            //if left.texture == nil { return }
             thisnode.clearSelected()
             left.run(SKAction.sequence([SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0), SKAction.unhide(), SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0.15)]))
             thisnode.run(SKAction.sequence([SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0.15), SKAction.hide(), SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0)]))
             thisnode = left
+            tutorial.typechecks.insert(.swipeMove)
+            tutorial.nextStep(hasLeft: true, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
         }
     }
     
@@ -147,11 +238,13 @@ class DGIRoom: DGIScreen {
         }
         if let right = thisnode.right {
             //disables zoom swipes
-            if right.texture == nil { return }
+            //if right.texture == nil { return }
             thisnode.clearSelected()
             right.run(SKAction.sequence([SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0), SKAction.unhide(), SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0.15)]))
             thisnode.run(SKAction.sequence([SKAction.moveBy(x: -1 * Config.bounds.width, y: 0, duration: 0.15), SKAction.hide(), SKAction.moveBy(x: Config.bounds.width, y: 0, duration: 0)]))
             thisnode = right
+            tutorial.typechecks.insert(.swipeMove)
+            tutorial.nextStep(hasLeft: true, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
         }
     }
     
@@ -177,6 +270,8 @@ class DGIRoom: DGIScreen {
                 thisnode.isHidden = true
                 thisnode = back
                 thisnode.isHidden = false
+                tutorial.typechecks.insert(.swipeBack)
+                tutorial.nextStep(hasLeft: thisnode.left != nil, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
             }
         }
     }
@@ -277,7 +372,7 @@ class DGIRoom: DGIScreen {
                 musicNode.autoplayLooped = true
                 addChild(musicNode)
             }
-            for (index, screenData) in jsonData.screens.enumerated() {
+            for screenData in jsonData.screens {
                 let start = (jsonData.start == screenData.name) ? true : false
                 let screen = DGIRoomNode(imageNamed: screenData.image, name: screenData.name, grid: screenData.grid)
                 if let left = screenData.left { screen.moves["leftname"] = left }
@@ -294,6 +389,14 @@ class DGIRoom: DGIScreen {
                             sub.anchorPoint = CGPoint(x:anchor[0], y:anchor[1])
                             sub.position = CGPoint(x: (subData.sub[0] + (subData.sub[2] * anchor[0]))  * Config.scale, y: (subData.sub[1] + (subData.sub[3] * anchor[1])) * Config.scale)
                         }
+                        if let draggable = subData.draggable {
+                            sub.draggable = draggable;
+                            sub.dragbeds = subData.dragbeds?[1] ?? 0
+                            sub.dragbed = subData.dragbeds?[0] ?? 0
+                            if sub.dragbed > 0 { sub.zRotation = -2 * CGFloat.pi * CGFloat(sub.dragbed) / CGFloat(sub.dragbeds) }
+                        }
+                        if let dragcycle = subData.dragcycle { sub.dragcycle = dragcycle }
+                        if let dragaction = subData.dragaction { sub.dragaction = dragaction }
                         sub.displayname = subData.displayname ?? subData.name
                         if let visible = subData.visible { sub.isHidden = !visible }
                         if let setZ = subData.setZ { sub.zPosition = setZ }
@@ -360,7 +463,7 @@ class DGIRoom: DGIScreen {
                 }
                 for spot in screen.grid { parseSpot(spot) }
                 if start { thisnode = screen; screen.loadTexture(); screen.isHidden = false }
-                else if index <= 8 { screen.loadTexture() }
+                //else if index <= 8 { screen.loadTexture() }
             }
             //TODO: CLEANUP INVOBJ INITS
             for objectData in jsonData.objects {
@@ -392,7 +495,7 @@ class DGIRoom: DGIScreen {
     func parseSpot(_ spot: DGIJSONGrid) {
         if spot.cyclecounter == nil { spot.cyclecounter = 0 }
         if let viewname = spot.view {
-            parseView(view: viewname, grid: spot.subgrid, subs: spot.subsubs)
+            parseView(view: viewname, name: spot.name, grid: spot.subgrid, subs: spot.subsubs)
         }
         if let flagactions = spot.flagactions {
             for flagaction in flagactions {
@@ -411,8 +514,9 @@ class DGIRoom: DGIScreen {
         }
     }
     
-    func parseView(view: String, grid: [DGIJSONGrid]?, subs: [DGIJSONSub]?) {
-        let viewsub = DGIRoomNode(imageNamed: view, name: view, grid: grid)
+    func parseView(view: String, name: String, grid: [DGIJSONGrid]?, subs: [DGIJSONSub]?) {
+        let viewsub = DGIRoomNode(imageNamed: view, name: name, grid: grid)
+        let viewsize = UIImage(named: view)?.size ?? CGSize(width: 0, height: 0)
         viewsub.anchorPoint = CGPoint(x:0.5, y:0.5)
         viewsub.position = CGPoint(x: Config.bounds.width / 2, y: Config.bounds.height / 2)
         viewsub.isHidden = true
@@ -421,7 +525,8 @@ class DGIRoom: DGIScreen {
         if let sublist = subs {
             var currZ : Double = 1.1
             for sub in sublist {
-                let currsub = DGIRoomSub(imageNamed: sub.image, name: sub.name, position: CGPoint(x: sub.sub[0] * Config.scale - Config.bounds.width / 2, y: sub.sub[1] * Config.scale - Config.bounds.height / 2))
+                //let currsub = DGIRoomSub(imageNamed: sub.image, name: sub.name, position: CGPoint(x: sub.sub[0] * Config.scale, y: sub.sub[1] * Config.scale))
+                let currsub = DGIRoomSub(imageNamed: sub.image, name: sub.name, position: CGPoint(x: (sub.sub[0] - viewsize.width / 2) * Config.scale, y: (sub.sub[1] - viewsize.height / 2) * Config.scale))
                 if let anchor = sub.anchor {
                     currsub.anchorPoint = CGPoint(x:anchor[0], y:anchor[1])
                 } else { currsub.anchorPoint = CGPoint(x:0, y:0) }
@@ -494,7 +599,12 @@ class DGIRoom: DGIScreen {
                 childNode(withName: show[2])?.childNode(withName: show[1])?.childNode(withName: show[0])?.isHidden = false
             }
             else {
-                childNode(withName: show[1])?.childNode(withName: show[0])?.isHidden = false
+                if let parent = childNode(withName: show[1]) as? DGIRoomNode {
+                    if let name = parent.childNode(withName: show[0]) as? DGIRoomSub {
+                        name.isHidden = false
+                        if parent.texture != nil { name.loadTexture() }
+                    }
+                }
             }
             
         }
@@ -521,13 +631,13 @@ class DGIRoom: DGIScreen {
         for (name, value) in GameSave.autosave.flags {
             flags[name] = value
         }
-        /*for (name, value) in GameSave.autosave.cyclevals {
-            for grid in (childNode(withName: GameSave.autosave.cyclelocs[name]!) as! GameScreen).getGrid()!
-            {
-                if grid.getName() == name
-                {
-                    grid.setCycleCounter(count: value)
-                }
+        for (name, value) in GameSave.autosave.cyclevals {
+            let parent = (childNode(withName: GameSave.autosave.cyclelocs[name]!) as? DGIRoomNode)
+            let grid = parent?.gridSelected(name: name)?.spot
+            grid?.cyclecounter = value
+            for cycle in grid?.cycle ?? [] {
+                childNode(withName: cycle.parent)?.childNode(withName: cycle.subs[0].sub)?.isHidden = true
+                childNode(withName: cycle.parent)?.childNode(withName: cycle.subs[value].sub)?.isHidden = false
             }
         }
         var vals: [Int] = []
@@ -538,30 +648,8 @@ class DGIRoom: DGIScreen {
         }
         for i in vals.reversed() { states.remove(at: i) }
         for choice in GameSave.autosave.choices {
-            for currdialogue in dialogue {
-                if currdialogue.getName() == choice[1] {
-                    if choice.count == 4 {
-                        if let choiceparent = findChoice(start: currdialogue, name: choice[3]) {
-                            if choice[2] == "enable" {
-                                choiceparent.setLineActive(line: choice[0], active: true)
-                            } else if choice[2] == "disable" {
-                                choiceparent.setLineActive(line: choice[0], active: false)
-                            }
-                        }
-                    } else {
-                        if let choiceparent = findChoice(start: currdialogue, name: choice[0]) {
-                            if choice[2] == "enable" && choiceparent.getActive() != 2 {
-                                choiceparent.setActive(active: 1)
-                            } else if choice[2] == "disable" && choiceparent.getActive() != 2
-                            {
-                                choiceparent.setActive(active: 0)
-                            } else if choice[2] == "remove" {
-                                choiceparent.setActive(active: 2)
-                            }
-                        }
-                    }
-                }
-            }
-        }*/
+            changeBranch(name: choice[0], parent: choice.count == 4 ? choice[3] : nil, branches: &dialogues[(dialogues.firstIndex(where: {$0.name == choice[1]}))!].branch!, type: DGIChoiceType(rawValue: choice[2])!)
+            
+        }
     }
 }

@@ -177,5 +177,13 @@ class DGIInventoryObject: DGIRoomSub {
         self.animations = animations ?? []
         self.subs = subs ?? []
         self.collects = collects ?? []
+        
+        for subData in self.subs {
+            let invsub = DGIRoomSub(imageNamed: subData.image, name: subData.name)
+            if subData.visible ?? true { invsub.loadTexture() }
+            else { invsub.isHidden = true }
+            if let relZ = subData.relZ { invsub.zPosition = zPosition + relZ }
+            addChild(invsub)
+        }
     }
 }

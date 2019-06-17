@@ -15,8 +15,15 @@ extension CGPoint {
     }
 }
 
+extension CGFloat {
+    func mod(_ by: Int) -> Int {
+        let r = Int(self >= 0 ? self : self + CGFloat(by)) % by
+        return r
+    }
+}
+
 extension Collection {
-    //shouldn't be needed in Swift 5
+    //shouldn't be needed in a future Swift version
     func count(where test: (Element) throws -> Bool) rethrows -> Int {
         return try self.filter(test).count
     }
@@ -37,6 +44,14 @@ extension SKSpriteNode {
         self.anchorPoint = CGPoint(x: 0, y: 0)
         self.setScale(Config.scale)
         self.position = position
+    }
+    
+    func addOutline() {
+        let outline = SKSpriteNode(texture: texture)
+        outline.color = .yellow
+        outline.zPosition = zPosition - 0.1
+        outline.setScale(1.2)
+        addChild(outline)
     }
     
 }

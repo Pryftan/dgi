@@ -68,9 +68,7 @@ extension DGIRoom {
                 }
             }
             if let sound = useframe.sound {
-                actionGroup.append(SKAction.run{
-                    [weak self] in self?.soundEffect.run(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
-                })
+                actionGroup.append(SKAction.run{ [weak self] in self?.playSound(sound) })
             }
             if useframe.frame == "zoom" {
                 camera?.run(SKAction.sequence([SKAction.wait(forDuration: delay), SKAction.group([SKAction.move(to: CGPoint(x: frame.pos![0] * Config.scale, y: frame.pos![1] * Config.scale), duration: frame.duration), SKAction.scale(to: frame.pos![2], duration: frame.duration)])]))
@@ -103,6 +101,8 @@ extension DGIRoom {
                 actionGroup.append(SKAction.move(by: CGVector(dx: useframe.pos![0] * Config.scale, dy: useframe.pos![1] * Config.scale), duration: useframe.duration))
             } else if useframe.frame == "cfmoveby" {
                 if let subs = useframe.subs { actionGroup.append(SKAction.group([SKAction.run{last?.ref.childNode(withName: subs[0])?.run(SKAction.fadeOut(withDuration: useframe.duration))},SKAction.move(by: CGVector(dx: useframe.pos![0] * Config.scale, dy: useframe.pos![1] * Config.scale), duration: useframe.duration),SKAction.run{last?.ref.childNode(withName: subs[1])?.run(SKAction.fadeIn(withDuration: useframe.duration))}])) }
+            } else if useframe.frame == "rotateto" {
+                actionGroup.append(SKAction.rotate(toAngle: -1 * useframe.pos![0] * CGFloat(Double.pi)/180, duration: useframe.duration, shortestUnitArc: true))
             } else if useframe.frame == "rotateby" {
                 actionGroup.append(SKAction.rotate(byAngle: -1 * useframe.pos![0] * CGFloat(Double.pi)/180, duration: useframe.duration))
             } else if useframe.frame == "fadein" {
@@ -137,8 +137,8 @@ extension DGIRoom {
                 let newframe = DGIRoomSub(imageNamed: useframe.frame)
                 if let last = last {
                     if last.type == .temp { actionGroup.append(SKAction.removeFromParent()) }
-                    //last.ref.zPosition = 4
                     last.ref.run(SKAction.sequence(actionGroup))
+                    last.ref.zPosition = 2
                     actionGroup.removeAll()
                 }
                 newframe.position = CGPoint(x: useframe.pos![0] * Config.scale, y: useframe.pos![1] * Config.scale)
@@ -283,7 +283,7 @@ extension DGIRoom {
             runSpot(randoms[Int.random(in: 0..<randoms.count)])
         }
         if let selectable = spot.selectable { thisnode.setSelected(name: selectable) }
-        if let sound = spot.sound { soundEffect.run(SKAction.playSoundFileNamed(sound, waitForCompletion: false)) }
+        if let sound = spot.sound { playSound(sound) }
         if let zoom = spot.zoom {
             if let newnode = childNode(withName: zoom) as? DGIRoomNode {
                 thisnode.clearSelected()
@@ -292,14 +292,16 @@ extension DGIRoom {
                 thisnode.isHidden = true
                 thisnode = newnode
                 thisnode.isHidden = false
+                tutorial.typechecks.insert(.tapZoom)
+                tutorial.nextStep(hasLeft: thisnode.left != nil, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
             }
         }
         if let phonezoom = spot.phonezoom {
             //untested
             camera?.run(SKAction.sequence([SKAction.wait(forDuration: delay), SKAction.group([SKAction.move(to: CGPoint(x: phonezoom[0] * Config.scale, y: phonezoom[1] * Config.scale), duration: 0.7), SKAction.scale(to: 0.5, duration: 0.7)])]))
         }
-        if let viewname = spot.view {
-            viewnode = childNode(withName: viewname) as? DGIRoomNode
+        if spot.view != nil {
+            viewnode = childNode(withName: spot.name) as? DGIRoomNode
             if viewnode.texture == nil { viewnode.loadTexture() }
             disableGestures(except: ["downSwipe"])
             viewnode.isHidden = false
@@ -309,8 +311,10 @@ extension DGIRoom {
             save = true
         }
         if let objectname = spot.object {
-            soundEffect.run(SKAction.playSoundFileNamed(invsounds.next, waitForCompletion: false))
+            playSound(invsounds.next)
             inventory.addObj(objectname: objectname, after: delay)
+            tutorial.typechecks.insert(.invObj)
+            tutorial.nextStep(hasLeft: thisnode.left != nil, zoomGrid: thisnode.zoomGrid, hasBack: thisnode.back == nil ? false : true, objGrid: thisnode.objGrid, dragSub: thisnode.dragSub)
             let spotsave = spot.saves ?? true
             if spotsave { GameSave.autosave.addInv(object: objectname) }
             save = true
@@ -320,6 +324,11 @@ extension DGIRoom {
                 for invobj in inventory.masterinv {
                     if invobj.name == invdisplay[index * 2] {
                         invobj.displayname = invdisplay[index * 2 + 1]
+                        if invobj.color == .red {
+                            invobj.removeSelect()
+                            invobj.addSelect()
+                        }
+                        //CHECK IF THE ABOVE CAUSES ISSUES FOR OBJECTS NOT IN CURRENTINV
                     }
                 }
             }
@@ -340,6 +349,7 @@ extension DGIRoom {
             spot.speechcounter = (spot.speechcounter! + 1) % speech.count
         }
         if let dialoguename = spot.dialogue {
+            tutorial.clearScreen()
             runDialogue(name: dialoguename)
         }
         if let cycles = spot.cycle {
@@ -353,14 +363,24 @@ extension DGIRoom {
                 }
             }
             spot.cyclecounter = (spot.cyclecounter + 1) % cycles[0].subs.count
+            if spotsave { GameSave.autosave.addCycle(name: spot.name, parent: thisnode.name!, val: spot.cyclecounter) }
+            save = true
         }
         if let cycleifs = spot.cycleif {
-            for cycleif in cycleifs {
+            cycleloop: for cycleif in cycleifs {
                 /*var cycleval = -1
                 if let cyclenode = childNode(withName: cycleif.parent) as? DGIRoomNode { if let index = cyclenode.gridSelected(name: cycleif.name)?.index {
                     cycleval = cyclenode.grid[index].cyclecounter ?? -1
                 } }*/
                 //CURRENTLY IMPLEMENTED ONLY FOR ACTIVE SPOT - MAY NEED TO CHANGE
+                if let dragNode = childNode(withName: cycleif.parent)?.childNode(withName: cycleif.name) {
+                    for value in cycleif.values {
+                        if value.value == (dragNode as? DGIRoomSub)?.dragbed {
+                            runSpot(value)
+                        }
+                    }
+                    break cycleloop
+                }
                 if cycleif.name == spot.name { for action in cycleif.values {
                     if let value = action.value {
                         if spot.cyclecounter == value { let _ = runSpot(action) }
@@ -372,6 +392,8 @@ extension DGIRoom {
         if let choices = spot.choices {
             for choice in choices {
                 changeBranch(name: choice.name, parent: choice.parent, branches: &dialogues[(dialogues.firstIndex(where: {$0.name == choice.dialogue}))!].branch!, type: choice.type)
+                if spotsave { GameSave.autosave.addChoice(name: choice.name, dialogue: choice.dialogue, type: choice.type.rawValue, parent: choice.parent) }
+                save = true
             }
         }
         if let draws = spot.draws {
@@ -407,7 +429,6 @@ extension DGIRoom {
                         sub.isHidden = false
                     }
                 }
-                let spotsave = spot.saves ?? true
                 if spotsave { GameSave.autosave.addShow(name: show.name, parent: show.parent, grandparent: show.grandparent) }
                 save = true
             }

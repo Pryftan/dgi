@@ -15,11 +15,8 @@ class DGIScreen: SKScene {
     let gestures = ["leftSwipe": UISwipeGestureRecognizer(), "rightSwipe": UISwipeGestureRecognizer(), "upSwipe": UISwipeGestureRecognizer(), "downSwipe": UISwipeGestureRecognizer()]
     var dialogues: [DGIJSONDialogue] = []
     var menu: DGIMenu? = nil
-    var music: SKAudioNode! {
+    var music: SKAudioNode? {
         get { return childNode(withName: "Music") as? SKAudioNode }
-    }
-    var soundEffect: SKAudioNode! {
-        get { return childNode(withName: "SoundEffect") as? SKAudioNode }
     }
     var menubar: DGIMenuBar! {
         get { return childNode(withName: "MenuBar") as? DGIMenuBar }
@@ -97,7 +94,7 @@ class DGIScreen: SKScene {
         for gesture in gestures {
             self.view!.addGestureRecognizer(gesture.value)
         }
-        music.run(SKAction.play())
+        music?.run(SKAction.group([SKAction.play(), SKAction.changeVolume(to: Config.volume.music, duration: 0)]))
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -176,6 +173,15 @@ class DGIScreen: SKScene {
         for gesture in gestures {
             if !names.contains(gesture.key) { gesture.value.isEnabled = true }
         }
+    }
+    
+    func playSound(_ sound: String) {
+        if let current = childNode(withName: "SoundEffect") { current.removeFromParent() }
+        let soundEffect = SKAudioNode(fileNamed: sound)
+        soundEffect.name = "SoundEffect"
+        soundEffect.autoplayLooped = false
+        addChild(soundEffect)
+        soundEffect.run(SKAction.sequence([SKAction.changeVolume(to: Config.volume.effect, duration: 0), SKAction.play()]))
     }
     
     func closeDialogue() {

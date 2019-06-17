@@ -23,14 +23,15 @@ class DGIViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             //Config.bounds = view.bounds.size
-            view.presentScene(DGIMenu(from: "soldier"))
-            //view.presentScene(DGIRoom(from: "endroom"))
+            view.presentScene(DGIMenu(from: Config.name))
+            //GameSave.autosave.clearSave()
+            //view.presentScene(DGIRoom(from: "classroom"))
             //view.presentScene(DGIVoid(from: "cuts2"))
             
             view.ignoresSiblingOrder = true
             
-            view.showsFPS = true
-            view.showsNodeCount = true
+            //view.showsFPS = true
+            //view.showsNodeCount = true
         }
     }
 

@@ -31,7 +31,8 @@ class GameSave: NSObject, NSCoding {
     }()
     
     var part = ""
-    var volume: [Float] = [1,1]
+    var tutorial = ""
+    var volume: [Float] = [0.5,1]
     var inventory: [String] = []
     var shows: [[String]] = []
     var hides: [[String]] = []
@@ -53,6 +54,9 @@ class GameSave: NSObject, NSCoding {
     required init?(coder decoder: NSCoder) {
         if let part = decoder.decodeObject(forKey: "part") {
             self.part = part as! String
+        }
+        if let tutorial = decoder.decodeObject(forKey: "tutorial") {
+            self.tutorial = tutorial as! String
         }
         if let volume = decoder.decodeObject(forKey: "volume") {
             self.volume = volume as! [Float]
@@ -91,6 +95,7 @@ class GameSave: NSObject, NSCoding {
     
     func encode(with coder: NSCoder) {
         coder.encode(part, forKey: "part")
+        coder.encode(tutorial, forKey: "tutorial")
         coder.encode(volume, forKey: "volume")
         coder.encode(inventory, forKey: "inventory")
         coder.encode(shows, forKey: "shows")
@@ -106,6 +111,11 @@ class GameSave: NSObject, NSCoding {
     
     func setPart(part: String) {
         self.part = part
+    }
+    
+    func setTutorial(_ run: Bool) {
+        if run { self.tutorial = "run" }
+        else { self.tutorial = "" }
     }
     
     func addInv(object: String) {
@@ -132,8 +142,7 @@ class GameSave: NSObject, NSCoding {
     }
     
     func addHide(name: String, parent: String, grandparent: String?) {
-        for (index, show) in shows.enumerated()
-        {
+        for (index, show) in shows.enumerated() {
             if show[0] == name {
                 shows.remove(at: index)
                 return
@@ -160,8 +169,13 @@ class GameSave: NSObject, NSCoding {
     }
     
     func addCycle(name: String, parent: String, val: Int) {
-        cyclelocs[name] = parent
-        cyclevals[name] = val
+        if val > 0 {
+            cyclelocs[name] = parent
+            cyclevals[name] = val
+        } else {
+            cyclelocs.removeValue(forKey: name)
+            cyclevals.removeValue(forKey: name)
+        }
     }
     
     func addState(name: String) {
