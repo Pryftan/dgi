@@ -101,7 +101,7 @@
 			"image": "e2",
 			"camera": "Camera2",
 			"shows": ["Books1", "Books2", "Books3", "Books4", "Symbols1", "Symbols2", "Symbols3", "Symbols4"],
-			"hides": ["Books1_in", "Books2_in", "Books3_in", "Books4_in", "Symbols1_in", "Symbols2_in", "Symbols3_in", "Symbols4_in", "BookshelfDoor1", "BookshelfDoor2"],
+			"hides": ["Books1_in", "Books2_in", "Books3_in", "Books4_in", "Symbols1_in", "Symbols2_in", "Symbols3_in", "Symbols4_in", "Rug_star", "BookshelfDoor1", "BookshelfDoor2"],
 			"left": "Endroom1",
 			"right": "Endroom3",
 			"subs": [
@@ -130,6 +130,13 @@
 					"priority": 0,
 					"shows": ["BookshelfDoor2"],
 					"sub": [315, 661, 44, 46]
+				},
+				{ "name": "E2Star",
+					"image": "e2star",
+					"shows": ["Rug_star"],
+                    "visible": false,
+					"undo": true,
+					"sub": [807, 0, 439, 140]
 				},
 				{ "name": "E2NOn",
 					"image": "e2non",
@@ -553,7 +560,7 @@
 						{ "name": "Remote",
 							"flagactions": [
 								{ "name": "!TVRunning",
-									"animate": "RemoteUse",
+									"animate": "RemoteUse"
 								}
 							],
 							"zoom": "TVZoom"
@@ -1118,7 +1125,7 @@
 						{ "name": "Remote",
 							"flagactions": [
 								{ "name": "!TVRunning",
-									"animate": "RemoteUse",
+									"animate": "RemoteUse"
 								}
 							],
 							"zoom": "TVZoom"
@@ -1714,6 +1721,7 @@
 					"type": "reverse",
 					"visible": false,
 					"sub": [847, 297, 195, 92],
+					"priority": 0,
 					"frames": [
 						{ "frame": "e6fire2",
 							"bframe": 96,
@@ -1729,8 +1737,8 @@
 					"image": "e6f11",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1558, 355, 15, 23],
-					"priority": 0,
+					"sub": [1537, 350, 23, 16],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1738,8 +1746,8 @@
 					"image": "e6f12",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1573, 354, 9, 40],
-					"priority": 0,
+					"sub": [1544, 350, 23, 37],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1747,8 +1755,8 @@
 					"image": "e6f13",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1581, 353, 15, 22],
-					"priority": 0,
+					"sub": [1561, 353, 11, 26],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1756,8 +1764,8 @@
 					"image": "e6f14",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1573, 331, 9, 24],
-					"priority": 0,
+					"sub": [1559, 329, 18, 24],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1765,8 +1773,8 @@
 					"image": "e6f21",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1600, 340, 15, 24],
-					"priority": 0,
+					"sub": [1583, 351, 11, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1774,8 +1782,8 @@
 					"image": "e6f22",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1600, 333, 36, 23],
-					"priority": 0,
+					"sub": [1588, 347, 25, 35],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1783,8 +1791,8 @@
 					"image": "e6f23",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1603, 326, 27, 13],
-					"priority": 0,
+					"sub": [1595, 347, 24, 13],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1792,8 +1800,8 @@
 					"image": "e6f24",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1581, 323, 23, 18],
-					"priority": 0,
+					"sub": [1577, 328, 18, 24],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1801,8 +1809,8 @@
 					"image": "e6f31",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1604, 301, 27, 11],
-					"priority": 0,
+					"sub": [1607, 324, 23, 15],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1810,8 +1818,8 @@
 					"image": "e6f32",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1600, 281, 35, 29],
-					"priority": 0,
+					"sub": [1606, 313, 39, 13],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1819,8 +1827,8 @@
 					"image": "e6f33",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1600, 278, 14, 26],
-					"priority": 0,
+					"sub": [1606, 299, 21, 18],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1828,8 +1836,8 @@
 					"image": "e6f34",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1581, 303, 24, 22],
-					"priority": 0,
+					"sub": [1584, 317, 23, 11],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1837,8 +1845,8 @@
 					"image": "e6f41",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1580, 270, 15, 24],
-					"priority": 0,
+					"sub": [1594, 282, 23, 17],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1846,8 +1854,8 @@
 					"image": "e6f42",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1572, 256, 9, 40],
-					"priority": 0,
+					"sub": [1587, 261, 24, 38],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1855,8 +1863,8 @@
 					"image": "e6f43",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1558, 274, 15, 21],
-					"priority": 0,
+					"sub": [1582, 269, 11, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1864,8 +1872,8 @@
 					"image": "e6f44",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1572, 294, 9, 24],
-					"priority": 0,
+					"sub": [1577, 295, 18, 25],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1873,8 +1881,8 @@
 					"image": "e6f51",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1541, 285, 14, 23],
-					"priority": 0,
+					"sub": [1560, 271, 11, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1882,8 +1890,8 @@
 					"image": "e6f52",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1521, 294, 34, 22],
-					"priority": 0,
+					"sub": [1542, 269, 24, 34],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1891,8 +1899,8 @@
 					"image": "e6f53",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1526, 310, 25, 13],
-					"priority": 0,
+					"sub": [1537, 290, 23, 12],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1900,8 +1908,8 @@
 					"image": "e6f54",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1551, 308, 22, 18],
-					"priority": 0,
+					"sub": [1559, 297, 18, 24],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1909,8 +1917,8 @@
 					"image": "e6f61",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1526, 335, 25, 11],
-					"priority": 0,
+					"sub": [1528, 310, 21, 15],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1918,8 +1926,8 @@
 					"image": "e6f62",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1522, 338, 33, 27],
-					"priority": 0,
+					"sub": [1513, 323, 36, 13],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1927,8 +1935,8 @@
 					"image": "e6f63",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1542, 344, 13, 25],
-					"priority": 0,
+					"sub": [1529, 331, 21, 18],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1936,8 +1944,8 @@
 					"image": "e6f64",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1550, 325, 23, 20],
-					"priority": 0,
+					"sub": [1549, 321, 21, 10],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -1945,8 +1953,8 @@
 					"image": "e6f0",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1569, 316, 16, 16],
-					"priority": 0,
+					"sub": [1570, 316, 15, 17],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				}
@@ -2023,6 +2031,7 @@
 				{ "name": "E7BirthCert",
 					"image": "e7birthcert",
 					"shows": ["BabyBottle", "BabyBottle_liquid", "BirthCert"],
+					"priority": 0,
 					"sub": [875, 219, 84, 15],
 					"undo": true,
 					"visible": false
@@ -2031,8 +2040,8 @@
 					"image": "e7f11",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [711, 338, 18, 25],
-					"priority": 0,
+					"sub": [686, 332, 27, 16],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2040,8 +2049,8 @@
 					"image": "e7f12",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [728, 338, 10, 44],
-					"priority": 0,
+					"sub": [693, 331, 28, 40],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2049,8 +2058,8 @@
 					"image": "e7f13",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [737, 338, 17, 25],
-					"priority": 0,
+					"sub": [713, 336, 13, 29],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2058,8 +2067,8 @@
 					"image": "e7f14",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [728, 313, 10, 26],
-					"priority": 0,
+					"sub": [712, 310, 21, 26],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2067,8 +2076,8 @@
 					"image": "e7f21",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [760, 326, 16, 27],
-					"priority": 0,
+					"sub": [740, 336, 13, 30],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2076,8 +2085,8 @@
 					"image": "e7f22",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [759, 318, 40, 28],
-					"priority": 0,
+					"sub": [746, 332, 28, 40],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2085,8 +2094,8 @@
 					"image": "e7f23",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [764, 312, 30, 13],
-					"priority": 0,
+					"sub": [753, 332, 27, 16],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2094,8 +2103,8 @@
 					"image": "e7f24",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [737, 305, 27, 21],
-					"priority": 0,
+					"sub": [733, 310, 21, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2103,8 +2112,8 @@
 					"image": "e7f31",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [765, 285, 29, 13],
-					"priority": 0,
+					"sub": [767, 310, 25, 17],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2112,8 +2121,8 @@
 					"image": "e7f32",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [761, 264, 39, 28],
-					"priority": 0,
+					"sub": [767, 299, 43, 11],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2121,8 +2130,8 @@
 					"image": "e7f33",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [760, 258, 16, 27],
-					"priority": 0,
+					"sub": [767, 283, 25, 18],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2130,8 +2139,8 @@
 					"image": "e7f34",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [738, 284, 28, 22],
-					"priority": 0,
+					"sub": [741, 301, 27, 10],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2139,8 +2148,8 @@
 					"image": "e7f41",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [738, 248, 18, 25],
-					"priority": 0,
+					"sub": [754, 263, 27, 16],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2148,8 +2157,8 @@
 					"image": "e7f42",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [728, 229, 10, 43],
-					"priority": 0,
+					"sub": [746, 239, 28, 40],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2157,8 +2166,8 @@
 					"image": "e7f43",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [712, 248, 17, 25],
-					"priority": 0,
+					"sub": [740, 245, 13, 29],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2166,8 +2175,8 @@
 					"image": "e7f44",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [728, 272, 10, 26],
-					"priority": 0,
+					"sub": [733, 274, 21, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2175,8 +2184,8 @@
 					"image": "e7f51",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [692, 258, 16, 27],
-					"priority": 0,
+					"sub": [714, 245, 13, 29],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2184,8 +2193,8 @@
 					"image": "e7f52",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [668, 266, 40, 27],
-					"priority": 0,
+					"sub": [694, 240, 27, 40],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2193,8 +2202,8 @@
 					"image": "e7f53",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [673, 286, 30, 13],
-					"priority": 0,
+					"sub": [687, 263, 27, 16],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2202,8 +2211,8 @@
 					"image": "e7f54",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [702, 285, 27, 21],
-					"priority": 0,
+					"sub": [713, 274, 21, 27],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2211,8 +2220,8 @@
 					"image": "e7f61",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [673, 313, 29, 13],
-					"priority": 0,
+					"sub": [676, 284, 25, 17],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2220,8 +2229,8 @@
 					"image": "e7f62",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [668, 318, 39, 29],
-					"priority": 0,
+					"sub": [658, 301, 43, 11],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2229,8 +2238,8 @@
 					"image": "e7f63",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [691, 325, 16, 27],
-					"priority": 0,
+					"sub": [676, 310, 25, 18],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2238,8 +2247,8 @@
 					"image": "e7f64",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [702, 305, 27, 21],
-					"priority": 0,
+					"sub": [700, 301, 25, 10],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2247,8 +2256,8 @@
 					"image": "e7f0",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [724, 297, 19, 17],
-					"priority": 0,
+					"sub": [725, 296, 16, 19],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -2982,10 +2991,19 @@
 			"image": "rugzoom",
 			"camera": "RugCam",
 			"shows": [],
-			"hides": [],
+			"hides": ["Rug_star"],
 			"left": "BookshelfZoom",
 			"right": "MapZoom",
 			"back": "Endroom2",
+			"subs": [
+				{ "name": "RugStar",
+					"image": "rugstar",
+					"shows": ["Rug_star"],
+                    "visible": false,
+					"undo": true,
+					"sub": [442, 154, 977, 814]
+				}
+			],
 			"grid": [
 				{ "name": "RugSelect",
 					"pos": [404, 95, 1055, 887],
@@ -4429,7 +4447,7 @@
 						{ "name": "Remote",
 							"flagactions": [
 								{ "name": "!TVRunning",
-									"animate": "RemoteUse",
+									"animate": "RemoteUse"
 								}
 							]
 						}
@@ -4749,7 +4767,7 @@
 					"image": "d2open",
 					"shows": ["Drawer2_out", "Combo1_out", "Combo1N_out", "Combo2_out", "Combo2N_out", "Combo3_out", "Combo3N_out", "Combo4_out", "Combo4N_out", "Drawer2Knob_out", "Compass", "CompassDot", "CompassFace", "CompassGlass", "CompassNeedle", "Compass_button", "Compass_dash", "Compass_dot"],
 					"hides": ["Drawer2", "Combo1", "Combo1N", "Combo2", "Combo2N", "Combo3", "Combo3N", "Combo4", "Combo4N", "Stand_knobs", "Matchbox", "Matchbox_inside", "Matches"],
-					"priority": 0,
+					"priority": 1,
 					"sub": [106, 0, 1731, 855],
 					"visible": false
 				},
@@ -5056,10 +5074,8 @@
 			"image": "compasszoome",
 			"camera": "CompassCam",
 			"shows": ["Drawer2_out", "Combo1_out", "Combo1N_out", "Combo2_out", "Combo2N_out", "Combo3_out", "Combo3N_out", "Combo4_out", "Combo4N_out", "Drawer2Knob_out", "Compass", "CompassDot", "CompassFace", "CompassGlass", "Compass_button", "Compass_dash", "Compass_dot"],
-			"hides": ["Drawer2", "Combo1", "Combo1N", "Combo2", "Combo2N", "Combo3", "Combo3N", "Combo4", "Combo4N", "Stand_knobs", "CompassNeedle"],
-			"sequence": 4,
+			"hides": ["Drawer2", "Combo1", "Combo1N", "Combo2", "Combo2N", "Combo3", "Combo3N", "Combo4", "Combo4N", "Stand_knobs", "CompassGlass", "CompassNeedle"],
 			"back": "Drawer2Zoom",
-			"backaction": "CompassClear",
 			"subs": [
 				{ "name": "CompassNeedle",
 					"image": "compassneedlee",
@@ -5067,141 +5083,111 @@
 					"hides": ["Compass", "CompassDot", "CompassFace", "CompassGlass", "Drawer2_out", "TV Stand", "Room"],
 					"anchor": [0.5, 0],
 					"sub": [937, 632, 44, 231],
+					"priority": 0,
+					"undo": true,
+					"draggable": true,
+					"dragbeds": [0, 12],
+                    "dragaction": "CompassDrag"
+				},
+				{ "name": "CompassGlass",
+					"image": "compassglass",
+					"shows": ["CompassGlass"],
+					"hides": ["Compass", "CompassDot", "CompassFace", "Drawer4", "Drawer2_out", "TV Stand", "Room"],
+					"sub": [599, 286, 715, 689],
+					"priority": 0,
 					"undo": true
+				},
+				{ "name": "CompassDotGlow",
+					"image": "compassdot",
+					"shows": ["Compass_dot_glow"],
+					"hides": ["Compass_dot"],
+					"sub": [704, 165, 82, 82],
+					"priority": 0,
+					"undo": true,
+					"visible": false
+				},
+				{ "name": "CompassDashGlow",
+					"image": "compassdash",
+					"shows": ["Compass_dash_glow"],
+					"hides": ["Compass_dash"],
+					"sub": [1096, 180, 138, 55],
+					"undo": true,
+					"visible": false
 				}
 			],
 			"grid": [
-				{ "name": "CompassDotSelect",
-					"pos": [666, 117, 170, 167],
-					"animate": "CompassDotPress",
-					"sequence": "O"
-				},
-				{ "name": "CompassDashSelect",
-					"pos": [1059, 119, 206, 170],
-					"animate": "CompassDashPress",
-					"sequence": "A"
-				},
 				{ "name": "CompassButtonSelect",
 					"pos": [850, 57, 207, 179],
-					"sequenceactions": [
-						{ "name": "OA",
-							"animate": "CompassAX",
-							"sequence": "clear"
-						},
-						{ "name": "AOOO",
-							"animate": "CompassRB",
-							"sequence": "clear"
-						},
-						{ "name": "AOAO",
-							"animate": "CompassCV",
-							"sequence": "clear"
-						},
-						{ "name": "AOO",
-							"animate": "CompassDM",
-							"sequence": "clear"
-						},
-						{ "name": "O",
-							"animate": "CompassNPE",
-							"sequence": "clear"
-						},
-						{ "name": "OOAO",
-							"animate": "CompassOF",
-							"sequence": "clear"
-						},
-						{ "name": "AAO",
-							"animate": "CompassIG",
-							"sequence": "clear"
-						},
-						{ "name": "OOOO",
-							"animate": "CompassHW",
-							"sequence": "clear"
-						},
-						{ "name": "OO",
-							"animate": "CompassIG",
-							"sequence": "clear"
-						},
-						{ "name": "OAAA",
-							"animate": "CompassZJ",
-							"sequence": "clear"
-						},
-						{ "name": "AOA",
-							"animate": "CompassSK",
-							"sequence": "clear"
-						},
-						{ "name": "OAOO",
-							"animate": "CompassLYQ",
-							"sequence": "clear"
-						},
-						{ "name": "AA",
-							"animate": "CompassDM",
-							"sequence": "clear"
-						},
-						{ "name": "AO",
-							"animate": "CompassNPE",
-							"sequence": "clear"
-						},
-						{ "name": "AAA",
-							"animate": "CompassOF",
-							"sequence": "clear"
-						},
-						{ "name": "OAAO",
-							"animate": "CompassNPE",
-							"sequence": "clear"
-						},
-						{ "name": "AAOA",
-							"animate": "CompassLYQ",
-							"sequence": "clear"
-						},
-						{ "name": "OAO",
-							"animate": "CompassRB",
-							"sequence": "clear"
-						},
-						{ "name": "OOO",
-							"animate": "CompassSK",
-							"sequence": "clear"
-						},
-						{ "name": "A",
-							"animate": "CompassUT",
-							"sequence": "clear"
-						},
-						{ "name": "OOA",
-							"animate": "CompassUT",
-							"sequence": "clear"
-						},
-						{ "name": "OOOA",
-							"animate": "CompassCV",
-							"sequence": "clear"
-						},
-						{ "name": "OAA",
-							"animate": "CompassHW",
-							"sequence": "clear"
-						},
-						{ "name": "AOOA",
-							"animate": "CompassAX",
-							"sequence": "clear"
-						},
-						{ "name": "AOAA",
-							"animate": "CompassLYQ",
-							"sequence": "clear"
-						},
-						{ "name": "AAOO",
-							"animate": "CompassZJ",
-							"sequence": "clear"
-						}
-					],
-					"sequence": "clear",
-					"animate": "CompassButtonPress"
+					"speech": [
+						{ "line": "The button is broken.. maybe I can manipulate the needle directly." },
+						{ "line": "I should be able to grab the compass needle through the glass." }
+					]
 				},
 				{ "name": "CompassSelect",
 					"pos": [629, 270, 691, 710],
 					"speech": [
-						{ "line": "There's a set of symbols on this compass." }
+						{ "line": "There's a set of symbols on this compass." },
+                        { "line": "I should be able to move the needle, just like with clock hands." }
 					]
 				},
-				{ "name": "CompassClear",
-					"pos": [0, 0, 0, 0],
-					"sequence": "clear"
-				}
+                { "name": "CompassDrag",
+                    "pos": [0, 0, 0, 0],
+                    "cycleif": [
+                        { "name": "CompassNeedle",
+                            "parent": "CompassZoom",
+                            "values": [
+                                { "name": "Compass1",
+                                    "value": 0,
+                                    "animate": "CompassJ"
+                                },
+                                { "name": "Compass2",
+                                    "value": 1,
+                                    "animate": "CompassO"
+                                },
+                                { "name": "Compass3",
+                                    "value": 2,
+                                    "animate": "CompassT"
+                                },
+                                { "name": "Compass4",
+                                    "value": 3,
+                                    "animate": "CompassR"
+                                },
+                                { "name": "Compass5",
+                                    "value": 4,
+                                    "animate": "CompassA"
+                                },
+                                { "name": "Compass6",
+                                    "value": 5,
+                                    "animate": "CompassW"
+                                },
+                                { "name": "Compass7",
+                                    "value": 6,
+                                    "animate": "CompassE"
+                                },
+                                { "name": "Compass8",
+                                    "value": 7,
+                                    "animate": "CompassV"
+                                },
+                                { "name": "Compass9",
+                                    "value": 8,
+                                    "animate": "CompassM"
+                                },
+                                { "name": "Compass10",
+                                    "value": 9,
+                                    "animate": "CompassI"
+                                },
+                                { "name": "Compass11",
+                                    "value": 10,
+                                    "animate": "CompassL"
+                                },
+                                { "name": "Compass12",
+                                    "value": 11,
+                                    "animate": "CompassS"
+                                }
+                            ]
+                        }
+                    ]
+                }
 			]
 		},
 		{ "name": "TypewriterZoom",
@@ -7186,26 +7172,21 @@
 				{ "name": "GrowerShears",
 					"image": "growershears",
 					"shows": ["Shears", "ShearsBrace", "ShearsHandle", "Shears_R"],
+					"priority": 0,
 					"sub": [348, 313, 257, 194]
 				},
 				{ "name": "GrowerPlants",
 					"image": "growerplants",
 					"hides": ["GrowerLamp", "GrowerSage1", "GrowerSage2", "Sage_bulb"],
+					"priority": 0,
 					"sub": [709, 604, 548, 426]
-				},
-				{ "name": "GrowerF11",
-					"image": "growerf11",
-					"shows": ["Minifridge_snowflake_2"],
-					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [775, 0, 49, 24],
-					"undo": true,
-					"visible": false
 				},
 				{ "name": "GrowerF12",
 					"image": "growerf12",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [826, 0, 31, 77],
+					"priority": 1,
+					"sub": [721, 0, 52, 43],
 					"undo": true,
 					"visible": false
 				},
@@ -7213,7 +7194,26 @@
 					"image": "growerf13",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [860, 0, 47, 23],
+					"priority": 1,
+					"sub": [788, 0, 34, 29],
+					"undo": true,
+					"visible": false
+				},
+				{ "name": "GrowerF21",
+					"image": "growerf21",
+					"shows": ["Minifridge_snowflake_1"],
+					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
+					"sub": [863, 0, 35, 30],
+					"priority": 1,
+					"undo": true,
+					"visible": false
+				},
+				{ "name": "GrowerF22",
+					"image": "growerf22",
+					"shows": ["Minifridge_snowflake_3"],
+					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
+					"sub": [911, 0, 53, 47],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				}
@@ -7369,8 +7369,8 @@
 					"image": "fridgef11",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [785, 637, 69, 100],
-					"priority": 0,
+					"sub": [687, 609, 107, 66],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7378,8 +7378,8 @@
 					"image": "fridgef12",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [853, 635, 40, 175],
-					"priority": 0,
+					"sub": [713, 609, 112, 162],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7387,8 +7387,8 @@
 					"image": "fridgef13",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [892, 636, 68, 97],
-					"priority": 0,
+					"sub": [794, 627, 52, 119],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7396,8 +7396,8 @@
 					"image": "fridgef14",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [854, 535, 41, 100],
-					"priority": 0,
+					"sub": [792, 524, 83, 105],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7405,8 +7405,8 @@
 					"image": "fridgef21",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [979, 586, 64, 106],
-					"priority": 0,
+					"sub": [901, 627, 53, 119],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7414,8 +7414,8 @@
 					"image": "fridgef22",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [980, 553, 161, 106],
-					"priority": 0,
+					"sub": [924, 609, 111, 159],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7423,8 +7423,8 @@
 					"image": "fridgef23",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [997, 528, 119, 52],
-					"priority": 0,
+					"sub": [956, 609, 108, 63],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7432,8 +7432,8 @@
 					"image": "fridgef24",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [892, 506, 107, 80],
-					"priority": 0,
+					"sub": [874, 524, 82, 105],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7441,8 +7441,8 @@
 					"image": "fridgef31",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [1002, 423, 116, 49],
-					"priority": 0,
+					"sub": [1010, 519, 101, 67],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7450,8 +7450,8 @@
 					"image": "fridgef32",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [982, 343, 154, 112],
-					"priority": 0,
+					"sub": [1009, 478, 174, 45],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7459,8 +7459,8 @@
 					"image": "fridgef33",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [982, 321, 61, 103],
-					"priority": 0,
+					"sub": [1009, 417, 96, 71],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7468,8 +7468,8 @@
 					"image": "fridgef34",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [892, 423, 110, 84],
-					"priority": 0,
+					"sub": [906, 485, 105, 40],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7477,8 +7477,8 @@
 					"image": "fridgef41",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [893, 285, 67, 96],
-					"priority": 0,
+					"sub": [955, 341, 105, 64],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7486,8 +7486,8 @@
 					"image": "fridgef42",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [857, 220, 37, 163],
-					"priority": 0,
+					"sub": [923, 251, 107, 152],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7495,8 +7495,8 @@
 					"image": "fridgef43",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [794, 291, 65, 90],
-					"priority": 0,
+					"sub": [903, 277, 51, 111],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7504,8 +7504,8 @@
 					"image": "fridgef44",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [856, 379, 38, 100],
-					"priority": 0,
+					"sub": [874, 386, 82, 104],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7513,8 +7513,8 @@
 					"image": "fridgef51",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [716, 332, 58, 99],
-					"priority": 0,
+					"sub": [801, 280, 51, 109],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7522,8 +7522,8 @@
 					"image": "fridgef52",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [625, 362, 149, 100],
-					"priority": 0,
+					"sub": [725, 263, 104, 146],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7531,8 +7531,8 @@
 					"image": "fridgef53",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [643, 434, 114, 52],
-					"priority": 0,
+					"sub": [697, 351, 101, 58],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7540,8 +7540,8 @@
 					"image": "fridgef54",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [755, 429, 102, 80],
-					"priority": 0,
+					"sub": [797, 388, 78, 103],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7549,8 +7549,8 @@
 					"image": "fridgef61",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [641, 538, 113, 50],
-					"priority": 0,
+					"sub": [654, 430, 94, 65],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7558,8 +7558,8 @@
 					"image": "fridgef62",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [617, 556, 156, 113],
-					"priority": 0,
+					"sub": [583, 490, 166, 45],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7567,8 +7567,8 @@
 					"image": "fridgef63",
 					"shows": ["Minifridge_snowflake_1"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [709, 587, 64, 108],
-					"priority": 0,
+					"sub": [653, 527, 96, 70],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7576,8 +7576,8 @@
 					"image": "fridgef64",
 					"shows": ["Minifridge_snowflake_2"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [753, 507, 105, 80],
-					"priority": 0,
+					"sub": [746, 490, 98, 38],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7585,8 +7585,8 @@
 					"image": "fridgef0",
 					"shows": ["Minifridge_snowflake_3"],
 					"hides": ["Minifridge_snowflake", "Minifridge_door_closed", "Minifridge", "Minifridge_grid", "Minifridge_icer", "Minifridge_milk", "Minifridge_soda", "GridStand", "GridSupports", "Room"],
-					"sub": [838, 475, 75, 64],
-					"priority": 0,
+					"sub": [843, 472, 64, 73],
+					"priority": 1,
 					"undo": true,
 					"visible": false
 				},
@@ -7626,24 +7626,19 @@
 					"image": "fridgebirthcert",
 					"shows": ["BabyBottle", "BabyBottle_liquid", "BirthCert"],
 					"sub": [1394, 144, 384, 130],
+					"priority": 0,
 					"undo": true,
 					"visible": false
 				}
 			],
 			"grid": [
 				{ "name": "FridgeP11",
-					"pos": [768, 628, 84, 138],
+					"pos": [654, 606, 113, 79],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
 								{ "sub": "None" },
 								{ "sub": "FridgeF11" }
-							]
-						},
-						{ "parent": "GrowerZoom",
-							"subs": [
-								{ "sub": "None" },
-								{ "sub": "GrowerF11" }
 							]
 						},
 						{ "parent": "Endroom6",
@@ -7661,7 +7656,7 @@
 					]
 				},
 				{ "name": "FridgeP12",
-					"pos": [850, 638, 46, 188],
+					"pos": [712, 673, 83, 106],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7690,7 +7685,7 @@
 					]
 				},
 				{ "name": "FridgeP13",
-					"pos": [894, 638, 88, 122],
+					"pos": [793, 628, 73, 140],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7719,7 +7714,7 @@
 					]
 				},
 				{ "name": "FridgeP14",
-					"pos": [847, 537, 55, 100],
+					"pos": [796, 529, 72, 94],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7742,12 +7737,18 @@
 					]
 				},
 				{ "name": "FridgeP21",
-					"pos": [975, 596, 71, 106],
+					"pos": [879, 636, 70, 151],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
 								{ "sub": "None" },
 								{ "sub": "FridgeF21" }
+							]
+						},
+						{ "parent": "GrowerZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "GrowerF21" }
 							]
 						},
 						{ "parent": "Endroom6",
@@ -7765,12 +7766,18 @@
 					]
 				},
 				{ "name": "FridgeP22",
-					"pos": [1025, 577, 133, 98],
+					"pos": [948, 682, 100, 112],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
 								{ "sub": "None" },
 								{ "sub": "FridgeF22" }
+							]
+						},
+						{ "parent": "GrowerZoom",
+							"subs": [
+								{ "sub": "None" },
+								{ "sub": "GrowerF22" }
 							]
 						},
 						{ "parent": "Endroom6",
@@ -7788,7 +7795,7 @@
 					]
 				},
 				{ "name": "FridgeP23",
-					"pos": [1001, 512, 125, 75],
+					"pos": [954, 608, 130, 76],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7811,7 +7818,7 @@
 					]
 				},
 				{ "name": "FridgeP24",
-					"pos": [896, 505, 105, 81],
+					"pos": [886, 533, 64, 95],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7834,7 +7841,7 @@
 					]
 				},
 				{ "name": "FridgeP31",
-					"pos": [1002, 419, 139, 79],
+					"pos": [1013, 520, 108, 81],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7857,7 +7864,7 @@
 					]
 				},
 				{ "name": "FridgeP32",
-					"pos": [1031, 330, 126, 95],
+					"pos": [1024, 478, 171, 43],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7880,7 +7887,7 @@
 					]
 				},
 				{ "name": "FridgeP33",
-					"pos": [971, 317, 78, 110],
+					"pos": [1005, 409, 132, 73],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7903,7 +7910,7 @@
 					]
 				},
 				{ "name": "FridgeP34",
-					"pos": [893, 423, 112, 84],
+					"pos": [908, 484, 101, 46],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7926,7 +7933,7 @@
 					]
 				},
 				{ "name": "FridgeP41",
-					"pos": [894, 266, 84, 118],
+					"pos": [999, 337, 84, 71],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7949,7 +7956,7 @@
 					]
 				},
 				{ "name": "FridgeP42",
-					"pos": [856, 202, 41, 180],
+					"pos": [960, 235, 73, 122],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7972,7 +7979,7 @@
 					]
 				},
 				{ "name": "FridgeP43",
-					"pos": [782, 281, 75, 100],
+					"pos": [881, 261, 80, 120],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -7995,7 +8002,7 @@
 					]
 				},
 				{ "name": "FridgeP44",
-					"pos": [852, 379, 46, 102],
+					"pos": [886, 381, 68, 103],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8018,7 +8025,7 @@
 					]
 				},
 				{ "name": "FridgeP51",
-					"pos": [713, 331, 60, 94],
+					"pos": [804, 262, 72, 123],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8041,7 +8048,7 @@
 					]
 				},
 				{ "name": "FridgeP52",
-					"pos": [600, 350, 127, 87],
+					"pos": [717, 246, 86, 104],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8064,7 +8071,7 @@
 					]
 				},
 				{ "name": "FridgeP53",
-					"pos": [624, 433, 132, 63],
+					"pos": [673, 350, 122, 60],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8087,7 +8094,7 @@
 					]
 				},
 				{ "name": "FridgeP54",
-					"pos": [760, 432, 97, 79],
+					"pos": [795, 391, 70, 95],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8110,7 +8117,7 @@
 					]
 				},
 				{ "name": "FridgeP61",
-					"pos": [629, 526, 124, 65],
+					"pos": [634, 415, 114, 77],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8133,7 +8140,7 @@
 					]
 				},
 				{ "name": "FridgeP62",
-					"pos": [595, 585, 126, 100],
+					"pos": [556, 491, 191, 42],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8156,7 +8163,7 @@
 					]
 				},
 				{ "name": "FridgeP63",
-					"pos": [706, 590, 70, 109],
+					"pos": [631, 528, 116, 91],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8179,7 +8186,7 @@
 					]
 				},
 				{ "name": "FridgeP64",
-					"pos": [756, 510, 98, 77],
+					"pos": [746, 487, 94, 44],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8202,7 +8209,7 @@
 					]
 				},
 				{ "name": "FridgeP0",
-					"pos": [839, 472, 74, 70],
+					"pos": [838, 475, 71, 69],
 					"cycle": [
 						{ "parent": "FridgeZoom",
 							"subs": [
@@ -8477,6 +8484,7 @@
 							"flag": "PawnPlaced",
 							"removes": "Pawn",
 							"animate": "PawnPlace",
+                            "sound": "tap1",
 							"hides": [
 								{ "name": "ChessPawn",
 									"parent": "ChessZoom"
@@ -8501,6 +8509,7 @@
 							"flag": "KingPlaced",
 							"removes": "King",
 							"animate": "KingPlace",
+                            "sound": "tap1",
 							"hides": [
 								{ "name": "ChessKing",
 									"parent": "ChessZoom"
@@ -8525,6 +8534,7 @@
 							"flag": "KnightPlaced",
 							"removes": "Knight",
 							"animate": "KnightPlace",
+                            "sound": "tap1",
 							"hides": [
 								{ "name": "ChessKnight",
 									"parent": "ChessZoom"
@@ -9145,381 +9155,382 @@
 				}
 			]
 		},
-		{ "name": "CompassButtonPress",
+		{ "name": "CompassJ",
 			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "CompassCam",
-					"shows": ["Drawer2_out", "Compass", "CompassDot", "CompassFace", "CompassGlass", "CompassNeedle", "Compass_button_down", "Compass_dash", "Compass_dot"],
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				}
+				{ "frame": "show",
+					"name": "CompassDotGlow",
+					"parent": "CompassZoom",
+					"duration": 1
+				},
+				{ "frame": "hide",
+					"duration": 1
+				},
+				{ "frame": "show",
+					"name": "CompassDashGlow",
+					"parent": "CompassZoom",
+					"duration": 1.5
+				},
+				{ "frame": "hide",
+					"duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
 			]
 		},
-		{ "name": "CompassDotPress",
-			"frames": [
-				{ "frame": "compassdot",
-					"camera": "CompassCam",
-					"shows": ["Drawer2_out", "Compass", "CompassDot", "CompassFace", "CompassGlass", "CompassNeedle", "Compass_button", "Compass_dash", "Compass_dot_down"],
-					"pos": [667, 147, 131, 145],
-					"duration": 0.5
-				}
-			]
-		},
-		{ "name": "CompassDashPress",
-			"frames": [
-				{ "frame": "compassdash",
-					"camera": "CompassCam",
-					"shows": ["Drawer2_out", "Compass", "CompassDot", "CompassFace", "CompassGlass", "CompassNeedle", "Compass_button", "Compass_dash_down", "Compass_dot"],
-					"pos": [1039, 161, 214, 129],
-					"duration": 0.5
-				}
-			]
-		},
-		{ "name": "CompassZJ",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				}
-			]
-		},
-		{ "name": "CompassOF",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [30, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-30, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassUT",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-300, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-60, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassRB",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [90, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-90, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassAX",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-240, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-120, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassHW",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [150, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-150, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassNPE",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-180, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [180, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassCV",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [210, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [150, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassDM",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-120, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [120, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassIG",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [270, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [90, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassLYQ",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [-60, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [60, 0],
-					"duration": 0.7
-				}
-			]
-		},
-		{ "name": "CompassSK",
-			"frames": [
-				{ "frame": "compassbuttone",
-					"camera": "None",
-					"pos": [854, 76, 177, 182],
-					"duration": 0.5
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [1080, 0],
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [330, 0],
-					"duration": 0.1
-				},
-				{ "frame": "wait",
-					"duration": 1
-				},
-				{ "name": "CompassNeedle",
-					"parent": "CompassZoom",
-					"frame": "rotateby",
-					"pos": [30, 0],
-					"duration": 0.7
-				}
-			]
-		},
+        { "name": "CompassO",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassT",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassR",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassA",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassW",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassE",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassV",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassM",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassI",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassL",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDashGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1.5
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
+        { "name": "CompassS",
+            "frames": [
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "show",
+                    "name": "CompassDotGlow",
+                    "parent": "CompassZoom",
+                    "duration": 1
+                },
+                { "frame": "hide",
+                    "duration": 1
+                },
+                { "frame": "rotateto",
+                    "name": "CompassNeedle",
+                    "parent": "CompassZoom",
+                    "pos": [0, 0],
+                    "duration": 1
+                }
+            ]
+        },
 		{ "name": "KnightPlace",
 			"frames": [
 				{ "frame": "knightplace",
@@ -10931,6 +10942,7 @@
 			"screen": "CabinetZoom",
 			"match": "456123",
 			"animate": "Star3Press",
+            "flag": "CabinetUnlock",
 			"hides": [
 				{ "name": "CabinetDoor",
 					"parent": "CabinetZoom"
@@ -10980,6 +10992,7 @@
 			"screen": "CabinetZoom",
 			"match": "321654",
 			"animate": "Star4Press",
+            "flag": "CabinetUnlock",
 			"hides": [
 				{ "name": "CabinetDoor",
 					"parent": "CabinetZoom"
@@ -11550,6 +11563,18 @@
 					"cycle": 6
 				}
 			],
+            "flagactions": [
+                { "name": "&!CabinetUnlock",
+                    "shows": [
+                        { "name": "RugStar",
+                            "parent": "RugZoom"
+                        },
+                        { "name": "E2Star",
+                            "parent": "Endroom2"
+                        }
+                    ]
+                }
+            ],
 			"flag": "D1OpenFlag",
 			"sound": "draweropen1",
 			"animate": "D1Open",

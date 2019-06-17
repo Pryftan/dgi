@@ -46,6 +46,10 @@
 				}
 			],
 			"grid": [
+                { "name": "C1OrderZoom",
+                    "pos": [1737, 517, 183, 248],
+                    "zoom": "Order1Zoom"
+                },
 				{ "name": "C1SoldiersZoom",
 					"pos": [0, 495, 374, 352],
 					"zoom": "SoldiersZoom"
@@ -61,10 +65,6 @@
 				{ "name": "C1RifleZoom",
 					"pos": [1160, 0, 522, 552],
 					"zoom": "RifleZoom"
-				},
-				{ "name": "C1OrderZoom",
-					"pos": [1737, 517, 183, 248],
-					"zoom": "Order1Zoom"
 				},
 				{ "name": "C1ChestZoom",
 					"pos": [1694, 0, 226, 319],
@@ -152,6 +152,15 @@
 				}
 			],
 			"grid": [
+                { "name": "C2ChestZoom",
+                    "pos": [636, 90, 412, 362],
+                    "zoom": "ChestZoom",
+                    "flagactions": [
+                        { "name": "ChestOpen",
+                            "zoom": "ChestInZoom"
+                        }
+                    ]
+                },
 				{ "name": "C2CanteenZoom",
 					"pos": [131, 609, 311, 307],
 					"zoom": "CanteenZoom"
@@ -163,15 +172,6 @@
 				{ "name": "C2OrderZoom",
 					"pos": [609, 539, 381, 339],
 					"zoom": "Order1Zoom"
-				},
-				{ "name": "C2ChestZoom",
-					"pos": [636, 90, 412, 362],
-					"zoom": "ChestZoom",
-					"flagactions": [
-						{ "name": "ChestOpen",
-							"zoom": "ChestInZoom"
-						}
-					]
 				},
 				{ "name": "C2FloorZoom",
 					"pos": [1018, 35, 418, 201],
@@ -246,6 +246,10 @@
 				}
 			],
 			"grid": [
+                { "name": "C3ShirtZoom",
+                    "pos": [527, 175, 620, 262],
+                    "zoom": "ShirtZoom"
+                },
 				{ "name": "C3ChestZoom",
 					"pos": [0, 0, 89, 365],
 					"zoom": "ChestZoom",
@@ -258,10 +262,6 @@
 				{ "name": "C3FloorZoom",
 					"pos": [94, 0, 481, 173],
 					"zoom": "FloorZoom"
-				},
-				{ "name": "C3ShirtZoom",
-					"pos": [527, 175, 620, 262],
-					"zoom": "ShirtZoom"
 				},
 				{ "name": "C3WatchZoom",
 					"pos": [731, 607, 527, 356],
@@ -618,6 +618,10 @@
 				}
 			],
 			"grid": [
+                { "name": "C5CabinetZoom",
+                    "pos": [630, 482, 447, 413],
+                    "zoom": "CabinetZoom"
+                },
 				{ "name": "C5SinkZoom",
 					"pos": [0, 330, 216, 351],
 					"zoom": "SinkZoom"
@@ -625,10 +629,6 @@
 				{ "name": "C5PipesZoom",
 					"pos": [0, 0, 709, 325],
 					"zoom": "PipesZoom"
-				},
-				{ "name": "C5CabinetZoom",
-					"pos": [630, 482, 447, 413],
-					"zoom": "CabinetZoom"
 				},
 				{ "name": "C5MapZoom",
 					"pos": [1170, 473, 406, 342],
@@ -1397,6 +1397,10 @@
 				}
 			],
 			"grid": [
+                { "name": "C8BootsZoom",
+                    "pos": [1265, 0, 469, 387],
+                    "zoom": "BootsZoom"
+                },
 				{ "name": "C8MailboxesZoom",
 					"pos": [0, 303, 832, 698],
 					"zoom": "MailboxesZoom"
@@ -1412,10 +1416,6 @@
 				{ "name": "C8SoldiersZoom",
 					"pos": [1282, 496, 525, 419],
 					"zoom": "SoldiersZoom"
-				},
-				{ "name": "C8BootsZoom",
-					"pos": [1265, 0, 469, 387],
-					"zoom": "BootsZoom"
 				}
 			]
 		},
@@ -2281,6 +2281,7 @@
 			"grid": [
 				{ "name": "SinkFaucets",
 					"pos": [606, 580, 734, 338],
+                    "transition": true,
 					"speech": [
 						{ "line": "The faucet handles don't seem to turn." },
 						{ "line": "I think they're rusty." }
@@ -4120,259 +4121,112 @@
 					"hides": ["ClockDoor_open"],
 					"sub": [769, 0, 362, 295]
 				},
-				{ "name": "ClockH3",
-					"image": "clockh3",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 300, 0] }],
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH4",
-					"image": "clockh4",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 330, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH5",
-					"image": "clockh5",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 0, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH6",
-					"image": "clockh6",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 30, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH7",
-					"image": "clockh7",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 60, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH8",
-					"image": "clockh8",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 90, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH9",
-					"image": "clockh9",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 120, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH10",
-					"image": "clockh10",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 150, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH11",
-					"image": "clockh11",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 180, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH12",
-					"image": "clockh12",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 210, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH1",
-					"image": "clockh1",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 240, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockH2",
-					"image": "clockh2",
-					"shows": ["HourHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "HourHand", "by": [90, 270, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [802, 418, 290, 291]
-				},
-				{ "name": "ClockM9",
-					"image": "clockm9",
+                { "name": "ClockHour",
+                    "image": "clockhour",
+                    "shows": ["HourHand"],
+                    "hides": ["ClockFace", "Numbers", "Clock", "Room"],
+                    "sub": [918, 581, 55, 129],
+                    "anchor": [0.5, -0.12],
+                    "draggable": true,
+                    "dragbeds": [3,12],
+                    "dragcycle": [
+                        { "parent": "Cabin8",
+                            "subs": [
+                                { "sub": "C8H12" },
+                                { "sub": "C8H1" },
+                                { "sub": "C8H2" },
+                                { "sub": "C8H3" },
+                                { "sub": "C8H4" },
+                                { "sub": "C8H5" },
+                                { "sub": "C8H6" },
+                                { "sub": "C8H7" },
+                                { "sub": "C8H8" },
+                                { "sub": "C8H9" },
+                                { "sub": "C8H10" },
+                                { "sub": "C8H11" }
+                            ]
+                        }
+                    ]
+                },
+				{ "name": "ClockMinute",
+					"image": "clockminute",
 					"shows": ["MinuteHand"],
 					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 70, 0] }],
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM10",
-					"image": "clockm10",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 100, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM11",
-					"image": "clockm11",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 130, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM12",
-					"image": "clockm12",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 160, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM1",
-					"image": "clockm1",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 190, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM2",
-					"image": "clockm2",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 220, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM3",
-					"image": "clockm3",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 250, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM4",
-					"image": "clockm4",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 280, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM5",
-					"image": "clockm5",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 310, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM6",
-					"image": "clockm6",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 340, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM7",
-					"image": "clockm7",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 10, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				},
-				{ "name": "ClockM8",
-					"image": "clockm8",
-					"shows": ["MinuteHand"],
-					"hides": ["ClockFace", "Numbers", "Clock", "Room"],
-					"rotates": [{ "name": "MinuteHand", "by": [90, 40, 0] }],
-					"visible": false,
-					"undo": true,
-					"sub": [737, 353, 420, 423]
-				}
+					"sub": [922, 540, 50, 232],
+                    "anchor": [0.5, 0.08],
+                    "draggable": true,
+                    "dragbeds": [9,12],
+                    "dragcycle": [
+                        { "parent": "Cabin8",
+                            "subs": [
+                                { "sub": "C8M12" },
+                                { "sub": "C8M1" },
+                                { "sub": "C8M2" },
+                                { "sub": "C8M3" },
+                                { "sub": "C8M4" },
+                                { "sub": "C8M5" },
+                                { "sub": "C8M6" },
+                                { "sub": "C8M7" },
+                                { "sub": "C8M8" },
+                                { "sub": "C8M9" },
+                                { "sub": "C8M10" },
+                                { "sub": "C8M11" }
+                            ]
+                        }
+                    ]
+                }
 			],
 			"grid": [
 				{ "name": "ClockButtonPress",
 					"pos": [1178, 246, 184, 200],
 					"animate": "ClockButton",
-					"flagactions": [
-						{ "name": "ClockHSet",
-							"flagactions": [
-								{ "name": "ClockMSet",
-									"animate": "ClockOpen",
-									"hides": [
-										{ "name": "ClockDoor",
-											"parent": "ClockZoom"
-										},
-										{ "name": "C8CDoor",
-											"parent": "Cabin8"
-										}
-									],
-									"toggles": [
-										{ "name": "ClockButtonPress",
-											"parent": "ClockZoom"
-										},
-										{ "name": "ClockButtonPress2",
-											"parent": "ClockZoom"
-										},
-										{ "name": "PendulumSelect",
-											"parent": "PendulumZoom"
-										},
-										{ "name": "PendulumWatchTake",
-											"parent": "PendulumZoom"
-										}
-									],
-									"choices": [
-										{ "name": "ClockHint",
-											"type": "remove",
-											"dialogue": "Avatar"
-										}
-									]
-								}
+					"cycleif": [
+						{ "name": "ClockMinute",
+                            "parent": "ClockZoom",
+                            "values": [
+                                { "name": "ClockMSet",
+                                    "value": 7,
+                                    "animate": "ClockButton",
+                                    "cycleif": [
+                                        { "name": "ClockHour",
+                                            "parent": "ClockZoom",
+                                            "values": [
+                                                { "name": "ClockHSet",
+                                                    "value": 7,
+                                                    "animate": "ClockOpen",
+                                                    "hides": [
+                                                        { "name": "ClockDoor",
+                                                            "parent": "ClockZoom"
+                                                        },
+                                                        { "name": "C8CDoor",
+                                                            "parent": "Cabin8"
+                                                        }
+                                                    ],
+                                                    "toggles": [
+                                                        { "name": "ClockButtonPress",
+                                                            "parent": "ClockZoom"
+                                                        },
+                                                        { "name": "ClockButtonPress2",
+                                                            "parent": "ClockZoom"
+                                                        },
+                                                        { "name": "PendulumSelect",
+                                                            "parent": "PendulumZoom"
+                                                        },
+                                                        { "name": "PendulumWatchTake",
+                                                            "parent": "PendulumZoom"
+                                                        }
+                                                    ],
+                                                    "choices": [
+                                                        { "name": "ClockHint",
+                                                            "type": "remove",
+                                                            "dialogue": "Avatar"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
 							]
 						}
 					]
@@ -4381,192 +4235,6 @@
 					"pos": [1178, 246, 184, 200],
 					"animate": "ClockButton",
 					"active": false
-				},
-				{ "name": "ClockHourMove",
-					"pos": [819, 437, 256, 250],
-					"sound": "tap1",
-					"cycleif": [
-						{ "name": "ClockHourMove",
-							"parent": "ClockZoom",
-							"values": [
-								{ "name": "CheckH0",
-									"value": 0,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH1",
-									"value": 1,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH2",
-									"value": 2,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH3",
-									"value": 3,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH4",
-									"value": 4,
-									"flag": "ClockHSet"
-								},
-								{ "name": "CheckH5",
-									"value": 5,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH6",
-									"value": 6,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH7",
-									"value": 7,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH8",
-									"value": 8,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH9",
-									"value": 9,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH10",
-									"value": 10,
-									"flag": "!ClockHSet"
-								},
-								{ "name": "CheckH11",
-									"value": 11,
-									"flag": "!ClockHSet"
-								}
-							]
-						}
-					],
-					"cycle": [
-						{ "parent": "ClockZoom",
-							"subs": [
-								{ "sub": "ClockH3" },
-								{ "sub": "ClockH4" },
-								{ "sub": "ClockH5" },
-								{ "sub": "ClockH6" },
-								{ "sub": "ClockH7" },
-								{ "sub": "ClockH8" },
-								{ "sub": "ClockH9" },
-								{ "sub": "ClockH10" },
-								{ "sub": "ClockH11" },
-								{ "sub": "ClockH12" },
-								{ "sub": "ClockH1" },
-								{ "sub": "ClockH2" }
-							]
-						},
-						{ "parent": "Cabin8",
-							"subs": [
-								{ "sub": "C8H3" },
-								{ "sub": "C8H4" },
-								{ "sub": "C8H5" },
-								{ "sub": "C8H6" },
-								{ "sub": "C8H7" },
-								{ "sub": "C8H8" },
-								{ "sub": "C8H9" },
-								{ "sub": "C8H10" },
-								{ "sub": "C8H11" },
-								{ "sub": "C8H12" },
-								{ "sub": "C8H1" },
-								{ "sub": "C8H2" }
-							]
-						}
-					]
-				},
-				{ "name": "ClockMinuteMove",
-					"pos": [674, 286, 554, 554],
-					"sound": "tap1",
-					"cycleif": [
-						{ "name": "ClockMinuteMove",
-							"parent": "ClockZoom",
-							"values": [
-								{ "name": "CheckM0",
-									"value": 0,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM1",
-									"value": 1,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM2",
-									"value": 2,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM3",
-									"value": 3,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM4",
-									"value": 4,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM5",
-									"value": 5,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM6",
-									"value": 6,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM7",
-									"value": 7,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM8",
-									"value": 8,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM9",
-									"value": 9,
-									"flag": "!ClockMSet"
-								},
-								{ "name": "CheckM10",
-									"value": 10,
-									"flag": "ClockMSet"
-								},
-								{ "name": "CheckM11",
-									"value": 11,
-									"flag": "!ClockMSet"
-								}
-							]
-						}
-					],
-					"cycle": [
-						{ "parent": "ClockZoom",
-							"subs": [
-								{ "sub": "ClockM9" },
-								{ "sub": "ClockM10" },
-								{ "sub": "ClockM11" },
-								{ "sub": "ClockM12" },
-								{ "sub": "ClockM1" },
-								{ "sub": "ClockM2" },
-								{ "sub": "ClockM3" },
-								{ "sub": "ClockM4" },
-								{ "sub": "ClockM5" },
-								{ "sub": "ClockM6" },
-								{ "sub": "ClockM7" },
-								{ "sub": "ClockM8" }
-							]
-						},
-						{ "parent": "Cabin8",
-							"subs": [
-								{ "sub": "C8M9" },
-								{ "sub": "C8M10" },
-								{ "sub": "C8M11" },
-								{ "sub": "C8M12" },
-								{ "sub": "C8M1" },
-								{ "sub": "C8M2" },
-								{ "sub": "C8M3" },
-								{ "sub": "C8M4" },
-								{ "sub": "C8M5" },
-								{ "sub": "C8M6" },
-								{ "sub": "C8M7" },
-								{ "sub": "C8M8" }
-							]
-						}
-					]
 				}
 			]
 		},
@@ -5884,7 +5552,7 @@
 					"duration": 0.2
 				},
 				{ "frame": "wait",
-					"duration": 0.1,
+					"duration": 0.1
 				},
 				{ "frame": "fadein",
 					"name": "MapBlack",
@@ -5910,7 +5578,7 @@
 					"duration": 0
 				},
 				{ "frame": "wait",
-					"duration": 0.1,
+					"duration": 0.1
 				},
 				{ "frame": "hide",
 					"name": "Bullet2",

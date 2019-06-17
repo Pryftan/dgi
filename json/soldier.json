@@ -1,0 +1,78 @@
+{ "name": "Soldier",
+	"scenes": ["cuts1", "cabin", "cuts2", "endroom", "cuts3"],
+    "music": "music_menu",
+	"images": [
+		{ "name": "Title",
+			"image": "soldiertitle",
+			"shows": ["Title", "NewGame", "Continue", "Credits", "Settings"],
+			"hides": ["Music", "Sound", "Back", "Bar1", "Bar2", "Ball1", "Ball2"],
+			"sub": [441, 543, 1000, 455]
+		},
+		{ "name": "NewGame",
+			"image": "newgame",
+			"sub": [181, 260, 671, 105],
+			"type": "new"
+		},
+		{ "name": "ContGame",
+			"image": "contgame",
+			"sub": [1139, 259, 517, 107],
+			"type": "cont"
+		},
+		{ "name": "Settings",
+			"image": "settings",
+			"sub": [464, 89, 312, 87],
+			"type": "settings"
+		},
+		{ "name": "Credits",
+			"image": "credits",
+			"sub": [1087, 107, 273, 70],
+			"type": "cred"
+		},
+		{ "name": "Music",
+			"image": "soldiermusic",
+			"shows": ["Music", "Sound", "Back", "Bar1", "Bar2"],
+			"hides": ["Title", "NewGame", "Continue", "Credits", "Settings"],
+			"sub": [315, 712, 510, 165],
+			"type": "music",
+            "visible": false
+		},
+		{ "name": "SoundEffect",
+			"image": "soldierse",
+			"sub": [150, 381, 893, 145],
+            "type": "sound",
+            "visible": false
+		},
+		{ "name": "Back",
+			"image": "soldierback",
+			"sub": [767, 97, 347, 134],
+            "type": "back",
+            "visible": false
+		},
+		{ "name": "Slider1",
+			"image": "slider1",
+            "sub": [1119, 776, 669, 17],
+            "visible": false
+		},
+		{ "name": "Slider2",
+			"image": "slider2",
+            "sub": [1123, 432, 670, 16],
+            "visible": false
+		},
+		{ "name": "Ball1",
+			"image": "musicball",
+			"shows": ["Ball1"],
+			"hides": ["Bar1"],
+			"sub": [1421, 753, 63, 63],
+            "type": "musicball",
+            "visible": false
+		},
+		{ "name": "Ball2",
+			"image": "soundball",
+			"shows": ["Ball2"],
+			"hides": ["Bar2"],
+			"sub": [1421, 409, 63, 63],
+            "type": "soundball",
+            "visible": false
+		}
+	]
+}

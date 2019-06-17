@@ -2461,6 +2461,7 @@
 						},
 						{ "name": "Book2T04",
 							"image": "book2t04",
+                            "visible": false,
 							"sub": [113, 506]
 						},
 						{ "name": "Book2T05",
@@ -2469,6 +2470,7 @@
 						},
 						{ "name": "Book2T06",
 							"image": "book2t06",
+                            "visible": false,
 							"sub": [149, 414]
 						},
 						{ "name": "Book2T07",
@@ -2481,6 +2483,7 @@
 						},
 						{ "name": "Book2T09",
 							"image": "book2t09",
+                            "visible": false,
 							"sub": [239, 211]
 						},
 						{ "name": "Book2T10",
@@ -4940,6 +4943,18 @@
 					"pauses": false,
 					"duration": 1.0
 				},
+                { "frame": "fadein",
+                    "name": "Book1Text02",
+                    "parent": "D1BookView",
+                    "duration": 1.0,
+                    "pauses": false
+                },
+                { "frame": "fadein",
+                    "name": "Book1Text03",
+                    "parent": "D1BookView",
+                    "duration": 1.0,
+                    "pauses": false
+                },
 				{ "frame": "fadeout",
 					"name": "Book1Text01",
 					"parent": "D1BookView",
@@ -4980,6 +4995,18 @@
 					"pauses": false,
 					"duration": 1.0
 				},
+                { "frame": "fadein",
+                    "name": "Book1Text01",
+                    "parent": "D1BookView",
+                    "duration": 1.0,
+                    "pauses": false
+                },
+                { "frame": "fadein",
+                    "name": "Book1Text02",
+                    "parent": "D1BookView",
+                    "duration": 1.0,
+                    "pauses": false
+                },
 				{ "frame": "fadeout",
 					"name": "Book1Text03",
 					"parent": "D1BookView",
