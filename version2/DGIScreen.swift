@@ -9,15 +9,13 @@
 import SpriteKit
 import AVFoundation
 
-class DGIScreen: SKScene {
+class DGIScreen: SKScene, UITextFieldDelegate {
     
     let json: String!
     let gestures = ["leftSwipe": UISwipeGestureRecognizer(), "rightSwipe": UISwipeGestureRecognizer(), "upSwipe": UISwipeGestureRecognizer(), "downSwipe": UISwipeGestureRecognizer()]
     var dialogues: [DGIJSONDialogue] = []
     var menu: DGIMenu? = nil
-    var music: SKAudioNode? {
-        get { return childNode(withName: "Music") as? SKAudioNode }
-    }
+    var music: [SKAudioNode] = []
     var menubar: DGIMenuBar! {
         get { return childNode(withName: "MenuBar") as? DGIMenuBar }
     }
@@ -30,6 +28,7 @@ class DGIScreen: SKScene {
     var choicebox: DGIChoiceBox! {
         get { return childNode(withName: "ChoiceBox") as? DGIChoiceBox }
     }
+    let dateFormatter = DateFormatter()
     
     required init?(coder decoder: NSCoder) {
         json = ""
@@ -94,7 +93,7 @@ class DGIScreen: SKScene {
         for gesture in gestures {
             self.view!.addGestureRecognizer(gesture.value)
         }
-        music?.run(SKAction.group([SKAction.play(), SKAction.changeVolume(to: Config.volume.music, duration: 0)]))
+        if music.count > 0 { music[0].run(SKAction.group([SKAction.play(), SKAction.changeVolume(to: Config.volume.music, duration: 0)])) }
     }
     
     func touchDown(atPoint pos : CGPoint) {

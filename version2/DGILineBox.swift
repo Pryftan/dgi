@@ -159,7 +159,7 @@ class DGIChoiceBox: DGILineBox {
                             }
                         }
                         if let exittype = branch.exittype {
-                            action = (parent as? DGIRoom)?.dialogues[dialno].sharedexit?.first(where: {$0.name == exittype})
+                            if action == nil { action = (parent as? DGIRoom)?.dialogues[dialno].sharedexit?.first(where: {$0.name == exittype}) }
                             exitbool = true
                         }
                         if let type = branch.type {
@@ -174,8 +174,15 @@ class DGIChoiceBox: DGILineBox {
                             (parent as? DGIScreen)?.playerbox?.runLines(jsonlines: lines, name: "Player", branch: branch.branch, action: action, exit: exitbool)
                         }
                         (parent as? DGIScreen)?.avatarbox?.runLines(jsonlines: lines, name: "Avatar")
+                    } else if let exittype = branch.exittype {
+                        if let action = branch.action?[0] { (parent as? DGIRoom)?.runSpot(action) }
+                        else if let action = (parent as? DGIRoom)?.dialogues[dialno].sharedexit?.first(where: {$0.name == exittype}) { (parent as? DGIRoom)?.runSpot(action) }
+                        (parent as? DGIScreen)?.closeDialogue()
                     } else if let nextbranch = branch.branch {
-                        runBranch(nextbranch)
+                        if let action = branch.action?[0] {
+                            (parent as? DGIRoom)?.runSpot(action)
+                            runBranch(nextbranch)
+                        } else { runBranch(nextbranch) }
                     } else if let type = branch.type {
                         switch type {
                         case .remove:

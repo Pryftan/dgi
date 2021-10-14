@@ -25,7 +25,7 @@ class DGIViewController: UIViewController {
             //Config.bounds = view.bounds.size
             view.presentScene(DGIMenu(from: Config.name))
             //GameSave.autosave.clearSave()
-            //view.presentScene(DGIRoom(from: "classroom"))
+            //view.presentScene(DGIRoom(from: "study"))
             //view.presentScene(DGIVoid(from: "cuts2"))
             
             view.ignoresSiblingOrder = true

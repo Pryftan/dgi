@@ -75,7 +75,7 @@ class DGIInventory: SKSpriteNode {
                     }
                 }
             }
-            if object.name == objectname { found = index }
+            if object.name == objectname || object.displayname == objectname { found = index }
         }
         if found > -1 {
             let removeref = currentinv[found]
@@ -183,6 +183,7 @@ class DGIInventoryObject: DGIRoomSub {
             if subData.visible ?? true { invsub.loadTexture() }
             else { invsub.isHidden = true }
             if let relZ = subData.relZ { invsub.zPosition = zPosition + relZ }
+            invsub.position = CGPoint(x: frame.minX, y: frame.minY)
             addChild(invsub)
         }
     }

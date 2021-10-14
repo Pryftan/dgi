@@ -208,7 +208,7 @@ class DGITutorial: SKNode {
     func dragObj(_ sub: DGIRoomSub) {
         clearScreen()
         if sub.texture == nil { sub.loadTexture() }
-        let dragText = SKLabelNode(text: "Hold and drag glowing objects")
+        let dragText = SKLabelNode(text: "Hold and drag")
         dragText.fontSize = CGFloat(Config.subtitle.text * 2)
         dragText.fontName = font
         dragText.position = CGPoint(x: Config.bounds.width / 2, y : 800)

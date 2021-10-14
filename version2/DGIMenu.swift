@@ -88,6 +88,7 @@ class DGIMenu: SKScene {
         } else if node.name == "cont" {
             if let scene = returnScene {
                 music?.run(SKAction.pause())
+                scene.menu = self
                 view?.presentScene(scene)
             } else {
                 if GameSave.autosave.part != "" {
@@ -105,6 +106,7 @@ class DGIMenu: SKScene {
         } else if node.name == "back" {
             if let scene = returnScene {
                 music?.run(SKAction.pause())
+                scene.menu = self
                 view?.presentScene(scene)
             } else {
                 toggleSettings(false)

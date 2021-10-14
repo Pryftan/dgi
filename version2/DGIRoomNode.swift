@@ -15,32 +15,41 @@ class DGIRoomNode: DGIRoomSub {
     weak var left: DGIRoomNode?
     weak var right: DGIRoomNode?
     weak var back: DGIRoomNode?
+    var moveonaction: String? = nil
     var backaction: String? = nil
+    var ontime = DispatchTime.now()
     var grid: [DGIJSONGrid] = []
+    var wait: [DGIJSONMove] = []
     var sequence: [String] = []
     var sequencelength = 0
+    var sequencedraw: DGIJSONSequenceDraw? = nil
     weak var selected: DGIRoomSub? = nil
     var zoomGrid: DGIJSONGrid? { return grid.first(where: { $0.active ?? true && $0.zoom != nil } ) }
     var objGrid: DGIJSONGrid? { return grid.first(where: { $0.active ?? true && $0.object != nil } ) }
-    var dragSub: DGIRoomSub? { return children.first(where: {($0 as? DGIRoomSub)?.draggable ?? false}) as? DGIRoomSub }
+    var dragSub: DGIRoomSub? {
+        if let dragReturn = children.first(where: {($0 as? DGIRoomSub)?.draggable ?? false}) as? DGIRoomSub {
+            return dragReturn
+        } else if let dragReturn = children.first(where: {($0 as? DGIRotateNode)?.childsub?.draggable ?? false}) as? DGIRoomSub {
+            return dragReturn
+        }
+        return nil
+    }
+    var blurs: [SKEffectNode] = []
+    var gearbox: DGIGearNode? = nil
+    var special: DGISpecialType? = nil
     
     required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
+        fatalError("Encoding rooms is not supported")
     }
     
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         super.init(texture: texture, color: color, size: size)
     }
     
-    convenience init(imageNamed: String) {
-        self.init()
-        texturename = imageNamed
-    }
-    
     convenience init(imageNamed: String, name: String, grid: [DGIJSONGrid]? = []) {
         self.init()
-        self.name = name
         texturename = imageNamed
+        self.name = name
         self.isHidden = true
         self.anchorPoint = CGPoint(x: 0, y: 0)
         self.setScale(Config.scale)
@@ -96,20 +105,53 @@ class DGIRoomNode: DGIRoomSub {
             }
         }
     }
+    
+    func moveOn() {
+        ontime = DispatchTime.now()
+        for blur in blurs {
+            if let blurSub = blur.children[0] as? DGIRoomSub, let fill = (blur.children[0] as? DGIRoomSub)?.contents {
+                if blurSub.texture == nil { blurSub.loadTexture() }
+                if fill == "0" { blur.filter = nil
+                } else if blur.isHidden == false { blur.filter = CIFilter(name:"CIGaussianBlur",parameters: ["inputRadius": CGFloat(Double(fill)!)]) }
+            }
+        }
+        if let moveonaction = self.moveonaction {
+            (parent as? DGIRoom)?.runSpot(gridSelected(name: moveonaction)!.spot)
+        }
+        if let special = self.special {
+            if special == .slidebox {
+                (children.first(where: {$0 is DGISpecial}) as? DGISpecial)?.specialDirect(2)
+            }
+        }
+    }
+    
+    func moveOff() {
+        (parent as? DGIRoom)?.cutSpeech()
+        for blur in blurs { blur.filter = nil }
+        if let backaction = self.backaction {
+            (parent as? DGIRoom)?.runSpot(gridSelected(name: backaction)!.spot)
+        }
+        if let special = self.special {
+            if special == .slidebox {
+                (children.first(where: {$0 is DGISpecial}) as? DGISpecial)?.specialDirect(3)
+            }
+        }
+    }
 }
 
 class DGIRoomSub: SKSpriteNode {
     
     var texturename: String = ""
     var displayname: String = ""
+    var initalpha: CGFloat = 1
+    var setcolor: UIColor = UIColor.white
+    var contents: String = ""
     var draggable = false
-    var dragbeds: Int = 0
     var dragbed: Int = 0
-    var dragcycle: [DGIJSONCycle] = []
-    var dragaction: String = ""
+    var draginf: DGIJSONDrags?
     
     required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
+        fatalError("Encoding subs is not supported")
     }
     
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
@@ -129,6 +171,10 @@ class DGIRoomSub: SKSpriteNode {
         texturename = imageNamed
     }
     
+    convenience init(texture: SKTexture) {
+        self.init(texture: texture, color: UIColor.white, size: texture.size())
+    }
+    
     override func addChild(_ node: SKNode) {
         if let sub = node as? DGIRoomSub, texture != nil {
             sub.loadTexture()
@@ -143,7 +189,13 @@ class DGIRoomSub: SKSpriteNode {
     }
     
     func loadTexture() {
-        super.run(SKAction.setTexture(SKTexture(imageNamed: texturename), resize: true))
+        if texturename != "black" {
+            texture = SKTexture(imageNamed: texturename)
+            size = texture!.size()
+            //super.run(SKAction.setTexture(SKTexture(imageNamed: texturename), resize: true))
+            color = setcolor
+            alpha = initalpha
+        }
         for case let child as DGIRoomSub in children {
             if child.isHidden == false { child.loadTexture() }
         }
@@ -175,5 +227,39 @@ class DGIRoomSub: SKSpriteNode {
         color = UIColor.white
         //childNode(withName: "Glow")?.removeFromParent()
         childNode(withName: "Label")?.removeFromParent()
+    }
+}
+
+class DGIRoomCycle: DGIRoomSub {
+    //USED?
+    var texturenames: [String] = []
+    var count: Int = 0
+    
+    required init?(coder decoder: NSCoder) {
+        fatalError("Encoding subs is not supported")
+    }
+    
+    override init(texture: SKTexture?, color: UIColor, size: CGSize) {
+        super.init(texture: texture, color: color, size: size)
+    }
+    
+    init(imagesNamed: [String]) {
+        self.init()
+        self.texturenames = imagesNamed
+        texturename = imagesNamed[0]
+    }
+    
+    func increment() {
+        count = count + 1 >= texturenames.count ? 0 : count + 1
+        texturename = texturenames[count]
+        loadTexture() //NECESSARY?
+    }
+    
+    func set(to new: Int) {
+        if new < texturenames.count {
+            count = new
+            texturename = texturenames[count]
+            loadTexture()
+        }
     }
 }

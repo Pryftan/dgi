@@ -28,7 +28,7 @@ class DGIVoid: DGIScreen {
         disableGestures(except: ["scrollUp", "scrollDown"])
         childNode(withName: "Avatar")?.run(SKAction.sequence([SKAction.wait(forDuration: delay),SKAction.fadeAlpha(to: 0.8, duration: 1), SKAction.run{ self.runDialogue() }]))
         menubar.isHidden = true
-        music?.run(SKAction.play())
+        if music.count > 0 { music[0].run(SKAction.play()) }
     }
     
     override func touchUp(atPoint pos : CGPoint) {
@@ -74,6 +74,7 @@ class DGIVoid: DGIScreen {
                 musicNode.name = "Music"
                 musicNode.autoplayLooped = true
                 addChild(musicNode)
+                self.music.append(musicNode)
             }
             if let preloadnames = jsonData.preload {
                 //for image in preloadnames { preload.append(SKTexture(imageNamed: image)) }
@@ -91,7 +92,7 @@ class DGIVoid: DGIScreen {
                     addimage.zPosition = currZ
                     currZ += 0.01
                     if let vis = image.visible { addimage.isHidden = !vis }
-                    if let opacity = image.opacity { addimage.alpha = CGFloat(opacity)}
+                    if let alpha = image.alpha { addimage.alpha = CGFloat(alpha)}
                     if let rotate = image.rotate { addimage.zRotation = -1 * rotate * CGFloat(Double.pi)/180 }
                     if let frames = image.frames {
                         var actions: [SKAction] = []
